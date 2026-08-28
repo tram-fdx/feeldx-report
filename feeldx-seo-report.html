@@ -1,0 +1,500 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FeelDX SEO Report</title>
+<style>
+  :root{
+    --ink:#12150C; --card:#1B1F13; --card2:#232819; --line:#2E3421;
+    --accent:#86906C; --accent-deep:#555E3C; --sage:#CBD0C0;
+    --text:#E7EAE1; --muted:#98A183; --dim:#727B60;
+    --up:#7FB069; --down:#D98C6A; --warn:#D9B26A;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ink);color:var(--text);
+       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+       font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 20px 80px}
+
+  header{border-bottom:1px solid var(--line);background:#171B10;padding:22px 0;margin-bottom:28px}
+  .hrow{max-width:1160px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .logo{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(134,144,108,.2)}
+  h1{font-size:19px;margin:0;font-weight:600;letter-spacing:.01em}
+  .sub{color:var(--muted);font-size:13px;margin-top:2px}
+  .spacer{flex:1}
+  .langbtn{background:var(--card2);border:1px solid var(--line);color:var(--muted);
+           padding:6px 13px;border-radius:7px;cursor:pointer;font-size:12.5px;font-weight:600}
+  .langbtn:hover{color:var(--text);border-color:var(--accent-deep)}
+
+  h2{font-size:15px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+     color:var(--accent);margin:44px 0 4px}
+  .h2sub{color:var(--dim);font-size:13px;margin:0 0 16px}
+
+  .grid{display:grid;gap:12px}
+  .k4{grid-template-columns:repeat(4,1fr)}
+  .k3{grid-template-columns:repeat(3,1fr)}
+  .k2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:860px){.k4,.k3{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.k4,.k3,.k2{grid-template-columns:1fr}}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .klabel{color:var(--muted);font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+  .kval{font-size:30px;font-weight:700;letter-spacing:-.02em;margin:6px 0 2px;font-variant-numeric:tabular-nums}
+  .kprev{color:var(--dim);font-size:12.5px}
+  .delta{font-size:13px;font-weight:700;font-variant-numeric:tabular-nums}
+  .up{color:var(--up)} .down{color:var(--down)} .flat{color:var(--dim)}
+
+  table{width:100%;border-collapse:collapse;font-size:13.5px;font-variant-numeric:tabular-nums}
+  th{text-align:left;color:var(--muted);font-weight:600;font-size:11.5px;letter-spacing:.05em;
+     text-transform:uppercase;padding:9px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+  td{padding:9px 10px;border-bottom:1px solid rgba(46,52,33,.6)}
+  tr:last-child td{border-bottom:0}
+  tbody tr:hover{background:rgba(134,144,108,.06)}
+  .num{text-align:right;white-space:nowrap}
+  .q{color:var(--sage)}
+  .tblwrap{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow-x:auto}
+  .pill{display:inline-block;font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:20px;
+        letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+  .p-brand{background:rgba(134,144,108,.22);color:var(--accent)}
+  .p-non{background:rgba(217,178,106,.16);color:var(--warn)}
+  .p-good{background:rgba(127,176,105,.16);color:var(--up)}
+  .p-bad{background:rgba(217,140,106,.16);color:var(--down)}
+
+  .note{background:var(--card2);border-left:3px solid var(--accent-deep);border-radius:0 9px 9px 0;
+        padding:13px 16px;color:var(--muted);font-size:13.5px;margin-top:12px}
+  .note b{color:var(--text)}
+  .warnbox{border-left-color:var(--warn)}
+  .findings{list-style:none;padding:0;margin:0}
+  .findings li{background:var(--card);border:1px solid var(--line);border-radius:11px;
+               padding:14px 17px;margin-bottom:10px;display:flex;gap:14px;align-items:flex-start}
+  .fi{flex:none;width:26px;height:26px;border-radius:7px;background:var(--accent-deep);
+      color:var(--text);font-weight:700;font-size:12.5px;display:flex;align-items:center;justify-content:center;margin-top:1px}
+  .ft{font-weight:600;margin-bottom:3px}
+  .fd{color:var(--muted);font-size:13.5px}
+
+  svg{display:block;width:100%;height:auto}
+  .legend{display:flex;gap:18px;color:var(--muted);font-size:12px;margin-top:10px;flex-wrap:wrap}
+  .sw{display:inline-block;width:11px;height:11px;border-radius:3px;vertical-align:-1px;margin-right:6px}
+
+  footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
+         color:var(--dim);font-size:12.5px;line-height:1.8}
+  .en{display:none}
+  body.lang-en .vi{display:none}
+  body.lang-en .en{display:block}
+  body.lang-en span.en, body.lang-en td.en, body.lang-en b.en{display:inline}
+</style>
+</head>
+<body class="lang-vi">
+
+<header>
+  <div class="hrow">
+    <span class="logo"></span>
+    <div>
+      <h1>FeelDX &middot; SEO Report</h1>
+      <div class="sub">
+        <span class="vi">feeldx.com &middot; 28 ngày: 29/07 – 25/08/2026 &middot; so với 01/07 – 28/07/2026</span>
+        <span class="en">feeldx.com &middot; 28 days: 29 Jul – 25 Aug 2026 &middot; vs 1 Jul – 28 Jul 2026</span>
+      </div>
+    </div>
+    <span class="spacer"></span>
+    <button class="langbtn" id="lang">EN</button>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- ══ KPI ══ -->
+  <h2><span class="vi">Chỉ số chính</span><span class="en">Headline metrics</span></h2>
+  <p class="h2sub">
+    <span class="vi">Google Search Console — property https://www.feeldx.com/ (URL-prefix). GSC trễ ~3 ngày.</span>
+    <span class="en">Google Search Console — property https://www.feeldx.com/ (URL-prefix). GSC lags ~3 days.</span>
+  </p>
+
+  <div class="grid k4">
+    <div class="card">
+      <div class="klabel">Clicks</div>
+      <div class="kval">170</div>
+      <div><span class="delta up">▲ +39.3%</span> <span class="kprev">· prev 122</span></div>
+    </div>
+    <div class="card">
+      <div class="klabel">Impressions</div>
+      <div class="kval">6,361</div>
+      <div><span class="delta up">▲ +5.4%</span> <span class="kprev">· prev 6,037</span></div>
+    </div>
+    <div class="card">
+      <div class="klabel">CTR</div>
+      <div class="kval">2.67%</div>
+      <div><span class="delta up">▲ +0.65pp</span> <span class="kprev">· prev 2.02%</span></div>
+    </div>
+    <div class="card">
+      <div class="klabel"><span class="vi">Vị trí TB</span><span class="en">Avg position</span></div>
+      <div class="kval">41.2</div>
+      <div><span class="delta down">▼ −6.6</span> <span class="kprev">· prev 34.6</span></div>
+    </div>
+  </div>
+
+  <div class="note">
+    <span class="vi"><b>Đọc bộ số này thế nào.</b> Clicks tăng mạnh (+39%) nhưng impressions gần như đứng yên (+5%),
+    nghĩa là mức tăng đến từ <b>tỷ lệ click tốt hơn</b> chứ không phải hiển thị nhiều hơn. Vị trí trung bình tụt
+    từ 34.6 xuống 41.2 — không phải vì các trang đang xếp hạng bị rớt, mà vì site bắt đầu hiển thị cho nhiều
+    truy vấn mới ở vị trí rất thấp (40–90), kéo trung bình xuống.</span>
+    <span class="en"><b>How to read this.</b> Clicks are up sharply (+39%) while impressions are nearly flat (+5%),
+    so the gain came from <b>better click-through</b>, not more visibility. Average position fell from 34.6 to 41.2 —
+    not because ranking pages dropped, but because the site started appearing for many new queries at very low
+    positions (40–90), dragging the mean down.</span>
+  </div>
+
+  <!-- ══ CHART ══ -->
+  <h2><span class="vi">Diễn biến 28 ngày</span><span class="en">28-day trend</span></h2>
+  <p class="h2sub">
+    <span class="vi">Cột = impressions (trục phải) · Đường = clicks (trục trái)</span>
+    <span class="en">Bars = impressions (right axis) · Line = clicks (left axis)</span>
+  </p>
+  <div class="card">
+    <svg viewBox="0 0 1000 260" role="img" aria-label="28-day clicks and impressions">
+      <g id="chart"></g>
+    </svg>
+    <div class="legend">
+      <span><span class="sw" style="background:#555E3C"></span>Impressions</span>
+      <span><span class="sw" style="background:#86906C"></span>Clicks</span>
+    </div>
+  </div>
+  <div class="note">
+    <span class="vi"><b>Đỉnh 13/08:</b> 16 clicks / 322 impressions — ngày tốt nhất kỳ.
+    <b>Đáy 31/07 – 01/08:</b> 0 clicks hai ngày liên tiếp dù vẫn có ~190 impressions/ngày.</span>
+    <span class="en"><b>Peak 13 Aug:</b> 16 clicks / 322 impressions — best day of the period.
+    <b>Trough 31 Jul – 1 Aug:</b> zero clicks two days running despite ~190 impressions/day.</span>
+  </div>
+
+  <!-- ══ BRAND VS NON-BRAND ══ -->
+  <h2><span class="vi">Brand và phi-brand</span><span class="en">Brand vs non-brand</span></h2>
+  <p class="h2sub">
+    <span class="vi">Câu hỏi quan trọng nhất của báo cáo này: SEO đang mang về khách mới, hay chỉ đón người đã biết FeelDX?</span>
+    <span class="en">The most important question in this report: is SEO winning new demand, or just catching people who already know FeelDX?</span>
+  </p>
+
+  <div class="grid k3">
+    <div class="card">
+      <div class="klabel"><span class="vi">Clicks từ 7 truy vấn brand</span><span class="en">Clicks from 7 brand queries</span></div>
+      <div class="kval">118</div>
+      <div class="kprev"><span class="vi">69% tổng clicks</span><span class="en">69% of all clicks</span></div>
+    </div>
+    <div class="card">
+      <div class="klabel"><span class="vi">Clicks phi-brand (đuôi dài)</span><span class="en">Non-brand clicks (long tail)</span></div>
+      <div class="kval">52</div>
+      <div class="kprev"><span class="vi">31% — rải trên các truy vấn ẩn danh</span><span class="en">31% — spread across anonymised queries</span></div>
+    </div>
+    <div class="card">
+      <div class="klabel"><span class="vi">Truy vấn phi-brand 0 click</span><span class="en">Non-brand queries with 0 clicks</span></div>
+      <div class="kval">444</div>
+      <div class="kprev"><span class="vi">trên tổng 451 truy vấn</span><span class="en">of 451 queries total</span></div>
+    </div>
+  </div>
+
+  <div class="note warnbox">
+    <span class="vi"><b>Đây là phát hiện lớn nhất.</b> Chỉ 7 truy vấn có click, và cả 7 đều là biến thể tên
+    thương hiệu (feeldx, feel dx, feeldx pty ltd…). 444 truy vấn phi-brand còn lại tạo ra ~6.200 impressions
+    nhưng <b>không một click nào</b>. Nói cách khác: Google đã cho FeelDX xuất hiện, nhưng ở vị trí quá thấp
+    (trung bình 40–60) để ai đó bấm vào.</span>
+    <span class="en"><b>This is the headline finding.</b> Only 7 queries produced clicks, and all 7 are brand-name
+    variants (feeldx, feel dx, feeldx pty ltd…). The remaining 444 non-brand queries generated ~6,200 impressions
+    and <b>not a single click</b>. Google is showing FeelDX — just far too low (average position 40–60) for anyone
+    to click.</span>
+  </div>
+
+  <div class="grid k2" style="margin-top:14px">
+    <div class="tblwrap">
+      <table>
+        <thead><tr>
+          <th><span class="vi">Truy vấn có click</span><span class="en">Queries with clicks</span></th>
+          <th class="num">Clk</th><th class="num">Impr</th><th class="num">CTR</th><th class="num">Pos</th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="q">feeldx <span class="pill p-brand">brand</span></td><td class="num">80</td><td class="num">155</td><td class="num">51.6%</td><td class="num">1.1</td></tr>
+          <tr><td class="q">feel dx pty ltd <span class="pill p-brand">brand</span></td><td class="num">12</td><td class="num">33</td><td class="num">36.4%</td><td class="num">1.1</td></tr>
+          <tr><td class="q">feeldx pty ltd <span class="pill p-brand">brand</span></td><td class="num">12</td><td class="num">30</td><td class="num">40.0%</td><td class="num">1.0</td></tr>
+          <tr><td class="q">feel dx <span class="pill p-brand">brand</span></td><td class="num">9</td><td class="num">14</td><td class="num">64.3%</td><td class="num">1.0</td></tr>
+          <tr><td class="q">field dx <span class="pill p-brand">brand</span></td><td class="num">2</td><td class="num">4</td><td class="num">50.0%</td><td class="num">1.5</td></tr>
+          <tr><td class="q">vpdd feeldx pty ltd <span class="pill p-brand">brand</span></td><td class="num">2</td><td class="num">4</td><td class="num">50.0%</td><td class="num">4.2</td></tr>
+          <tr><td class="q">aman dalmond <span class="pill p-brand">brand</span></td><td class="num">1</td><td class="num">5</td><td class="num">20.0%</td><td class="num">24.2</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="tblwrap">
+      <table>
+        <thead><tr>
+          <th><span class="vi">Impressions cao nhất — 0 click</span><span class="en">Highest impressions — zero clicks</span></th>
+          <th class="num">Impr</th><th class="num">Pos</th>
+        </tr></thead>
+        <tbody>
+          <tr><td class="q">defense bim software</td><td class="num">279</td><td class="num">38.7</td></tr>
+          <tr><td class="q">5d bim</td><td class="num">200</td><td class="num">51.2</td></tr>
+          <tr><td class="q">render 3d</td><td class="num">177</td><td class="num">67.7</td></tr>
+          <tr><td class="q">3d model rendering</td><td class="num">167</td><td class="num">40.9</td></tr>
+          <tr><td class="q">rendering in 3d animation</td><td class="num">143</td><td class="num">65.5</td></tr>
+          <tr><td class="q">render 3d model</td><td class="num">131</td><td class="num">59.0</td></tr>
+          <tr><td class="q">modeling rendering</td><td class="num">126</td><td class="num">57.0</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- ══ STRIKING DISTANCE ══ -->
+  <h2><span class="vi">Gần chạm trang 1–2</span><span class="en">Striking distance</span></h2>
+  <p class="h2sub">
+    <span class="vi">Truy vấn đã ở vị trí &lt; 30 nhưng chưa có click — đây là nơi công sức bỏ ra sinh lời nhanh nhất.</span>
+    <span class="en">Queries already ranking under position 30 with no clicks yet — where effort pays back fastest.</span>
+  </p>
+  <div class="tblwrap">
+    <table>
+      <thead><tr>
+        <th><span class="vi">Truy vấn</span><span class="en">Query</span></th>
+        <th class="num">Impr</th><th class="num">Pos</th>
+        <th><span class="vi">Cụm chủ đề</span><span class="en">Cluster</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="q">project control plan</td><td class="num">95</td><td class="num">15.1</td><td><span class="pill p-good">project controls</span></td></tr>
+        <tr><td class="q">pcm meaning in construction</td><td class="num">18</td><td class="num">7.6</td><td><span class="pill p-good">project controls</span></td></tr>
+        <tr><td class="q">pcm role</td><td class="num">11</td><td class="num">4.4</td><td><span class="pill p-good">project controls</span></td></tr>
+        <tr><td class="q">who offers bim, digital twin, 4d/5d construction services?</td><td class="num">42</td><td class="num">4.6</td><td><span class="pill p-good">AI / conversational</span></td></tr>
+        <tr><td class="q">how to win work from tier 2 builders</td><td class="num">4</td><td class="num">5.5</td><td><span class="pill p-good">AI / conversational</span></td></tr>
+        <tr><td class="q">pcm meaning construction</td><td class="num">5</td><td class="num">11.6</td><td><span class="pill p-good">project controls</span></td></tr>
+        <tr><td class="q">project controls plan</td><td class="num">4</td><td class="num">11.5</td><td><span class="pill p-good">project controls</span></td></tr>
+        <tr><td class="q">best 5d bim software</td><td class="num">7</td><td class="num">12.9</td><td><span class="pill p-non">5D BIM</span></td></tr>
+        <tr><td class="q">5d bim software list</td><td class="num">20</td><td class="num">18.8</td><td><span class="pill p-non">5D BIM</span></td></tr>
+        <tr><td class="q">5d bim software</td><td class="num">68</td><td class="num">22.8</td><td><span class="pill p-non">5D BIM</span></td></tr>
+        <tr><td class="q">bim 5d software</td><td class="num">49</td><td class="num">23.1</td><td><span class="pill p-non">5D BIM</span></td></tr>
+        <tr><td class="q">4d tender animation</td><td class="num">22</td><td class="num">26.4</td><td><span class="pill p-good">tender</span></td></tr>
+        <tr><td class="q">project controls manager</td><td class="num">25</td><td class="num">27.7</td><td><span class="pill p-good">project controls</span></td></tr>
+        <tr><td class="q">5d software bim</td><td class="num">63</td><td class="num">27.5</td><td><span class="pill p-non">5D BIM</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">
+    <span class="vi"><b>Cụm "project controls" là mỏ vàng đang bỏ không.</b> Nó vừa đúng định vị FeelDX (project
+    controls firm), vừa đã xếp hạng sẵn ở vị trí 4–28. Ngược lại, cụm "3D rendering" tạo nhiều impressions nhất
+    nhưng là truy vấn phổ thông toàn cầu, không phải builder Úc — đuổi theo cụm này tốn công mà không ra lead.</span>
+    <span class="en"><b>The "project controls" cluster is unclaimed ground.</b> It matches FeelDX positioning as a
+    project controls firm and already ranks at positions 4–28. The "3D rendering" cluster, by contrast, drives the
+    most impressions but is generic global consumer intent, not Australian builders — chasing it costs effort and
+    returns no leads.</span>
+  </div>
+
+  <!-- ══ PAGES ══ -->
+  <h2><span class="vi">Trang theo hiệu suất</span><span class="en">Pages by performance</span></h2>
+  <div class="tblwrap">
+    <table>
+      <thead><tr>
+        <th>URL</th><th class="num">Clk</th><th class="num">Impr</th><th class="num">CTR</th><th class="num">Pos</th>
+        <th><span class="vi">Đánh giá</span><span class="en">Verdict</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="q">/news/the-art-of-rendering-a-3d-model</td><td class="num">0</td><td class="num">1,588</td><td class="num">0%</td><td class="num">54.1</td><td><span class="pill p-bad"><span class="vi">sai đối tượng</span><span class="en">wrong audience</span></span></td></tr>
+        <tr><td class="q">/news/exploring-5d-bim-software-solutions</td><td class="num">1</td><td class="num">771</td><td class="num">0.1%</td><td class="num">45.2</td><td><span class="pill p-non"><span class="vi">cần đẩy</span><span class="en">needs work</span></span></td></tr>
+        <tr><td class="q">/news/the-critical-role-of-project-controls-manager…</td><td class="num">2</td><td class="num">725</td><td class="num">0.3%</td><td class="num">37.0</td><td><span class="pill p-good"><span class="vi">ưu tiên 1</span><span class="en">priority 1</span></span></td></tr>
+        <tr><td class="q">/ <span class="pill p-brand">home</span></td><td class="num">146</td><td class="num">637</td><td class="num">22.9%</td><td class="num">7.4</td><td><span class="pill p-good"><span class="vi">khoẻ</span><span class="en">healthy</span></span></td></tr>
+        <tr><td class="q">/news/bim-and-4d-modelling-revolutionise-australian-defence…</td><td class="num">0</td><td class="num">433</td><td class="num">0%</td><td class="num">46.3</td><td><span class="pill p-non"><span class="vi">cần đẩy</span><span class="en">needs work</span></span></td></tr>
+        <tr><td class="q">/about-us</td><td class="num">10</td><td class="num">345</td><td class="num">2.9%</td><td class="num">2.2</td><td><span class="pill p-good"><span class="vi">khoẻ</span><span class="en">healthy</span></span></td></tr>
+        <tr><td class="q">/news/delving-into-construction-project-life-cycle-phases</td><td class="num">0</td><td class="num">333</td><td class="num">0%</td><td class="num">64.4</td><td><span class="pill p-bad"><span class="vi">sai đối tượng</span><span class="en">wrong audience</span></span></td></tr>
+        <tr><td class="q">/services</td><td class="num">3</td><td class="num">297</td><td class="num">1.0%</td><td class="num">1.9</td><td><span class="pill p-non">CTR <span class="vi">thấp</span><span class="en">low</span></span></td></tr>
+        <tr><td class="q">/our-work</td><td class="num">4</td><td class="num">261</td><td class="num">1.5%</td><td class="num">3.5</td><td><span class="pill p-non">CTR <span class="vi">thấp</span><span class="en">low</span></span></td></tr>
+        <tr><td class="q">/aec</td><td class="num">1</td><td class="num">241</td><td class="num">0.4%</td><td class="num">1.9</td><td><span class="pill p-bad">CTR <span class="vi">rất thấp</span><span class="en">very low</span></span></td></tr>
+        <tr><td class="q">/contact-us</td><td class="num">1</td><td class="num">179</td><td class="num">0.6%</td><td class="num">6.1</td><td><span class="pill p-non">—</span></td></tr>
+        <tr><td class="q">/technology</td><td class="num">1</td><td class="num">164</td><td class="num">0.6%</td><td class="num">3.4</td><td><span class="pill p-bad">CTR <span class="vi">rất thấp</span><span class="en">very low</span></span></td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note warnbox">
+    <span class="vi"><b>Bất thường đáng chú ý:</b> /services, /our-work, /aec và /technology đều xếp hạng
+    <b>vị trí 1.9–3.5</b> — tức là gần như luôn ở top 4 — nhưng CTR chỉ 0.4–1.5%. Trang xếp hạng top 4 bình
+    thường phải đạt CTR 8–15%. Điều này gần như chắc chắn nghĩa là chúng đang xếp hạng cho các truy vấn
+    <b>tên thương hiệu của người khác</b> hoặc truy vấn navigational không liên quan, chứ không phải truy vấn
+    người mua thật sự gõ. Cần kiểm tra title và meta description của 4 trang này.</span>
+    <span class="en"><b>Anomaly worth flagging:</b> /services, /our-work, /aec and /technology all rank at
+    <b>positions 1.9–3.5</b> — effectively always top 4 — yet convert only 0.4–1.5% of impressions into clicks.
+    A genuine top-4 listing normally earns 8–15% CTR. This almost certainly means they rank for
+    <b>other companies' brand terms</b> or unrelated navigational queries, not queries a buyer actually types.
+    Worth auditing the title and meta description on these four.</span>
+  </div>
+
+  <!-- ══ GEO / DEVICE ══ -->
+  <h2><span class="vi">Địa lý và thiết bị</span><span class="en">Geography &amp; device</span></h2>
+  <div class="grid k2">
+    <div class="tblwrap">
+      <table>
+        <thead><tr><th><span class="vi">Quốc gia</span><span class="en">Country</span></th><th class="num">Clk</th><th class="num">Impr</th><th class="num">CTR</th><th class="num">Pos</th></tr></thead>
+        <tbody>
+          <tr><td class="q">Australia</td><td class="num">82</td><td class="num">1,282</td><td class="num">6.4%</td><td class="num">17.8</td></tr>
+          <tr><td class="q">Vietnam</td><td class="num">41</td><td class="num">162</td><td class="num">25.3%</td><td class="num">17.2</td></tr>
+          <tr><td class="q">Philippines</td><td class="num">26</td><td class="num">204</td><td class="num">12.7%</td><td class="num">26.2</td></tr>
+          <tr><td class="q">Sri Lanka</td><td class="num">8</td><td class="num">12</td><td class="num">66.7%</td><td class="num">2.0</td></tr>
+          <tr><td class="q">India</td><td class="num">3</td><td class="num">251</td><td class="num">1.2%</td><td class="num">44.2</td></tr>
+          <tr><td class="q">Singapore</td><td class="num">3</td><td class="num">25</td><td class="num">12.0%</td><td class="num">9.1</td></tr>
+          <tr><td class="q">Austria</td><td class="num">1</td><td class="num">56</td><td class="num">1.8%</td><td class="num">45.4</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="tblwrap">
+      <table>
+        <thead><tr><th><span class="vi">Thiết bị</span><span class="en">Device</span></th><th class="num">Clk</th><th class="num">Impr</th><th class="num">CTR</th><th class="num">Pos</th></tr></thead>
+        <tbody>
+          <tr><td class="q">Desktop</td><td class="num">134</td><td class="num">5,331</td><td class="num">2.5%</td><td class="num">42.5</td></tr>
+          <tr><td class="q">Mobile</td><td class="num">36</td><td class="num">1,019</td><td class="num">3.5%</td><td class="num">31.9</td></tr>
+          <tr><td class="q">Tablet</td><td class="num">0</td><td class="num">11</td><td class="num">0%</td><td class="num">11.3</td></tr>
+        </tbody>
+      </table>
+      <div style="padding:14px 16px;color:var(--muted);font-size:13px;border-top:1px solid var(--line)">
+        <span class="vi">84% impressions đến từ desktop — hợp lý với đối tượng builder/tender đang làm việc tại văn phòng.</span>
+        <span class="en">84% of impressions are desktop — consistent with builders and tender teams working at a desk.</span>
+      </div>
+    </div>
+  </div>
+  <div class="note warnbox">
+    <span class="vi"><b>Việt Nam + Philippines + Sri Lanka = 75 clicks, chiếm 44% tổng clicks</b>, với CTR
+    12–67% — cao bất thường. Đây gần như chắc chắn là <b>nhân sự nội bộ và ứng viên tuyển dụng</b> tự tìm tên
+    công ty, không phải khách hàng tiềm năng. Nếu loại nhóm này ra, số clicks "thật" từ thị trường mục tiêu
+    (Úc) chỉ là <b>82</b>, không phải 170.</span>
+    <span class="en"><b>Vietnam + Philippines + Sri Lanka = 75 clicks, 44% of the total</b>, at CTRs of 12–67% —
+    abnormally high. This is almost certainly <b>internal staff and job applicants</b> searching the company name,
+    not prospects. Strip them out and the real clicks from the target market (Australia) are <b>82</b>, not 170.</span>
+  </div>
+
+  <!-- ══ GA4 ══ -->
+  <h2><span class="vi">Organic trên GA4</span><span class="en">Organic in GA4</span></h2>
+  <p class="h2sub">
+    <span class="vi">GA4 property "FeelDX - GA4" — cùng khung 28 ngày.</span>
+    <span class="en">GA4 property "FeelDX - GA4" — same 28-day window.</span>
+  </p>
+  <div class="grid k4">
+    <div class="card">
+      <div class="klabel"><span class="vi">Phiên organic</span><span class="en">Organic sessions</span></div>
+      <div class="kval">248</div>
+      <div><span class="delta up">▲ +19.2%</span> <span class="kprev">· prev 208</span></div>
+    </div>
+    <div class="card">
+      <div class="klabel"><span class="vi">Tỷ lệ tương tác</span><span class="en">Engagement rate</span></div>
+      <div class="kval">57.7%</div>
+      <div><span class="delta up">▲ +5.2%</span> <span class="kprev">· prev 54.8%</span></div>
+    </div>
+    <div class="card">
+      <div class="klabel"><span class="vi">Thời gian TB/phiên</span><span class="en">Avg time / session</span></div>
+      <div class="kval">49s</div>
+      <div><span class="delta up">▲ +17.1%</span> <span class="kprev">· prev 42s</span></div>
+    </div>
+    <div class="card">
+      <div class="klabel"><span class="vi">Key events từ organic</span><span class="en">Key events from organic</span></div>
+      <div class="kval">33</div>
+      <div><span class="delta up">▲ +200%</span> <span class="kprev">· prev 11</span></div>
+    </div>
+  </div>
+  <div class="note">
+    <span class="vi"><b>Organic là kênh chất lượng nhất của site — cách biệt rõ rệt.</b> Nó chỉ chiếm 19% lượng
+    phiên nhưng mang về <b>33 trong tổng 44 key events (75%)</b>. Thời gian trên trang 49 giây, gấp hơn 5 lần
+    Direct (9s). Kết luận thực dụng: organic tuy nhỏ nhưng là kênh duy nhất đang tạo ra hành vi giống khách
+    hàng thật.</span>
+    <span class="en"><b>Organic is by a distance the site's highest-quality channel.</b> It is only 19% of sessions
+    but delivers <b>33 of all 44 key events (75%)</b>. Time on site is 49 seconds, more than 5× Direct's 9s.
+    The practical read: organic is small but it is the only channel producing behaviour that looks like a real buyer.</span>
+  </div>
+
+  <!-- ══ FINDINGS ══ -->
+  <h2><span class="vi">Việc cần làm</span><span class="en">What to do next</span></h2>
+  <p class="h2sub">
+    <span class="vi">Xếp theo tỷ lệ tác động trên công sức bỏ ra.</span>
+    <span class="en">Ordered by impact per unit of effort.</span>
+  </p>
+  <ul class="findings">
+    <li><span class="fi">1</span><div>
+      <div class="ft"><span class="vi">Nộp sitemap lên Search Console</span><span class="en">Submit a sitemap to Search Console</span></div>
+      <div class="fd"><span class="vi">GSC đang hiển thị <b>0 sitemap đã nộp</b>. Đây là việc mất 5 phút và ảnh hưởng trực tiếp tới tốc độ Google tìm và index nội dung mới. Không có lý do gì để trống mục này.</span>
+      <span class="en">GSC currently shows <b>0 submitted sitemaps</b>. This is a five-minute fix that directly affects how fast Google finds and indexes new content. There is no reason to leave it empty.</span></div>
+    </div></li>
+    <li><span class="fi">2</span><div>
+      <div class="ft"><span class="vi">Sửa title/meta cho 4 trang dịch vụ CTR bất thường</span><span class="en">Fix titles and metas on the four low-CTR service pages</span></div>
+      <div class="fd"><span class="vi">/services, /our-work, /aec, /technology xếp hạng top 4 nhưng CTR 0.4–1.5%. Kiểm tra chúng đang hiện cho truy vấn nào, viết lại title cho khớp ý định tìm kiếm của builder.</span>
+      <span class="en">/services, /our-work, /aec and /technology rank top 4 but convert 0.4–1.5%. Check which queries they surface for, then rewrite titles to match what a builder is actually searching for.</span></div>
+    </div></li>
+    <li><span class="fi">3</span><div>
+      <div class="ft"><span class="vi">Dồn lực vào cụm "project controls"</span><span class="en">Concentrate effort on the "project controls" cluster</span></div>
+      <div class="fd"><span class="vi">project control plan (vị trí 15), pcm meaning in construction (7.6), pcm role (4.4), project controls manager (27.7). Đúng định vị FeelDX, đã gần trang 1, và là ngôn ngữ người mua thật sự dùng.</span>
+      <span class="en">project control plan (pos 15), pcm meaning in construction (7.6), pcm role (4.4), project controls manager (27.7). On-positioning, already near page one, and the language real buyers use.</span></div>
+    </div></li>
+    <li><span class="fi">4</span><div>
+      <div class="ft"><span class="vi">Quyết định dứt khoát về cụm "3D rendering"</span><span class="en">Make a call on the "3D rendering" cluster</span></div>
+      <div class="fd"><span class="vi">/news/the-art-of-rendering-a-3d-model tạo 1.588 impressions — 25% toàn site — và <b>0 click</b>. Các truy vấn này ("render 3d", "3d model rendering") là nhu cầu phổ thông toàn cầu, không phải builder Úc. Hoặc viết lại nhắm đúng AEC, hoặc chấp nhận bỏ và ngừng tính nó là thành tích.</span>
+      <span class="en">/news/the-art-of-rendering-a-3d-model draws 1,588 impressions — 25% of the whole site — and <b>zero clicks</b>. Those queries ("render 3d", "3d model rendering") are generic global demand, not Australian builders. Either rewrite it to target AEC specifically, or accept it as noise and stop counting it as reach.</span></div>
+    </div></li>
+    <li><span class="fi">5</span><div>
+      <div class="ft"><span class="vi">Xử lý 20 trang "Crawled – currently not indexed"</span><span class="en">Deal with the 20 "Crawled – currently not indexed" pages</span></div>
+      <div class="fd"><span class="vi">75 trang được index, 22 trang không. Google đã đọc 20 trang rồi quyết định không đưa vào index — thường là dấu hiệu nội dung mỏng hoặc trùng ý với trang khác.</span>
+      <span class="en">75 pages indexed, 22 not. Google read 20 of them and chose not to index — usually a signal of thin content or overlap with an existing page.</span></div>
+    </div></li>
+    <li><span class="fi">6</span><div>
+      <div class="ft"><span class="vi">Lọc traffic nội bộ ra khỏi báo cáo</span><span class="en">Filter internal traffic out of reporting</span></div>
+      <div class="fd"><span class="vi">44% clicks đến từ VN/PH/LK với CTR bất thường. Chừng nào chưa tách nhóm này, mọi con số tăng trưởng đều bị thổi phồng và không dùng để ra quyết định được.</span>
+      <span class="en">44% of clicks come from VN/PH/LK at abnormal CTRs. Until that group is separated out, every growth figure here is inflated and cannot be used to make decisions.</span></div>
+    </div></li>
+  </ul>
+
+  <footer>
+    <div><b><span class="vi">Nguồn dữ liệu</span><span class="en">Data sources</span></b></div>
+    <div>Google Search Console — property <code>https://www.feeldx.com/</code> (URL-prefix). <span class="vi">Đọc trực tiếp qua Chrome, 28/08/2026.</span><span class="en">Read directly via Chrome, 28 Aug 2026.</span></div>
+    <div>Google Analytics 4 — <code>FeelDX - GA4</code> (309588561). <span class="vi">Cùng khung ngày, có so sánh kỳ trước.</span><span class="en">Same window, with previous-period comparison.</span></div>
+    <div style="color:var(--warn)">Ahrefs — <span class="vi"><b>không đọc được.</b> feeldx.com chưa được verify trên gói Ahrefs hiện tại ("Domain not verified"), và API trả về "Insufficient plan". Backlink, Domain Rating và organic traffic estimate <b>không có trong báo cáo này</b> — không có số nào được ước lượng thay thế.</span><span class="en"><b>not readable.</b> feeldx.com is not verified on the current Ahrefs plan ("Domain not verified") and the API returns "Insufficient plan". Backlinks, Domain Rating and organic traffic estimates are <b>absent from this report</b> — no figure has been estimated in their place.</span></div>
+    <div style="color:var(--warn)">Core Web Vitals — <span class="vi">GSC báo "not enough usage data in the last 90 days" cho cả mobile và desktop. Lưu lượng site chưa đủ để Google dựng dữ liệu CrUX.</span><span class="en">GSC reports "not enough usage data in the last 90 days" for both mobile and desktop. Site traffic is too low for Google to build CrUX data.</span></div>
+    <div style="margin-top:10px">
+      <span class="vi">Mọi con số trên trang này được đọc trực tiếp từ giao diện nguồn. Không có số nào được nội suy, ước lượng hay mang từ kỳ trước sang.</span>
+      <span class="en">Every figure on this page was read directly from the source interface. Nothing is interpolated, estimated, or carried forward from a previous period.</span>
+    </div>
+  </footer>
+</div>
+
+<script>
+/* ── language toggle ── */
+const b=document.getElementById('lang');
+b.onclick=()=>{const en=document.body.classList.toggle('lang-en');
+  b.textContent=en?'VI':'EN'; document.documentElement.lang=en?'en':'vi';};
+
+/* ── 28-day chart ── */
+const data=[["Jul 29",6,226],["Jul 30",1,251],["Jul 31",0,192],["Aug 1",0,170],["Aug 2",2,200],
+["Aug 3",9,237],["Aug 4",12,267],["Aug 5",10,306],["Aug 6",8,250],["Aug 7",8,205],["Aug 8",1,164],
+["Aug 9",7,220],["Aug 10",3,308],["Aug 11",6,279],["Aug 12",7,229],["Aug 13",16,322],["Aug 14",7,161],
+["Aug 15",2,141],["Aug 16",5,199],["Aug 17",7,245],["Aug 18",11,283],["Aug 19",8,218],["Aug 20",8,311],
+["Aug 21",3,174],["Aug 22",1,128],["Aug 23",7,186],["Aug 24",8,221],["Aug 25",7,268]];
+
+const W=1000,H=260,PL=40,PR=40,PT=16,PB=34;
+const iw=W-PL-PR, ih=H-PT-PB;
+const maxI=Math.max(...data.map(d=>d[2]))*1.05;
+const maxC=Math.max(...data.map(d=>d[1]))*1.15;
+const bw=iw/data.length;
+const x=i=>PL+i*bw, xc=i=>PL+i*bw+bw/2;
+const yI=v=>PT+ih-(v/maxI)*ih, yC=v=>PT+ih-(v/maxC)*ih;
+const esc=s=>String(s).replace(/&/g,'&amp;').replace(/</g,'&lt;');
+let s='';
+
+/* gridlines */
+for(let g=0;g<=4;g++){const y=PT+ih-(g/4)*ih;
+  s+=`<line x1="${PL}" y1="${y}" x2="${W-PR}" y2="${y}" stroke="#2E3421" stroke-width="1"/>`;
+  s+=`<text x="${PL-8}" y="${y+4}" fill="#727B60" font-size="11" text-anchor="end">${Math.round(g/4*maxC)}</text>`;
+  s+=`<text x="${W-PR+8}" y="${y+4}" fill="#727B60" font-size="11">${Math.round(g/4*maxI)}</text>`;}
+
+/* impression bars */
+data.forEach((d,i)=>{const y=yI(d[2]);
+  s+=`<rect x="${x(i)+2}" y="${y}" width="${bw-4}" height="${PT+ih-y}" fill="#555E3C" rx="2"><title>${esc(d[0])}: ${d[2]} impressions</title></rect>`;});
+
+/* clicks line + dots */
+s+=`<polyline fill="none" stroke="#86906C" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" points="${data.map((d,i)=>xc(i)+','+yC(d[1])).join(' ')}"/>`;
+data.forEach((d,i)=>{
+  s+=`<circle cx="${xc(i)}" cy="${yC(d[1])}" r="3.2" fill="#12150C" stroke="#86906C" stroke-width="2"><title>${esc(d[0])}: ${d[1]} clicks</title></circle>`;});
+
+/* x labels every 4th */
+data.forEach((d,i)=>{ if(i%4===0||i===data.length-1)
+  s+=`<text x="${xc(i)}" y="${H-12}" fill="#727B60" font-size="11" text-anchor="middle">${esc(d[0].replace('Aug ','8/').replace('Jul ','7/'))}</text>`;});
+
+document.getElementById('chart').innerHTML=s;
+</script>
+
+</body>
+</html>
