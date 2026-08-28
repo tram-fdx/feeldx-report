@@ -159,6 +159,13 @@ openLink.classList.toggle('off', !TABS[0].url);
 
 const start = TABS.findIndex(t => t.key === location.hash.slice(1));
 if (start > 0) show(start);
+
+/* Back/forward and links pasted into an already-open tab change only the
+   hash, which does not reload the page — so react to it explicitly. */
+window.addEventListener('hashchange', () => {
+  const i = TABS.findIndex(t => t.key === location.hash.slice(1));
+  if (i >= 0 && !panes[i].classList.contains('on')) show(i);
+});
 </script>
 
 </body>
