@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FeelDX SEO Weekly</title>
+<style>
+  :root{
+    --ink:#12150C; --card:#1B1F13; --card2:#232819; --line:#2E3421;
+    --accent:#86906C; --accent-deep:#555E3C; --sage:#CBD0C0;
+    --text:#E7EAE1; --muted:#98A183; --dim:#727B60;
+    --up:#7FB069; --down:#D9705C; --warn:#D9B26A;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ink);color:var(--text);
+       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+       font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1000px;margin:0 auto;padding:0 20px 80px}
+  header{border-bottom:1px solid var(--line);background:#171B10;padding:22px 0;margin-bottom:28px}
+  .hrow{max-width:1000px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .logo{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(134,144,108,.2)}
+  h1{font-size:19px;margin:0;font-weight:600}
+  .sub{color:var(--muted);font-size:13px;margin-top:2px}
+  .spacer{flex:1}
+  .langbtn{background:var(--card2);border:1px solid var(--line);color:var(--muted);
+           padding:6px 13px;border-radius:7px;cursor:pointer;font-size:12.5px;font-weight:600}
+  .langbtn:hover{color:var(--text);border-color:var(--accent-deep)}
+
+  h2{font-size:15px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+     color:var(--accent);margin:42px 0 4px}
+  .h2sub{color:var(--dim);font-size:13px;margin:0 0 16px}
+
+  .grid{display:grid;gap:12px}
+  .k3{grid-template-columns:repeat(3,1fr)}
+  @media(max-width:640px){.k3{grid-template-columns:1fr}}
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .klabel{color:var(--muted);font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+  .kval{font-size:32px;font-weight:700;letter-spacing:-.02em;margin:6px 0 2px;font-variant-numeric:tabular-nums}
+  .kprev{color:var(--dim);font-size:12.5px}
+  .delta{font-size:13px;font-weight:700}
+  .up{color:var(--up)} .down{color:var(--down)}
+
+  table{width:100%;border-collapse:collapse;font-size:13.5px;font-variant-numeric:tabular-nums}
+  th{text-align:left;color:var(--muted);font-weight:600;font-size:11.5px;letter-spacing:.05em;
+     text-transform:uppercase;padding:10px;border-bottom:1px solid var(--line);white-space:nowrap}
+  td{padding:10px;border-bottom:1px solid rgba(46,52,33,.6)}
+  tr:last-child td{border-bottom:0}
+  tbody tr:hover{background:rgba(134,144,108,.06)}
+  .num{text-align:right;white-space:nowrap}
+  .q{color:var(--sage)}
+  .tblwrap{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow-x:auto}
+  .cur{background:rgba(134,144,108,.1)}
+  .cur td{font-weight:600}
+
+  .note{background:var(--card2);border-left:3px solid var(--accent-deep);border-radius:0 9px 9px 0;
+        padding:13px 16px;color:var(--muted);font-size:13.5px;margin-top:12px}
+  .note b{color:var(--text)}
+  .warnbox{border-left-color:var(--warn)}
+
+  svg{display:block;width:100%;height:auto}
+  .legend{display:flex;gap:18px;color:var(--muted);font-size:12px;margin-top:10px;flex-wrap:wrap}
+  .sw{display:inline-block;width:11px;height:11px;border-radius:3px;vertical-align:-1px;margin-right:6px}
+
+  .check{list-style:none;padding:0;margin:0}
+  .check li{background:var(--card);border:1px solid var(--line);border-radius:11px;
+            padding:13px 16px;margin-bottom:9px;display:flex;gap:13px;align-items:flex-start;font-size:14px}
+  .cb{flex:none;width:20px;height:20px;border-radius:6px;border:2px solid var(--accent-deep);margin-top:2px}
+  .cd{color:var(--muted);font-size:13.3px;margin-top:2px}
+
+  footer{margin-top:52px;padding-top:20px;border-top:1px solid var(--line);
+         color:var(--dim);font-size:12.5px;line-height:1.8}
+  .en{display:none}
+  body.lang-en .vi{display:none}
+  body.lang-en .en{display:block}
+  body.lang-en span.en,body.lang-en b.en{display:inline}
+</style>
+</head>
+<body class="lang-vi">
+
+<header>
+  <div class="hrow">
+    <span class="logo"></span>
+    <div>
+      <h1>FeelDX &middot; SEO Weekly</h1>
+      <div class="sub">
+        <span class="vi">Tuần 19–25/08/2026 &middot; so với tuần 12–18/08</span>
+        <span class="en">Week 19–25 Aug 2026 &middot; vs week 12–18 Aug</span>
+      </div>
+    </div>
+    <span class="spacer"></span>
+    <button class="langbtn" id="lang">EN</button>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <h2><span class="vi">Tuần này</span><span class="en">This week</span></h2>
+  <p class="h2sub">
+    <span class="vi">Google Search Console &middot; feeldx.com &middot; GSC trễ ~3 ngày nên tuần gần nhất kết thúc 25/08.</span>
+    <span class="en">Google Search Console &middot; feeldx.com &middot; GSC lags ~3 days, so the latest full week ends 25 Aug.</span>
+  </p>
+
+  <div class="grid k3">
+    <div class="card">
+      <div class="klabel">Clicks</div>
+      <div class="kval">42</div>
+      <div><span class="delta down">▼ −23.6%</span> <span class="kprev">· <span class="vi">tuần trước</span><span class="en">prev week</span> 55</span></div>
+    </div>
+    <div class="card">
+      <div class="klabel">Impressions</div>
+      <div class="kval">1,506</div>
+      <div><span class="delta down">▼ −4.7%</span> <span class="kprev">· <span class="vi">tuần trước</span><span class="en">prev week</span> 1,580</span></div>
+    </div>
+    <div class="card">
+      <div class="klabel">CTR</div>
+      <div class="kval">2.79%</div>
+      <div><span class="delta down">▼ −0.69pp</span> <span class="kprev">· <span class="vi">tuần trước</span><span class="en">prev week</span> 3.48%</span></div>
+    </div>
+  </div>
+
+  <div class="note warnbox">
+    <span class="vi"><b>Tuần này giảm, nhưng đừng vội kết luận.</b> Tuần trước (12–18/08) chứa ngày 13/08 —
+    ngày tốt nhất cả tháng với 16 clicks, gần gấp ba mức trung bình ngày. So với một đỉnh bất thường thì tuần
+    nào cũng trông tệ. So với <b>trung bình 4 tuần (42.5 clicks/tuần)</b>, tuần này đúng bằng mức bình thường.</span>
+    <span class="en"><b>Down this week, but hold the conclusion.</b> Last week (12–18 Aug) contained 13 Aug — the best
+    day of the month at 16 clicks, nearly triple the daily average. Measured against a one-off spike, any week looks
+    weak. Measured against the <b>four-week average of 42.5 clicks/week</b>, this week is exactly normal.</span>
+  </div>
+
+  <!-- ══ 4 WEEK TREND ══ -->
+  <h2><span class="vi">Bốn tuần gần nhất</span><span class="en">Last four weeks</span></h2>
+  <div class="tblwrap">
+    <table>
+      <thead><tr>
+        <th><span class="vi">Tuần</span><span class="en">Week</span></th>
+        <th class="num">Clicks</th><th class="num">Impressions</th><th class="num">CTR</th>
+        <th><span class="vi">Ghi chú</span><span class="en">Note</span></th>
+      </tr></thead>
+      <tbody>
+        <tr class="cur"><td class="q">19–25/08 <span style="color:var(--accent)">◀</span></td><td class="num">42</td><td class="num">1,506</td><td class="num">2.79%</td><td style="color:var(--muted)"><span class="vi">bằng mức trung bình</span><span class="en">on the average</span></td></tr>
+        <tr><td class="q">12–18/08</td><td class="num">55</td><td class="num">1,580</td><td class="num">3.48%</td><td style="color:var(--up)"><span class="vi">tuần tốt nhất — có đỉnh 13/08</span><span class="en">best week — contains the 13 Aug spike</span></td></tr>
+        <tr><td class="q">05–11/08</td><td class="num">43</td><td class="num">1,732</td><td class="num">2.48%</td><td style="color:var(--muted)"><span class="vi">impressions cao nhất, CTR thấp</span><span class="en">highest impressions, weak CTR</span></td></tr>
+        <tr><td class="q">29/07–04/08</td><td class="num">30</td><td class="num">1,543</td><td class="num">1.94%</td><td style="color:var(--down)"><span class="vi">tuần yếu nhất — 2 ngày 0 click</span><span class="en">weakest week — two zero-click days</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="note">
+    <span class="vi"><b>Xu hướng thật nằm ở CTR, không phải clicks.</b> Impressions bốn tuần gần như đứng yên
+    (1.506 – 1.732), nhưng CTR đi từ <b>1.94% → 2.48% → 3.48% → 2.79%</b>. Đó là hướng đúng: cùng một lượng hiển
+    thị nhưng ngày càng nhiều người bấm vào. Cần thêm 2–3 tuần nữa mới khẳng định được đây là xu hướng chứ không
+    phải dao động ngẫu nhiên.</span>
+    <span class="en"><b>The real trend is in CTR, not clicks.</b> Impressions have been flat across four weeks
+    (1,506 – 1,732), while CTR moved <b>1.94% → 2.48% → 3.48% → 2.79%</b>. That is the right direction: the same
+    visibility is converting into more clicks. Another two to three weeks are needed before calling it a trend
+    rather than noise.</span>
+  </div>
+
+  <!-- ══ DAILY ══ -->
+  <h2><span class="vi">Từng ngày trong tuần</span><span class="en">Day by day</span></h2>
+  <div class="card">
+    <svg viewBox="0 0 800 220" role="img" aria-label="Daily clicks and impressions this week">
+      <g id="chart"></g>
+    </svg>
+    <div class="legend">
+      <span><span class="sw" style="background:#555E3C"></span>Impressions</span>
+      <span><span class="sw" style="background:#86906C"></span>Clicks</span>
+    </div>
+  </div>
+  <div class="note">
+    <span class="vi"><b>22/08 (thứ Bảy) chỉ có 1 click trên 128 impressions</b> — CTR 0.8%, thấp nhất tuần.
+    Cuối tuần luôn yếu với site B2B như FeelDX: người ra quyết định là builder và tender manager, họ tìm kiếm
+    trong giờ làm việc. Không cần hành động gì.</span>
+    <span class="en"><b>22 Aug (Saturday) drew 1 click from 128 impressions</b> — 0.8% CTR, the week's low.
+    Weekends are always soft for a B2B site like FeelDX: the decision-makers are builders and tender managers who
+    search during working hours. No action needed.</span>
+  </div>
+
+  <!-- ══ WATCHLIST ══ -->
+  <h2><span class="vi">Theo dõi tuần tới</span><span class="en">Watch next week</span></h2>
+  <p class="h2sub">
+    <span class="vi">Ba chỉ số cần kiểm tra lại vào lần quét sau.</span>
+    <span class="en">Three things to re-check on the next scan.</span>
+  </p>
+  <ul class="check">
+    <li><span class="cb"></span><div>
+      <div><span class="vi">CTR có giữ được trên 2.5% không</span><span class="en">Does CTR hold above 2.5%</span></div>
+      <div class="cd"><span class="vi">Nếu giữ được ba tuần liên tiếp thì mức cải thiện là thật, không phải dao động.</span>
+      <span class="en">Three consecutive weeks above it would make the improvement real rather than noise.</span></div>
+    </div></li>
+    <li><span class="cb"></span><div>
+      <div><span class="vi">/faq đã được khôi phục chưa</span><span class="en">Has /faq been restored</span></div>
+      <div class="cd"><span class="vi">Trang này đang 404. Nó có thời gian trên trang cao nhất site (2 phút 03 giây) — xem chi tiết ở tab Website Audit.</span>
+      <span class="en">The page is currently 404 and holds the site's highest time-on-page (2m 03s) — see the Website Audit tab.</span></div>
+    </div></li>
+    <li><span class="cb"></span><div>
+      <div><span class="vi">Sitemap đã nộp lên GSC chưa</span><span class="en">Has the sitemap been submitted to GSC</span></div>
+      <div class="cd"><span class="vi">Sau khi nộp, theo dõi xem số trang được index có nhích lên khỏi mốc 75 không.</span>
+      <span class="en">Once submitted, watch whether indexed pages move up from 75.</span></div>
+    </div></li>
+    <li><span class="cb"></span><div>
+      <div><span class="vi">Cụm "project controls" có lên trang 1 không</span><span class="en">Is the "project controls" cluster reaching page one</span></div>
+      <div class="cd"><span class="vi">"project control plan" đang ở vị trí 15.1 với 95 impressions — mục tiêu gần nhất và dễ nhất.</span>
+      <span class="en">"project control plan" sits at position 15.1 on 95 impressions — the nearest and easiest target.</span></div>
+    </div></li>
+  </ul>
+
+  <footer>
+    <div><b><span class="vi">Nguồn dữ liệu</span><span class="en">Data source</span></b></div>
+    <div>Google Search Console — <code>https://www.feeldx.com/</code> · <span class="vi">breakdown theo ngày, đọc trực tiếp qua Chrome ngày 28/08/2026.</span><span class="en">day breakdown, read directly via Chrome on 28 Aug 2026.</span></div>
+    <div style="margin-top:10px">
+      <span class="vi">Các con số theo tuần được cộng từ dữ liệu ngày thật của GSC. Không có tuần nào được ước lượng.</span>
+      <span class="en">Weekly figures are summed from GSC's real daily rows. No week is estimated.</span>
+    </div>
+  </footer>
+</div>
+
+<script>
+const b=document.getElementById('lang');
+b.onclick=()=>{const en=document.body.classList.toggle('lang-en');
+  b.textContent=en?'VI':'EN'; document.documentElement.lang=en?'en':'vi';};
+
+const data=[["19/08",8,218],["20/08",8,311],["21/08",3,174],["22/08",1,128],
+            ["23/08",7,186],["24/08",8,221],["25/08",7,268]];
+const W=800,H=220,PL=44,PR=44,PT=16,PB=32;
+const iw=W-PL-PR, ih=H-PT-PB;
+const maxI=Math.max(...data.map(d=>d[2]))*1.08;
+const maxC=Math.max(...data.map(d=>d[1]))*1.2;
+const bw=iw/data.length;
+const x=i=>PL+i*bw, xc=i=>PL+i*bw+bw/2;
+const yI=v=>PT+ih-(v/maxI)*ih, yC=v=>PT+ih-(v/maxC)*ih;
+let s='';
+for(let g=0;g<=4;g++){const y=PT+ih-(g/4)*ih;
+  s+=`<line x1="${PL}" y1="${y}" x2="${W-PR}" y2="${y}" stroke="#2E3421" stroke-width="1"/>`;
+  s+=`<text x="${PL-8}" y="${y+4}" fill="#727B60" font-size="11" text-anchor="end">${Math.round(g/4*maxC)}</text>`;
+  s+=`<text x="${W-PR+8}" y="${y+4}" fill="#727B60" font-size="11">${Math.round(g/4*maxI)}</text>`;}
+data.forEach((d,i)=>{const y=yI(d[2]);
+  s+=`<rect x="${x(i)+9}" y="${y}" width="${bw-18}" height="${PT+ih-y}" fill="#555E3C" rx="3"><title>${d[0]}: ${d[2]} impressions</title></rect>`;});
+s+=`<polyline fill="none" stroke="#86906C" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" points="${data.map((d,i)=>xc(i)+','+yC(d[1])).join(' ')}"/>`;
+data.forEach((d,i)=>{
+  s+=`<circle cx="${xc(i)}" cy="${yC(d[1])}" r="4" fill="#12150C" stroke="#86906C" stroke-width="2.5"><title>${d[0]}: ${d[1]} clicks</title></circle>`;
+  s+=`<text x="${xc(i)}" y="${H-10}" fill="#727B60" font-size="11" text-anchor="middle">${d[0]}</text>`;});
+document.getElementById('chart').innerHTML=s;
+</script>
+
+</body>
+</html>
