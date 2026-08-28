@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FeelDX Website Audit</title>
+<style>
+  :root{
+    --ink:#12150C; --card:#1B1F13; --card2:#232819; --line:#2E3421;
+    --accent:#86906C; --accent-deep:#555E3C; --sage:#CBD0C0;
+    --text:#E7EAE1; --muted:#98A183; --dim:#727B60;
+    --up:#7FB069; --crit:#D9705C; --warn:#D9B26A; --info:#6A96A8;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ink);color:var(--text);
+       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+       font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 20px 80px}
+  header{border-bottom:1px solid var(--line);background:#171B10;padding:22px 0;margin-bottom:28px}
+  .hrow{max-width:1160px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .logo{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(134,144,108,.2)}
+  h1{font-size:19px;margin:0;font-weight:600}
+  .sub{color:var(--muted);font-size:13px;margin-top:2px}
+  .spacer{flex:1}
+  .langbtn{background:var(--card2);border:1px solid var(--line);color:var(--muted);
+           padding:6px 13px;border-radius:7px;cursor:pointer;font-size:12.5px;font-weight:600}
+  .langbtn:hover{color:var(--text);border-color:var(--accent-deep)}
+
+  h2{font-size:15px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+     color:var(--accent);margin:44px 0 4px}
+  .h2sub{color:var(--dim);font-size:13px;margin:0 0 16px}
+
+  .grid{display:grid;gap:12px}
+  .k4{grid-template-columns:repeat(4,1fr)}
+  .k3{grid-template-columns:repeat(3,1fr)}
+  .k2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:860px){.k4,.k3{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.k4,.k3,.k2{grid-template-columns:1fr}}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .klabel{color:var(--muted);font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+  .kval{font-size:30px;font-weight:700;letter-spacing:-.02em;margin:6px 0 2px;font-variant-numeric:tabular-nums}
+  .kprev{color:var(--dim);font-size:12.5px}
+  .delta{font-size:13px;font-weight:700}
+  .up{color:var(--up)} .down{color:var(--crit)}
+
+  /* health score ring */
+  .score{display:flex;align-items:center;gap:24px;flex-wrap:wrap}
+  .ring{flex:none}
+  .scoretext{flex:1;min-width:240px;color:var(--muted);font-size:14px}
+
+  /* issue rows */
+  .issue{background:var(--card);border:1px solid var(--line);border-left-width:4px;
+         border-radius:0 12px 12px 0;padding:15px 18px;margin-bottom:11px}
+  .sev-crit{border-left-color:var(--crit)}
+  .sev-warn{border-left-color:var(--warn)}
+  .sev-info{border-left-color:var(--info)}
+  .ihead{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:5px}
+  .itag{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
+        padding:3px 8px;border-radius:20px;white-space:nowrap}
+  .t-crit{background:rgba(217,112,92,.18);color:var(--crit)}
+  .t-warn{background:rgba(217,178,106,.16);color:var(--warn)}
+  .t-info{background:rgba(106,150,168,.16);color:var(--info)}
+  .ititle{font-weight:600;font-size:15px}
+  .ibody{color:var(--muted);font-size:13.8px}
+  .ibody b{color:var(--text)}
+  .fix{margin-top:9px;padding-top:9px;border-top:1px solid var(--line);
+       color:var(--sage);font-size:13.3px}
+  .fix::before{content:"→ ";color:var(--accent);font-weight:700}
+  code{background:var(--card2);border:1px solid var(--line);padding:1px 6px;
+       border-radius:5px;font-size:12.5px;color:var(--accent)}
+
+  table{width:100%;border-collapse:collapse;font-size:13.5px;font-variant-numeric:tabular-nums}
+  th{text-align:left;color:var(--muted);font-weight:600;font-size:11.5px;letter-spacing:.05em;
+     text-transform:uppercase;padding:9px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+  td{padding:9px 10px;border-bottom:1px solid rgba(46,52,33,.6)}
+  tr:last-child td{border-bottom:0}
+  tbody tr:hover{background:rgba(134,144,108,.06)}
+  .num{text-align:right;white-space:nowrap}
+  .q{color:var(--sage)}
+  .tblwrap{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow-x:auto}
+  .pill{display:inline-block;font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:20px;
+        letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+  .p-ok{background:rgba(127,176,105,.16);color:var(--up)}
+  .p-warn{background:rgba(217,178,106,.16);color:var(--warn)}
+  .p-bad{background:rgba(217,112,92,.18);color:var(--crit)}
+
+  .note{background:var(--card2);border-left:3px solid var(--accent-deep);border-radius:0 9px 9px 0;
+        padding:13px 16px;color:var(--muted);font-size:13.5px;margin-top:12px}
+  .note b{color:var(--text)}
+  .warnbox{border-left-color:var(--warn)}
+  .critbox{border-left-color:var(--crit)}
+
+  svg{display:block;max-width:100%;height:auto}
+  .bars{margin-top:4px}
+  .barrow{display:flex;align-items:center;gap:12px;margin-bottom:9px;font-size:13.5px}
+  .bl{width:120px;flex:none;color:var(--sage)}
+  .bt{flex:1;background:var(--card2);border-radius:5px;height:22px;overflow:hidden}
+  .bf{height:100%;border-radius:5px}
+  .bn{width:120px;flex:none;text-align:right;color:var(--muted);font-variant-numeric:tabular-nums;font-size:12.5px}
+
+  footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
+         color:var(--dim);font-size:12.5px;line-height:1.8}
+  .en{display:none}
+  body.lang-en .vi{display:none}
+  body.lang-en .en{display:block}
+  body.lang-en span.en,body.lang-en b.en{display:inline}
+</style>
+</head>
+<body class="lang-vi">
+
+<header>
+  <div class="hrow">
+    <span class="logo"></span>
+    <div>
+      <h1>FeelDX &middot; Website Audit</h1>
+      <div class="sub">
+        <span class="vi">feeldx.com &middot; quét ngày 28/08/2026 &middot; dữ liệu lưu lượng 29/07 – 25/08/2026</span>
+        <span class="en">feeldx.com &middot; crawled 28 Aug 2026 &middot; traffic window 29 Jul – 25 Aug 2026</span>
+      </div>
+    </div>
+    <span class="spacer"></span>
+    <button class="langbtn" id="lang">EN</button>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- ══ SCORE ══ -->
+  <h2><span class="vi">Tình trạng tổng thể</span><span class="en">Overall health</span></h2>
+  <div class="card score">
+    <svg class="ring" width="150" height="150" viewBox="0 0 150 150">
+      <circle cx="75" cy="75" r="62" fill="none" stroke="#232819" stroke-width="14"/>
+      <circle cx="75" cy="75" r="62" fill="none" stroke="#D9B26A" stroke-width="14"
+              stroke-linecap="round" stroke-dasharray="389.6" stroke-dashoffset="140"
+              transform="rotate(-90 75 75)"/>
+      <text x="75" y="70" text-anchor="middle" fill="#E7EAE1" font-size="38" font-weight="700">64</text>
+      <text x="75" y="94" text-anchor="middle" fill="#98A183" font-size="12" letter-spacing="1">/ 100</text>
+    </svg>
+    <div class="scoretext">
+      <span class="vi"><b style="color:var(--text)">Nền tảng kỹ thuật ổn, nhưng có ba lỗi đang chảy máu lưu lượng.</b>
+      Site không có lỗi nghiêm trọng về hạ tầng: HTTPS chuẩn, robots.txt mở, không chặn crawl, canonical đúng
+      trên phần lớn trang. Điểm bị trừ đến từ những thứ cụ thể và sửa được trong ngày: một URL trong sitemap
+      trả 404, một trang nháp bị public, và sitemap chưa từng được nộp lên Search Console.</span>
+      <span class="en"><b style="color:var(--text)">The technical foundation is sound, but three defects are leaking traffic.</b>
+      Nothing is structurally broken: HTTPS is clean, robots.txt is open, nothing blocks crawling, and canonicals
+      are correct on most pages. The deductions come from specific, same-day fixes: a sitemap URL returning 404,
+      a draft page left public, and a sitemap that has never been submitted to Search Console.</span>
+    </div>
+  </div>
+
+  <div class="grid k4" style="margin-top:12px">
+    <div class="card">
+      <div class="klabel"><span class="vi">Trang được index</span><span class="en">Pages indexed</span></div>
+      <div class="kval">75</div>
+      <div class="kprev"><span class="vi">trên 90 URL trong sitemap</span><span class="en">of 90 URLs in sitemap</span></div>
+    </div>
+    <div class="card">
+      <div class="klabel"><span class="vi">Không được index</span><span class="en">Not indexed</span></div>
+      <div class="kval" style="color:var(--warn)">22</div>
+      <div class="kprev"><span class="vi">2 lý do</span><span class="en">2 reasons</span></div>
+    </div>
+    <div class="card">
+      <div class="klabel"><span class="vi">Lỗi tìm thấy</span><span class="en">Issues found</span></div>
+      <div class="kval">8</div>
+      <div class="kprev"><span style="color:var(--crit)">3 critical</span> · <span style="color:var(--warn)">3 warning</span> · <span style="color:var(--info)">2 info</span></div>
+    </div>
+    <div class="card">
+      <div class="klabel"><span class="vi">Sitemap nộp lên GSC</span><span class="en">Sitemaps in GSC</span></div>
+      <div class="kval" style="color:var(--crit)">0</div>
+      <div class="kprev"><span class="vi">file tồn tại nhưng chưa nộp</span><span class="en">file exists but not submitted</span></div>
+    </div>
+  </div>
+
+  <!-- ══ ISSUES ══ -->
+  <h2><span class="vi">Lỗi cần sửa</span><span class="en">Issues to fix</span></h2>
+  <p class="h2sub">
+    <span class="vi">Xếp theo mức độ nghiêm trọng. Mỗi lỗi đều đã được kiểm chứng trực tiếp trên site.</span>
+    <span class="en">Ordered by severity. Every issue below was verified directly against the live site.</span>
+  </p>
+
+  <div class="issue sev-crit">
+    <div class="ihead"><span class="itag t-crit">critical</span>
+      <span class="ititle"><span class="vi">Trang /faq trả về 404 nhưng vẫn nằm trong sitemap</span><span class="en">/faq returns 404 but is still in the sitemap</span></span></div>
+    <div class="ibody">
+      <span class="vi"><code>https://www.feeldx.com/faq</code> hiện trả <b>HTTP 404 — "PAGE NOT FOUND"</b>. Nhưng URL này
+      vẫn được khai báo trong <code>sitemap.xml</code>, và GA4 ghi nhận <b>27 lượt xem trong kỳ, 64 lượt trong 7
+      ngày gần nhất</b>, với thời gian trên trang <b>2 phút 03 giây</b> — mức tương tác cao nhất toàn site.
+      Nghĩa là trang FAQ mới hỏng gần đây, và người dùng thật vẫn đang tìm đến nó.</span>
+      <span class="en"><code>https://www.feeldx.com/faq</code> currently returns <b>HTTP 404 — "PAGE NOT FOUND"</b>,
+      yet the URL is still declared in <code>sitemap.xml</code>, and GA4 recorded <b>27 views in the period and 64
+      in the last 7 days</b> at <b>2m 03s</b> average engagement — the highest on the entire site. The FAQ page
+      broke recently and real users are still trying to reach it.</span>
+    </div>
+    <div class="fix"><span class="vi">Khôi phục trang FAQ, hoặc nếu đã bỏ hẳn thì 301 sang trang thay thế và gỡ khỏi sitemap. Đây là việc gấp nhất trong danh sách — trang có tương tác tốt nhất site đang hỏng.</span>
+    <span class="en">Restore the FAQ page, or if it was retired deliberately, 301 it to a replacement and remove it from the sitemap. This is the most urgent item here — the site's best-engaging page is down.</span></div>
+  </div>
+
+  <div class="issue sev-crit">
+    <div class="ihead"><span class="itag t-crit">critical</span>
+      <span class="ititle"><span class="vi">Sitemap chưa bao giờ được nộp lên Search Console</span><span class="en">Sitemap has never been submitted to Search Console</span></span></div>
+    <div class="ibody">
+      <span class="vi">File <code>sitemap.xml</code> tồn tại, hợp lệ, và đã được khai báo đúng trong
+      <code>robots.txt</code>. Nhưng mục Sitemaps trong GSC hiển thị <b>0 sitemap đã nộp</b>. Google vẫn tìm được
+      site qua robots.txt, nhưng bạn mất toàn bộ báo cáo phủ sóng theo sitemap và mất tín hiệu ưu tiên crawl.</span>
+      <span class="en">The <code>sitemap.xml</code> file exists, is valid, and is correctly declared in
+      <code>robots.txt</code>. But the Sitemaps section of GSC shows <b>0 submitted sitemaps</b>. Google can still
+      discover the site through robots.txt, but you lose sitemap-level coverage reporting and the crawl-priority signal.</span>
+    </div>
+    <div class="fix"><span class="vi">GSC → Sitemaps → nhập <code>sitemap.xml</code> → Submit. Mất chưa tới một phút.</span>
+    <span class="en">GSC → Sitemaps → enter <code>sitemap.xml</code> → Submit. Under a minute of work.</span></div>
+  </div>
+
+  <div class="issue sev-crit">
+    <div class="ihead"><span class="itag t-crit">critical</span>
+      <span class="ititle"><span class="vi">Trang nháp /studio-draft đang public và được submit để index</span><span class="en">Draft page /studio-draft is public and submitted for indexing</span></span></div>
+    <div class="ibody">
+      <span class="vi"><code>/studio-draft</code> trả <b>HTTP 200</b>, không có <code>noindex</code>, không có
+      meta description, title chỉ vỏn vẹn <b>"Studio"</b> (6 ký tự) — và nó <b>nằm trong sitemap.xml</b>. Đây là
+      bản nháp gần như trùng nội dung với <code>/studio</code>, tạo rủi ro trùng lặp và làm loãng tín hiệu xếp hạng.</span>
+      <span class="en"><code>/studio-draft</code> returns <b>HTTP 200</b>, carries no <code>noindex</code>, has no
+      meta description, and has a six-character title — <b>"Studio"</b> — and it is <b>listed in sitemap.xml</b>.
+      It is a near-duplicate of <code>/studio</code>, creating duplication risk and splitting ranking signals.</span>
+    </div>
+    <div class="fix"><span class="vi">Gỡ khỏi sitemap và thêm <code>noindex</code>, hoặc xoá hẳn trang nếu không còn dùng.</span>
+    <span class="en">Remove it from the sitemap and add <code>noindex</code>, or delete the page outright if it is no longer needed.</span></div>
+  </div>
+
+  <div class="issue sev-warn">
+    <div class="ihead"><span class="itag t-warn">warning</span>
+      <span class="ititle"><span class="vi">/aec thiếu canonical, thiếu H1, và dùng title trùng trang chủ</span><span class="en">/aec has no canonical, no H1, and reuses the homepage title</span></span></div>
+    <div class="ibody">
+      <span class="vi">Trang <code>/aec</code> không có thẻ <code>canonical</code>, không có thẻ <code>H1</code> nào,
+      và title của nó là <b>bản sao nguyên văn title trang chủ</b> (89 ký tự). Điều này giải thích nghịch lý trong
+      báo cáo SEO: trang xếp hạng <b>vị trí 1.9</b> nhưng CTR chỉ <b>0.4%</b> — người tìm kiếm nhìn thấy đúng
+      dòng tiêu đề của trang chủ và không hiểu trang này nói về gì.</span>
+      <span class="en">The <code>/aec</code> page carries no <code>canonical</code> tag, contains no <code>H1</code>
+      at all, and its title is a <b>verbatim copy of the homepage title</b> (89 characters). This explains the paradox
+      in the SEO report: the page ranks at <b>position 1.9</b> yet earns just <b>0.4% CTR</b> — searchers see the
+      homepage headline and cannot tell what the page is about.</span>
+    </div>
+    <div class="fix"><span class="vi">Viết title riêng cho /aec (55–60 ký tự, nói rõ AEC industry), thêm H1, thêm canonical tự trỏ.</span>
+    <span class="en">Write a dedicated title for /aec (55–60 characters, naming the AEC industry), add an H1, and add a self-referencing canonical.</span></div>
+  </div>
+
+  <div class="issue sev-warn">
+    <div class="ihead"><span class="itag t-warn">warning</span>
+      <span class="ititle"><span class="vi">20 trang bị "Crawled – currently not indexed"</span><span class="en">20 pages sit in "Crawled – currently not indexed"</span></span></div>
+    <div class="ibody">
+      <span class="vi">Google đã đọc 20 trang này rồi <b>chủ động quyết định không đưa vào index</b>. Thêm 2 trang
+      nữa rơi vào "Duplicate without user-selected canonical". Với một site có 77 bài news, con số này thường
+      chỉ ra nội dung mỏng hoặc nhiều bài trùng ý nhau — mà đúng là site có nhiều bài rất giống nhau về 3D
+      rendering và 4D/5D BIM.</span>
+      <span class="en">Google read these 20 pages and <b>actively chose not to index them</b>. A further 2 fall under
+      "Duplicate without user-selected canonical". On a site with 77 news articles this usually points to thin content
+      or heavy topical overlap — and the site does carry many near-identical pieces on 3D rendering and 4D/5D BIM.</span>
+    </div>
+    <div class="fix"><span class="vi">Xem danh sách 20 URL trong GSC → Pages. Gộp các bài trùng ý thành một bài sâu hơn, hoặc noindex những bài không còn giá trị.</span>
+    <span class="en">Pull the 20 URLs from GSC → Pages. Consolidate overlapping articles into one deeper piece, or noindex the ones no longer worth keeping.</span></div>
+  </div>
+
+  <div class="issue sev-warn">
+    <div class="ihead"><span class="itag t-warn">warning</span>
+      <span class="ititle"><span class="vi">Sitemap chứa một URL hỏng và không có lastmod</span><span class="en">Sitemap contains a malformed URL and carries no lastmod</span></span></div>
+    <div class="ibody">
+      <span class="vi">Trong 90 mục của sitemap có một mục <code>&lt;loc&gt;//&lt;/loc&gt;</code> — URL rỗng, không hợp lệ.
+      Ngoài ra <b>không mục nào có thẻ <code>&lt;lastmod&gt;</code></b>; tất cả đều dùng chung
+      <code>changefreq weekly</code> và <code>priority 0.8</code>. Google bỏ qua priority, và không có lastmod thì
+      không có tín hiệu nào cho biết bài nào vừa cập nhật.</span>
+      <span class="en">One of the sitemap's 90 entries is <code>&lt;loc&gt;//&lt;/loc&gt;</code> — an empty, invalid URL.
+      Beyond that, <b>no entry carries a <code>&lt;lastmod&gt;</code> tag</b>; every one repeats
+      <code>changefreq weekly</code> and <code>priority 0.8</code>. Google ignores priority, and without lastmod
+      there is no signal telling it which pages were recently updated.</span>
+    </div>
+    <div class="fix"><span class="vi">Xoá mục <code>//</code> và thêm <code>&lt;lastmod&gt;</code> thật cho từng URL khi generate sitemap.</span>
+    <span class="en">Drop the <code>//</code> entry and emit a real <code>&lt;lastmod&gt;</code> per URL when the sitemap is generated.</span></div>
+  </div>
+
+  <div class="issue sev-info">
+    <div class="ihead"><span class="itag t-info">info</span>
+      <span class="ititle"><span class="vi">Title dài 65–89 ký tự, bị cắt trong kết quả tìm kiếm</span><span class="en">Titles run 65–89 characters and get truncated in search results</span></span></div>
+    <div class="ibody">
+      <span class="vi">Google cắt title ở khoảng <b>60 ký tự</b>. Các trang chính đều vượt: trang chủ và /aec
+      89 ký tự, /our-work 84, /services 82, /technology 79, /project-control 65. Phần đuôi — thường là phần
+      chứa từ khoá phân biệt — không bao giờ hiển thị. Các title cũng dùng ký tự <code>I</code> làm dấu phân
+      cách thay vì <code>|</code>.</span>
+      <span class="en">Google truncates titles at roughly <b>60 characters</b>. Every main page exceeds it: the
+      homepage and /aec at 89 characters, /our-work at 84, /services at 82, /technology at 79, /project-control at 65.
+      The tail — usually the differentiating keyword — never appears. The titles also use the letter <code>I</code>
+      as a separator rather than <code>|</code>.</span>
+    </div>
+    <div class="fix"><span class="vi">Rút mỗi title về 55–60 ký tự, đặt từ khoá quan trọng nhất lên đầu, đổi <code>I</code> thành <code>|</code>.</span>
+    <span class="en">Cut each title to 55–60 characters, front-load the most important keyword, and swap <code>I</code> for <code>|</code>.</span></div>
+  </div>
+
+  <div class="issue sev-info">
+    <div class="ihead"><span class="itag t-info">info</span>
+      <span class="ititle"><span class="vi">Core Web Vitals chưa có dữ liệu</span><span class="en">Core Web Vitals has no data</span></span></div>
+    <div class="ibody">
+      <span class="vi">GSC báo <b>"not enough usage data in the last 90 days"</b> cho cả mobile và desktop. Đây
+      không phải lỗi của site — chỉ là lưu lượng chưa đủ ngưỡng để Google dựng bộ dữ liệu CrUX. Muốn biết tốc
+      độ thật thì phải chạy PageSpeed Insights thủ công (lab data).</span>
+      <span class="en">GSC reports <b>"not enough usage data in the last 90 days"</b> for both mobile and desktop.
+      This is not a site defect — traffic simply hasn't reached the threshold for Google to build a CrUX dataset.
+      Real speed figures need a manual PageSpeed Insights run (lab data).</span>
+    </div>
+  </div>
+
+  <!-- ══ CRAWL TABLE ══ -->
+  <h2><span class="vi">Kiểm tra on-page</span><span class="en">On-page checks</span></h2>
+  <p class="h2sub">
+    <span class="vi">Đọc trực tiếp HTML của từng trang, 28/08/2026.</span>
+    <span class="en">Read directly from each page's HTML, 28 Aug 2026.</span>
+  </p>
+  <div class="tblwrap">
+    <table>
+      <thead><tr>
+        <th>URL</th><th class="num">HTTP</th>
+        <th class="num"><span class="vi">Title</span><span class="en">Title len</span></th>
+        <th class="num">Meta</th><th>H1</th><th>Canonical</th>
+        <th><span class="vi">Trạng thái</span><span class="en">Status</span></th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="q">/</td><td class="num">200</td><td class="num">89</td><td class="num">113</td><td>—</td><td>—</td><td><span class="pill p-warn"><span class="vi">title dài</span><span class="en">long title</span></span></td></tr>
+        <tr><td class="q">/services</td><td class="num">200</td><td class="num">82</td><td class="num">150</td><td>OUR SERVICES</td><td>✓</td><td><span class="pill p-warn"><span class="vi">title dài</span><span class="en">long title</span></span></td></tr>
+        <tr><td class="q">/our-work</td><td class="num">200</td><td class="num">84</td><td class="num">151</td><td>Our Work</td><td>✓</td><td><span class="pill p-warn"><span class="vi">title dài</span><span class="en">long title</span></span></td></tr>
+        <tr><td class="q">/technology</td><td class="num">200</td><td class="num">79</td><td class="num">141</td><td>Our Technology</td><td>✓</td><td><span class="pill p-warn"><span class="vi">title dài</span><span class="en">long title</span></span></td></tr>
+        <tr><td class="q">/project-control</td><td class="num">200</td><td class="num">65</td><td class="num">140</td><td>PROJECT CONTROL AND FORENSIC ANALYSIS</td><td>✓</td><td><span class="pill p-ok">ok</span></td></tr>
+        <tr><td class="q">/aec</td><td class="num">200</td><td class="num">89</td><td class="num">113</td><td style="color:var(--crit)">—</td><td style="color:var(--crit)">—</td><td><span class="pill p-bad"><span class="vi">trùng trang chủ</span><span class="en">duplicates home</span></span></td></tr>
+        <tr><td class="q">/studio-draft</td><td class="num">200</td><td class="num" style="color:var(--crit)">6</td><td class="num" style="color:var(--crit)">0</td><td>The Studio</td><td>✓</td><td><span class="pill p-bad"><span class="vi">nháp bị public</span><span class="en">draft public</span></span></td></tr>
+        <tr><td class="q">/faq</td><td class="num" style="color:var(--crit)">404</td><td class="num">—</td><td class="num">—</td><td style="color:var(--crit)">—</td><td style="color:var(--crit)">—</td><td><span class="pill p-bad">404</span></td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <!-- ══ TRAFFIC ══ -->
+  <h2><span class="vi">Lưu lượng và chất lượng</span><span class="en">Traffic &amp; quality</span></h2>
+  <p class="h2sub">
+    <span class="vi">GA4 · 29/07 – 25/08/2026 so với 01/07 – 28/07/2026</span>
+    <span class="en">GA4 · 29 Jul – 25 Aug 2026 vs 1 Jul – 28 Jul 2026</span>
+  </p>
+  <div class="grid k4">
+    <div class="card">
+      <div class="klabel">Sessions</div>
+      <div class="kval">1,286</div>
+      <div><span class="delta up">▲ +59.4%</span> <span class="kprev">· prev 807</span></div>
+    </div>
+    <div class="card">
+      <div class="klabel"><span class="vi">Tỷ lệ tương tác</span><span class="en">Engagement rate</span></div>
+      <div class="kval">36.6%</div>
+      <div><span class="delta up">▲ +10.9%</span> <span class="kprev">· prev 33.0%</span></div>
+    </div>
+    <div class="card">
+      <div class="klabel">Key events</div>
+      <div class="kval">44</div>
+      <div><span class="delta up">▲ +100%</span> <span class="kprev">· prev 22</span></div>
+    </div>
+    <div class="card">
+      <div class="klabel"><span class="vi">Tỷ lệ key event/phiên</span><span class="en">Key event rate</span></div>
+      <div class="kval">1.01%</div>
+      <div><span class="delta down">▼ −32.0%</span> <span class="kprev">· prev 1.49%</span></div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-top:12px">
+    <div class="klabel" style="margin-bottom:14px"><span class="vi">Phiên theo kênh — và chất lượng thật của từng kênh</span><span class="en">Sessions by channel — and what each is actually worth</span></div>
+    <div class="bars" id="bars"></div>
+  </div>
+
+  <div class="note critbox">
+    <span class="vi"><b>Sessions tăng 59% nhưng đó không phải tin tốt như vẻ ngoài.</b> Toàn bộ mức tăng đến từ
+    Direct (+82%) và Display (+104%) — hai kênh có tương tác tệ nhất: Direct chỉ <b>9 giây</b> trên trang,
+    Display <b>10 giây</b>. Google Analytics còn tự đánh dấu hai bất thường: ngày <b>18/08</b> Direct vọt lên 275
+    phiên với 249 lượt truy cập mới từ Singapore qua Chrome, và ngày <b>06/08</b> lượt xem trang chủ tăng vọt do
+    "Android Webview" từ 3 lên 52 cùng khách từ Nigeria từ 9 lên 54. Đây là dấu hiệu điển hình của traffic
+    không phải người thật.</span>
+    <span class="en"><b>Sessions are up 59%, but that is not the good news it looks like.</b> The entire increase
+    comes from Direct (+82%) and Display (+104%) — the two worst-engaging channels: Direct averages <b>9 seconds</b>
+    on site, Display <b>10 seconds</b>. Google Analytics itself flagged two anomalies: on <b>18 Aug</b> Direct jumped
+    to 275 sessions with 249 new visits from Singapore via Chrome, and on <b>6 Aug</b> homepage views spiked as
+    "Android Webview" traffic went from 3 to 52 and Nigerian visitors from 9 to 54. These are textbook signatures
+    of non-human traffic.</span>
+  </div>
+
+  <div class="note">
+    <span class="vi"><b>Điều này giải thích nghịch lý key event rate.</b> Số key event tăng gấp đôi (22 → 44),
+    nhưng tỷ lệ key event trên mỗi phiên lại <b>giảm 32%</b> — vì mẫu số phình lên bằng traffic rác. Organic
+    Search chỉ chiếm 19% phiên nhưng đóng góp <b>33 trong 44 key event</b>. Nếu chỉ tính các kênh có người
+    thật, hiệu suất site thực ra đang cải thiện.</span>
+    <span class="en"><b>This explains the key-event paradox.</b> Key events doubled (22 → 44), yet the key-event
+    rate per session <b>fell 32%</b> — because the denominator inflated with junk traffic. Organic Search is only
+    19% of sessions but delivers <b>33 of the 44 key events</b>. Measured across the channels carrying real people,
+    site performance is in fact improving.</span>
+  </div>
+
+  <h2><span class="vi">Trang được xem nhiều nhất</span><span class="en">Most-viewed pages</span></h2>
+  <div class="tblwrap">
+    <table>
+      <thead><tr>
+        <th>URL</th><th class="num">Views</th><th class="num">Prev</th><th class="num">Δ</th>
+        <th class="num"><span class="vi">TG/user</span><span class="en">Time/user</span></th>
+        <th class="num">Key ev.</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="q">/</td><td class="num">827</td><td class="num">638</td><td class="num up">+29.6%</td><td class="num">9s</td><td class="num">0</td></tr>
+        <tr><td class="q">/services</td><td class="num">101</td><td class="num">92</td><td class="num up">+9.8%</td><td class="num">35s</td><td class="num">0</td></tr>
+        <tr><td class="q">/contact-us</td><td class="num">88</td><td class="num">88</td><td class="num" style="color:var(--dim)">0%</td><td class="num">16s</td><td class="num" style="color:var(--up);font-weight:700">21</td></tr>
+        <tr><td class="q">/technology</td><td class="num">80</td><td class="num">40</td><td class="num up">+100%</td><td class="num">9s</td><td class="num">0</td></tr>
+        <tr><td class="q">/our-work</td><td class="num">72</td><td class="num">75</td><td class="num down">−4.0%</td><td class="num">31s</td><td class="num">0</td></tr>
+        <tr><td class="q">/about-us</td><td class="num">64</td><td class="num">64</td><td class="num" style="color:var(--dim)">0%</td><td class="num">24s</td><td class="num">0</td></tr>
+        <tr><td class="q">/project-control</td><td class="num">62</td><td class="num">42</td><td class="num up">+47.6%</td><td class="num">8s</td><td class="num">0</td></tr>
+        <tr><td class="q">/studio</td><td class="num">41</td><td class="num">37</td><td class="num up">+10.8%</td><td class="num">39s</td><td class="num">0</td></tr>
+        <tr><td class="q">/news/vetting-bim-companies-in-perth…</td><td class="num">29</td><td class="num">28</td><td class="num up">+3.6%</td><td class="num">1s</td><td class="num">0</td></tr>
+        <tr><td class="q">/faq <span class="pill p-bad">404</span></td><td class="num">27</td><td class="num">0</td><td class="num">—</td><td class="num" style="color:var(--up);font-weight:700">2m 03s</td><td class="num">0</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note warnbox">
+    <span class="vi"><b>Hai điều đáng chú ý trong bảng này.</b> Thứ nhất, <code>/contact-us</code> tạo <b>21 trên
+    44 key event</b> — gần một nửa — dù chỉ có 88 lượt xem; đây là trang có giá trị chuyển đổi cao nhất và
+    xứng đáng được dẫn link nhiều hơn. Thứ hai, <code>/faq</code> giữ thời gian trên trang <b>2 phút 03 giây</b>,
+    cao gấp 13 lần trang chủ — và nó đang 404.</span>
+    <span class="en"><b>Two things stand out here.</b> First, <code>/contact-us</code> produces <b>21 of the 44 key
+    events</b> — nearly half — off just 88 views; it is the highest-converting page on the site and deserves far more
+    internal linking. Second, <code>/faq</code> holds visitors for <b>2m 03s</b>, thirteen times the homepage — and
+    it is currently returning 404.</span>
+  </div>
+
+  <footer>
+    <div><b><span class="vi">Nguồn dữ liệu</span><span class="en">Data sources</span></b></div>
+    <div>Google Search Console — <code>https://www.feeldx.com/</code> · <span class="vi">Page indexing, Sitemaps, Core Web Vitals.</span><span class="en">Page indexing, Sitemaps, Core Web Vitals.</span></div>
+    <div>Google Analytics 4 — <code>FeelDX - GA4</code> (309588561) · <span class="vi">Traffic acquisition, Pages and screens, Insights.</span><span class="en">Traffic acquisition, Pages and screens, Insights.</span></div>
+    <div><span class="vi">Kiểm tra on-page và sitemap: đọc trực tiếp HTML/XML từ feeldx.com ngày 28/08/2026.</span><span class="en">On-page and sitemap checks: HTML/XML read directly from feeldx.com on 28 Aug 2026.</span></div>
+    <div style="color:var(--warn)">Ahrefs Site Audit — <span class="vi"><b>không chạy được.</b> feeldx.com chưa verify trên gói Ahrefs hiện tại. Các hạng mục backlink, broken link nội bộ toàn site và crawl depth <b>không có trong báo cáo này</b>.</span><span class="en"><b>unavailable.</b> feeldx.com is not verified on the current Ahrefs plan. Backlinks, site-wide internal broken links and crawl depth are <b>absent from this report</b>.</span></div>
+    <div style="margin-top:10px">
+      <span class="vi">Điểm 64/100 là đánh giá dựa trên các lỗi đã kiểm chứng ở trên, không phải điểm số từ một công cụ tự động.</span>
+      <span class="en">The 64/100 score is a judgement based on the verified issues above, not a number from an automated tool.</span>
+    </div>
+  </footer>
+</div>
+
+<script>
+const b=document.getElementById('lang');
+b.onclick=()=>{const en=document.body.classList.toggle('lang-en');
+  b.textContent=en?'VI':'EN'; document.documentElement.lang=en?'en':'vi';};
+
+/* channel bars — colour encodes engagement quality, not volume */
+const ch=[
+ {n:'Direct',        s:749, t:'9s',  e:29.5, k:8,  q:'bad'},
+ {n:'Organic Search',s:248, t:'49s', e:57.7, k:33, q:'good'},
+ {n:'Display',       s:147, t:'10s', e:34.7, k:0,  q:'bad'},
+ {n:'Paid Search',   s:90,  t:'10s', e:32.2, k:2,  q:'mid'},
+ {n:'Referral',      s:24,  t:'19s', e:54.2, k:1,  q:'good'},
+ {n:'Organic Social',s:15,  t:'28s', e:60.0, k:0,  q:'good'},
+ {n:'Email',         s:6,   t:'8s',  e:33.3, k:0,  q:'mid'}
+];
+const col={good:'#86906C', mid:'#6A96A8', bad:'#D9705C'};
+const max=Math.max(...ch.map(c=>c.s));
+document.getElementById('bars').innerHTML=ch.map(c=>`
+ <div class="barrow">
+   <span class="bl">${c.n}</span>
+   <span class="bt"><span class="bf" style="width:${(c.s/max*100).toFixed(1)}%;background:${col[c.q]}"></span></span>
+   <span class="bn">${c.s} · ${c.t} · ${c.k} ev.</span>
+ </div>`).join('') +
+ `<div style="margin-top:12px;color:#727B60;font-size:12.5px">
+   <span class="sw" style="display:inline-block;width:11px;height:11px;border-radius:3px;background:#86906C;vertical-align:-1px;margin-right:6px"></span><span class="vi">tương tác tốt</span><span class="en">healthy engagement</span>
+   &nbsp;&nbsp;<span class="sw" style="display:inline-block;width:11px;height:11px;border-radius:3px;background:#6A96A8;vertical-align:-1px;margin-right:6px"></span><span class="vi">trung bình</span><span class="en">middling</span>
+   &nbsp;&nbsp;<span class="sw" style="display:inline-block;width:11px;height:11px;border-radius:3px;background:#D9705C;vertical-align:-1px;margin-right:6px"></span><span class="vi">nghi ngờ traffic không thật</span><span class="en">suspected non-human</span>
+ </div>`;
+</script>
+
+</body>
+</html>
