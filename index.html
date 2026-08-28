@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FeelDX Marketing Hub</title>
+<style>
+  /* ── FeelDX brand palette (lifted from feeldx.com) ──────────────────
+     olive-900 #2A2F1E · olive-700 #555E3C · olive-500 #86906C
+     sage-200 #CBD0C0 · sage-100 #E7EAE1 · paper #F5F7F2
+     Deliberately different from the DX Living hub (navy #2A3143 /
+     salmon #F0A48E / blue #2B6CF6) so the two are never confused.  */
+  :root{
+    --ink:#12150C; --bar:#1D2114; --line:#2E3421; --hover:#272D1A;
+    --accent:#86906C; --accent-deep:#555E3C;
+    --text:#E7EAE1; --muted:#98A183; --dim:#727B60;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;height:100%;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--ink)}
+
+  #bar{display:flex;align-items:center;gap:4px;height:52px;padding:0 14px;
+       background:var(--bar);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:10}
+  #brand{display:flex;align-items:center;gap:9px;color:#fff;font-weight:600;
+         font-size:14px;margin-right:16px;letter-spacing:.02em;white-space:nowrap}
+  #dot{width:9px;height:9px;border-radius:50%;background:var(--accent);
+       box-shadow:0 0 0 3px rgba(134,144,108,.22)}
+
+  .tab{appearance:none;border:0;background:transparent;color:var(--muted);font-size:13px;
+       font-weight:500;padding:8px 16px;border-radius:8px;cursor:pointer;transition:.15s;white-space:nowrap}
+  .tab:hover{background:var(--hover);color:var(--text)}
+  .tab.on{background:var(--accent);color:#12150C;font-weight:600}
+  .tab .dotmark{display:inline-block;width:5px;height:5px;border-radius:50%;
+                background:var(--dim);margin-left:6px;vertical-align:2px}
+  .tab.ready .dotmark{background:var(--accent)}
+  .tab.on .dotmark{background:#12150C;opacity:.45}
+
+  #spacer{flex:1}
+  #open{color:var(--dim);font-size:12px;text-decoration:none;padding:6px 10px;
+        border:1px solid var(--line);border-radius:7px;white-space:nowrap}
+  #open:hover{color:var(--text);border-color:var(--accent-deep)}
+  #open.off{opacity:.35;pointer-events:none}
+
+  #stage{position:relative;height:calc(100% - 52px)}
+  iframe{position:absolute;inset:0;width:100%;height:100%;border:0;background:#fff;display:none}
+  iframe.on{display:block}
+
+  .pane{position:absolute;inset:0;display:none;flex-direction:column;align-items:center;
+        justify-content:center;text-align:center;padding:40px;background:var(--ink);
+        color:var(--muted);font-size:14px;line-height:1.75}
+  .pane.on{display:flex}
+  .pane h2{color:var(--text);font-size:18px;font-weight:600;margin:0 0 10px}
+  .pane p{margin:0 0 6px;max-width:520px}
+  .badge{width:48px;height:48px;border-radius:13px;background:var(--accent-deep);
+         display:flex;align-items:center;justify-content:center;margin-bottom:18px;
+         color:var(--text);font-weight:700;font-size:15px;letter-spacing:.03em}
+  code{background:var(--bar);border:1px solid var(--line);color:var(--accent);
+       padding:2px 7px;border-radius:5px;font-size:12.5px}
+  .btn{display:inline-block;margin-top:18px;background:var(--accent);color:#12150C;
+       font-weight:600;font-size:13.5px;text-decoration:none;padding:10px 20px;border-radius:9px}
+  .btn:hover{background:#95A079}
+
+  @media (max-width:680px){
+    #bar{height:auto;flex-wrap:wrap;padding:8px 10px;gap:6px}
+    #stage{height:calc(100% - 104px)}
+    #open{display:none}
+  }
+</style>
+</head>
+<body>
+
+<div id="bar">
+  <span id="brand"><span id="dot"></span>FeelDX · Marketing Hub</span>
+  <span id="tabs"></span>
+  <span id="spacer"></span>
+  <a id="open" target="_blank" rel="noopener">Open in new tab ↗</a>
+</div>
+
+<div id="stage"></div>
+
+<script>
+/* ═══════════════════════════════════════════════════════════════════
+   Mỗi tab trỏ tới một file báo cáo. `url` để "" nghĩa là chưa có dữ liệu.
+   Khi deploy lên GitHub Pages, thay đường dẫn tương đối bằng URL đầy đủ
+   nếu báo cáo nằm ở repo khác.
+   ═══════════════════════════════════════════════════════════════════ */
+const TABS = [
+  { key:'seo',    label:'SEO',            url:'feeldx-seo-report.html' },
+  { key:'weekly', label:'SEO Weekly',     url:'feeldx-seo-weekly.html' },
+  { key:'audit',  label:'Website Audit',  url:'feeldx-website-audit.html' },
+  { key:'social', label:'Social',         url:'',
+    why:{
+      vi:'Meta Business Suite của tài khoản này chỉ chứa tài sản <b>DX Living</b> (dxliving.au — Facebook + Instagram). Trang <b>facebook.com/feeldx</b> chưa được thêm vào Business Manager nên không đọc được insights. HubSpot cũng chưa được cấp quyền trong phiên này.',
+      en:'This account’s Meta Business Suite holds only <b>DX Living</b> assets (dxliving.au — Facebook + Instagram). The <b>facebook.com/feeldx</b> page is not in the Business Manager, so its insights cannot be read. HubSpot is also not authorised in this session.'
+    },
+    need:{
+      vi:'Cần: thêm page FeelDX (Facebook + Instagram) vào Business Manager, hoặc cấp quyền HubSpot. Sau đó tab này dựng được trong một lần quét.',
+      en:'Needed: add the FeelDX page (Facebook + Instagram) to Business Manager, or authorise HubSpot. This tab can then be built in a single scan.'
+    }}
+];
+/* ═══════════════════════════════════════════════════════════════════ */
+
+const isFile = location.protocol === 'file:';
+const tabsWrap = document.getElementById('tabs');
+const stage    = document.getElementById('stage');
+const openLink = document.getElementById('open');
+const panes    = [];
+
+TABS.forEach((t, i) => {
+  const b = document.createElement('button');
+  b.className = 'tab' + (i === 0 ? ' on' : '') + (t.url ? ' ready' : '');
+  b.innerHTML = t.label + '<span class="dotmark"></span>';
+  b.onclick = () => show(i);
+  tabsWrap.appendChild(b);
+
+  let pane;
+  if (t.url && !isFile) {
+    /* served over http(s): embed it */
+    pane = document.createElement('iframe');
+    pane.dataset.src = t.url;
+    if (i === 0) { pane.src = t.url; pane.className = 'on'; }
+  } else if (t.url && isFile) {
+    /* opened from disk: browsers block file:// iframes, so offer the link */
+    pane = document.createElement('div');
+    pane.className = 'pane' + (i === 0 ? ' on' : '');
+    pane.innerHTML =
+      '<div class="badge">DX</div>' +
+      '<h2>' + t.label + '</h2>' +
+      '<p>Trang này đang mở bằng <code>file://</code> nên trình duyệt chặn nhúng iframe.</p>' +
+      '<p>Bấm nút bên dưới để mở báo cáo, hoặc deploy cả thư mục lên GitHub Pages để 4 tab chạy liền mạch.</p>' +
+      '<a class="btn" href="' + t.url + '">Mở ' + t.label + ' →</a>';
+  } else {
+    pane = document.createElement('div');
+    pane.className = 'pane' + (i === 0 ? ' on' : '');
+    pane.innerHTML =
+      '<div class="badge">DX</div>' +
+      '<h2>' + t.label + ' — chưa có dữ liệu</h2>' +
+      '<p>' + t.why.vi + '</p>' +
+      '<p style="color:var(--accent);margin-top:14px">' + t.need.vi + '</p>' +
+      '<p style="color:#727B60;margin-top:16px;font-size:13px">' + t.why.en + '<br><br>' + t.need.en + '</p>';
+  }
+  stage.appendChild(pane);
+  panes.push(pane);
+});
+
+function show(i) {
+  [...tabsWrap.children].forEach((b, n) => b.classList.toggle('on', n === i));
+  panes.forEach((p, n) => {
+    p.classList.toggle('on', n === i);
+    if (n === i && p.tagName === 'IFRAME' && !p.src) p.src = p.dataset.src;
+  });
+  const u = TABS[i].url;
+  openLink.href = u || '#';
+  openLink.classList.toggle('off', !u);
+  location.hash = TABS[i].key;
+}
+
+openLink.href = TABS[0].url || '#';
+openLink.classList.toggle('off', !TABS[0].url);
+
+const start = TABS.findIndex(t => t.key === location.hash.slice(1));
+if (start > 0) show(start);
+</script>
+
+</body>
+</html>
