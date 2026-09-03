@@ -87,15 +87,7 @@ const TABS = [
   { key:'seo',    label:'SEO',            url:'feeldx-seo-report.html' },
   { key:'weekly', label:'SEO Weekly',     url:'feeldx-seo-weekly.html' },
   { key:'audit',  label:'Website Audit',  url:'feeldx-website-audit.html' },
-  { key:'social', label:'Social',         url:'',
-    why:{
-      vi:'Meta Business Suite của tài khoản này chỉ chứa tài sản <b>DX Living</b> (dxliving.au — Facebook + Instagram). Trang <b>facebook.com/feeldx</b> chưa được thêm vào Business Manager nên không đọc được insights. HubSpot cũng chưa được cấp quyền trong phiên này.',
-      en:'This account’s Meta Business Suite holds only <b>DX Living</b> assets (dxliving.au — Facebook + Instagram). The <b>facebook.com/feeldx</b> page is not in the Business Manager, so its insights cannot be read. HubSpot is also not authorised in this session.'
-    },
-    need:{
-      vi:'Cần: thêm page FeelDX (Facebook + Instagram) vào Business Manager, hoặc cấp quyền HubSpot. Sau đó tab này dựng được trong một lần quét.',
-      en:'Needed: add the FeelDX page (Facebook + Instagram) to Business Manager, or authorise HubSpot. This tab can then be built in a single scan.'
-    }}
+  { key:'social', label:'Social',         url:'feeldx-social.html' }
 ];
 /* ═══════════════════════════════════════════════════════════════════ */
 
@@ -134,9 +126,10 @@ TABS.forEach((t, i) => {
     pane.innerHTML =
       '<div class="badge">DX</div>' +
       '<h2>' + t.label + ' — chưa có dữ liệu</h2>' +
-      '<p>' + t.why.vi + '</p>' +
-      '<p style="color:var(--accent);margin-top:14px">' + t.need.vi + '</p>' +
-      '<p style="color:#727B60;margin-top:16px;font-size:13px">' + t.why.en + '<br><br>' + t.need.en + '</p>';
+      '<p>' + (t.why ? t.why.vi : '') + '</p>' +
+      (t.need ? '<p style="color:var(--accent);margin-top:14px">' + t.need.vi + '</p>' : '') +
+      (t.why ? '<p style="color:#727B60;margin-top:16px;font-size:13px">' + t.why.en +
+               (t.need ? '<br><br>' + t.need.en : '') + '</p>' : '');
   }
   stage.appendChild(pane);
   panes.push(pane);
