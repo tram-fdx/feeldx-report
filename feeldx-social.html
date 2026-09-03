@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FeelDX Social Report</title>
+<style>
+  :root{
+    --ink:#12150C; --card:#1B1F13; --card2:#232819; --line:#2E3421;
+    --accent:#86906C; --accent-deep:#555E3C; --sage:#CBD0C0;
+    --text:#E7EAE1; --muted:#98A183; --dim:#727B60;
+    --up:#7FB069; --down:#D9705C; --warn:#D9B26A; --info:#6A96A8;
+  }
+  *{box-sizing:border-box}
+  body{margin:0;background:var(--ink);color:var(--text);
+       font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
+       font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
+  .wrap{max-width:1160px;margin:0 auto;padding:0 20px 80px}
+  header{border-bottom:1px solid var(--line);background:#171B10;padding:22px 0;margin-bottom:28px}
+  .hrow{max-width:1160px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
+  .logo{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(134,144,108,.2)}
+  h1{font-size:19px;margin:0;font-weight:600}
+  .sub{color:var(--muted);font-size:13px;margin-top:2px}
+  .spacer{flex:1}
+  .langbtn{background:var(--card2);border:1px solid var(--line);color:var(--muted);
+           padding:6px 13px;border-radius:7px;cursor:pointer;font-size:12.5px;font-weight:600}
+  .langbtn:hover{color:var(--text);border-color:var(--accent-deep)}
+
+  h2{font-size:15px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;
+     color:var(--accent);margin:44px 0 4px}
+  .h2sub{color:var(--dim);font-size:13px;margin:0 0 16px}
+
+  .grid{display:grid;gap:12px}
+  .k4{grid-template-columns:repeat(4,1fr)}
+  .k3{grid-template-columns:repeat(3,1fr)}
+  .k2{grid-template-columns:repeat(2,1fr)}
+  @media(max-width:860px){.k4,.k3{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.k4,.k3,.k2{grid-template-columns:1fr}}
+
+  .card{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+  .klabel{color:var(--muted);font-size:12px;font-weight:600;letter-spacing:.04em;text-transform:uppercase}
+  .kval{font-size:30px;font-weight:700;letter-spacing:-.02em;margin:6px 0 2px;font-variant-numeric:tabular-nums}
+  .kprev{color:var(--dim);font-size:12.5px}
+  .delta{font-size:13px;font-weight:700}
+  .up{color:var(--up)} .down{color:var(--down)} .zero{color:var(--warn)}
+
+  table{width:100%;border-collapse:collapse;font-size:13.5px;font-variant-numeric:tabular-nums}
+  th{text-align:left;color:var(--muted);font-weight:600;font-size:11.5px;letter-spacing:.05em;
+     text-transform:uppercase;padding:9px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
+  td{padding:9px 10px;border-bottom:1px solid rgba(46,52,33,.6);vertical-align:top}
+  tr:last-child td{border-bottom:0}
+  tbody tr:hover{background:rgba(134,144,108,.06)}
+  .num{text-align:right;white-space:nowrap}
+  .q{color:var(--sage)}
+  .tblwrap{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow-x:auto}
+  .me{background:rgba(134,144,108,.13)}
+  .me td{font-weight:700}
+  .pill{display:inline-block;font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:20px;
+        letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
+  .p-ok{background:rgba(127,176,105,.16);color:var(--up)}
+  .p-warn{background:rgba(217,178,106,.16);color:var(--warn)}
+  .p-bad{background:rgba(217,112,92,.18);color:var(--down)}
+  .p-info{background:rgba(106,150,168,.16);color:var(--info)}
+
+  .note{background:var(--card2);border-left:3px solid var(--accent-deep);border-radius:0 9px 9px 0;
+        padding:13px 16px;color:var(--muted);font-size:13.5px;margin-top:12px}
+  .note b{color:var(--text)}
+  .warnbox{border-left-color:var(--warn)}
+  .critbox{border-left-color:var(--down)}
+
+  .bars{margin-top:4px}
+  .barrow{display:flex;align-items:center;gap:12px;margin-bottom:9px;font-size:13.5px}
+  .bl{width:150px;flex:none;color:var(--sage)}
+  .bt{flex:1;background:var(--card2);border-radius:5px;height:22px;overflow:hidden}
+  .bf{height:100%;border-radius:5px;background:var(--accent-deep)}
+  .bn{width:110px;flex:none;text-align:right;color:var(--muted);font-variant-numeric:tabular-nums;font-size:12.5px}
+  @media(max-width:560px){.bl{width:104px}.bn{width:82px}}
+
+  .chan{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid rgba(46,52,33,.6)}
+  .chan:last-child{border-bottom:0}
+  .cico{flex:none;width:38px;height:38px;border-radius:10px;display:flex;align-items:center;
+        justify-content:center;font-weight:700;font-size:13px;color:var(--text);background:var(--accent-deep)}
+  .cname{font-weight:600}
+  .cmeta{color:var(--dim);font-size:12.5px}
+  .cnum{margin-left:auto;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+  .cbig{font-size:19px;font-weight:700}
+
+  .findings{list-style:none;padding:0;margin:0}
+  .findings li{background:var(--card);border:1px solid var(--line);border-radius:11px;
+               padding:14px 17px;margin-bottom:10px;display:flex;gap:14px;align-items:flex-start}
+  .fi{flex:none;width:26px;height:26px;border-radius:7px;background:var(--accent-deep);
+      color:var(--text);font-weight:700;font-size:12.5px;display:flex;align-items:center;
+      justify-content:center;margin-top:1px}
+  .ft{font-weight:600;margin-bottom:3px}
+  .fd{color:var(--muted);font-size:13.5px}
+  code{background:var(--card2);border:1px solid var(--line);color:var(--accent);
+       padding:1px 6px;border-radius:5px;font-size:12.5px}
+
+  footer{margin-top:56px;padding-top:20px;border-top:1px solid var(--line);
+         color:var(--dim);font-size:12.5px;line-height:1.8}
+  .en{display:none}
+  body.lang-en .vi{display:none}
+  body.lang-en .en{display:block}
+  body.lang-en span.en,body.lang-en b.en{display:inline}
+</style>
+</head>
+<body class="lang-vi">
+
+<header>
+  <div class="hrow">
+    <span class="logo"></span>
+    <div>
+      <h1>FeelDX &middot; Social Report</h1>
+      <div class="sub">
+        <span class="vi">LinkedIn &middot; 30 ngày: 03/08 – 01/09/2026 &middot; quét 04/09/2026</span>
+        <span class="en">LinkedIn &middot; 30 days: 3 Aug – 1 Sep 2026 &middot; scanned 4 Sep 2026</span>
+      </div>
+    </div>
+    <span class="spacer"></span>
+    <button class="langbtn" id="lang">EN</button>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <!-- ══ CHANNELS ══ -->
+  <h2><span class="vi">Bốn kênh, một nguồn số liệu</span><span class="en">Four channels, one source of data</span></h2>
+  <p class="h2sub">
+    <span class="vi">Chỉ LinkedIn có quyền admin để đọc analytics. Ba kênh còn lại chỉ xem được số công khai.</span>
+    <span class="en">Only LinkedIn has admin access for analytics. The other three are public counts only.</span>
+  </p>
+  <div class="card">
+    <div class="chan">
+      <span class="cico">in</span>
+      <div>
+        <div class="cname">LinkedIn — FeelDX</div>
+        <div class="cmeta"><span class="pill p-ok"><span class="vi">có admin</span><span class="en">admin access</span></span>
+        <span class="vi"> · impressions, reactions, visitors, demographics đầy đủ</span>
+        <span class="en"> · full impressions, reactions, visitors, demographics</span></div>
+      </div>
+      <div class="cnum"><div class="cbig">3,103</div><div class="cmeta">followers</div></div>
+    </div>
+    <div class="chan">
+      <span class="cico" style="background:#2E3421">f</span>
+      <div>
+        <div class="cname">Facebook — Feel DX</div>
+        <div class="cmeta"><span class="pill p-bad"><span class="vi">không đọc được</span><span class="en">no access</span></span>
+        <span class="vi"> · page không nằm trong Business Manager của tài khoản này</span>
+        <span class="en"> · page is not in this account's Business Manager</span></div>
+      </div>
+      <div class="cnum"><div class="cbig">390</div><div class="cmeta">followers</div></div>
+    </div>
+    <div class="chan">
+      <span class="cico" style="background:#2E3421">ig</span>
+      <div>
+        <div class="cname">Instagram — @feeldx</div>
+        <div class="cmeta"><span class="pill p-bad"><span class="vi">không đọc được</span><span class="en">no access</span></span>
+        <span class="vi"> · 463 bài đăng, đang theo dõi 464 tài khoản</span>
+        <span class="en"> · 463 posts, following 464 accounts</span></div>
+      </div>
+      <div class="cnum"><div class="cbig">214</div><div class="cmeta">followers</div></div>
+    </div>
+    <div class="chan">
+      <span class="cico" style="background:#2E3421">yt</span>
+      <div>
+        <div class="cname">YouTube — Feel DX Pty Ltd</div>
+        <div class="cmeta"><span class="pill p-warn"><span class="vi">bỏ hoang</span><span class="en">dormant</span></span>
+        <span class="vi"> · 14 video, mới nhất cách đây 3 năm, phần lớn còn thương hiệu Feel VR cũ</span>
+        <span class="en"> · 14 videos, newest is 3 years old, most still under the old Feel VR brand</span></div>
+      </div>
+      <div class="cnum"><div class="cbig">12</div><div class="cmeta">subscribers</div></div>
+    </div>
+  </div>
+  <div class="note">
+    <span class="vi"><b>Tỷ lệ nói lên chiến lược.</b> LinkedIn chiếm <b>83% tổng follower</b> của cả bốn kênh
+    (3.103 trên 3.719). Đúng với một công ty B2B bán cho builder và tender manager — nhưng cũng có nghĩa ba kênh
+    còn lại đang tiêu tốn công sức mà gần như không tạo ra đối tượng.</span>
+    <span class="en"><b>The ratio is the strategy.</b> LinkedIn holds <b>83% of all followers</b> across the four
+    channels (3,103 of 3,719). That is right for a B2B firm selling to builders and tender managers — but it also
+    means the other three absorb effort while building almost no audience.</span>
+  </div>
+
+  <!-- ══ LINKEDIN KPI ══ -->
+  <h2><span class="vi">LinkedIn — chỉ số 30 ngày</span><span class="en">LinkedIn — 30-day metrics</span></h2>
+  <p class="h2sub">
+    <span class="vi">Page admin analytics &middot; 03/08 – 01/09/2026 &middot; toàn bộ organic, không chi quảng cáo</span>
+    <span class="en">Page admin analytics &middot; 3 Aug – 1 Sep 2026 &middot; entirely organic, zero ad spend</span>
+  </p>
+  <div class="grid k4">
+    <div class="card">
+      <div class="klabel">Impressions</div>
+      <div class="kval">1,641</div>
+      <div><span class="delta down">▼ −1.7%</span></div>
+    </div>
+    <div class="card">
+      <div class="klabel">Reactions</div>
+      <div class="kval">66</div>
+      <div><span class="delta up">▲ +88.6%</span></div>
+    </div>
+    <div class="card">
+      <div class="klabel">Comments</div>
+      <div class="kval zero">0</div>
+      <div><span class="kprev"><span class="vi">suốt 30 ngày</span><span class="en">across 30 days</span></span></div>
+    </div>
+    <div class="card">
+      <div class="klabel"><span class="vi">Follower mới</span><span class="en">New followers</span></div>
+      <div class="kval">11</div>
+      <div><span class="delta down">▼ −15.4%</span></div>
+    </div>
+  </div>
+
+  <div class="grid k4" style="margin-top:12px">
+    <div class="card">
+      <div class="klabel"><span class="vi">Lượt xem trang</span><span class="en">Page views</span></div>
+      <div class="kval">193</div>
+      <div><span class="delta down">▼ −23.1%</span></div>
+    </div>
+    <div class="card">
+      <div class="klabel"><span class="vi">Khách duy nhất</span><span class="en">Unique visitors</span></div>
+      <div class="kval">76</div>
+      <div><span class="delta down">▼ −5.6%</span></div>
+    </div>
+    <div class="card">
+      <div class="klabel"><span class="vi">Click nút CTA</span><span class="en">Custom button clicks</span></div>
+      <div class="kval zero">0</div>
+      <div><span class="delta down">▼ −100%</span></div>
+    </div>
+    <div class="card">
+      <div class="klabel"><span class="vi">Bài đăng</span><span class="en">Posts published</span></div>
+      <div class="kval">7</div>
+      <div><span class="kprev"><span class="vi">≈1,6 bài/tuần</span><span class="en">≈1.6 per week</span></span></div>
+    </div>
+  </div>
+
+  <div class="note critbox">
+    <span class="vi"><b>Hai số 0 quan trọng hơn mọi số khác trên trang này.</b> <b>0 comment</b> trong 30 ngày,
+    và <b>0 click vào nút CTA</b> của trang. Reactions tăng 89% là tín hiệu tốt, nhưng reaction là hành vi rẻ
+    nhất trên LinkedIn — bấm một cái rồi lướt tiếp. Comment mới là thứ đẩy bài ra ngoài mạng lưới follower, và
+    click CTA mới là thứ biến người xem thành lead. Cả hai đều bằng 0.</span>
+    <span class="en"><b>Two zeros matter more than every other number here.</b> <b>Zero comments</b> in 30 days,
+    and <b>zero clicks</b> on the page's call-to-action button. Reactions up 89% reads well, but a reaction is the
+    cheapest act on LinkedIn — one tap and scroll on. Comments are what push a post beyond the follower list, and
+    CTA clicks are what turn a viewer into a lead. Both are zero.</span>
+  </div>
+
+  <!-- ══ POSTS ══ -->
+  <h2><span class="vi">Bài đăng gần nhất</span><span class="en">Recent posts</span></h2>
+  <p class="h2sub">
+    <span class="vi">Bảng post của LinkedIn dùng khung 19/08 – 02/09, lệch với khung Highlights ở trên.</span>
+    <span class="en">LinkedIn's post table uses a 19 Aug – 2 Sep window, which differs from the Highlights window above.</span>
+  </p>
+  <div class="tblwrap">
+    <table>
+      <thead><tr>
+        <th><span class="vi">Ngày</span><span class="en">Date</span></th>
+        <th><span class="vi">Chủ đề</span><span class="en">Topic</span></th>
+        <th><span class="vi">Dạng</span><span class="en">Type</span></th>
+        <th class="num">Impr</th><th class="num">Clicks</th><th class="num">CTR</th>
+        <th class="num">React</th><th class="num">Cmt</th><th class="num">Eng.</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="q">03/09</td><td><span class="vi">Nhà ở khu vực / duyệt quy hoạch</span><span class="en">Regional housing / planning approvals</span></td><td><span class="pill p-info">Image</span></td><td class="num">36</td><td class="num">1</td><td class="num">2.78%</td><td class="num">1</td><td class="num zero">0</td><td class="num">5.56%</td></tr>
+        <tr><td class="q">25/08</td><td><span class="vi">Thiếu hụt nhân lực / VDC</span><span class="en">Skilled labour shortage / VDC</span></td><td><span class="pill p-ok">Video</span></td><td class="num">155</td><td class="num">6</td><td class="num">3.87%</td><td class="num">3</td><td class="num zero">0</td><td class="num">7.10%</td></tr>
+        <tr><td class="q">21/08</td><td><span class="vi">Câu chuyện người sáng lập</span><span class="en">Founder story / infrastructure legacy</span></td><td><span class="pill p-info">Image</span></td><td class="num">160</td><td class="num">6</td><td class="num">3.75%</td><td class="num">7</td><td class="num zero">0</td><td class="num" style="color:var(--up);font-weight:700">8.75%</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note">
+    <span class="vi"><b>Bài kể chuyện người sáng lập thắng rõ.</b> Engagement rate 8,75% — cao nhất — và 7 reaction,
+    gấp đôi bài video. Bài về nhà ở khu vực đăng 03/09 chỉ đạt 36 impressions, bằng <b>22%</b> mức của hai bài trước.
+    Khác biệt: hai bài mạnh đều có góc nhìn con người hoặc một vấn đề cụ thể của builder; bài yếu là thông cáo
+    dịch vụ chung chung.</span>
+    <span class="en"><b>The founder-story post wins clearly.</b> An 8.75% engagement rate — the highest — and 7 reactions,
+    double the video's. The regional-housing post on 3 Sep drew 36 impressions, <b>22%</b> of what the other two
+    managed. The difference: both strong posts carry a human angle or a specific builder problem; the weak one is a
+    generic service announcement.</span>
+  </div>
+
+  <!-- ══ BENCHMARK ══ -->
+  <h2><span class="vi">So với các trang cùng ngành</span><span class="en">Against comparable pages</span></h2>
+  <p class="h2sub">
+    <span class="vi">30 ngày. LinkedIn tự gợi ý danh sách này — FeelDX <b>chưa cấu hình đối thủ nào</b>.</span>
+    <span class="en">30 days. LinkedIn suggested this list — FeelDX has <b>no competitors configured</b>.</span>
+  </p>
+  <div class="tblwrap">
+    <table>
+      <thead><tr>
+        <th><span class="vi">Trang</span><span class="en">Page</span></th>
+        <th class="num">Followers</th><th class="num">+30d</th>
+        <th class="num"><span class="vi">Bài</span><span class="en">Posts</span></th>
+        <th class="num">Comments</th><th class="num">Reactions</th>
+      </tr></thead>
+      <tbody>
+        <tr><td class="q">Hickory <span class="pill p-ok"><span class="vi">đối thủ thật</span><span class="en">real peer</span></span></td><td class="num">40,666</td><td class="num">378</td><td class="num">2</td><td class="num" style="color:var(--up)">29</td><td class="num">799</td></tr>
+        <tr class="me"><td class="q">FeelDX ◀</td><td class="num">3,103</td><td class="num">11</td><td class="num">7</td><td class="num" style="color:var(--down)">0</td><td class="num">66</td></tr>
+        <tr><td class="q">Solid Support Pty Ltd</td><td class="num">3,455</td><td class="num">65</td><td class="num">5</td><td class="num">4</td><td class="num">124</td></tr>
+        <tr><td class="q">Water Infrastructure Services</td><td class="num">679</td><td class="num">29</td><td class="num">1</td><td class="num">0</td><td class="num">4</td></tr>
+        <tr><td class="q">Time Planning &amp; Programming</td><td class="num">602</td><td class="num">2</td><td class="num">0</td><td class="num">0</td><td class="num">5</td></tr>
+        <tr><td class="q">DX Living <span class="pill p-info"><span class="vi">cùng nhà</span><span class="en">sister page</span></span></td><td class="num">100</td><td class="num">46</td><td class="num">20</td><td class="num">0</td><td class="num">94</td></tr>
+        <tr><td class="q">Greenwich Planning</td><td class="num">183</td><td class="num">1</td><td class="num">0</td><td class="num">0</td><td class="num">0</td></tr>
+      </tbody>
+    </table>
+  </div>
+  <div class="note warnbox">
+    <span class="vi"><b>Hai phép so sánh đáng suy nghĩ.</b> <b>Solid Support</b> có số follower gần bằng FeelDX
+    (3.455 so với 3.103) nhưng thu về <b>65 follower mới</b> — gấp sáu lần — chỉ với 5 bài. <b>DX Living</b>, trang
+    cùng nhà, chỉ có 100 follower nhưng đăng <b>20 bài</b> trong 30 ngày và kéo về 46 follower mới. FeelDX đăng 7 bài
+    và được 11. Vấn đề không nằm ở quy mô trang, mà ở tần suất và ở việc nội dung có đủ sức khiến người ta bấm theo dõi.</span>
+    <span class="en"><b>Two comparisons worth sitting with.</b> <b>Solid Support</b> has a follower count close to
+    FeelDX's (3,455 vs 3,103) yet gained <b>65 new followers</b> — six times as many — off just 5 posts.
+    <b>DX Living</b>, the sister page, has only 100 followers but published <b>20 posts</b> in 30 days and pulled in 46.
+    FeelDX published 7 and gained 11. The constraint is not page size; it is cadence, and whether the content is
+    strong enough to earn a follow.</span>
+  </div>
+  <div class="note">
+    <span class="vi"><b>Bỏ qua Arcadis, Jacobs và Fluor.</b> LinkedIn gợi ý ba tập đoàn toàn cầu 1–2 triệu follower
+    vào danh sách này. So sánh với họ không cho biết điều gì hữu ích. Nên vào <b>Analytics → Competitors → Edit</b>
+    và thay bằng các đối thủ Úc thật: Hickory, Solid Support, và các công ty digital engineering cùng tầm.</span>
+    <span class="en"><b>Ignore Arcadis, Jacobs and Fluor.</b> LinkedIn dropped three global groups with 1–2 million
+    followers into this list. Measuring against them tells you nothing useful. Go to
+    <b>Analytics → Competitors → Edit</b> and replace them with genuine Australian peers: Hickory, Solid Support,
+    and digital engineering firms of a similar size.</span>
+  </div>
+
+  <!-- ══ AUDIENCE ══ -->
+  <h2><span class="vi">Đối tượng</span><span class="en">Audience</span></h2>
+  <div class="grid k2">
+    <div class="card">
+      <div class="klabel" style="margin-bottom:14px"><span class="vi">Follower theo khu vực</span><span class="en">Followers by location</span></div>
+      <div class="bars" id="loc"></div>
+    </div>
+    <div class="card">
+      <div class="klabel" style="margin-bottom:14px"><span class="vi">Khách ghé trang theo chức năng</span><span class="en">Page visitors by job function</span></div>
+      <div class="bars" id="job"></div>
+    </div>
+  </div>
+  <div class="note">
+    <span class="vi"><b>Đối tượng đang đúng.</b> <b>52% follower ở năm thành phố lớn của Úc</b>, riêng Melbourne
+    chiếm 36,4% — đúng nơi đặt trụ sở. Về chức năng, <b>Engineering + Operations + Research = 52%</b> khách ghé
+    trang: đây chính là người ngồi trong phòng ra quyết định về tender và project controls. Vấn đề không phải
+    thu hút sai người, mà là <b>chưa cho họ lý do để hành động</b>.</span>
+    <span class="en"><b>The audience is right.</b> <b>52% of followers sit in Australia's five largest cities</b>,
+    Melbourne alone at 36.4% — exactly where the business is based. By function,
+    <b>Engineering + Operations + Research = 52%</b> of page visitors: precisely the people in the room when tender
+    and project-controls decisions get made. The problem is not attracting the wrong people; it is
+    <b>giving them no reason to act</b>.</span>
+  </div>
+
+  <div class="grid k3" style="margin-top:12px">
+    <div class="card">
+      <div class="klabel"><span class="vi">Lượt tìm trang / 7 ngày</span><span class="en">Page searches / 7 days</span></div>
+      <div class="kval">346</div>
+      <div><span class="delta up">▲ +12%</span> <span class="kprev">26/08 – 01/09</span></div>
+    </div>
+    <div class="card">
+      <div class="klabel"><span class="vi">Từ khoá tìm hàng đầu</span><span class="en">Top search keyword</span></div>
+      <div class="kval" style="font-size:22px">Feeldx</div>
+      <div class="kprev"><span class="vi">duy nhất — toàn bộ là brand</span><span class="en">the only one — entirely brand</span></div>
+    </div>
+    <div class="card">
+      <div class="klabel"><span class="vi">Desktop / Mobile</span><span class="en">Desktop / Mobile</span></div>
+      <div class="kval" style="font-size:22px">95 / 98</div>
+      <div class="kprev"><span class="vi">chia gần đôi</span><span class="en">near even split</span></div>
+    </div>
+  </div>
+  <div class="note warnbox">
+    <span class="vi"><b>346 lượt tìm trong 7 ngày, nhưng chỉ 76 khách duy nhất trong 30 ngày.</b> Người ta tìm
+    thấy FeelDX trên LinkedIn nhiều hơn hẳn số người thật sự vào xem trang. Và từ khoá duy nhất là tên thương
+    hiệu — giống hệt phát hiện ở báo cáo SEO: FeelDX được tìm bởi người đã biết tên, chứ chưa được tìm thấy bởi
+    người đang có nhu cầu.</span>
+    <span class="en"><b>346 searches in 7 days, yet only 76 unique visitors in 30.</b> Far more people surface
+    FeelDX in LinkedIn search than actually open the page. And the only keyword is the brand name — the same finding
+    as the SEO report: FeelDX is found by people who already know it, not by people with a need.</span>
+  </div>
+
+  <!-- ══ ACTIONS ══ -->
+  <h2><span class="vi">Việc cần làm</span><span class="en">What to do next</span></h2>
+  <p class="h2sub">
+    <span class="vi">Xếp theo tỷ lệ tác động trên công sức bỏ ra.</span>
+    <span class="en">Ordered by impact per unit of effort.</span>
+  </p>
+  <ul class="findings">
+    <li><span class="fi">1</span><div>
+      <div class="ft"><span class="vi">Sửa nút CTA trên trang LinkedIn</span><span class="en">Fix the LinkedIn page CTA button</span></div>
+      <div class="fd"><span class="vi"><b>0 click trong 30 ngày, giảm 100%.</b> Con số 0 tuyệt đối với 76 khách duy nhất là dấu hiệu nút hỏng, trỏ sai chỗ, hoặc dùng nhãn không ai muốn bấm. Kiểm tra nút đang trỏ đi đâu và đổi nhãn thành thứ cụ thể ("Đặt lịch tư vấn tender") thay vì chung chung.</span>
+      <span class="en"><b>Zero clicks in 30 days, down 100%.</b> An absolute zero against 76 unique visitors points to a broken button, a wrong destination, or a label nobody wants to press. Check where it points and give it a specific label ("Book a tender consult") rather than a generic one.</span></div>
+    </div></li>
+    <li><span class="fi">2</span><div>
+      <div class="ft"><span class="vi">Kết thúc mỗi bài bằng một câu hỏi thật</span><span class="en">End every post with a real question</span></div>
+      <div class="fd"><span class="vi">0 comment suốt 30 ngày. Hickory chỉ đăng 2 bài nhưng thu 29 comment. Các bài của FeelDX hiện kết bằng số điện thoại và hashtag — không có gì để trả lời. Thử: "Đội của bạn phát hiện xung đột không gian ở giai đoạn nào?"</span>
+      <span class="en">Zero comments in 30 days. Hickory posted twice and drew 29. FeelDX posts currently end with a phone number and hashtags — nothing to answer. Try: "At what stage does your team catch spatial clashes?"</span></div>
+    </div></li>
+    <li><span class="fi">3</span><div>
+      <div class="ft"><span class="vi">Nâng tần suất lên 3 bài/tuần</span><span class="en">Lift cadence to 3 posts a week</span></div>
+      <div class="fd"><span class="vi">Hiện 7 bài/30 ngày (≈1,6 bài/tuần). LinkedIn tự cảnh báo trong dashboard: trang đăng tối thiểu 1 lần/tuần có lượng follower gấp 5 lần. DX Living đăng 20 bài và kéo 46 follower — gấp bốn FeelDX với cùng nguồn lực đội ngũ.</span>
+      <span class="en">Currently 7 posts per 30 days (≈1.6 a week). LinkedIn's own dashboard warns that pages posting at least weekly see 5× the follower growth. DX Living published 20 and gained 46 — four times FeelDX, from the same team.</span></div>
+    </div></li>
+    <li><span class="fi">4</span><div>
+      <div class="ft"><span class="vi">Nhân rộng công thức bài "người sáng lập"</span><span class="en">Repeat the founder-story formula</span></div>
+      <div class="fd"><span class="vi">Bài 21/08 đạt engagement 8,75% và 7 reaction — cao nhất kỳ. Bài dịch vụ chung chung 03/09 chỉ 36 impressions. Góc nhìn con người và vấn đề cụ thể của builder thắng rõ so với thông cáo năng lực.</span>
+      <span class="en">The 21 Aug post hit 8.75% engagement and 7 reactions — the period's best. The generic service post on 3 Sep drew 36 impressions. Human angles and specific builder problems beat capability announcements.</span></div>
+    </div></li>
+    <li><span class="fi">5</span><div>
+      <div class="ft"><span class="vi">Thêm page FeelDX vào Meta Business Manager</span><span class="en">Add the FeelDX page to Meta Business Manager</span></div>
+      <div class="fd"><span class="vi">Facebook và Instagram hiện <b>không đo được</b> — Business Manager của tài khoản này chỉ chứa tài sản DX Living. Chừng nào chưa thêm vào, hai kênh đó vẫn là điểm mù hoàn toàn trong mọi báo cáo.</span>
+      <span class="en">Facebook and Instagram are <b>unmeasurable</b> — this account's Business Manager holds only DX Living assets. Until they are added, both channels stay a complete blind spot in any report.</span></div>
+    </div></li>
+    <li><span class="fi">6</span><div>
+      <div class="ft"><span class="vi">Quyết định dứt điểm về YouTube và thống nhất tên miền</span><span class="en">Settle YouTube, and pick one domain</span></div>
+      <div class="fd"><span class="vi">Kênh YouTube có 12 subscriber, video mới nhất cách đây 3 năm, phần lớn còn mang thương hiệu <b>Feel VR</b> cũ — đang gây nhiễu thương hiệu. Ngoài ra Facebook trỏ <code>feeldx.com.au</code>, một bài LinkedIn cũng dùng <code>.com.au</code>, trong khi website thật là <code>feeldx.com</code>. Cần thống nhất.</span>
+      <span class="en">The YouTube channel has 12 subscribers, a newest upload three years old, and most videos still carry the old <b>Feel VR</b> brand — it is actively muddying the brand. Separately, Facebook points to <code>feeldx.com.au</code> and one LinkedIn post uses <code>.com.au</code>, while the live site is <code>feeldx.com</code>. Pick one.</span></div>
+    </div></li>
+  </ul>
+
+  <footer>
+    <div><b><span class="vi">Nguồn dữ liệu</span><span class="en">Data sources</span></b></div>
+    <div>LinkedIn Page admin analytics — FeelDX (company 67163800). <span class="vi">Content, Visitors, Followers, Search appearances, Competitors. Đọc trực tiếp qua Chrome ngày 04/09/2026.</span><span class="en">Content, Visitors, Followers, Search appearances, Competitors. Read directly via Chrome on 4 Sep 2026.</span></div>
+    <div><span class="vi">Facebook, Instagram, YouTube: số công khai đọc từ trang hồ sơ, cùng ngày.</span><span class="en">Facebook, Instagram, YouTube: public counts read from the profile pages, same day.</span></div>
+    <div style="color:var(--warn)"><span class="vi"><b>Hai khung thời gian khác nhau trong dữ liệu LinkedIn.</b> Highlights dùng 03/08 – 01/09; bảng bài đăng dùng 19/08 – 02/09; Search appearances dùng 26/08 – 01/09. Vì vậy Highlights báo 0 repost trong khi bảng bài đăng cho thấy 3 — hai khung không trùng nhau. Cả hai đều được ghi đúng như LinkedIn hiển thị, không hiệu chỉnh.</span><span class="en"><b>LinkedIn reports three different windows.</b> Highlights covers 3 Aug – 1 Sep; the post table covers 19 Aug – 2 Sep; Search appearances covers 26 Aug – 1 Sep. That is why Highlights shows 0 reposts while the post table shows 3 — the windows do not overlap. Both are recorded exactly as LinkedIn displayed them, unadjusted.</span></div>
+    <div style="color:var(--warn)"><span class="vi">Meta Business Suite và HubSpot: <b>không truy cập được</b>. Không có số nào cho Facebook và Instagram ngoài số follower công khai — và không có số nào được ước lượng thay thế.</span><span class="en">Meta Business Suite and HubSpot: <b>not accessible</b>. No figures exist for Facebook and Instagram beyond public follower counts — and none has been estimated in their place.</span></div>
+    <div style="margin-top:10px">
+      <span class="vi">Mọi con số trên trang này được đọc trực tiếp từ giao diện nguồn. Không nội suy, không ước lượng.</span>
+      <span class="en">Every figure on this page was read directly from the source interface. Nothing is interpolated or estimated.</span>
+    </div>
+  </footer>
+</div>
+
+<script>
+const b=document.getElementById('lang');
+b.onclick=()=>{const en=document.body.classList.toggle('lang-en');
+  b.textContent=en?'VI':'EN'; document.documentElement.lang=en?'en':'vi';};
+
+function bars(el, rows, unit){
+  const max=Math.max(...rows.map(r=>r[1]));
+  el.innerHTML=rows.map(r=>`
+    <div class="barrow">
+      <span class="bl">${r[0]}</span>
+      <span class="bt"><span class="bf" style="width:${(r[1]/max*100).toFixed(1)}%"></span></span>
+      <span class="bn">${r[1].toLocaleString()}${r[2]!=null?' · '+r[2]+'%':''}</span>
+    </div>`).join('');
+}
+
+bars(document.getElementById('loc'), [
+  ['Melbourne',1129,36.4],['Sydney',254,8.2],['Brisbane',96,3.1],['Perth',93,3.0],
+  ['Adelaide',46,1.5],['Manila, PH',42,1.4],['TP.HCM, VN',40,1.3]
+]);
+
+bars(document.getElementById('job'), [
+  ['Engineering',48,24.9],['Operations',30,15.5],['Arts & Design',30,15.5],['Research',22,11.4],
+  ['Marketing',13,6.7],['Community',12,6.2],['Business Dev',4,2.1]
+]);
+</script>
+
+</body>
+</html>
