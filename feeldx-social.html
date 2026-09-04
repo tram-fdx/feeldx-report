@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FeelDX Social Report</title>
 <style>
   :root{
-    --ink:#12150C; --card:#1B1F13; --card2:#232819; --line:#2E3421;
-    --accent:#86906C; --accent-deep:#555E3C; --sage:#CBD0C0;
-    --text:#E7EAE1; --muted:#98A183; --dim:#727B60;
-    --up:#7FB069; --down:#D9705C; --warn:#D9B26A; --info:#6A96A8;
+    --ink:#F5F7F2; --card:#FFFFFF; --card2:#EEF1E9; --line:#DDE2D4;
+    --accent:#5A6640; --accent-deep:#47512F; --sage:#6E7659;
+    --text:#2A2F1E; --muted:#5C6449; --dim:#666E51;
+    --up:#4F7A3A; --down:#B4503A; --warn:#856214; --info:#3D6B80;
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--ink);color:var(--text);
        font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
        font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
   .wrap{max-width:1160px;margin:0 auto;padding:0 20px 80px}
-  header{border-bottom:1px solid var(--line);background:#171B10;padding:22px 0;margin-bottom:28px}
+  header{border-bottom:1px solid var(--line);background:#FFFFFF;padding:22px 0;margin-bottom:28px;position:sticky;top:0;z-index:20}
   .hrow{max-width:1160px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-  .logo{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(134,144,108,.2)}
+  .logo{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(90,102,64,.16)}
   h1{font-size:19px;margin:0;font-weight:600}
   .sub{color:var(--muted);font-size:13px;margin-top:2px}
   .spacer{flex:1}
@@ -47,20 +47,20 @@
   table{width:100%;border-collapse:collapse;font-size:13.5px;font-variant-numeric:tabular-nums}
   th{text-align:left;color:var(--muted);font-weight:600;font-size:11.5px;letter-spacing:.05em;
      text-transform:uppercase;padding:9px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
-  td{padding:9px 10px;border-bottom:1px solid rgba(46,52,33,.6);vertical-align:top}
+  td{padding:9px 10px;border-bottom:1px solid #E8EBE0;vertical-align:top}
   tr:last-child td{border-bottom:0}
-  tbody tr:hover{background:rgba(134,144,108,.06)}
+  tbody tr:hover{background:rgba(90,102,64,.05)}
   .num{text-align:right;white-space:nowrap}
   .q{color:var(--sage)}
   .tblwrap{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow-x:auto}
-  .me{background:rgba(134,144,108,.13)}
+  .me{background:rgba(90,102,64,.09)}
   .me td{font-weight:700}
   .pill{display:inline-block;font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:20px;
         letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
-  .p-ok{background:rgba(127,176,105,.16);color:var(--up)}
-  .p-warn{background:rgba(217,178,106,.16);color:var(--warn)}
-  .p-bad{background:rgba(217,112,92,.18);color:var(--down)}
-  .p-info{background:rgba(106,150,168,.16);color:var(--info)}
+  .p-ok{background:rgba(79,122,58,.14);color:var(--up)}
+  .p-warn{background:rgba(154,116,32,.14);color:var(--warn)}
+  .p-bad{background:rgba(180,80,58,.13);color:var(--down)}
+  .p-info{background:rgba(61,107,128,.13);color:var(--info)}
 
   .note{background:var(--card2);border-left:3px solid var(--accent-deep);border-radius:0 9px 9px 0;
         padding:13px 16px;color:var(--muted);font-size:13.5px;margin-top:12px}
@@ -72,14 +72,14 @@
   .barrow{display:flex;align-items:center;gap:12px;margin-bottom:9px;font-size:13.5px}
   .bl{width:150px;flex:none;color:var(--sage)}
   .bt{flex:1;background:var(--card2);border-radius:5px;height:22px;overflow:hidden}
-  .bf{height:100%;border-radius:5px;background:var(--accent-deep)}
+  .bf{height:100%;border-radius:5px;background:#6B7550}
   .bn{width:110px;flex:none;text-align:right;color:var(--muted);font-variant-numeric:tabular-nums;font-size:12.5px}
   @media(max-width:560px){.bl{width:104px}.bn{width:82px}}
 
-  .chan{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid rgba(46,52,33,.6)}
+  .chan{display:flex;align-items:center;gap:14px;padding:14px 0;border-bottom:1px solid #E8EBE0}
   .chan:last-child{border-bottom:0}
   .cico{flex:none;width:38px;height:38px;border-radius:10px;display:flex;align-items:center;
-        justify-content:center;font-weight:700;font-size:13px;color:var(--text);background:var(--accent-deep)}
+        justify-content:center;font-weight:700;font-size:13px;color:#F5F7F2;background:var(--accent-deep)}
   .cname{font-weight:600}
   .cmeta{color:var(--dim);font-size:12.5px}
   .cnum{margin-left:auto;text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
@@ -89,7 +89,7 @@
   .findings li{background:var(--card);border:1px solid var(--line);border-radius:11px;
                padding:14px 17px;margin-bottom:10px;display:flex;gap:14px;align-items:flex-start}
   .fi{flex:none;width:26px;height:26px;border-radius:7px;background:var(--accent-deep);
-      color:var(--text);font-weight:700;font-size:12.5px;display:flex;align-items:center;
+      color:#F5F7F2;font-weight:700;font-size:12.5px;display:flex;align-items:center;
       justify-content:center;margin-top:1px}
   .ft{font-weight:600;margin-bottom:3px}
   .fd{color:var(--muted);font-size:13.5px}
@@ -104,7 +104,7 @@
   body.lang-en span.en,body.lang-en b.en{display:inline}
 </style>
 </head>
-<body class="lang-vi">
+<body class="lang-en">
 
 <header>
   <div class="hrow">
@@ -117,7 +117,7 @@
       </div>
     </div>
     <span class="spacer"></span>
-    <button class="langbtn" id="lang">EN</button>
+    <button class="langbtn" id="lang">VI</button>
   </div>
 </header>
 
@@ -141,7 +141,7 @@
       <div class="cnum"><div class="cbig">3,103</div><div class="cmeta">followers</div></div>
     </div>
     <div class="chan">
-      <span class="cico" style="background:#2E3421">f</span>
+      <span class="cico" style="background:#6B7550">f</span>
       <div>
         <div class="cname">Facebook — Feel DX</div>
         <div class="cmeta"><span class="pill p-bad"><span class="vi">không đọc được</span><span class="en">no access</span></span>
@@ -151,7 +151,7 @@
       <div class="cnum"><div class="cbig">390</div><div class="cmeta">followers</div></div>
     </div>
     <div class="chan">
-      <span class="cico" style="background:#2E3421">ig</span>
+      <span class="cico" style="background:#6B7550">ig</span>
       <div>
         <div class="cname">Instagram — @feeldx</div>
         <div class="cmeta"><span class="pill p-bad"><span class="vi">không đọc được</span><span class="en">no access</span></span>
@@ -161,7 +161,7 @@
       <div class="cnum"><div class="cbig">214</div><div class="cmeta">followers</div></div>
     </div>
     <div class="chan">
-      <span class="cico" style="background:#2E3421">yt</span>
+      <span class="cico" style="background:#6B7550">yt</span>
       <div>
         <div class="cname">YouTube — Feel DX Pty Ltd</div>
         <div class="cmeta"><span class="pill p-warn"><span class="vi">bỏ hoang</span><span class="en">dormant</span></span>
