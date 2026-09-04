@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FeelDX SEO Weekly</title>
 <style>
   :root{
-    --ink:#12150C; --card:#1B1F13; --card2:#232819; --line:#2E3421;
-    --accent:#86906C; --accent-deep:#555E3C; --sage:#CBD0C0;
-    --text:#E7EAE1; --muted:#98A183; --dim:#727B60;
-    --up:#7FB069; --down:#D9705C; --warn:#D9B26A;
+    --ink:#F5F7F2; --card:#FFFFFF; --card2:#EEF1E9; --line:#DDE2D4;
+    --accent:#5A6640; --accent-deep:#47512F; --sage:#6E7659;
+    --text:#2A2F1E; --muted:#5C6449; --dim:#666E51;
+    --up:#4F7A3A; --down:#B4503A; --warn:#856214;
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--ink);color:var(--text);
        font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
        font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
   .wrap{max-width:1000px;margin:0 auto;padding:0 20px 80px}
-  header{border-bottom:1px solid var(--line);background:#171B10;padding:22px 0;margin-bottom:28px}
+  header{border-bottom:1px solid var(--line);background:#FFFFFF;padding:22px 0;margin-bottom:28px;position:sticky;top:0;z-index:20}
   .hrow{max-width:1000px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-  .logo{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(134,144,108,.2)}
+  .logo{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(90,102,64,.16)}
   h1{font-size:19px;margin:0;font-weight:600}
   .sub{color:var(--muted);font-size:13px;margin-top:2px}
   .spacer{flex:1}
@@ -43,13 +43,13 @@
   table{width:100%;border-collapse:collapse;font-size:13.5px;font-variant-numeric:tabular-nums}
   th{text-align:left;color:var(--muted);font-weight:600;font-size:11.5px;letter-spacing:.05em;
      text-transform:uppercase;padding:10px;border-bottom:1px solid var(--line);white-space:nowrap}
-  td{padding:10px;border-bottom:1px solid rgba(46,52,33,.6)}
+  td{padding:10px;border-bottom:1px solid #E8EBE0}
   tr:last-child td{border-bottom:0}
-  tbody tr:hover{background:rgba(134,144,108,.06)}
+  tbody tr:hover{background:rgba(90,102,64,.05)}
   .num{text-align:right;white-space:nowrap}
   .q{color:var(--sage)}
   .tblwrap{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow-x:auto}
-  .cur{background:rgba(134,144,108,.1)}
+  .cur{background:rgba(90,102,64,.08)}
   .cur td{font-weight:600}
 
   .note{background:var(--card2);border-left:3px solid var(--accent-deep);border-radius:0 9px 9px 0;
@@ -75,7 +75,7 @@
   body.lang-en span.en,body.lang-en b.en{display:inline}
 </style>
 </head>
-<body class="lang-vi">
+<body class="lang-en">
 
 <header>
   <div class="hrow">
@@ -88,7 +88,7 @@
       </div>
     </div>
     <span class="spacer"></span>
-    <button class="langbtn" id="lang">EN</button>
+    <button class="langbtn" id="lang">VI</button>
   </div>
 </header>
 
@@ -163,8 +163,8 @@
       <g id="chart"></g>
     </svg>
     <div class="legend">
-      <span><span class="sw" style="background:#555E3C"></span>Impressions</span>
-      <span><span class="sw" style="background:#86906C"></span>Clicks</span>
+      <span><span class="sw" style="background:#A8B28C"></span>Impressions</span>
+      <span><span class="sw" style="background:#5A6640"></span>Clicks</span>
     </div>
   </div>
   <div class="note">
@@ -231,15 +231,15 @@ const x=i=>PL+i*bw, xc=i=>PL+i*bw+bw/2;
 const yI=v=>PT+ih-(v/maxI)*ih, yC=v=>PT+ih-(v/maxC)*ih;
 let s='';
 for(let g=0;g<=4;g++){const y=PT+ih-(g/4)*ih;
-  s+=`<line x1="${PL}" y1="${y}" x2="${W-PR}" y2="${y}" stroke="#2E3421" stroke-width="1"/>`;
-  s+=`<text x="${PL-8}" y="${y+4}" fill="#727B60" font-size="11" text-anchor="end">${Math.round(g/4*maxC)}</text>`;
-  s+=`<text x="${W-PR+8}" y="${y+4}" fill="#727B60" font-size="11">${Math.round(g/4*maxI)}</text>`;}
+  s+=`<line x1="${PL}" y1="${y}" x2="${W-PR}" y2="${y}" stroke="#DDE2D4" stroke-width="1"/>`;
+  s+=`<text x="${PL-8}" y="${y+4}" fill="#6E7659" font-size="11" text-anchor="end">${Math.round(g/4*maxC)}</text>`;
+  s+=`<text x="${W-PR+8}" y="${y+4}" fill="#6E7659" font-size="11">${Math.round(g/4*maxI)}</text>`;}
 data.forEach((d,i)=>{const y=yI(d[2]);
-  s+=`<rect x="${x(i)+9}" y="${y}" width="${bw-18}" height="${PT+ih-y}" fill="#555E3C" rx="3"><title>${d[0]}: ${d[2]} impressions</title></rect>`;});
-s+=`<polyline fill="none" stroke="#86906C" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" points="${data.map((d,i)=>xc(i)+','+yC(d[1])).join(' ')}"/>`;
+  s+=`<rect x="${x(i)+9}" y="${y}" width="${bw-18}" height="${PT+ih-y}" fill="#A8B28C" rx="3"><title>${d[0]}: ${d[2]} impressions</title></rect>`;});
+s+=`<polyline fill="none" stroke="#5A6640" stroke-width="2.5" stroke-linejoin="round" stroke-linecap="round" points="${data.map((d,i)=>xc(i)+','+yC(d[1])).join(' ')}"/>`;
 data.forEach((d,i)=>{
-  s+=`<circle cx="${xc(i)}" cy="${yC(d[1])}" r="4" fill="#12150C" stroke="#86906C" stroke-width="2.5"><title>${d[0]}: ${d[1]} clicks</title></circle>`;
-  s+=`<text x="${xc(i)}" y="${H-10}" fill="#727B60" font-size="11" text-anchor="middle">${d[0]}</text>`;});
+  s+=`<circle cx="${xc(i)}" cy="${yC(d[1])}" r="4" fill="#F5F7F2" stroke="#5A6640" stroke-width="2.5"><title>${d[0]}: ${d[1]} clicks</title></circle>`;
+  s+=`<text x="${xc(i)}" y="${H-10}" fill="#6E7659" font-size="11" text-anchor="middle">${d[0]}</text>`;});
 document.getElementById('chart').innerHTML=s;
 </script>
 
