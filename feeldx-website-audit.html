@@ -1,24 +1,24 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>FeelDX Website Audit</title>
 <style>
   :root{
-    --ink:#12150C; --card:#1B1F13; --card2:#232819; --line:#2E3421;
-    --accent:#86906C; --accent-deep:#555E3C; --sage:#CBD0C0;
-    --text:#E7EAE1; --muted:#98A183; --dim:#727B60;
-    --up:#7FB069; --crit:#D9705C; --warn:#D9B26A; --info:#6A96A8;
+    --ink:#F5F7F2; --card:#FFFFFF; --card2:#EEF1E9; --line:#DDE2D4;
+    --accent:#5A6640; --accent-deep:#47512F; --sage:#6E7659;
+    --text:#2A2F1E; --muted:#5C6449; --dim:#666E51;
+    --up:#4F7A3A; --crit:#B4503A; --warn:#856214; --info:#3D6B80;
   }
   *{box-sizing:border-box}
   body{margin:0;background:var(--ink);color:var(--text);
        font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;
        font-size:15px;line-height:1.6;-webkit-font-smoothing:antialiased}
   .wrap{max-width:1160px;margin:0 auto;padding:0 20px 80px}
-  header{border-bottom:1px solid var(--line);background:#171B10;padding:22px 0;margin-bottom:28px}
+  header{border-bottom:1px solid var(--line);background:#FFFFFF;padding:22px 0;margin-bottom:28px;position:sticky;top:0;z-index:20}
   .hrow{max-width:1160px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:14px;flex-wrap:wrap}
-  .logo{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(134,144,108,.2)}
+  .logo{width:10px;height:10px;border-radius:50%;background:var(--accent);box-shadow:0 0 0 4px rgba(90,102,64,.16)}
   h1{font-size:19px;margin:0;font-weight:600}
   .sub{color:var(--muted);font-size:13px;margin-top:2px}
   .spacer{flex:1}
@@ -58,9 +58,9 @@
   .ihead{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:5px}
   .itag{font-size:10.5px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;
         padding:3px 8px;border-radius:20px;white-space:nowrap}
-  .t-crit{background:rgba(217,112,92,.18);color:var(--crit)}
-  .t-warn{background:rgba(217,178,106,.16);color:var(--warn)}
-  .t-info{background:rgba(106,150,168,.16);color:var(--info)}
+  .t-crit{background:rgba(180,80,58,.13);color:var(--crit)}
+  .t-warn{background:rgba(154,116,32,.14);color:var(--warn)}
+  .t-info{background:rgba(61,107,128,.13);color:var(--info)}
   .ititle{font-weight:600;font-size:15px}
   .ibody{color:var(--muted);font-size:13.8px}
   .ibody b{color:var(--text)}
@@ -73,17 +73,17 @@
   table{width:100%;border-collapse:collapse;font-size:13.5px;font-variant-numeric:tabular-nums}
   th{text-align:left;color:var(--muted);font-weight:600;font-size:11.5px;letter-spacing:.05em;
      text-transform:uppercase;padding:9px 10px;border-bottom:1px solid var(--line);white-space:nowrap}
-  td{padding:9px 10px;border-bottom:1px solid rgba(46,52,33,.6)}
+  td{padding:9px 10px;border-bottom:1px solid #E8EBE0}
   tr:last-child td{border-bottom:0}
-  tbody tr:hover{background:rgba(134,144,108,.06)}
+  tbody tr:hover{background:rgba(90,102,64,.05)}
   .num{text-align:right;white-space:nowrap}
   .q{color:var(--sage)}
   .tblwrap{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow-x:auto}
   .pill{display:inline-block;font-size:10.5px;font-weight:700;padding:2px 7px;border-radius:20px;
         letter-spacing:.04em;text-transform:uppercase;white-space:nowrap}
-  .p-ok{background:rgba(127,176,105,.16);color:var(--up)}
-  .p-warn{background:rgba(217,178,106,.16);color:var(--warn)}
-  .p-bad{background:rgba(217,112,92,.18);color:var(--crit)}
+  .p-ok{background:rgba(79,122,58,.14);color:var(--up)}
+  .p-warn{background:rgba(154,116,32,.14);color:var(--warn)}
+  .p-bad{background:rgba(180,80,58,.13);color:var(--crit)}
 
   .note{background:var(--card2);border-left:3px solid var(--accent-deep);border-radius:0 9px 9px 0;
         padding:13px 16px;color:var(--muted);font-size:13.5px;margin-top:12px}
@@ -107,7 +107,7 @@
   body.lang-en span.en,body.lang-en b.en{display:inline}
 </style>
 </head>
-<body class="lang-vi">
+<body class="lang-en">
 
 <header>
   <div class="hrow">
@@ -120,7 +120,7 @@
       </div>
     </div>
     <span class="spacer"></span>
-    <button class="langbtn" id="lang">EN</button>
+    <button class="langbtn" id="lang">VI</button>
   </div>
 </header>
 
@@ -130,12 +130,12 @@
   <h2><span class="vi">Tình trạng tổng thể</span><span class="en">Overall health</span></h2>
   <div class="card score">
     <svg class="ring" width="150" height="150" viewBox="0 0 150 150">
-      <circle cx="75" cy="75" r="62" fill="none" stroke="#232819" stroke-width="14"/>
-      <circle cx="75" cy="75" r="62" fill="none" stroke="#D9B26A" stroke-width="14"
+      <circle cx="75" cy="75" r="62" fill="none" stroke="#EEF1E9" stroke-width="14"/>
+      <circle cx="75" cy="75" r="62" fill="none" stroke="#856214" stroke-width="14"
               stroke-linecap="round" stroke-dasharray="389.6" stroke-dashoffset="140"
               transform="rotate(-90 75 75)"/>
-      <text x="75" y="70" text-anchor="middle" fill="#E7EAE1" font-size="38" font-weight="700">64</text>
-      <text x="75" y="94" text-anchor="middle" fill="#98A183" font-size="12" letter-spacing="1">/ 100</text>
+      <text x="75" y="70" text-anchor="middle" fill="#2A2F1E" font-size="38" font-weight="700">64</text>
+      <text x="75" y="94" text-anchor="middle" fill="#5C6449" font-size="12" letter-spacing="1">/ 100</text>
     </svg>
     <div class="scoretext">
       <span class="vi"><b style="color:var(--text)">Nền tảng kỹ thuật ổn, nhưng có ba lỗi đang chảy máu lưu lượng.</b>
@@ -454,7 +454,7 @@ const ch=[
  {n:'Organic Social',s:15,  t:'28s', e:60.0, k:0,  q:'good'},
  {n:'Email',         s:6,   t:'8s',  e:33.3, k:0,  q:'mid'}
 ];
-const col={good:'#86906C', mid:'#6A96A8', bad:'#D9705C'};
+const col={good:'#5A6640', mid:'#3D6B80', bad:'#B4503A'};
 const max=Math.max(...ch.map(c=>c.s));
 document.getElementById('bars').innerHTML=ch.map(c=>`
  <div class="barrow">
@@ -462,10 +462,10 @@ document.getElementById('bars').innerHTML=ch.map(c=>`
    <span class="bt"><span class="bf" style="width:${(c.s/max*100).toFixed(1)}%;background:${col[c.q]}"></span></span>
    <span class="bn">${c.s} · ${c.t} · ${c.k} ev.</span>
  </div>`).join('') +
- `<div style="margin-top:12px;color:#727B60;font-size:12.5px">
-   <span class="sw" style="display:inline-block;width:11px;height:11px;border-radius:3px;background:#86906C;vertical-align:-1px;margin-right:6px"></span><span class="vi">tương tác tốt</span><span class="en">healthy engagement</span>
-   &nbsp;&nbsp;<span class="sw" style="display:inline-block;width:11px;height:11px;border-radius:3px;background:#6A96A8;vertical-align:-1px;margin-right:6px"></span><span class="vi">trung bình</span><span class="en">middling</span>
-   &nbsp;&nbsp;<span class="sw" style="display:inline-block;width:11px;height:11px;border-radius:3px;background:#D9705C;vertical-align:-1px;margin-right:6px"></span><span class="vi">nghi ngờ traffic không thật</span><span class="en">suspected non-human</span>
+ `<div style="margin-top:12px;color:#6E7659;font-size:12.5px">
+   <span class="sw" style="display:inline-block;width:11px;height:11px;border-radius:3px;background:#5A6640;vertical-align:-1px;margin-right:6px"></span><span class="vi">tương tác tốt</span><span class="en">healthy engagement</span>
+   &nbsp;&nbsp;<span class="sw" style="display:inline-block;width:11px;height:11px;border-radius:3px;background:#3D6B80;vertical-align:-1px;margin-right:6px"></span><span class="vi">trung bình</span><span class="en">middling</span>
+   &nbsp;&nbsp;<span class="sw" style="display:inline-block;width:11px;height:11px;border-radius:3px;background:#B4503A;vertical-align:-1px;margin-right:6px"></span><span class="vi">nghi ngờ traffic không thật</span><span class="en">suspected non-human</span>
  </div>`;
 </script>
 
