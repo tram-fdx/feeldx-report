@@ -1,0 +1,2015 @@
+{
+ "run_date": "2026-09-09",
+ "timezone": "Asia/Ho_Chi_Minh",
+ "notes": [
+  "Working clone at /tmp/fdxrepo2 (the /tmp/fdxrepo leftover from the previous run is owned by another uid and read-only in this sandbox)."
+ ],
+ "gsc": {
+  "property": "https://www.feeldx.com/",
+  "last_data_date": "2026-09-06",
+  "windows": {
+   "current": {
+    "start": "2026-08-10",
+    "end": "2026-09-06"
+   },
+   "previous": {
+    "start": "2026-07-13",
+    "end": "2026-08-09"
+   },
+   "weekly": "7-day blocks ending 2026-09-06, summed from GSC daily rows"
+  },
+  "current": {
+   "clicks": 148,
+   "impressions": 5951,
+   "ctr": 2.49,
+   "position": 42.0,
+   "tiles_read": "Total clicks 148 / 5.95K / 2.5% / 42"
+  },
+  "previous": {
+   "clicks": 142,
+   "impressions": 6257,
+   "ctr": 2.27,
+   "position": 37.4,
+   "tiles_read": "Total clicks 142 / 6.26K / 2.3% / 37.4 (start_date=20260713&end_date=20260809)"
+  },
+  "daily": [
+   {
+    "date": "2026-06-07",
+    "clicks": 1,
+    "impressions": 350,
+    "ctr": 0.3,
+    "position": 23.5
+   },
+   {
+    "date": "2026-06-08",
+    "clicks": 4,
+    "impressions": 331,
+    "ctr": 1.2,
+    "position": 23.8
+   },
+   {
+    "date": "2026-06-09",
+    "clicks": 13,
+    "impressions": 413,
+    "ctr": 3.1,
+    "position": 17.7
+   },
+   {
+    "date": "2026-06-10",
+    "clicks": 4,
+    "impressions": 415,
+    "ctr": 1.0,
+    "position": 25.3
+   },
+   {
+    "date": "2026-06-11",
+    "clicks": 10,
+    "impressions": 359,
+    "ctr": 2.8,
+    "position": 22.3
+   },
+   {
+    "date": "2026-06-12",
+    "clicks": 1,
+    "impressions": 289,
+    "ctr": 0.3,
+    "position": 29.0
+   },
+   {
+    "date": "2026-06-13",
+    "clicks": 0,
+    "impressions": 295,
+    "ctr": 0.0,
+    "position": 31.6
+   },
+   {
+    "date": "2026-06-14",
+    "clicks": 9,
+    "impressions": 348,
+    "ctr": 2.6,
+    "position": 27.6
+   },
+   {
+    "date": "2026-06-15",
+    "clicks": 12,
+    "impressions": 361,
+    "ctr": 3.3,
+    "position": 33.2
+   },
+   {
+    "date": "2026-06-16",
+    "clicks": 6,
+    "impressions": 392,
+    "ctr": 1.5,
+    "position": 32.1
+   },
+   {
+    "date": "2026-06-17",
+    "clicks": 10,
+    "impressions": 312,
+    "ctr": 3.2,
+    "position": 34.2
+   },
+   {
+    "date": "2026-06-18",
+    "clicks": 7,
+    "impressions": 357,
+    "ctr": 2.0,
+    "position": 37.3
+   },
+   {
+    "date": "2026-06-19",
+    "clicks": 1,
+    "impressions": 205,
+    "ctr": 0.5,
+    "position": 32.1
+   },
+   {
+    "date": "2026-06-20",
+    "clicks": 1,
+    "impressions": 190,
+    "ctr": 0.5,
+    "position": 34.2
+   },
+   {
+    "date": "2026-06-21",
+    "clicks": 2,
+    "impressions": 200,
+    "ctr": 1.0,
+    "position": 30.7
+   },
+   {
+    "date": "2026-06-22",
+    "clicks": 6,
+    "impressions": 200,
+    "ctr": 3.0,
+    "position": 25.9
+   },
+   {
+    "date": "2026-06-23",
+    "clicks": 9,
+    "impressions": 303,
+    "ctr": 3.0,
+    "position": 27.5
+   },
+   {
+    "date": "2026-06-24",
+    "clicks": 13,
+    "impressions": 291,
+    "ctr": 4.5,
+    "position": 35.2
+   },
+   {
+    "date": "2026-06-25",
+    "clicks": 7,
+    "impressions": 248,
+    "ctr": 2.8,
+    "position": 35.9
+   },
+   {
+    "date": "2026-06-26",
+    "clicks": 6,
+    "impressions": 226,
+    "ctr": 2.7,
+    "position": 37.2
+   },
+   {
+    "date": "2026-06-27",
+    "clicks": 5,
+    "impressions": 191,
+    "ctr": 2.6,
+    "position": 39.1
+   },
+   {
+    "date": "2026-06-28",
+    "clicks": 6,
+    "impressions": 261,
+    "ctr": 2.3,
+    "position": 32.8
+   },
+   {
+    "date": "2026-06-29",
+    "clicks": 8,
+    "impressions": 257,
+    "ctr": 3.1,
+    "position": 30.3
+   },
+   {
+    "date": "2026-06-30",
+    "clicks": 8,
+    "impressions": 308,
+    "ctr": 2.6,
+    "position": 32.4
+   },
+   {
+    "date": "2026-07-01",
+    "clicks": 4,
+    "impressions": 250,
+    "ctr": 1.6,
+    "position": 36.1
+   },
+   {
+    "date": "2026-07-02",
+    "clicks": 5,
+    "impressions": 212,
+    "ctr": 2.4,
+    "position": 29.7
+   },
+   {
+    "date": "2026-07-03",
+    "clicks": 4,
+    "impressions": 140,
+    "ctr": 2.9,
+    "position": 36.2
+   },
+   {
+    "date": "2026-07-04",
+    "clicks": 2,
+    "impressions": 116,
+    "ctr": 1.7,
+    "position": 35.6
+   },
+   {
+    "date": "2026-07-05",
+    "clicks": 3,
+    "impressions": 196,
+    "ctr": 1.5,
+    "position": 28.4
+   },
+   {
+    "date": "2026-07-06",
+    "clicks": 4,
+    "impressions": 171,
+    "ctr": 2.3,
+    "position": 32.3
+   },
+   {
+    "date": "2026-07-07",
+    "clicks": 5,
+    "impressions": 234,
+    "ctr": 2.1,
+    "position": 35.4
+   },
+   {
+    "date": "2026-07-08",
+    "clicks": 4,
+    "impressions": 181,
+    "ctr": 2.2,
+    "position": 35.4
+   },
+   {
+    "date": "2026-07-09",
+    "clicks": 1,
+    "impressions": 228,
+    "ctr": 0.4,
+    "position": 29.9
+   },
+   {
+    "date": "2026-07-10",
+    "clicks": 0,
+    "impressions": 227,
+    "ctr": 0.0,
+    "position": 31.7
+   },
+   {
+    "date": "2026-07-11",
+    "clicks": 2,
+    "impressions": 196,
+    "ctr": 1.0,
+    "position": 34.6
+   },
+   {
+    "date": "2026-07-12",
+    "clicks": 10,
+    "impressions": 317,
+    "ctr": 3.2,
+    "position": 27.5
+   },
+   {
+    "date": "2026-07-13",
+    "clicks": 8,
+    "impressions": 249,
+    "ctr": 3.2,
+    "position": 32.3
+   },
+   {
+    "date": "2026-07-14",
+    "clicks": 10,
+    "impressions": 362,
+    "ctr": 2.8,
+    "position": 30.1
+   },
+   {
+    "date": "2026-07-15",
+    "clicks": 5,
+    "impressions": 195,
+    "ctr": 2.6,
+    "position": 33.7
+   },
+   {
+    "date": "2026-07-16",
+    "clicks": 6,
+    "impressions": 192,
+    "ctr": 3.1,
+    "position": 25.5
+   },
+   {
+    "date": "2026-07-17",
+    "clicks": 0,
+    "impressions": 163,
+    "ctr": 0.0,
+    "position": 44.0
+   },
+   {
+    "date": "2026-07-18",
+    "clicks": 0,
+    "impressions": 147,
+    "ctr": 0.0,
+    "position": 38.9
+   },
+   {
+    "date": "2026-07-19",
+    "clicks": 0,
+    "impressions": 191,
+    "ctr": 0.0,
+    "position": 32.5
+   },
+   {
+    "date": "2026-07-20",
+    "clicks": 9,
+    "impressions": 262,
+    "ctr": 3.4,
+    "position": 35.5
+   },
+   {
+    "date": "2026-07-21",
+    "clicks": 9,
+    "impressions": 342,
+    "ctr": 2.6,
+    "position": 38.0
+   },
+   {
+    "date": "2026-07-22",
+    "clicks": 4,
+    "impressions": 223,
+    "ctr": 1.8,
+    "position": 34.6
+   },
+   {
+    "date": "2026-07-23",
+    "clicks": 7,
+    "impressions": 198,
+    "ctr": 3.5,
+    "position": 36.2
+   },
+   {
+    "date": "2026-07-24",
+    "clicks": 1,
+    "impressions": 205,
+    "ctr": 0.5,
+    "position": 42.9
+   },
+   {
+    "date": "2026-07-25",
+    "clicks": 1,
+    "impressions": 130,
+    "ctr": 0.8,
+    "position": 37.4
+   },
+   {
+    "date": "2026-07-26",
+    "clicks": 4,
+    "impressions": 197,
+    "ctr": 2.0,
+    "position": 36.7
+   },
+   {
+    "date": "2026-07-27",
+    "clicks": 6,
+    "impressions": 238,
+    "ctr": 2.5,
+    "position": 42.3
+   },
+   {
+    "date": "2026-07-28",
+    "clicks": 8,
+    "impressions": 275,
+    "ctr": 2.9,
+    "position": 35.4
+   },
+   {
+    "date": "2026-07-29",
+    "clicks": 6,
+    "impressions": 226,
+    "ctr": 2.7,
+    "position": 38.2
+   },
+   {
+    "date": "2026-07-30",
+    "clicks": 1,
+    "impressions": 251,
+    "ctr": 0.4,
+    "position": 46.3
+   },
+   {
+    "date": "2026-07-31",
+    "clicks": 0,
+    "impressions": 192,
+    "ctr": 0.0,
+    "position": 46.0
+   },
+   {
+    "date": "2026-08-01",
+    "clicks": 0,
+    "impressions": 170,
+    "ctr": 0.0,
+    "position": 43.5
+   },
+   {
+    "date": "2026-08-02",
+    "clicks": 2,
+    "impressions": 200,
+    "ctr": 1.0,
+    "position": 37.1
+   },
+   {
+    "date": "2026-08-03",
+    "clicks": 9,
+    "impressions": 237,
+    "ctr": 3.8,
+    "position": 38.2
+   },
+   {
+    "date": "2026-08-04",
+    "clicks": 12,
+    "impressions": 267,
+    "ctr": 4.5,
+    "position": 34.0
+   },
+   {
+    "date": "2026-08-05",
+    "clicks": 10,
+    "impressions": 306,
+    "ctr": 3.3,
+    "position": 39.3
+   },
+   {
+    "date": "2026-08-06",
+    "clicks": 8,
+    "impressions": 250,
+    "ctr": 3.2,
+    "position": 39.6
+   },
+   {
+    "date": "2026-08-07",
+    "clicks": 8,
+    "impressions": 205,
+    "ctr": 3.9,
+    "position": 39.9
+   },
+   {
+    "date": "2026-08-08",
+    "clicks": 1,
+    "impressions": 164,
+    "ctr": 0.6,
+    "position": 43.0
+   },
+   {
+    "date": "2026-08-09",
+    "clicks": 7,
+    "impressions": 220,
+    "ctr": 3.2,
+    "position": 35.1
+   },
+   {
+    "date": "2026-08-10",
+    "clicks": 3,
+    "impressions": 308,
+    "ctr": 1.0,
+    "position": 40.2
+   },
+   {
+    "date": "2026-08-11",
+    "clicks": 6,
+    "impressions": 279,
+    "ctr": 2.2,
+    "position": 37.6
+   },
+   {
+    "date": "2026-08-12",
+    "clicks": 7,
+    "impressions": 229,
+    "ctr": 3.1,
+    "position": 40.0
+   },
+   {
+    "date": "2026-08-13",
+    "clicks": 16,
+    "impressions": 322,
+    "ctr": 5.0,
+    "position": 35.1
+   },
+   {
+    "date": "2026-08-14",
+    "clicks": 7,
+    "impressions": 161,
+    "ctr": 4.3,
+    "position": 40.2
+   },
+   {
+    "date": "2026-08-15",
+    "clicks": 2,
+    "impressions": 141,
+    "ctr": 1.4,
+    "position": 40.4
+   },
+   {
+    "date": "2026-08-16",
+    "clicks": 5,
+    "impressions": 199,
+    "ctr": 2.5,
+    "position": 38.5
+   },
+   {
+    "date": "2026-08-17",
+    "clicks": 7,
+    "impressions": 245,
+    "ctr": 2.9,
+    "position": 43.9
+   },
+   {
+    "date": "2026-08-18",
+    "clicks": 11,
+    "impressions": 283,
+    "ctr": 3.9,
+    "position": 37.0
+   },
+   {
+    "date": "2026-08-19",
+    "clicks": 8,
+    "impressions": 218,
+    "ctr": 3.7,
+    "position": 41.9
+   },
+   {
+    "date": "2026-08-20",
+    "clicks": 8,
+    "impressions": 311,
+    "ctr": 2.6,
+    "position": 47.8
+   },
+   {
+    "date": "2026-08-21",
+    "clicks": 3,
+    "impressions": 174,
+    "ctr": 1.7,
+    "position": 48.8
+   },
+   {
+    "date": "2026-08-22",
+    "clicks": 1,
+    "impressions": 128,
+    "ctr": 0.8,
+    "position": 56.2
+   },
+   {
+    "date": "2026-08-23",
+    "clicks": 7,
+    "impressions": 186,
+    "ctr": 3.8,
+    "position": 43.1
+   },
+   {
+    "date": "2026-08-24",
+    "clicks": 8,
+    "impressions": 221,
+    "ctr": 3.6,
+    "position": 42.7
+   },
+   {
+    "date": "2026-08-25",
+    "clicks": 7,
+    "impressions": 268,
+    "ctr": 2.6,
+    "position": 40.4
+   },
+   {
+    "date": "2026-08-26",
+    "clicks": 4,
+    "impressions": 216,
+    "ctr": 1.9,
+    "position": 50.9
+   },
+   {
+    "date": "2026-08-27",
+    "clicks": 4,
+    "impressions": 207,
+    "ctr": 1.9,
+    "position": 44.6
+   },
+   {
+    "date": "2026-08-28",
+    "clicks": 6,
+    "impressions": 185,
+    "ctr": 3.2,
+    "position": 48.3
+   },
+   {
+    "date": "2026-08-29",
+    "clicks": 1,
+    "impressions": 168,
+    "ctr": 0.6,
+    "position": 57.2
+   },
+   {
+    "date": "2026-08-30",
+    "clicks": 4,
+    "impressions": 232,
+    "ctr": 1.7,
+    "position": 48.7
+   },
+   {
+    "date": "2026-08-31",
+    "clicks": 2,
+    "impressions": 203,
+    "ctr": 1.0,
+    "position": 47.4
+   },
+   {
+    "date": "2026-09-01",
+    "clicks": 4,
+    "impressions": 232,
+    "ctr": 1.7,
+    "position": 34.8
+   },
+   {
+    "date": "2026-09-02",
+    "clicks": 4,
+    "impressions": 191,
+    "ctr": 2.1,
+    "position": 30.5
+   },
+   {
+    "date": "2026-09-03",
+    "clicks": 7,
+    "impressions": 161,
+    "ctr": 4.3,
+    "position": 36.7
+   },
+   {
+    "date": "2026-09-04",
+    "clicks": 2,
+    "impressions": 152,
+    "ctr": 1.3,
+    "position": 38.5
+   },
+   {
+    "date": "2026-09-05",
+    "clicks": 1,
+    "impressions": 119,
+    "ctr": 0.8,
+    "position": 38.5
+   },
+   {
+    "date": "2026-09-06",
+    "clicks": 3,
+    "impressions": 212,
+    "ctr": 1.4,
+    "position": 36.4
+   }
+  ],
+  "weeks": [
+   {
+    "start": "2026-08-31",
+    "end": "2026-09-06",
+    "clicks": 23,
+    "impressions": 1270,
+    "ctr": 1.81
+   },
+   {
+    "start": "2026-08-24",
+    "end": "2026-08-30",
+    "clicks": 34,
+    "impressions": 1497,
+    "ctr": 2.27
+   },
+   {
+    "start": "2026-08-17",
+    "end": "2026-08-23",
+    "clicks": 45,
+    "impressions": 1545,
+    "ctr": 2.91
+   },
+   {
+    "start": "2026-08-10",
+    "end": "2026-08-16",
+    "clicks": 46,
+    "impressions": 1639,
+    "ctr": 2.81
+   }
+  ],
+  "queries": {
+   "window": "2026-08-10..2026-09-06",
+   "total_queries": 421,
+   "queries_with_clicks": 6,
+   "with_clicks": [
+    [
+     "feeldx",
+     67,
+     140,
+     47.9,
+     1.1
+    ],
+    [
+     "feel dx pty ltd",
+     12,
+     35,
+     34.3,
+     1.1
+    ],
+    [
+     "feeldx pty ltd",
+     12,
+     30,
+     40.0,
+     1.0
+    ],
+    [
+     "feel dx",
+     12,
+     23,
+     52.2,
+     1.0
+    ],
+    [
+     "aman dalmond",
+     1,
+     7,
+     14.3,
+     17.9
+    ],
+    [
+     "field dx",
+     1,
+     2,
+     50.0,
+     1.5
+    ]
+   ],
+   "brand_clicks": 105,
+   "nonbrand_clicks_anonymised": 43,
+   "nonbrand_zero_click_queries": 415,
+   "listed_zero_click_impressions": 3786,
+   "top_zero": [
+    [
+     "defense bim software",
+     310,
+     47.4
+    ],
+    [
+     "5d bim",
+     186,
+     54.5
+    ],
+    [
+     "4d coordination hyperscale construction",
+     184,
+     86.8
+    ],
+    [
+     "render 3d",
+     176,
+     74.7
+    ],
+    [
+     "3d model rendering",
+     166,
+     41.5
+    ],
+    [
+     "modeling rendering",
+     124,
+     62.0
+    ],
+    [
+     "render 3d model",
+     124,
+     62.7
+    ],
+    [
+     "rendering in 3d animation",
+     122,
+     67.8
+    ],
+    [
+     "5d bim software",
+     72,
+     21.7
+    ],
+    [
+     "bim 5d",
+     72,
+     50.1
+    ],
+    [
+     "what is project controls in construction",
+     71,
+     46.4
+    ],
+    [
+     "military construction bim software",
+     68,
+     67.9
+    ],
+    [
+     "5d bim services",
+     65,
+     52.2
+    ],
+    [
+     "5d bim in construction",
+     63,
+     61.0
+    ]
+   ],
+   "striking": [
+    [
+     "5d bim software",
+     72,
+     21.7
+    ],
+    [
+     "5d software bim",
+     56,
+     29.7
+    ],
+    [
+     "project control plan",
+     45,
+     24.9
+    ],
+    [
+     "bim 5d software",
+     45,
+     26.3
+    ],
+    [
+     "4d tender animation",
+     33,
+     26.1
+    ],
+    [
+     "who offers bim, digital twin, 4d/5d construction services?",
+     30,
+     6.5
+    ],
+    [
+     "ai-accelerated rendering",
+     26,
+     11.4
+    ],
+    [
+     "pcm meaning in construction",
+     21,
+     7.3
+    ],
+    [
+     "5d bim software list",
+     17,
+     18.5
+    ],
+    [
+     "project controls manager",
+     17,
+     30.1
+    ],
+    [
+     "4d bim planning",
+     14,
+     26.5
+    ],
+    [
+     "pcm role",
+     11,
+     4.0
+    ],
+    [
+     "how to scale from tier 3 to tier 2 construction",
+     10,
+     28.1
+    ],
+    [
+     "4d planning bim",
+     9,
+     25.6
+    ],
+    [
+     "4d simulation",
+     7,
+     7.1
+    ],
+    [
+     "4d bim construction",
+     7,
+     19.9
+    ],
+    [
+     "pcm meaning construction",
+     5,
+     10.8
+    ],
+    [
+     "project controls plan",
+     4,
+     17.0
+    ],
+    [
+     "best 5d bim software",
+     4,
+     21.0
+    ],
+    [
+     "how to win work from tier 2 builders",
+     3,
+     7.0
+    ]
+   ],
+   "previous_period": {
+    "window": "2026-07-13..2026-08-09",
+    "total_queries": 449,
+    "with_clicks": [
+     [
+      "feeldx",
+      66,
+      136,
+      48.5,
+      1.1
+     ],
+     [
+      "feeldx pty ltd",
+      10,
+      34,
+      29.4,
+      1.0
+     ],
+     [
+      "feel dx",
+      9,
+      14,
+      64.3,
+      1.0
+     ],
+     [
+      "feel dx pty ltd",
+      3,
+      8,
+      37.5,
+      2.2
+     ],
+     [
+      "vpdd feeldx pty ltd",
+      3,
+      8,
+      37.5,
+      3.6
+     ],
+     [
+      "field dx",
+      2,
+      4,
+      50.0,
+      1.5
+     ],
+     [
+      "bim 5d software",
+      1,
+      73,
+      1.4,
+      17.5
+     ]
+    ]
+   }
+  },
+  "pages": {
+   "window": "2026-08-10..2026-09-06",
+   "total_pages": 71,
+   "pages": [
+    [
+     "/news/the-art-of-rendering-a-3d-model",
+     0,
+     1215,
+     0.0,
+     57.4
+    ],
+    [
+     "/news/exploring-5d-bim-software-solutions",
+     2,
+     732,
+     0.3,
+     47.1
+    ],
+    [
+     "/news/the-critical-role-of-project-controls-manager-in-construction",
+     0,
+     661,
+     0.0,
+     36.1
+    ],
+    [
+     "/",
+     128,
+     586,
+     21.8,
+     7.9
+    ],
+    [
+     "/news/bim-and-4d-modelling-revolutionise-australian-defence-construction",
+     0,
+     433,
+     0.0,
+     50.2
+    ],
+    [
+     "/about-us",
+     5,
+     323,
+     1.5,
+     2.4
+    ],
+    [
+     "/services",
+     3,
+     288,
+     1.0,
+     2.6
+    ],
+    [
+     "/our-work",
+     2,
+     239,
+     0.8,
+     3.5
+    ],
+    [
+     "/news/delving-into-construction-project-life-cycle-phases",
+     0,
+     236,
+     0.0,
+     64.4
+    ],
+    [
+     "/news/leveraging-4d-bim-for-enhanced-construction-scheduling",
+     0,
+     226,
+     0.0,
+     81.3
+    ],
+    [
+     "/aec",
+     1,
+     222,
+     0.5,
+     1.9
+    ],
+    [
+     "/news/4d-bim-vs-5d-bim-understanding-the-key-differences",
+     0,
+     195,
+     0.0,
+     45.4
+    ],
+    [
+     "/contact-us",
+     2,
+     174,
+     1.1,
+     6.7
+    ],
+    [
+     "/news/understanding-the-components-of-a-project-control-plan",
+     0,
+     158,
+     0.0,
+     35.6
+    ],
+    [
+     "/news",
+     0,
+     136,
+     0.0,
+     27.6
+    ],
+    [
+     "/technology",
+     0,
+     133,
+     0.0,
+     4.2
+    ],
+    [
+     "/news/exploring-the-added-value-of-5d-bim-in-construction",
+     0,
+     125,
+     0.0,
+     65.8
+    ],
+    [
+     "/news/the-role-of-4d-simulation-in-bim-projects",
+     0,
+     124,
+     0.0,
+     67.6
+    ],
+    [
+     "/news/4d-construction-sequencing-in-sydney-a-2026-guide-for-tfnsw-contractors",
+     2,
+     114,
+     1.8,
+     6.2
+    ],
+    [
+     "/news/how-architects-can-use-ai-powered-architectural-rendering-for-smarter-design-decisions",
+     0,
+     102,
+     0.0,
+     39.6
+    ]
+   ]
+  },
+  "country": [
+   [
+    "Australia",
+    80,
+    1320,
+    6.1,
+    17.5
+   ],
+   [
+    "Philippines",
+    25,
+    220,
+    11.4,
+    29.2
+   ],
+   [
+    "Vietnam",
+    22,
+    153,
+    14.4,
+    30.4
+   ],
+   [
+    "Sri Lanka",
+    9,
+    12,
+    75.0,
+    1.2
+   ],
+   [
+    "India",
+    2,
+    252,
+    0.8,
+    51.9
+   ],
+   [
+    "Malaysia",
+    2,
+    57,
+    3.5,
+    50.3
+   ],
+   [
+    "Singapore",
+    2,
+    33,
+    6.1,
+    31.2
+   ],
+   [
+    "Thailand",
+    2,
+    26,
+    7.7,
+    50.1
+   ],
+   [
+    "Austria",
+    1,
+    57,
+    1.8,
+    55.1
+   ],
+   [
+    "France",
+    1,
+    54,
+    1.9,
+    59.5
+   ],
+   [
+    "Hong Kong",
+    1,
+    25,
+    4.0,
+    8.5
+   ],
+   [
+    "New Zealand",
+    1,
+    7,
+    14.3,
+    11.1
+   ]
+  ],
+  "country_previous": {
+   "window": "2026-07-13..2026-08-09",
+   "rows": [
+    [
+     "Australia",
+     81,
+     1279,
+     6.3,
+     18.1
+    ],
+    [
+     "Vietnam",
+     38,
+     213,
+     17.8,
+     11.5
+    ],
+    [
+     "Philippines",
+     9,
+     92,
+     9.8,
+     14.8
+    ],
+    [
+     "India",
+     5,
+     126,
+     4.0,
+     27.2
+    ],
+    [
+     "United States",
+     3,
+     2289,
+     0.1,
+     51.4
+    ],
+    [
+     "United Kingdom",
+     1,
+     492,
+     0.2,
+     45.4
+    ]
+   ]
+  },
+  "device": [
+   [
+    "Desktop",
+    117,
+    5031,
+    2.3,
+    44.0
+   ],
+   [
+    "Mobile",
+    31,
+    912,
+    3.4,
+    31.6
+   ],
+   [
+    "Tablet",
+    0,
+    8,
+    0.0,
+    5.8
+   ]
+  ],
+  "indexing": {
+   "last_update": "2026-09-04",
+   "indexed": 81,
+   "not_indexed": 12,
+   "reasons": {
+    "Crawled - currently not indexed": 10,
+    "Duplicate without user-selected canonical": 2,
+    "Alternate page with proper canonical tag": 0
+   }
+  },
+  "sitemaps_submitted": 0,
+  "core_web_vitals": {
+   "last_update": "2026-09-07",
+   "mobile": "Not enough usage data in the last 90 days",
+   "desktop": "Not enough usage data in the last 90 days"
+  },
+  "provenance": {
+   "performance": "read via Chrome javascript_tool from GSC performance tables (breakdown=date num_of_days=90; query/page/country/device num_of_days=28; previous period via start_date/end_date URL params)",
+   "indexing": "GSC Pages report, last update 2026-09-04 (unchanged)",
+   "sitemaps": "GSC Sitemaps page: 0-0 of 0 submitted",
+   "cwv": "GSC CWV page, last updated 2026-09-07",
+   "ahrefs": "not used - domain not verified on current plan"
+  }
+ },
+ "ga4": {
+  "property": "FeelDX - GA4 (309588561)",
+  "windows": {
+   "current": {
+    "start": "2026-08-10",
+    "end": "2026-09-06"
+   },
+   "previous": {
+    "start": "2026-07-13",
+    "end": "2026-08-09"
+   }
+  },
+  "traffic_acquisition": {
+   "window": "2026-08-10..2026-09-06",
+   "prev": "2026-07-13..2026-08-09",
+   "totals": {
+    "sessions": 1197,
+    "sessions_prev": 833,
+    "sessions_pct": 43.7,
+    "engaged": 474,
+    "engaged_prev": 277,
+    "engaged_pct": 71.12,
+    "eng_rate": 39.6,
+    "eng_rate_prev": 33.25,
+    "eng_rate_pct": 19.08,
+    "avg_eng_time": "18s",
+    "avg_eng_time_prev": "22s",
+    "avg_eng_time_pct": -18.91,
+    "events_per_session": 4.45,
+    "events_per_session_prev": 4.77,
+    "events": 5327,
+    "events_prev": 3970,
+    "events_pct": 34.18,
+    "key_events": 32,
+    "key_events_prev": 27,
+    "key_events_pct": 18.52,
+    "key_event_rate": 0.92,
+    "key_event_rate_prev": 1.2,
+    "key_event_rate_pct": -23.45
+   },
+   "channels": [
+    {
+     "n": "Direct",
+     "s": 671,
+     "sp": 402,
+     "pct": 66.92,
+     "t": "11s",
+     "tp": "11s",
+     "e": 35.77,
+     "ep": 18.16,
+     "k": 3,
+     "kp": 6
+    },
+    {
+     "n": "Organic Search",
+     "s": 253,
+     "sp": 204,
+     "pct": 24.02,
+     "t": "46s",
+     "tp": "54s",
+     "e": 61.26,
+     "ep": 53.92,
+     "k": 26,
+     "kp": 19,
+     "ker": 2.37,
+     "kerp": 1.96
+    },
+    {
+     "n": "Paid Search",
+     "s": 148,
+     "sp": 49,
+     "pct": 202.04,
+     "t": "5s",
+     "tp": "20s",
+     "e": 27.7,
+     "ep": 36.73,
+     "k": 2,
+     "kp": 0
+    },
+    {
+     "n": "Display",
+     "s": 72,
+     "sp": 138,
+     "pct": -47.83,
+     "t": "11s",
+     "tp": "8s",
+     "e": 23.61,
+     "ep": 40.58,
+     "k": 0,
+     "kp": 0
+    },
+    {
+     "n": "Referral",
+     "s": 30,
+     "sp": 14,
+     "pct": 114.29,
+     "t": "12s",
+     "tp": "25s",
+     "e": 46.67,
+     "ep": 64.29,
+     "k": 1,
+     "kp": 2
+    },
+    {
+     "n": "Organic Social",
+     "s": 12,
+     "sp": 13,
+     "pct": -7.69,
+     "t": "6s",
+     "tp": "32s",
+     "e": 33.33,
+     "ep": 61.54,
+     "k": 0,
+     "kp": 0
+    },
+    {
+     "n": "Cross-network",
+     "s": 6,
+     "sp": 3,
+     "t": "0s",
+     "e": 0,
+     "k": 0
+    },
+    {
+     "n": "Email",
+     "s": 4,
+     "sp": 5,
+     "t": "10s",
+     "e": 25.0,
+     "k": 0
+    },
+    {
+     "n": "AI Assistant",
+     "s": 1,
+     "sp": 1,
+     "t": "0s",
+     "e": 0,
+     "k": 0
+    },
+    {
+     "n": "Organic Shopping",
+     "s": 1,
+     "sp": 3,
+     "t": "19s",
+     "e": 100,
+     "k": 0
+    }
+   ],
+   "channels_note": "table showed 1-10 of 11 rows; 11th row not read",
+   "insights": [
+    "Insights side panel did not render into readable text this run. The 18 Aug direct spike (~300 views in the daily chart) remains inside the window; the previously recorded insight (Direct 275 sessions vs 20 expected, 249 new sessions from Singapore via Chrome) is carried as context only."
+   ]
+  },
+  "pages": {
+   "window": "2026-08-10..2026-09-06",
+   "total_views": 1680,
+   "total_views_prev": 1328,
+   "active_users": 1025,
+   "active_users_prev": 718,
+   "views_per_user": 1.64,
+   "views_per_user_prev": 1.85,
+   "avg_eng_time_per_user": "21s",
+   "avg_eng_time_per_user_prev": "26s",
+   "total_pages": 182,
+   "pages": [
+    [
+     "/",
+     666,
+     688,
+     -3.2,
+     "11s",
+     0
+    ],
+    [
+     "/technology",
+     150,
+     45,
+     233.33,
+     "7s",
+     0
+    ],
+    [
+     "/services",
+     108,
+     88,
+     22.73,
+     "30s",
+     0
+    ],
+    [
+     "/project-control",
+     79,
+     48,
+     64.58,
+     "9s",
+     0
+    ],
+    [
+     "/faq",
+     70,
+     0,
+     null,
+     "1m 51s",
+     0
+    ],
+    [
+     "/our-work",
+     66,
+     78,
+     -15.38,
+     "29s",
+     0
+    ],
+    [
+     "/about-us",
+     55,
+     62,
+     -11.29,
+     "22s",
+     0
+    ],
+    [
+     "/contact-us",
+     55,
+     95,
+     -42.11,
+     "19s",
+     9
+    ],
+    [
+     "/studio",
+     38,
+     39,
+     -2.56,
+     "36s",
+     0
+    ],
+    [
+     "/news",
+     16,
+     10,
+     60.0,
+     "30s",
+     0
+    ]
+   ],
+   "contact_us_key_events_prev": 16,
+   "faq_note": "/faq: 70 views from 9 active users (7.78 views/user), 1m 51s avg engagement; page still 404"
+  },
+  "provenance": {
+   "source": "GA4 UI via Chrome get_page_text: lifecycle-traffic-acquisition-v2 and all-pages-and-screens with explicit date params"
+  }
+ },
+ "social": {
+  "linkedin": {
+   "company_id": 67163800,
+   "scan_date": "2026-09-09",
+   "highlights": {
+    "window": "2026-08-08..2026-09-06",
+    "impressions": 1470,
+    "impressions_pct": -18.8,
+    "reactions": 39,
+    "reactions_pct": -9.3,
+    "comments": 0,
+    "reposts": 0,
+    "sponsored": 0
+   },
+   "posts_table": {
+    "window": "2026-08-24..2026-09-07",
+    "posts": [
+     {
+      "date": "2026-09-08",
+      "topic": "The Complete Guide to 5D BIM Modelling in Australia: Costs, Implementation, and ROI",
+      "type": "Article",
+      "impr": 61,
+      "views": 3,
+      "clicks": 1,
+      "ctr": 1.64,
+      "reactions": 0,
+      "comments": 0,
+      "reposts": 0,
+      "eng": 1.64
+     },
+     {
+      "date": "2026-09-03",
+      "topic": "Regional housing / planning approvals",
+      "type": "Image",
+      "impr": 110,
+      "views": null,
+      "clicks": 1,
+      "ctr": 0.91,
+      "reactions": 2,
+      "comments": 0,
+      "reposts": 1,
+      "eng": 3.64
+     },
+     {
+      "date": "2026-08-25",
+      "topic": "Skilled labour shortage / VDC",
+      "type": "Video",
+      "impr": 174,
+      "views": 60,
+      "clicks": 7,
+      "ctr": 4.02,
+      "reactions": 4,
+      "comments": 0,
+      "reposts": 3,
+      "eng": 8.05
+     }
+    ]
+   },
+   "followers": {
+    "window": "2026-08-08..2026-09-06",
+    "total": 3102,
+    "new_30d": 15,
+    "new_30d_pct": 7.1,
+    "location": [
+     [
+      "Greater Melbourne",
+      1127,
+      36.3
+     ],
+     [
+      "Greater Sydney",
+      254,
+      8.2
+     ],
+     [
+      "Greater Brisbane",
+      96,
+      3.1
+     ],
+     [
+      "Greater Perth",
+      92,
+      3.0
+     ],
+     [
+      "Greater Adelaide",
+      47,
+      1.5
+     ],
+     [
+      "Metro Manila, PH",
+      43,
+      1.4
+     ],
+     [
+      "Ho Chi Minh City, VN",
+      40,
+      1.3
+     ],
+     [
+      "London, UK",
+      24,
+      0.8
+     ],
+     [
+      "Gold Coast",
+      23,
+      0.7
+     ],
+     [
+      "Geelong",
+      18,
+      0.6
+     ]
+    ]
+   },
+   "visitors": {
+    "window": "2026-08-08..2026-09-06",
+    "page_views": 168,
+    "page_views_pct": -39.8,
+    "unique": 69,
+    "unique_pct": -12.7,
+    "button_clicks": 0,
+    "button_clicks_pct": -100,
+    "desktop": 94,
+    "mobile": 74,
+    "job_function": [
+     [
+      "Engineering",
+      40,
+      23.8
+     ],
+     [
+      "Arts and Design",
+      28,
+      16.7
+     ],
+     [
+      "Operations",
+      25,
+      14.9
+     ],
+     [
+      "Research",
+      21,
+      12.5
+     ],
+     [
+      "Community and Social Services",
+      11,
+      6.5
+     ],
+     [
+      "Marketing",
+      5,
+      3.0
+     ],
+     [
+      "Business Development",
+      4,
+      2.4
+     ],
+     [
+      "Human Resources",
+      3,
+      1.8
+     ],
+     [
+      "Healthcare Services",
+      2,
+      1.2
+     ],
+     [
+      "Media and Communication",
+      2,
+      1.2
+     ]
+    ]
+   },
+   "search": {
+    "window": "2026-08-31..2026-09-06",
+    "page_searches": 318,
+    "pct": 3.2,
+    "top_keywords": [
+     "Feeldx",
+     "Infrastructure services",
+     "Water"
+    ]
+   },
+   "competitors": {
+    "window": "last 30 days (2026-08-08..2026-09-06)",
+    "configured": false,
+    "columns": [
+     "page",
+     "followers",
+     "new_followers",
+     "posts",
+     "comments",
+     "comments_per_day",
+     "reactions"
+    ],
+    "rows": [
+     [
+      "Arcadis",
+      1412440,
+      18500,
+      23,
+      85,
+      3,
+      7300
+     ],
+     [
+      "Jacobs",
+      2114956,
+      17700,
+      31,
+      130,
+      4,
+      6700
+     ],
+     [
+      "Fluor Corporation",
+      1144525,
+      7700,
+      18,
+      136,
+      5,
+      6400
+     ],
+     [
+      "Hickory",
+      40738,
+      377,
+      2,
+      7,
+      0,
+      588
+     ],
+     [
+      "Solid Support Pty Ltd",
+      3463,
+      77,
+      5,
+      4,
+      0,
+      73
+     ],
+     [
+      "DX Living",
+      100,
+      43,
+      19,
+      0,
+      0,
+      85
+     ],
+     [
+      "Water Infrastructure Services",
+      683,
+      21,
+      0,
+      0,
+      0,
+      4
+     ],
+     [
+      "FeelDX",
+      3102,
+      15,
+      7,
+      0,
+      0,
+      39
+     ],
+     [
+      "Time Planning & Programming",
+      611,
+      9,
+      0,
+      0,
+      0,
+      7
+     ],
+     [
+      "Greenwich Planning",
+      183,
+      1,
+      0,
+      0,
+      0,
+      0
+     ]
+    ]
+   }
+  },
+  "public_counts": {
+   "facebook": {
+    "page": "facebook.com/feeldx",
+    "followers": 391,
+    "following": 49
+   },
+   "instagram": {
+    "handle": "@feeldx",
+    "followers": 213,
+    "posts": 464,
+    "following": 445
+   },
+   "youtube": {
+    "handle": "@feeldxptyltd2651",
+    "subscribers": 12,
+    "videos": 14
+   }
+  },
+  "windows": {
+   "linkedin_highlights": "2026-08-08..2026-09-06",
+   "linkedin_posts_table": "2026-08-24..2026-09-07",
+   "linkedin_search": "2026-08-31..2026-09-06",
+   "linkedin_competitors": "last 30 days"
+  },
+  "provenance": {
+   "linkedin": "admin analytics read via javascript_tool (main.innerText + table DOM + aria-labels 'increase/decrease by')",
+   "facebook_instagram_youtube": "public profile pages only; no insights (FeelDX page not in this account's Meta Business Manager)",
+   "hubspot": "not used"
+  }
+ },
+ "technical": {
+  "checked": "2026-09-09",
+  "robots": "User-agent: *\nDisallow:\nSitemap: https://www.feeldx.com/sitemap.xml",
+  "pages": [
+   {
+    "p": "/",
+    "status": 200,
+    "title_len": 89,
+    "meta_len": 113,
+    "h1": "Plan. Visualise. Transform.",
+    "canonical": "//"
+   },
+   {
+    "p": "/services",
+    "status": 200,
+    "title_len": 82,
+    "meta_len": 150,
+    "h1": "OUR SERVICES",
+    "canonical": "/services"
+   },
+   {
+    "p": "/our-work",
+    "status": 200,
+    "title_len": 84,
+    "meta_len": 151,
+    "h1": "Our Work",
+    "canonical": "/our-work"
+   },
+   {
+    "p": "/technology",
+    "status": 200,
+    "title_len": 79,
+    "meta_len": 141,
+    "h1": "Our Technology",
+    "canonical": "/technology"
+   },
+   {
+    "p": "/project-control",
+    "status": 200,
+    "title_len": 65,
+    "meta_len": 140,
+    "h1": "PROJECT CONTROL AND FORENSIC ANALYSIS",
+    "canonical": "/project-control"
+   },
+   {
+    "p": "/aec",
+    "status": 200,
+    "title_len": 89,
+    "meta_len": 113,
+    "h1": null,
+    "canonical": null,
+    "note": "title identical to homepage"
+   },
+   {
+    "p": "/studio-draft",
+    "status": 200,
+    "title_len": 6,
+    "meta_len": 0,
+    "h1": "The Studio",
+    "canonical": "/studio-draft",
+    "robots_meta": null,
+    "note": "draft public, no noindex, in sitemap"
+   },
+   {
+    "p": "/faq",
+    "status": 404,
+    "title_len": null,
+    "meta_len": null,
+    "h1": null,
+    "canonical": null,
+    "note": "still 404 (404 body carries homepage title), still in sitemap"
+   },
+   {
+    "p": "/about-us",
+    "status": 200,
+    "title_len": 72,
+    "meta_len": 137,
+    "h1": "ABOUT US",
+    "canonical": "/about-us"
+   },
+   {
+    "p": "/contact-us",
+    "status": 200,
+    "title_len": 88,
+    "meta_len": 158,
+    "h1": null,
+    "canonical": "/contact-us"
+   }
+  ],
+  "sitemap": {
+   "status": 200,
+   "urls": 90,
+   "news_urls": 77,
+   "has_empty_loc": true,
+   "lastmod_count": 0,
+   "changefreq_count": 90,
+   "priority_count": 90,
+   "contains_faq": true,
+   "contains_studio_draft": true
+  },
+  "gsc_index": {
+   "last_update": "2026-09-04",
+   "indexed": 81,
+   "not_indexed": 12,
+   "reasons": {
+    "Crawled - currently not indexed": 10,
+    "Duplicate without user-selected canonical": 2
+   }
+  },
+  "gsc_sitemaps_submitted": 0,
+  "cwv": {
+   "last_update": "2026-09-07",
+   "mobile": "Not enough usage data in the last 90 days",
+   "desktop": "Not enough usage data in the last 90 days"
+  },
+  "changes_since_2026-09-08": "none - no issue fixed, no issue new",
+  "provenance": "fetch() from a feeldx.com tab via javascript_tool; sitemap.xml and robots.txt parsed in-page"
+ }
+}
