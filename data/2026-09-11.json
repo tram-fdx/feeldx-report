@@ -1,0 +1,1687 @@
+{
+ "run_date": "2026-09-11",
+ "timezone": "Asia/Ho_Chi_Minh",
+ "notes": [
+  "All figures read live via Chrome on 2026-09-11 (Asia/Ho_Chi_Minh). GSC latest data date is 2026-09-08.",
+  "Ahrefs remains unavailable for feeldx.com (domain not verified on the current plan); no substitute figure used."
+ ],
+ "gsc": {
+  "property": "https://www.feeldx.com/",
+  "last_data_date": "2026-09-08",
+  "windows": {
+   "current": {
+    "from": "2026-08-12",
+    "to": "2026-09-08",
+    "days": 28
+   },
+   "previous": {
+    "from": "2026-07-15",
+    "to": "2026-08-11",
+    "days": 28
+   },
+   "weekly": "trailing 7-day blocks anchored on the last GSC data date; latest block 2026-09-02..2026-09-08"
+  },
+  "current": {
+   "clicks": 154,
+   "impressions": 5877,
+   "ctr": 2.62,
+   "position": 41.8,
+   "tiles_read": "computed from the 90-day date breakdown table (last 28 rows); position is impression-weighted"
+  },
+  "previous": {
+   "clicks": 133,
+   "impressions": 6233,
+   "ctr": 2.13,
+   "position": 38.2,
+   "tiles_read": "computed from the 90-day date breakdown table (rows -56..-28)"
+  },
+  "daily_columns": [
+   "date",
+   "clicks",
+   "impressions",
+   "position"
+  ],
+  "daily_28": [
+   [
+    "2026-08-12",
+    7,
+    229,
+    40.0
+   ],
+   [
+    "2026-08-13",
+    16,
+    322,
+    35.1
+   ],
+   [
+    "2026-08-14",
+    7,
+    161,
+    40.2
+   ],
+   [
+    "2026-08-15",
+    2,
+    141,
+    40.4
+   ],
+   [
+    "2026-08-16",
+    5,
+    199,
+    38.5
+   ],
+   [
+    "2026-08-17",
+    7,
+    245,
+    43.9
+   ],
+   [
+    "2026-08-18",
+    11,
+    283,
+    37.0
+   ],
+   [
+    "2026-08-19",
+    8,
+    218,
+    41.9
+   ],
+   [
+    "2026-08-20",
+    8,
+    311,
+    47.8
+   ],
+   [
+    "2026-08-21",
+    3,
+    174,
+    48.8
+   ],
+   [
+    "2026-08-22",
+    1,
+    128,
+    56.2
+   ],
+   [
+    "2026-08-23",
+    7,
+    186,
+    43.1
+   ],
+   [
+    "2026-08-24",
+    8,
+    221,
+    42.7
+   ],
+   [
+    "2026-08-25",
+    7,
+    268,
+    40.4
+   ],
+   [
+    "2026-08-26",
+    4,
+    216,
+    50.9
+   ],
+   [
+    "2026-08-27",
+    4,
+    207,
+    44.6
+   ],
+   [
+    "2026-08-28",
+    6,
+    185,
+    48.3
+   ],
+   [
+    "2026-08-29",
+    1,
+    168,
+    57.2
+   ],
+   [
+    "2026-08-30",
+    4,
+    232,
+    48.7
+   ],
+   [
+    "2026-08-31",
+    2,
+    203,
+    47.4
+   ],
+   [
+    "2026-09-01",
+    4,
+    232,
+    34.8
+   ],
+   [
+    "2026-09-02",
+    4,
+    191,
+    30.5
+   ],
+   [
+    "2026-09-03",
+    7,
+    161,
+    36.7
+   ],
+   [
+    "2026-09-04",
+    2,
+    152,
+    38.5
+   ],
+   [
+    "2026-09-05",
+    1,
+    119,
+    38.5
+   ],
+   [
+    "2026-09-06",
+    3,
+    212,
+    36.4
+   ],
+   [
+    "2026-09-07",
+    9,
+    233,
+    39.3
+   ],
+   [
+    "2026-09-08",
+    6,
+    280,
+    33.9
+   ]
+  ],
+  "weeks": [
+   {
+    "start": "2026-08-12",
+    "end": "2026-08-18",
+    "clicks": 55,
+    "impressions": 1580,
+    "ctr": 3.48
+   },
+   {
+    "start": "2026-08-19",
+    "end": "2026-08-25",
+    "clicks": 42,
+    "impressions": 1506,
+    "ctr": 2.79
+   },
+   {
+    "start": "2026-08-26",
+    "end": "2026-09-01",
+    "clicks": 25,
+    "impressions": 1443,
+    "ctr": 1.73
+   },
+   {
+    "start": "2026-09-02",
+    "end": "2026-09-08",
+    "clicks": 32,
+    "impressions": 1348,
+    "ctr": 2.37
+   }
+  ],
+  "queries": {
+   "window": "2026-08-12..2026-09-08",
+   "total_queries": 401,
+   "queries_with_clicks": 5,
+   "with_clicks": [
+    [
+     "feeldx",
+     68,
+     141,
+     48.2,
+     1.1
+    ],
+    [
+     "feeldx pty ltd",
+     13,
+     32,
+     40.6,
+     1.0
+    ],
+    [
+     "feel dx pty ltd",
+     12,
+     35,
+     34.3,
+     1.1
+    ],
+    [
+     "feel dx",
+     11,
+     21,
+     52.4,
+     1.0
+    ],
+    [
+     "aman dalmond",
+     1,
+     7,
+     14.3,
+     17.9
+    ]
+   ],
+   "brand_clicks": 105,
+   "nonbrand_clicks_anonymised": 49,
+   "nonbrand_zero_click_queries": 396,
+   "listed_zero_click_impressions": 3719,
+   "listed_clicks": 105,
+   "listed_impressions": 3955,
+   "top_zero": [
+    [
+     "defense bim software",
+     316,
+     48.8
+    ],
+    [
+     "4d coordination hyperscale construction",
+     195,
+     86.0
+    ],
+    [
+     "5d bim",
+     180,
+     54.5
+    ],
+    [
+     "render 3d",
+     161,
+     75.9
+    ],
+    [
+     "3d model rendering",
+     144,
+     42.9
+    ],
+    [
+     "render 3d model",
+     126,
+     62.0
+    ],
+    [
+     "modeling rendering",
+     124,
+     63.0
+    ],
+    [
+     "rendering in 3d animation",
+     113,
+     70.2
+    ],
+    [
+     "military construction bim software",
+     76,
+     68.3
+    ],
+    [
+     "bim 5d",
+     73,
+     50.0
+    ],
+    [
+     "5d bim software",
+     72,
+     21.5
+    ],
+    [
+     "what is project controls in construction",
+     66,
+     46.2
+    ]
+   ],
+   "striking_columns": [
+    "query",
+    "clicks",
+    "impressions",
+    "position"
+   ],
+   "striking": [
+    [
+     "5d bim software",
+     0,
+     72,
+     21.5
+    ],
+    [
+     "ai-accelerated rendering",
+     0,
+     33,
+     12.0
+    ],
+    [
+     "5d bim software list",
+     0,
+     16,
+     18.3
+    ],
+    [
+     "4d bim planning",
+     0,
+     15,
+     14.4
+    ],
+    [
+     "model rendering",
+     0,
+     8,
+     17.1
+    ],
+    [
+     "aman dalmond",
+     1,
+     7,
+     17.9
+    ],
+    [
+     "4d bim construction",
+     0,
+     6,
+     9.2
+    ],
+    [
+     "rendering in 3d modelling",
+     0,
+     6,
+     12.0
+    ],
+    [
+     "4d installations",
+     0,
+     5,
+     9.0
+    ],
+    [
+     "benefits of 5d bim",
+     0,
+     5,
+     19.8
+    ],
+    [
+     "pcm meaning construction",
+     0,
+     4,
+     8.5
+    ],
+    [
+     "rendering a 3d model",
+     0,
+     4,
+     13.8
+    ],
+    [
+     "5d model bim",
+     0,
+     4,
+     15.0
+    ],
+    [
+     "best 5d bim software",
+     0,
+     4,
+     21.0
+    ],
+    [
+     "project controls plan",
+     0,
+     4,
+     22.8
+    ]
+   ],
+   "previous_period": "not re-read this run; the 28-day query breakdown was read for the current window only"
+  },
+  "pages": {
+   "window": "2026-08-12..2026-09-08",
+   "total_pages": 72,
+   "columns": [
+    "path",
+    "clicks",
+    "impressions",
+    "ctr",
+    "position"
+   ],
+   "pages": [
+    [
+     "/news/the-art-of-rendering-a-3d-model",
+     0,
+     1085,
+     0.0,
+     58.0
+    ],
+    [
+     "/news/exploring-5d-bim-software-solutions",
+     3,
+     731,
+     0.4,
+     46.4
+    ],
+    [
+     "/news/the-critical-role-of-project-controls-manager-in-construction",
+     0,
+     656,
+     0.0,
+     36.7
+    ],
+    [
+     "/",
+     129,
+     579,
+     22.3,
+     8.0
+    ],
+    [
+     "/news/bim-and-4d-modelling-revolutionise-australian-defence-construction",
+     0,
+     446,
+     0.0,
+     51.4
+    ],
+    [
+     "/about-us",
+     6,
+     321,
+     1.9,
+     2.5
+    ],
+    [
+     "/services",
+     5,
+     291,
+     1.7,
+     2.6
+    ],
+    [
+     "/news/leveraging-4d-bim-for-enhanced-construction-scheduling",
+     0,
+     246,
+     0.0,
+     80.4
+    ],
+    [
+     "/our-work",
+     2,
+     239,
+     0.8,
+     3.5
+    ],
+    [
+     "/aec",
+     1,
+     228,
+     0.4,
+     2.0
+    ],
+    [
+     "/news/delving-into-construction-project-life-cycle-phases",
+     0,
+     213,
+     0.0,
+     63.1
+    ],
+    [
+     "/news/4d-bim-vs-5d-bim-understanding-the-key-differences",
+     0,
+     191,
+     0.0,
+     47.0
+    ],
+    [
+     "/contact-us",
+     2,
+     179,
+     1.1,
+     7.1
+    ],
+    [
+     "/news/understanding-the-components-of-a-project-control-plan",
+     0,
+     154,
+     0.0,
+     35.2
+    ],
+    [
+     "/news/the-role-of-4d-simulation-in-bim-projects",
+     0,
+     152,
+     0.0,
+     66.8
+    ]
+   ]
+  },
+  "country": {
+   "total_rows": 91,
+   "columns": [
+    "country",
+    "clicks",
+    "impressions",
+    "ctr",
+    "position"
+   ],
+   "with_clicks": [
+    [
+     "Australia",
+     81,
+     1365,
+     5.9,
+     17.5
+    ],
+    [
+     "Philippines",
+     26,
+     213,
+     12.2,
+     29.4
+    ],
+    [
+     "Vietnam",
+     24,
+     153,
+     15.7,
+     30.0
+    ],
+    [
+     "Sri Lanka",
+     10,
+     14,
+     71.4,
+     1.1
+    ],
+    [
+     "Singapore",
+     3,
+     36,
+     8.3,
+     32.6
+    ],
+    [
+     "India",
+     2,
+     239,
+     0.8,
+     53.0
+    ],
+    [
+     "Malaysia",
+     2,
+     58,
+     3.4,
+     49.5
+    ],
+    [
+     "Thailand",
+     2,
+     25,
+     8.0,
+     51.1
+    ],
+    [
+     "Austria",
+     1,
+     60,
+     1.7,
+     55.3
+    ],
+    [
+     "France",
+     1,
+     55,
+     1.8,
+     59.6
+    ],
+    [
+     "Hong Kong",
+     1,
+     24,
+     4.2,
+     7.7
+    ],
+    [
+     "New Zealand",
+     1,
+     7,
+     14.3,
+     11.1
+    ]
+   ],
+   "top_by_impressions": [
+    [
+     "United States",
+     0,
+     1707,
+     0.0,
+     51.9
+    ],
+    [
+     "Australia",
+     81,
+     1365,
+     5.9,
+     17.5
+    ],
+    [
+     "United Kingdom",
+     0,
+     439,
+     0.0,
+     55.7
+    ],
+    [
+     "United Arab Emirates",
+     0,
+     379,
+     0.0,
+     62.2
+    ],
+    [
+     "India",
+     2,
+     239,
+     0.8,
+     53.0
+    ],
+    [
+     "Philippines",
+     26,
+     213,
+     12.2,
+     29.4
+    ],
+    [
+     "Vietnam",
+     24,
+     153,
+     15.7,
+     30.0
+    ]
+   ]
+  },
+  "device": [
+   [
+    "Desktop",
+    120,
+    4984,
+    2.4,
+    43.9
+   ],
+   [
+    "Mobile",
+    34,
+    884,
+    3.8,
+    30.4
+   ],
+   [
+    "Tablet",
+    0,
+    9,
+    0.0,
+    6.3
+   ]
+  ],
+  "indexing": {
+   "last_update": "2026-09-04",
+   "indexed": 81,
+   "not_indexed": 12,
+   "reasons": {
+    "Duplicate without user-selected canonical": 2,
+    "Crawled - currently not indexed": 10,
+    "Alternate page with proper canonical tag": 0
+   }
+  },
+  "sitemaps_submitted": 0,
+  "core_web_vitals": {
+   "last_update": "2026-09-09",
+   "mobile": "Not enough usage data in the last 90 days for this device type.",
+   "desktop": "Not enough usage data in the last 90 days for this device type."
+  },
+  "provenance": {
+   "performance": "read via javascript_tool from the GSC date/query/page/country/device breakdown tables",
+   "indexing": "read from the GSC Page indexing screen",
+   "sitemaps": "read from the GSC Sitemaps screen (0-0 of 0)",
+   "cwv": "read from the GSC Core Web Vitals screen",
+   "ahrefs": "not readable - feeldx.com is not verified on the current Ahrefs plan; no substitute figure used"
+  }
+ },
+ "ga4": {
+  "property": "FeelDX - GA4 (309588561)",
+  "windows": {
+   "current": {
+    "from": "2026-08-12",
+    "to": "2026-09-08"
+   },
+   "previous": {
+    "from": "2026-07-15",
+    "to": "2026-08-11"
+   }
+  },
+  "traffic_acquisition": {
+   "window": "2026-08-12..2026-09-08",
+   "prev": "2026-07-15..2026-08-11",
+   "totals": {
+    "sessions": 1226,
+    "sessions_prev": 856,
+    "sessions_pct": 43.22,
+    "engaged_sessions": 471,
+    "engaged_sessions_prev": 275,
+    "engaged_sessions_pct": 71.27,
+    "engagement_rate": 38.42,
+    "engagement_rate_prev": 32.13,
+    "engagement_rate_pct": 19.58,
+    "avg_engagement_time": "18s",
+    "avg_engagement_time_prev": "21s",
+    "avg_engagement_time_pct": -17.85,
+    "events_per_session": 4.35,
+    "events_per_session_prev": 4.75,
+    "events_per_session_pct": -8.38,
+    "event_count": 5338,
+    "event_count_prev": 4068,
+    "event_count_pct": 31.22,
+    "key_events": 14,
+    "key_events_prev": 43,
+    "key_events_pct": -67.44,
+    "session_key_event_rate": 0.73,
+    "session_key_event_rate_prev": 1.4,
+    "session_key_event_rate_pct": -47.63
+   },
+   "channels": [
+    {
+     "channel": "Direct",
+     "sessions": 695,
+     "prev": 416,
+     "pct": 67.07,
+     "engaged": 237,
+     "engagement_rate": 34.1,
+     "avg_time": "11s",
+     "events": 2856,
+     "key_events": 2
+    },
+    {
+     "channel": "Organic Search",
+     "sessions": 255,
+     "prev": 197,
+     "pct": 29.44,
+     "engaged": 153,
+     "engagement_rate": 60.0,
+     "avg_time": "46s",
+     "events": 1445,
+     "key_events": 11
+    },
+    {
+     "channel": "Paid Search",
+     "sessions": 155,
+     "prev": 54,
+     "pct": 187.04,
+     "engaged": 41,
+     "engagement_rate": 26.45,
+     "avg_time": "5s",
+     "events": 585,
+     "key_events": 0
+    },
+    {
+     "channel": "Display",
+     "sessions": 66,
+     "prev": 144,
+     "pct": -54.17,
+     "engaged": 20,
+     "engagement_rate": 30.3,
+     "avg_time": "15s",
+     "events": 247,
+     "key_events": 0
+    },
+    {
+     "channel": "Referral",
+     "sessions": 31,
+     "prev": 14,
+     "pct": 121.43,
+     "engaged": 15,
+     "engagement_rate": 48.39,
+     "avg_time": "13s",
+     "events": 130,
+     "key_events": 1
+    },
+    {
+     "channel": "Organic Social",
+     "sessions": 13,
+     "prev": 13,
+     "pct": 0.0,
+     "engaged": 4,
+     "engagement_rate": 30.77,
+     "avg_time": "5s",
+     "events": 48,
+     "key_events": 0
+    },
+    {
+     "channel": "Cross-network",
+     "sessions": 6,
+     "prev": 4,
+     "pct": 50.0,
+     "engaged": 0,
+     "engagement_rate": 0.0,
+     "avg_time": "0s",
+     "events": 19,
+     "key_events": 0
+    },
+    {
+     "channel": "Unassigned",
+     "sessions": 2,
+     "prev": 1,
+     "pct": 100.0,
+     "engaged": 0,
+     "engagement_rate": 0.0,
+     "avg_time": "5s",
+     "events": 2,
+     "key_events": 0
+    },
+    {
+     "channel": "AI Assistant",
+     "sessions": 1,
+     "prev": 1,
+     "pct": 0.0,
+     "engaged": 0,
+     "engagement_rate": 0.0,
+     "avg_time": "0s",
+     "events": 3,
+     "key_events": 0
+    },
+    {
+     "channel": "Email",
+     "sessions": 1,
+     "prev": 7,
+     "pct": -85.71,
+     "engaged": 0,
+     "engagement_rate": 0.0,
+     "avg_time": "3s",
+     "events": 3,
+     "key_events": 0
+    }
+   ],
+   "channels_note": "all 10 visible channel rows read this run",
+   "insights": [
+    "GA4 still flags the 18 August 2026 direct spike: direct visits reached 275 against an expected 20; direct rose from 36 to 449 week over week, Chrome traffic from 18 to 441, and Singapore contributed 249 brand-new sessions."
+   ]
+  },
+  "pages": {
+   "window": "2026-08-12..2026-09-08",
+   "total_views": 1689,
+   "total_views_prev": 1346,
+   "active_users": 1054,
+   "active_users_prev": 738,
+   "views_per_user": 1.6,
+   "views_per_user_prev": 1.82,
+   "avg_eng_time_per_user": "21s",
+   "avg_eng_time_per_user_prev": "25s",
+   "total_pages": 193,
+   "columns": [
+    "path",
+    "views",
+    "views_prev",
+    "views_per_user",
+    "avg_time_per_user",
+    "events",
+    "key_events"
+   ],
+   "pages": [
+    [
+     "/",
+     612,
+     696,
+     1.28,
+     "11s",
+     2039,
+     0
+    ],
+    [
+     "/technology",
+     160,
+     47,
+     1.11,
+     "7s",
+     512,
+     0
+    ],
+    [
+     "/services",
+     112,
+     87,
+     1.32,
+     "31s",
+     299,
+     0
+    ],
+    [
+     "/project-control",
+     80,
+     52,
+     1.23,
+     "8s",
+     216,
+     0
+    ],
+    [
+     "/faq",
+     70,
+     0,
+     7.78,
+     "1m 51s",
+     149,
+     0
+    ],
+    [
+     "/our-work",
+     62,
+     80,
+     1.29,
+     "29s",
+     155,
+     0
+    ],
+    [
+     "/about-us",
+     61,
+     56,
+     1.3,
+     "26s",
+     174,
+     0
+    ],
+    [
+     "/contact-us",
+     54,
+     100,
+     1.17,
+     "22s",
+     175,
+     9
+    ],
+    [
+     "/studio",
+     41,
+     37,
+     1.11,
+     "36s",
+     118,
+     0
+    ],
+    [
+     "/news",
+     15,
+     11,
+     1.5,
+     "32s",
+     40,
+     0
+    ]
+   ],
+   "contact_us_key_events_prev": 17,
+   "faq_note": "/faq logged 70 GA4 views from 9 active users at 7.78 views per user and 1m 51s average, against 0 views last period - but the URL still returns HTTP 404. The views are hits on the 404 response, not a restored page."
+  },
+  "provenance": {
+   "source": "read via javascript_tool from the GA4 traffic-acquisition and pages-and-screens reports with explicit date parameters"
+  }
+ },
+ "social": {
+  "linkedin": {
+   "company_id": 67163800,
+   "scan_date": "2026-09-11",
+   "highlights": {
+    "window": "2026-08-10..2026-09-08",
+    "impressions": 1610,
+    "impressions_pct": 7.0,
+    "reactions": 38,
+    "reactions_pct": 7.3,
+    "comments": 0,
+    "comments_pct": 0,
+    "reposts": 0,
+    "reposts_pct": 0,
+    "sponsored": 0,
+    "note": "LinkedIn's Highlights window did not advance between the 2026-09-10 and 2026-09-11 scans; the figures displayed are identical and are recorded as shown, not carried forward."
+   },
+   "posts_table": {
+    "window": "2026-08-26..2026-09-09",
+    "rows": [
+     {
+      "date": "2026-09-10",
+      "type": "Image",
+      "impressions": 75,
+      "views": null,
+      "clicks": 4,
+      "ctr": 5.33,
+      "reactions": 2,
+      "comments": 0,
+      "reposts": 1,
+      "engagement_rate": 9.33,
+      "title": "High-pressure site environments... (R U OK? / MATES in Construction)"
+     },
+     {
+      "date": "2026-09-08",
+      "type": "Article",
+      "impressions": 80,
+      "views": 6,
+      "clicks": 1,
+      "ctr": 1.25,
+      "reactions": 0,
+      "comments": 0,
+      "reposts": 0,
+      "engagement_rate": 1.25,
+      "title": "The Complete Guide to 5D BIM Modelling in Australia: Costs, Implementation, and ROI"
+     },
+     {
+      "date": "2026-09-03",
+      "type": "Image",
+      "impressions": 118,
+      "views": null,
+      "clicks": 1,
+      "ctr": 0.85,
+      "reactions": 2,
+      "comments": 0,
+      "reposts": 1,
+      "engagement_rate": 3.39,
+      "title": "Meeting aggressive regional housing targets..."
+     }
+    ]
+   },
+   "followers": {
+    "window": "2026-08-10..2026-09-08",
+    "total": 3102,
+    "new_30d": 12,
+    "new_30d_pct": -14.3,
+    "auto_invited": 0,
+    "organic": 12,
+    "sponsored": 0,
+    "location": [
+     [
+      "Greater Melbourne",
+      1127,
+      36.3
+     ],
+     [
+      "Greater Sydney",
+      254,
+      8.2
+     ],
+     [
+      "Greater Brisbane",
+      96,
+      3.1
+     ],
+     [
+      "Greater Perth",
+      92,
+      3.0
+     ],
+     [
+      "Greater Adelaide",
+      47,
+      1.5
+     ],
+     [
+      "Metro Manila",
+      42,
+      1.4
+     ],
+     [
+      "Ho Chi Minh City",
+      40,
+      1.3
+     ],
+     [
+      "London",
+      24,
+      null
+     ],
+     [
+      "Gold Coast",
+      23,
+      null
+     ],
+     [
+      "Geelong",
+      18,
+      null
+     ]
+    ]
+   },
+   "visitors": {
+    "window": "2026-08-10..2026-09-08",
+    "page_views": 183,
+    "page_views_pct": 34.9,
+    "unique": 74,
+    "unique_pct": 9.8,
+    "button_clicks": 0,
+    "button_clicks_pct": -100,
+    "desktop": 101,
+    "mobile": 82,
+    "job_function": [
+     [
+      "Engineering",
+      40,
+      21.9
+     ],
+     [
+      "Operations",
+      28,
+      15.3
+     ],
+     [
+      "Arts and Design",
+      28,
+      15.3
+     ],
+     [
+      "Research",
+      20,
+      10.9
+     ],
+     [
+      "Business Development",
+      14,
+      7.7
+     ],
+     [
+      "Community and Social Services",
+      13,
+      7.1
+     ],
+     [
+      "Marketing",
+      5,
+      2.7
+     ],
+     [
+      "Healthcare Services",
+      2,
+      1.1
+     ],
+     [
+      "Media and Communication",
+      2,
+      1.1
+     ],
+     [
+      "Education",
+      2,
+      1.1
+     ]
+    ]
+   },
+   "search": {
+    "window": "2026-09-02..2026-09-08",
+    "page_searches": 310,
+    "pct": -10.4,
+    "top_keywords": [
+     "Feeldx",
+     "Infrastructure services",
+     "Water",
+     "Time planning programming"
+    ],
+    "top_searcher_companies": [
+     "Storible Agency",
+     "INTREC",
+     "Personio",
+     "Amaris Consulting",
+     "reFaced"
+    ]
+   },
+   "competitors": {
+    "window": "2026-08-10..2026-09-08 (last 30 days)",
+    "own_new_followers": 12,
+    "own_comments": 0,
+    "columns": [
+     "page",
+     "followers",
+     "new_followers_30d",
+     "posts",
+     "comments",
+     "reactions"
+    ],
+    "rows": [
+     [
+      "Jacobs",
+      "2,116,280",
+      "17.4K",
+      34,
+      131,
+      "6.9K"
+     ],
+     [
+      "Fluor Corporation",
+      "1,145,154",
+      "7.6K",
+      20,
+      143,
+      "6.5K"
+     ],
+     [
+      "Hickory",
+      "40,765",
+      "383",
+      3,
+      7,
+      "735"
+     ],
+     [
+      "Solid Support Pty Ltd",
+      "3,464",
+      "77",
+      5,
+      4,
+      "75"
+     ],
+     [
+      "DX Living",
+      "101",
+      "43",
+      21,
+      0,
+      "87"
+     ],
+     [
+      "Water Infrastructure Services",
+      "683",
+      "20",
+      1,
+      0,
+      "7"
+     ],
+     [
+      "FeelDX (own)",
+      "3,102",
+      "12",
+      8,
+      0,
+      "38"
+     ],
+     [
+      "VISUAL5D GROUP (V5D)",
+      "3,640",
+      "11",
+      0,
+      2,
+      "4"
+     ],
+     [
+      "Time Planning & Programming",
+      "611",
+      "9",
+      0,
+      0,
+      "8"
+     ],
+     [
+      "Greenwich Planning",
+      "184",
+      "1",
+      0,
+      0,
+      "0"
+     ]
+    ]
+   }
+  },
+  "facebook": {
+   "page": "Feel DX (facebook.com/feeldx)",
+   "asset_id": "1744520359178923",
+   "scan_date": "2026-09-11",
+   "window": "2026-08-13..2026-09-09",
+   "window_note": "Meta Business Suite's own 28-day preset, which advanced one day since the previous scan. It does not align with the GSC/GA4 window (2026-08-12..2026-09-08) and is recorded unadjusted.",
+   "views": 1623,
+   "views_displayed": "1.6K",
+   "views_pct": 37.7,
+   "views_from_followers_pct": 36.8,
+   "views_from_followers_pct_change": -26.0,
+   "views_from_nonfollowers_pct": 63.2,
+   "views_from_nonfollowers_pct_change": 25.8,
+   "viewers": 428,
+   "viewers_pct": 114.0,
+   "visits": 221,
+   "visits_pct": 9.4,
+   "interactions": 36,
+   "interactions_pct": -12.2,
+   "interactions_from_followers": 23,
+   "interactions_from_followers_pct": -30.3,
+   "interactions_from_nonfollowers": 13,
+   "interactions_from_nonfollowers_pct": 62.5,
+   "new_follows": 3,
+   "new_follows_pct": -25.0,
+   "unfollows": 0,
+   "unfollows_pct": -100,
+   "net_follows": 3,
+   "net_follows_pct": 0,
+   "video_3s_views": 125,
+   "video_3s_views_pct": -25.6,
+   "watch_time": "32m 49s",
+   "watch_time_pct": -35.5,
+   "conversations_started": 0,
+   "new_contacts": 0,
+   "orders_created": 0
+  },
+  "instagram": {
+   "account": "@feeldx",
+   "scan_date": "2026-09-11",
+   "window": "2026-08-13..2026-09-09",
+   "window_note": "same Meta Business Suite 28-day preset as Facebook; not aligned to the GSC/GA4 window",
+   "views": 779,
+   "views_pct": 2.9,
+   "views_from_followers_pct": 37.4,
+   "views_from_followers_pct_change": 8.1,
+   "views_from_nonfollowers_pct": 62.6,
+   "views_from_nonfollowers_pct_change": -4.3,
+   "reach": 383,
+   "reach_pct": -5.7,
+   "reach_from_followers": 54,
+   "reach_from_followers_pct": -12.9,
+   "reach_from_nonfollowers": 326,
+   "reach_from_nonfollowers_pct": -4.7,
+   "interactions": 32,
+   "interactions_pct": 18.5,
+   "interactions_from_followers_pct": 91,
+   "interactions_from_nonfollowers_pct": 9,
+   "new_follows": 5,
+   "new_follows_pct": 25.0,
+   "unfollows": 2,
+   "unfollows_pct": -33.3,
+   "net_follows": 3,
+   "conversations_started": 1,
+   "conversations_started_pct": -50.0,
+   "new_contacts": 1,
+   "response_rate": 0,
+   "orders_created": 0
+  },
+  "meta_content": {
+   "window": "2026-08-13..2026-09-09",
+   "columns": [
+    "platform",
+    "posted",
+    "reach",
+    "views",
+    "interactions",
+    "reactions",
+    "topic"
+   ],
+   "note": "Meta Business Suite showed 10 rows this run (11 on the previous scan); the 18 Aug Instagram post is no longer on the visible page of the table.",
+   "rows": [
+    [
+     "Facebook",
+     "2026-08-21 08:00",
+     249,
+     466,
+     11,
+     9,
+     "Major public infrastructure assets"
+    ],
+    [
+     "Instagram",
+     "2026-08-25 08:01",
+     124,
+     146,
+     3,
+     3,
+     "East Coast skilled labour shortage"
+    ],
+    [
+     "Facebook",
+     "2026-08-25 08:00",
+     113,
+     134,
+     1,
+     1,
+     "East Coast skilled labour shortage"
+    ],
+    [
+     "Instagram",
+     "2026-08-21 08:00",
+     70,
+     122,
+     11,
+     11,
+     "Major public infrastructure assets"
+    ],
+    [
+     "Instagram",
+     "2026-09-03 08:00",
+     24,
+     40,
+     3,
+     3,
+     "Regional housing / planning approvals"
+    ],
+    [
+     "Facebook",
+     "2026-09-03 08:00",
+     22,
+     31,
+     1,
+     1,
+     "Regional housing / planning approvals"
+    ],
+    [
+     "Instagram",
+     "2026-09-08 08:00",
+     21,
+     42,
+     3,
+     3,
+     "Cost planning"
+    ],
+    [
+     "Facebook",
+     "2026-09-08 08:00",
+     21,
+     41,
+     1,
+     1,
+     "Cost planning"
+    ],
+    [
+     "Instagram",
+     "2026-09-10 08:00",
+     14,
+     34,
+     0,
+     0,
+     "R U OK? / site mental health"
+    ],
+    [
+     "Facebook",
+     "2026-09-10 08:00",
+     12,
+     20,
+     0,
+     0,
+     "R U OK? / site mental health"
+    ]
+   ]
+  },
+  "public_counts": {
+   "facebook": {
+    "page": "facebook.com/feeldx",
+    "page_name": "Feel DX",
+    "followers": 391,
+    "following": 50
+   },
+   "instagram": {
+    "handle": "@feeldx",
+    "followers": 214,
+    "posts": 465,
+    "following": 445
+   },
+   "youtube": {
+    "handle": "@feeldxptyltd2651",
+    "subscribers": 12,
+    "videos": 14
+   }
+  },
+  "windows": {
+   "linkedin_highlights": "2026-08-10..2026-09-08",
+   "linkedin_posts_table": "2026-08-26..2026-09-09",
+   "linkedin_search": "2026-09-02..2026-09-08",
+   "linkedin_competitors": "2026-08-10..2026-09-08 (last 30 days)",
+   "meta": "2026-08-13..2026-09-09",
+   "public_counts": "live profile counters read 2026-09-11"
+  },
+  "provenance": {
+   "linkedin": "read via javascript_tool on the company admin analytics screens (updates, followers, visitors, search appearances, competitors)",
+   "facebook_instagram": "read 2026-09-11 from Meta Business Suite (asset 1744520359178923); the platform toggle was used to switch between the Facebook and Instagram views",
+   "youtube": "public counters read from the channel page; no YouTube Studio analytics access",
+   "hubspot": "not read this run"
+  }
+ },
+ "technical": {
+  "checked": "2026-09-11",
+  "robots": "User-agent: *\nDisallow:\nSitemap: https://www.feeldx.com/sitemap.xml",
+  "columns": [
+   "path",
+   "status",
+   "title_len",
+   "meta_len",
+   "h1",
+   "canonical"
+  ],
+  "pages": [
+   {
+    "p": "/",
+    "status": 200,
+    "title_len": 89,
+    "meta_len": 113,
+    "h1": "Plan. Visualise. Transform.",
+    "canonical": "//"
+   },
+   {
+    "p": "/faq",
+    "status": 404,
+    "title_len": null,
+    "meta_len": null,
+    "h1": null,
+    "canonical": null
+   },
+   {
+    "p": "/studio-draft",
+    "status": 200,
+    "title_len": 6,
+    "meta_len": 0,
+    "h1": "The Studio",
+    "canonical": "/studio-draft"
+   },
+   {
+    "p": "/aec",
+    "status": 200,
+    "title_len": 89,
+    "meta_len": 113,
+    "h1": null,
+    "canonical": null
+   },
+   {
+    "p": "/services",
+    "status": 200,
+    "title_len": 82,
+    "meta_len": 150,
+    "h1": "OUR SERVICES",
+    "canonical": "/services"
+   },
+   {
+    "p": "/our-work",
+    "status": 200,
+    "title_len": 84,
+    "meta_len": 151,
+    "h1": "Our Work",
+    "canonical": "/our-work"
+   },
+   {
+    "p": "/technology",
+    "status": 200,
+    "title_len": 79,
+    "meta_len": 141,
+    "h1": "Our Technology",
+    "canonical": "/technology"
+   },
+   {
+    "p": "/project-control",
+    "status": 200,
+    "title_len": 65,
+    "meta_len": 140,
+    "h1": "PROJECT CONTROL AND FORENSIC ANALYSIS",
+    "canonical": "/project-control"
+   },
+   {
+    "p": "/about-us",
+    "status": 200,
+    "title_len": 72,
+    "meta_len": 137,
+    "h1": "ABOUT US",
+    "canonical": "/about-us"
+   },
+   {
+    "p": "/contact-us",
+    "status": 200,
+    "title_len": 88,
+    "meta_len": 158,
+    "h1": null,
+    "canonical": "/contact-us"
+   },
+   {
+    "p": "/studio",
+    "status": 200,
+    "title_len": 6,
+    "meta_len": 0,
+    "h1": "The Studio",
+    "canonical": "/studio"
+   },
+   {
+    "p": "/news",
+    "status": 200,
+    "title_len": 86,
+    "meta_len": 122,
+    "h1": "News",
+    "canonical": "/news"
+   }
+  ],
+  "sitemap": {
+   "status": 200,
+   "urls": 90,
+   "has_empty_loc": true,
+   "empty_loc_value": "//",
+   "lastmod_count": 0,
+   "changefreq_count": 90,
+   "priority_count": 90,
+   "contains_faq": true,
+   "contains_studio_draft": true
+  },
+  "gsc_index": {
+   "last_update": "2026-09-04",
+   "indexed": 81,
+   "not_indexed": 12,
+   "reasons": {
+    "Duplicate without user-selected canonical": 2,
+    "Crawled - currently not indexed": 10
+   }
+  },
+  "gsc_sitemaps_submitted": 0,
+  "cwv": {
+   "last_update": "2026-09-09",
+   "mobile": "Not enough usage data in the last 90 days for this device type.",
+   "desktop": "Not enough usage data in the last 90 days for this device type."
+  },
+  "changes_since_2026-09-10": "none fixed, none new - /faq still 404, /studio-draft still public and still in the sitemap, sitemap still not submitted to GSC, sitemap still carries one empty <loc>//</loc> and no <lastmod>",
+  "provenance": "fetch() from a feeldx.com tab via javascript_tool; sitemap.xml and robots.txt parsed in-page"
+ }
+}
