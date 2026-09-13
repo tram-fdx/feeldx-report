@@ -1,0 +1,179 @@
+{
+  "run_date": "2026-09-14",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "status": "PARTIAL - three of four data sources were not readable this run",
+  "notes": [
+    "Google Search Console: NOT READABLE. The Chrome profile is signed in as thtram.work@gmail.com, which has no permission on https://www.feeldx.com/ (GSC returned the 'not-verified / you do not have access to this property' screen on u/0 and u/1). No GSC figures were collected; no values were carried forward or estimated.",
+    "GA4: NOT READABLE. Property 309588561 returned 'Thieu quyen / You do not have access to this account or property' for the signed-in account. No GA4 figures were collected.",
+    "LinkedIn: NOT READABLE. www.linkedin.com/feed redirected to the login page and the company admin analytics URLs hit the authwall. No LinkedIn figures were collected.",
+    "Meta Business Suite (Facebook + Instagram), the public profile counters and the feeldx.com technical checks WERE readable and are recorded below from live reads on 2026-09-14.",
+    "Because GSC, GA4 and LinkedIn were unavailable, the four HTML reports were left exactly as published on 2026-09-11 rather than being stamped with a 2026-09-14 date over stale figures. Only this snapshot file was added."
+  ],
+  "gsc": {
+    "property": "https://www.feeldx.com/",
+    "readable": false,
+    "reason": "signed-in Google account (thtram.work@gmail.com) has no access to the property; GSC served the not-verified screen",
+    "provenance": {
+      "performance": "not read",
+      "indexing": "not read",
+      "sitemaps": "not read",
+      "cwv": "not read",
+      "ahrefs": "not usable - feeldx.com is not verified on the current Ahrefs plan; no substitute figures used"
+    }
+  },
+  "ga4": {
+    "property": "FeelDX - GA4 (309588561)",
+    "readable": false,
+    "reason": "permission error on the signed-in Google account",
+    "provenance": { "source": "not read" }
+  },
+  "social": {
+    "linkedin": {
+      "company_id": 67163800,
+      "readable": false,
+      "reason": "not signed in to LinkedIn in this Chrome profile; admin analytics redirected to the authwall"
+    },
+    "facebook": {
+      "page": "Feel DX (facebook.com/feeldx)",
+      "asset_id": "1744520359178923",
+      "scan_date": "2026-09-14",
+      "window": "2026-08-16..2026-09-12",
+      "window_note": "Meta Business Suite's own 28-day preset; it advanced four days since the 2026-09-11 scan (13 Aug - 9 Sep). Not aligned to any GSC/GA4 window this run.",
+      "views": 1637,
+      "views_displayed": "1,6K",
+      "views_pct": 27.6,
+      "views_exact_note": "1637 is the sum of the 28 daily chart values; the tile rounds to 1,6K",
+      "views_from_followers_pct": 38.6,
+      "views_from_followers_pct_change": -17.4,
+      "views_from_nonfollowers_pct": 61.4,
+      "views_from_nonfollowers_pct_change": 15.3,
+      "viewers": 404,
+      "viewers_pct": 78.8,
+      "visits": 264,
+      "visits_pct": 26.9,
+      "interactions": 38,
+      "interactions_pct": -5.0,
+      "interactions_from_followers": 25,
+      "interactions_from_followers_pct": -24.2,
+      "interactions_from_nonfollowers": 13,
+      "interactions_from_nonfollowers_pct": 85.7,
+      "new_follows": 3,
+      "new_follows_pct": -25.0,
+      "unfollows": 0,
+      "unfollows_pct": -100.0,
+      "net_follows": 3,
+      "net_follows_pct": 0,
+      "video_3s_views": 111,
+      "video_3s_views_pct": -37.6,
+      "watch_time": "27m 57s",
+      "watch_time_pct": -38.9,
+      "conversations_started": 1,
+      "conversations_started_pct": 100.0,
+      "new_contacts": 1,
+      "new_contacts_pct": 100.0,
+      "response_rate": 0
+    },
+    "instagram": {
+      "account": "@feeldx",
+      "scan_date": "2026-09-14",
+      "window": "2026-08-16..2026-09-12",
+      "window_note": "same Meta Business Suite 28-day preset as Facebook",
+      "views": 689,
+      "views_pct": -20.7,
+      "views_from_followers_pct": 45.7,
+      "views_from_followers_pct_change": 44.1,
+      "views_from_nonfollowers_pct": 54.3,
+      "views_from_nonfollowers_pct_change": -20.5,
+      "reach": 288,
+      "reach_pct": -41.7,
+      "reach_from_followers": 55,
+      "reach_from_followers_pct": -11.3,
+      "reach_from_nonfollowers": 232,
+      "reach_from_nonfollowers_pct": -45.9,
+      "interactions": 28,
+      "interactions_pct": 0,
+      "interactions_from_followers_pct": 89,
+      "interactions_from_nonfollowers_pct": 11,
+      "new_follows": 5,
+      "new_follows_pct": 66.7,
+      "unfollows": 2,
+      "unfollows_pct": -33.3,
+      "net_follows": 3,
+      "conversations_started": 1,
+      "conversations_started_pct": -50.0,
+      "new_contacts": 1,
+      "new_contacts_pct": 100.0,
+      "response_rate": 0
+    },
+    "meta_content": {
+      "window": "2026-08-16..2026-09-12",
+      "columns": ["title", "posted", "platform", "reach", "views", "interactions"],
+      "note": "12 rows visible in Meta Business Suite this run; each organic post appears once per platform. The 1 Aug posts have dropped out of the 28-day window as it advanced.",
+      "rows": [
+        ["NSW's TOD pipeline is reshaping how infrastru...", "11 Sep 12:30", "Instagram", 18, 32, 1],
+        ["NSW's TOD pipeline is reshaping how infrastru...", "11 Sep 12:30", "Facebook", 39, 70, 2],
+        ["High-pressure site environments, compressed t...", "10 Sep 08:00", "Instagram", 17, 37, 0],
+        ["High-pressure site environments, compressed t...", "10 Sep 08:00", "Facebook", 16, 28, 0],
+        ["The challenge with cost planning isn't usuall...", "8 Sep 08:00", "Instagram", 22, 43, 3],
+        ["The challenge with cost planning isn't usuall...", "8 Sep 08:00", "Facebook", 27, 49, 1],
+        ["Meeting aggressive regional housing targets...", "3 Sep 08:00", "Instagram", 25, 41, 3],
+        ["Meeting aggressive regional housing targets...", "3 Sep 08:00", "Facebook", 24, 36, 1],
+        ["The East Coast skilled labour shortage...", "25 Aug 08:01", "Instagram", 124, 146, 3],
+        ["The East Coast skilled labour shortage...", "25 Aug 08:00", "Facebook", 114, 136, 1],
+        ["Major public infrastructure assets...", "21 Aug 08:00", "Instagram", 70, 122, 11],
+        ["Major public infrastructure assets...", "21 Aug 08:00", "Facebook", 250, 470, 11]
+      ]
+    },
+    "public_counts": {
+      "facebook": { "page": "facebook.com/feeldx", "page_name": "Feel DX", "followers": 391, "following": 50 },
+      "instagram": { "handle": "@feeldx", "followers": 214, "posts": 466, "following": 445 },
+      "youtube": { "handle": "@feeldxptyltd2651", "subscribers": 12, "videos": 14 }
+    },
+    "windows": {
+      "linkedin": "not read this run",
+      "meta": "2026-08-16..2026-09-12",
+      "public_counts": "live profile counters read 2026-09-14"
+    },
+    "provenance": {
+      "linkedin": "not readable - Chrome profile is signed out of LinkedIn",
+      "facebook_instagram": "read 2026-09-14 from Meta Business Suite (asset 1744520359178923); the platform toggle was switched from Facebook to Instagram and both overview screens plus the shared Content table were read via javascript_tool",
+      "youtube": "public counters read from the channel page; no YouTube Studio analytics access",
+      "hubspot": "not read this run"
+    }
+  },
+  "technical": {
+    "checked": "2026-09-14",
+    "robots": "User-agent: *\nDisallow:\nSitemap: https://www.feeldx.com/sitemap.xml",
+    "columns": ["path", "status", "title_len", "meta_len", "h1", "canonical"],
+    "pages": [
+      { "p": "/", "status": 200, "title_len": 89, "meta_len": 113, "h1": "Plan. Visualise. Transform.", "canonical": "//" },
+      { "p": "/faq", "status": 404, "title_len": null, "meta_len": null, "h1": null, "canonical": null },
+      { "p": "/studio-draft", "status": 200, "title_len": 6, "meta_len": 0, "h1": "The Studio", "canonical": "/studio-draft" },
+      { "p": "/aec", "status": 200, "title_len": 89, "meta_len": 113, "h1": null, "canonical": null },
+      { "p": "/services", "status": 200, "title_len": 82, "meta_len": 150, "h1": "OUR SERVICES", "canonical": "/services" },
+      { "p": "/our-work", "status": 200, "title_len": 84, "meta_len": 151, "h1": "Our Work", "canonical": "/our-work" },
+      { "p": "/technology", "status": 200, "title_len": 79, "meta_len": 141, "h1": "Our Technology", "canonical": "/technology" },
+      { "p": "/project-control", "status": 200, "title_len": 65, "meta_len": 140, "h1": "PROJECT CONTROL AND FORENSIC ANALYSIS", "canonical": "/project-control" },
+      { "p": "/about-us", "status": 200, "title_len": 72, "meta_len": 137, "h1": "ABOUT US", "canonical": "/about-us" },
+      { "p": "/contact-us", "status": 200, "title_len": 88, "meta_len": 158, "h1": null, "canonical": "/contact-us" },
+      { "p": "/studio", "status": 200, "title_len": 6, "meta_len": 0, "h1": "The Studio", "canonical": "/studio" },
+      { "p": "/news", "status": 200, "title_len": 86, "meta_len": 122, "h1": "News", "canonical": "/news" }
+    ],
+    "sitemap": {
+      "status": 200,
+      "urls": 90,
+      "has_empty_loc": true,
+      "empty_loc_value": "//",
+      "lastmod_count": 0,
+      "changefreq_count": 90,
+      "priority_count": 90,
+      "contains_faq": true,
+      "contains_studio_draft": true
+    },
+    "gsc_index": { "readable": false, "reason": "GSC not accessible this run" },
+    "gsc_sitemaps_submitted": null,
+    "cwv": { "readable": false, "reason": "GSC not accessible this run" },
+    "changes_since_2026-09-11": "No technical change. /faq still returns 404 while remaining in the sitemap; /studio-draft is still publicly reachable, still indexable and still listed in the sitemap; the sitemap still carries the broken <loc>//</loc> entry and still has zero <lastmod> values; the homepage canonical is still the malformed '//'.",
+    "provenance": "fetch() from a feeldx.com tab via javascript_tool; sitemap.xml and robots.txt parsed in-page"
+  }
+}
