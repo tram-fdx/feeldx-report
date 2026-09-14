@@ -1,0 +1,372 @@
+{
+ "run_date": "2026-09-15",
+ "timezone": "Asia/Ho_Chi_Minh",
+ "status": "PARTIAL - only technical checks and public social counters were readable. Chrome is signed out of the Google account that owns the FeelDX GSC/GA4 properties and signed out of LinkedIn.",
+ "notes": [
+  "Chrome is signed in to Google as thtram.work@gmail.com (authuser=0) and tram@kvytechnology.com (authuser=1). Neither has access to the GSC property https://www.feeldx.com/ nor to GA4 property 309588561. authuser=0..3 were all tried; GSC /welcome shows zero properties for the signed-in account.",
+  "LinkedIn returns the authwall on both /company/67163800/admin/analytics/* and the public /company/feeldx/ page, so no LinkedIn figure could be read this run.",
+  "No GSC, GA4 or LinkedIn number was interpolated or carried forward as if current. The four HTML reports were left untouched so they continue to display the 2026-09-14 figures under their own 2026-09-14 labels.",
+  "Action required by a human: sign Chrome in to the Google account that owns the FeelDX GSC/GA4 properties (marketing@feeldx.com or equivalent) and to LinkedIn, then re-run."
+ ],
+ "gsc": {
+  "property": "https://www.feeldx.com/",
+  "readable": false,
+  "reason": "Signed-in Google account has no access to this property (GSC 'Oops, you don't have access to this property'). Checked authuser=0,1,2,3.",
+  "last_known": {
+   "as_of": "2026-09-14",
+   "windows": {
+    "current": "2026-08-15..2026-09-11",
+    "previous": "2026-07-18..2026-08-14",
+    "latest_data_day": "2026-09-11",
+    "breakdowns_window": "2026-08-15..2026-09-11 (GSC 28-day preset)"
+   },
+   "totals": {
+    "clicks": 142,
+    "impressions": 5643,
+    "ctr_pct": 2.52,
+    "position": 41.1
+   },
+   "previous_totals": {
+    "clicks": 152,
+    "impressions": 6395,
+    "ctr_pct": 2.38,
+    "position": 38.5
+   },
+   "change": {
+    "clicks_pct": -6.6,
+    "impressions_pct": -11.8,
+    "ctr_pp": 0.14,
+    "position_delta": -2.6
+   },
+   "indexing": {
+    "indexed": 81,
+    "not_indexed": 12,
+    "gsc_last_update": "2026-09-04",
+    "reasons": [
+     [
+      "Duplicate without user-selected canonical",
+      "Website",
+      2
+     ],
+     [
+      "Crawled - currently not indexed",
+      "Google systems",
+      10
+     ],
+     [
+      "Alternate page with proper canonical tag",
+      "Website",
+      0
+     ]
+    ]
+   },
+   "sitemaps_submitted": 0,
+   "cwv": {
+    "source": "Chrome UX report",
+    "last_updated": "2026-09-12",
+    "mobile": "Not enough usage data in the last 90 days",
+    "desktop": "Not enough usage data in the last 90 days"
+   }
+  },
+  "provenance": {
+   "performance": "NOT READ 2026-09-15 - no property access",
+   "indexing": "NOT READ 2026-09-15 - no property access",
+   "sitemaps": "NOT READ 2026-09-15 - no property access",
+   "cwv": "NOT READ 2026-09-15 - no property access",
+   "ahrefs": "not usable - feeldx.com not verified on the current plan; no substitute figures used"
+  }
+ },
+ "ga4": {
+  "property": "FeelDX - GA4 (309588561)",
+  "account": "FeelDX (224776331)",
+  "readable": false,
+  "reason": "GA4 returned 'Missing permission - you do not have access to this account or property' for the signed-in Google account.",
+  "last_known": {
+   "as_of": "2026-09-14",
+   "windows": {
+    "current": "2026-08-15..2026-09-11",
+    "previous": "2026-07-18..2026-08-14"
+   },
+   "totals": {
+    "sessions": 1149,
+    "sessions_prev": 920,
+    "sessions_pct": 24.89,
+    "engaged_sessions": 459,
+    "engaged_sessions_prev": 297,
+    "engaged_sessions_pct": 54.55,
+    "engagement_rate_pct": 39.95,
+    "engagement_rate_prev_pct": 32.28,
+    "engagement_rate_change_pct": 23.74,
+    "avg_engagement_time": "18s",
+    "avg_engagement_time_prev": "18s",
+    "avg_engagement_time_pct": 2.89,
+    "events_per_session": 4.41,
+    "events_per_session_prev": 4.66,
+    "events_per_session_pct": -5.36,
+    "event_count": 5066,
+    "event_count_prev": 4286,
+    "event_count_pct": 18.2,
+    "key_events": 10,
+    "key_events_prev": 46,
+    "key_events_pct": -78.26,
+    "session_key_event_rate_pct": 0.52,
+    "session_key_event_rate_prev_pct": 1.52,
+    "session_key_event_rate_change_pct": -65.68
+   },
+   "organic_detail": {
+    "sessions": 237,
+    "sessions_prev": 219,
+    "sessions_pct": 8.22,
+    "engagement_rate_pct": 60.34,
+    "engagement_rate_prev_pct": 55.25,
+    "engagement_rate_change_pct": 9.21,
+    "avg_time": "45s",
+    "avg_time_prev": "45s",
+    "avg_time_pct": 0.99,
+    "key_events": 8,
+    "key_events_prev": 35,
+    "key_events_pct": -77.14,
+    "share_of_sessions_pct": 20.6,
+    "share_of_key_events_pct": 80.0
+   }
+  },
+  "provenance": {
+   "source": "NOT READ 2026-09-15 - no property access"
+  }
+ },
+ "social": {
+  "linkedin": {
+   "company_id": 67163800,
+   "readable": false,
+   "reason": "LinkedIn authwall on admin analytics and on the public company page; session signed out.",
+   "last_known": {
+    "as_of": "2026-09-14",
+    "windows": {
+     "highlights": "2026-08-13..2026-09-11",
+     "visitors": "2026-08-13..2026-09-11",
+     "followers": "2026-08-13..2026-09-11",
+     "competitors": "2026-08-13..2026-09-11 (last 30 days)",
+     "post_table": "2026-08-29..2026-09-12",
+     "search_appearances": "2026-09-05..2026-09-11"
+    },
+    "highlights": {
+     "impressions": 1726,
+     "impressions_pct": -7.2,
+     "reactions": 38,
+     "reactions_pct": -11.6,
+     "comments": 0,
+     "comments_pct": 0,
+     "reposts": 0,
+     "reposts_pct": 0,
+     "organic": 1726,
+     "sponsored": 0
+    },
+    "followers_total": 3103,
+    "followers_new_30d": 12,
+    "visitors": 187,
+    "unique_visitors": 74,
+    "search_appearances_7d": 319
+   }
+  },
+  "facebook": {
+   "page": "Feel DX (facebook.com/feeldx)",
+   "insights_readable": false,
+   "reason": "Meta Business Suite not opened; the FeelDX page is not in this account's Business Manager. Only the public profile counter was read.",
+   "last_known_insights": {
+    "as_of": "2026-09-14",
+    "window": "2026-08-16..2026-09-12",
+    "views": 1637,
+    "viewers": 404,
+    "visits": 264,
+    "interactions": 38
+   }
+  },
+  "instagram": {
+   "account": "@feeldx",
+   "insights_readable": false,
+   "reason": "Meta Business Suite not opened this run. Only the public profile counter was read.",
+   "last_known_insights": {
+    "as_of": "2026-09-14",
+    "window": "2026-08-16..2026-09-12",
+    "views": 689,
+    "reach": 288,
+    "interactions": 28
+   }
+  },
+  "public_counts": {
+   "scan_date": "2026-09-15",
+   "readable": true,
+   "facebook": {
+    "page": "facebook.com/feeldx",
+    "followers": 391,
+    "following": 50,
+    "change_vs_2026-09-14": "followers 391 -> 391 (no change)"
+   },
+   "instagram": {
+    "account": "@feeldx",
+    "followers": 214,
+    "following": 445,
+    "posts": 466,
+    "change_vs_2026-09-14": "no change on followers, following or post count"
+   },
+   "youtube": {
+    "channel": "@feeldxptyltd2651",
+    "subscribers": 12,
+    "videos": 14,
+    "change_vs_2026-09-14": "no change",
+    "note": "newest upload ~3 years old; most videos still under the old Feel VR brand"
+   },
+   "linkedin": {
+    "followers": null,
+    "note": "not readable - authwall; last known 3103 on 2026-09-14"
+   }
+  },
+  "provenance": {
+   "linkedin": "NOT READ 2026-09-15 - authwall",
+   "facebook_insights": "NOT READ 2026-09-15",
+   "instagram_insights": "NOT READ 2026-09-15",
+   "public_counts": "read live via Chrome 2026-09-15 on the public profile pages",
+   "youtube": "public profile counters only; no YouTube Studio access",
+   "hubspot": "not read on this scan"
+  }
+ },
+ "technical": {
+  "checked": "2026-09-15",
+  "readable": true,
+  "method": "fetch() from a live feeldx.com tab",
+  "robots": {
+   "status": 200,
+   "content": "User-agent: *\nDisallow:\nSitemap: https://www.feeldx.com/sitemap.xml"
+  },
+  "columns": [
+   "path",
+   "http_status",
+   "title_len",
+   "meta_desc_len",
+   "h1_count",
+   "title",
+   "canonical"
+  ],
+  "pages": [
+   [
+    "/",
+    200,
+    89,
+    113,
+    1,
+    "Innovative Construction Project Management & Control Solutions I 3D 4D 5D 7D BIM - FeelDX",
+    "//"
+   ],
+   [
+    "/faq",
+    404,
+    89,
+    113,
+    0,
+    "soft-404 shell serves the homepage title/meta",
+    ""
+   ],
+   [
+    "/studio-draft",
+    200,
+    6,
+    0,
+    1,
+    "Studio",
+    "/studio-draft"
+   ],
+   [
+    "/aec",
+    200,
+    89,
+    113,
+    0,
+    "soft-404 shell serves the homepage title/meta",
+    ""
+   ],
+   [
+    "/services",
+    200,
+    82,
+    150,
+    1,
+    "Project Planning & Control Experts I Multimedia I Tender Programmes I AEC Industry",
+    "/services"
+   ],
+   [
+    "/our-work",
+    200,
+    84,
+    151,
+    1,
+    "Our Projects I 3D Visualisations I 4D 5D Project Planning & Control I Interactive 4D",
+    "/our-work"
+   ],
+   [
+    "/technology",
+    200,
+    79,
+    141,
+    1,
+    "FeelDX Technology I Interactive Platform 4D I VR AR MR I Project Visualisations",
+    "/technology"
+   ],
+   [
+    "/project-control",
+    200,
+    65,
+    140,
+    1,
+    "Project Control Services - FeelDX I 4D 5D & 7D BIM I AEC Industry",
+    "/project-control"
+   ],
+   [
+    "/contact",
+    404,
+    89,
+    113,
+    0,
+    "404 - serves homepage title/meta",
+    ""
+   ],
+   [
+    "/about",
+    404,
+    89,
+    113,
+    0,
+    "404 - serves homepage title/meta; the live page is /about-us",
+    ""
+   ],
+   [
+    "/insights",
+    404,
+    89,
+    113,
+    0,
+    "404 - serves homepage title/meta; the live page is /news",
+    ""
+   ]
+  ],
+  "sitemap": {
+   "status": 200,
+   "total_urls": 90,
+   "malformed_loc_present": true,
+   "malformed_loc": "//",
+   "lastmod_count": 0,
+   "contains_studio_draft": true,
+   "contains_faq": true
+  },
+  "gsc_index": {
+   "indexed": null,
+   "not_indexed": null,
+   "note": "not readable this run; last known 81 indexed / 12 not indexed on 2026-09-14"
+  },
+  "gsc_sitemaps_submitted": null,
+  "cwv": "not readable this run; last known 'no CrUX data on mobile or desktop' 2026-09-14",
+  "changes_since_2026-09-14": "None. /faq still returns 404 and is still listed in sitemap.xml; /studio-draft still returns 200 and is still in the sitemap; sitemap still carries the malformed <loc>//</loc> and still has zero <lastmod>; robots.txt unchanged and still allows everything.",
+  "provenance": {
+   "source": "read live 2026-09-15"
+  }
+ }
+}
