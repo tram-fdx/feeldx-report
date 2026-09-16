@@ -115,8 +115,8 @@
     <div>
       <h1>FeelDX &middot; Website Audit</h1>
       <div class="sub">
-        <span class="vi">feeldx.com &middot; quét ngày 14/09/2026 &middot; dữ liệu lưu lượng 15/08 – 11/09/2026</span>
-        <span class="en">feeldx.com &middot; crawled 14 Sep 2026 &middot; traffic window 15 Aug – 11 Sep 2026</span>
+        <span class="vi">feeldx.com &middot; quét ngày 16/09/2026 &middot; dữ liệu lưu lượng 17/08 – 13/09/2026</span>
+        <span class="en">feeldx.com &middot; crawled 16 Sep 2026 &middot; traffic window 17 Aug – 13 Sep 2026</span>
       </div>
     </div>
     <span class="spacer"></span>
@@ -138,19 +138,8 @@
       <text x="75" y="94" text-anchor="middle" fill="#5C6449" font-size="12" letter-spacing="1">/ 100</text>
     </svg>
     <div class="scoretext">
-      <span class="vi"><b style="color:var(--text)">Không lỗi nào được sửa kể từ 28/08 — ba lỗi nghiêm trọng vẫn nguyên sau năm lần quét, và lần này phát hiện thêm một lỗi mới.</b>
-      Site không có lỗi nghiêm trọng về hạ tầng: HTTPS chuẩn, robots.txt mở, không chặn crawl. Nhưng điểm tụt từ 66
-      xuống <b>64</b> vì lần quét này ghi nhận thêm một lỗi: <b>canonical của trang chủ là <code>//</code></b> —
-      giá trị protocol-relative rỗng, không trỏ về đâu cả. Số trang được index vẫn đứng yên ở 81/12 qua năm lần quét,
-      tức đà tự cải thiện của Google đã dừng hẳn. Ba việc sửa được trong ngày vẫn chưa ai làm: /faq vẫn 404,
-      /studio-draft vẫn public và vẫn nằm trong sitemap, và sitemap vẫn chưa được nộp lên Search Console.</span>
-      <span class="en"><b style="color:var(--text)">Nothing has been fixed since 28 Aug — all three critical defects survive a fifth scan, and this run turned up a new one.</b>
-      Nothing is structurally broken: HTTPS is clean, robots.txt is open and nothing blocks crawling. But the score
-      drops from 66 to <b>64</b> because this scan recorded an additional defect: <b>the homepage canonical is
-      <code>//</code></b> — an empty protocol-relative value that points nowhere. Indexed pages are still flat at 81/12
-      across five scans, so Google's own improvement has stopped entirely. The three same-day fixes remain untouched:
-      /faq still returns 404, /studio-draft is still public and still in the sitemap, and the sitemap is still not
-      submitted to Search Console.</span>
+      <span class="vi"><b style="color:var(--text)">Lần quét thứ sáu, vẫn không một lỗi nào được sửa — và lần này cũng không có lỗi mới.</b> Site không có lỗi nghiêm trọng về hạ tầng: HTTPS chuẩn, robots.txt mở, không chặn crawl. Điểm giữ nguyên <b>64</b> vì không có gì được sửa và cũng không phát sinh thêm lỗi nào so với lần quét 14/09. Số trang được index vẫn đứng yên ở 81/12 qua sáu lần quét, tức đà tự cải thiện của Google đã dừng hẳn. Ba việc sửa được trong ngày vẫn chưa ai làm: /faq vẫn 404, /studio-draft vẫn public và vẫn nằm trong sitemap, và sitemap vẫn chưa được nộp lên Search Console. Canonical trang chủ vẫn là <code>//</code>.</span>
+      <span class="en"><b style="color:var(--text)">A sixth scan with nothing fixed — and, this time, nothing new broken either.</b> Nothing is structurally broken: HTTPS is clean, robots.txt is open and nothing blocks crawling. The score holds at <b>64</b> because no defect was repaired and none was added since the 14 Sep scan. Indexed pages are still flat at 81/12 across six scans, so Google's own improvement has stopped entirely. The three same-day fixes remain untouched: /faq still returns 404, /studio-draft is still public and still in the sitemap, and the sitemap is still not submitted to Search Console. The homepage canonical is still <code>//</code>.</span>
     </div>
   </div>
 
@@ -163,7 +152,7 @@
     <div class="card">
       <div class="klabel"><span class="vi">Không được index</span><span class="en">Not indexed</span></div>
       <div class="kval" style="color:var(--warn)">12</div>
-      <div class="kprev"><span class="vi">2 lý do · không đổi</span><span class="en">2 reasons · unchanged</span></div>
+      <div class="kprev"><span class="vi">2 lý do · không đổi 6 lần quét</span><span class="en">2 reasons · unchanged over 6 scans</span></div>
     </div>
     <div class="card">
       <div class="klabel"><span class="vi">Lỗi tìm thấy</span><span class="en">Issues found</span></div>
@@ -189,13 +178,13 @@
       <span class="ititle"><span class="vi">Trang /faq trả về 404 nhưng vẫn nằm trong sitemap</span><span class="en">/faq returns 404 but is still in the sitemap</span></span></div>
     <div class="ibody">
       <span class="vi"><code>https://www.feeldx.com/faq</code> vẫn trả <b>HTTP 404 — "PAGE NOT FOUND"</b> ở lần quét
-      14/09, tức đã hỏng ít nhất 17 ngày. URL này vẫn được khai báo trong <code>sitemap.xml</code>, và GA4 ghi nhận
+      16/09, tức đã hỏng ít nhất 19 ngày. URL này vẫn được khai báo trong <code>sitemap.xml</code>, và GA4 ghi nhận
       <b>70 lượt xem trong kỳ</b> với thời gian trung bình <b>1 phút 51 giây</b> — dài hơn bất kỳ trang nào khác trên site.
-      Người dùng thật vẫn đang tìm đến nó, và đang ngồi lại khá lâu trên một trang báo lỗi.</span>
+      Người dùng thật vẫn đang tìm đến nó, và đang ngồi lại khá lâu trên một trang báo lỗi. Lưu ý: lượt xem trong GA4 <b>không có nghĩa là trang đã được khôi phục</b> — máy chủ vẫn trả 404, phần hiển thị chỉ là màn hình báo lỗi của ứng dụng.</span>
       <span class="en"><code>https://www.feeldx.com/faq</code> still returns <b>HTTP 404 — "PAGE NOT FOUND"</b> on the
-      14 Sep scan, so it has been broken for at least 17 days. The URL is still declared in <code>sitemap.xml</code>,
+      16 Sep scan, so it has been broken for at least 19 days. The URL is still declared in <code>sitemap.xml</code>,
       and GA4 recorded <b>70 views in the period</b> at an average <b>1m 51s</b> — longer than any other page on the site.
-      Real users are still trying to reach it, and sitting on an error page while they do.</span>
+      Real users are still trying to reach it, and sitting on an error page while they do. Note: the GA4 views <b>do not mean the page is back</b> — the server still answers 404 and what renders is the app's not-found screen.</span>
     </div>
     <div class="fix"><span class="vi">Khôi phục trang FAQ, hoặc nếu đã bỏ hẳn thì 301 sang trang thay thế và gỡ khỏi sitemap. Đây là việc gấp nhất trong danh sách — trang có tương tác tốt nhất site đang hỏng.</span>
     <span class="en">Restore the FAQ page, or if it was retired deliberately, 301 it to a replacement and remove it from the sitemap. This is the most urgent item here — the site's best-engaging page is down.</span></div>
@@ -237,11 +226,11 @@
     <div class="ibody">
       <span class="vi">Trang <code>/aec</code> không có thẻ <code>canonical</code>, không có thẻ <code>H1</code> nào,
       và title của nó là <b>bản sao nguyên văn title trang chủ</b> (89 ký tự). Điều này giải thích nghịch lý trong
-      báo cáo SEO: trang xếp hạng <b>vị trí 1.7</b> nhưng CTR chỉ <b>0.5%</b> — người tìm kiếm nhìn thấy đúng
+      báo cáo SEO: trang xếp hạng <b>vị trí 1.5</b> nhưng CTR chỉ <b>0.6%</b> — người tìm kiếm nhìn thấy đúng
       dòng tiêu đề của trang chủ và không hiểu trang này nói về gì.</span>
       <span class="en">The <code>/aec</code> page carries no <code>canonical</code> tag, contains no <code>H1</code>
       at all, and its title is a <b>verbatim copy of the homepage title</b> (89 characters). This explains the paradox
-      in the SEO report: the page ranks at <b>position 1.7</b> yet earns just <b>0.5% CTR</b> — searchers see the
+      in the SEO report: the page ranks at <b>position 1.5</b> yet earns just <b>0.6% CTR</b> — searchers see the
       homepage headline and cannot tell what the page is about.</span>
     </div>
     <div class="fix"><span class="vi">Viết title riêng cho /aec (55–60 ký tự, nói rõ AEC industry), thêm H1, thêm canonical tự trỏ.</span>
@@ -252,12 +241,12 @@
     <div class="ihead"><span class="itag t-warn">warning</span>
       <span class="ititle"><span class="vi">10 trang bị "Crawled – currently not indexed"</span><span class="en">10 pages sit in "Crawled – currently not indexed"</span></span></div>
     <div class="ibody">
-      <span class="vi">Đứng yên ở 10 trang qua năm lần quét (GSC vẫn cập nhật lần cuối 04/09). Đây là những trang
+      <span class="vi">Đứng yên ở 10 trang qua sáu lần quét (GSC vẫn cập nhật lần cuối 04/09). Đây là những trang
       Google đã đọc rồi <b>chủ động quyết định không đưa vào index</b>. Thêm 2 trang nữa rơi vào "Duplicate without
       user-selected canonical". Với một site có 77 bài news, con số này thường chỉ ra nội dung mỏng hoặc nhiều bài
       trùng ý nhau — mà đúng là site có nhiều bài rất giống nhau về 3D rendering và 4D/5D BIM. Đà tự cải thiện hồi
       đầu tháng 9 (20 → 10) đã dừng hẳn.</span>
-      <span class="en">Flat at 10 pages across five scans (GSC still last updated 4 Sep). These are pages Google read
+      <span class="en">Flat at 10 pages across six scans (GSC still last updated 4 Sep). These are pages Google read
       and <b>actively chose not to index</b>. A further 2 fall under "Duplicate without user-selected canonical". On a
       site with 77 news articles this usually points to thin content or heavy topical overlap — and the site does carry
       many near-identical pieces on 3D rendering and 4D/5D BIM. The early-September self-correction (20 → 10) has
@@ -336,8 +325,8 @@
   <!-- ══ CRAWL TABLE ══ -->
   <h2><span class="vi">Kiểm tra on-page</span><span class="en">On-page checks</span></h2>
   <p class="h2sub">
-    <span class="vi">Đọc trực tiếp HTML của từng trang, 14/09/2026. Không trang nào thay đổi so với 28/08. Lần này kiểm tra thêm /about-us, /contact-us và /news.</span>
-    <span class="en">Read directly from each page's HTML, 14 Sep 2026. No page has changed since 28 Aug. This run also checked /about-us, /contact-us and /news.</span>
+    <span class="vi">Đọc trực tiếp HTML của từng trang, 16/09/2026. Không trang nào thay đổi so với 28/08 — title, meta, H1 và canonical đều giữ nguyên qua sáu lần quét.</span>
+    <span class="en">Read directly from each page's HTML, 16 Sep 2026. No page has changed since 28 Aug — titles, metas, H1s and canonicals are all identical across six scans.</span>
   </p>
   <div class="tblwrap">
     <table>
@@ -366,19 +355,19 @@
   <!-- ══ TRAFFIC ══ -->
   <h2><span class="vi">Lưu lượng và chất lượng</span><span class="en">Traffic &amp; quality</span></h2>
   <p class="h2sub">
-    <span class="vi">GA4 · 15/08 – 11/09/2026 so với 18/07 – 14/08/2026</span>
-    <span class="en">GA4 · 15 Aug – 11 Sep 2026 vs 18 Jul – 14 Aug 2026</span>
+    <span class="vi">GA4 · 17/08 – 13/09/2026 so với 20/07 – 16/08/2026</span>
+    <span class="en">GA4 · 17 Aug – 13 Sep 2026 vs 20 Jul – 16 Aug 2026</span>
   </p>
   <div class="grid k4">
     <div class="card">
       <div class="klabel">Sessions</div>
-      <div class="kval">1,149</div>
-      <div><span class="delta up">▲ +24.9%</span> <span class="kprev">· prev 920</span></div>
+      <div class="kval">1,130</div>
+      <div><span class="delta up">▲ +16.5%</span> <span class="kprev">· prev 970</span></div>
     </div>
     <div class="card">
       <div class="klabel"><span class="vi">Tỷ lệ tương tác</span><span class="en">Engagement rate</span></div>
-      <div class="kval">40.0%</div>
-      <div><span class="delta up">▲ +23.7%</span> <span class="kprev">· prev 32.3%</span></div>
+      <div class="kval">40.8%</div>
+      <div><span class="delta up">▲ +30.2%</span> <span class="kprev">· prev 31.3%</span></div>
     </div>
     <div class="card">
       <div class="klabel">Key events</div>
@@ -387,8 +376,8 @@
     </div>
     <div class="card">
       <div class="klabel"><span class="vi">Tỷ lệ key event/phiên</span><span class="en">Key event rate</span></div>
-      <div class="kval">0.52%</div>
-      <div><span class="delta down">▼ −65.7%</span> <span class="kprev">· prev 1.52%</span></div>
+      <div class="kval">0.53%</div>
+      <div><span class="delta down">▼ −63.2%</span> <span class="kprev">· prev 1.44%</span></div>
     </div>
   </div>
 
@@ -398,35 +387,13 @@
   </div>
 
   <div class="note critbox">
-    <span class="vi"><b>Sessions tăng 25% nhưng đó vẫn không phải tin tốt như vẻ ngoài.</b> Mức tăng vẫn đến từ
-    Direct (+36,5%, 457 → 624) và Paid Search (+196%, 54 → 160) — Direct chỉ <b>12 giây</b> trên trang, Paid Search
-    <b>6 giây</b> với tỷ lệ tương tác 26,9%. Direct một mình chiếm <b>54% tổng số phiên</b> nhưng chỉ tạo 1 key event.
-    Đỉnh ngày 18/08 giờ đã nằm ở đầu khung mới nên ảnh hưởng đã loãng bớt, nhưng tỷ trọng Direct vẫn cao bất thường
-    với một site B2B nhỏ. Điểm tích cực duy nhất: Display giảm 55% (144 → 65) và Email về 0 — hai kênh chất lượng kém
-    đã tự co lại.</span>
-    <span class="en"><b>Sessions are up 25%, and that is still not the good news it looks like.</b> The increase again
-    comes from Direct (+36.5%, 457 → 624) and Paid Search (+196%, 54 → 160) — Direct averages <b>12 seconds</b> on site,
-    Paid Search <b>6 seconds</b> at a 26.9% engagement rate. Direct alone is <b>54% of all sessions</b> yet produced a
-    single key event. The 18 Aug spike now sits at the front edge of the window so its weight has diluted, but the
-    Direct share remains abnormally high for a small B2B site. The one positive: Display fell 55% (144 → 65) and Email
-    went to zero — two poor-quality channels shrinking on their own.</span>
+    <span class="vi"><b>Sessions tăng 16,5% nhưng chất lượng vẫn nằm sai chỗ.</b> Mức tăng vẫn đến từ Direct (+29,6%, 476 → 617) và Paid Search (+191%, 57 → 166) — Direct chỉ <b>13 giây</b> trên trang, Paid Search <b>6 giây</b> với tỷ lệ tương tác 27,1%. Direct một mình chiếm <b>55% tổng số phiên</b> nhưng chỉ tạo 1 key event. GA4 tự đánh dấu bất thường đúng nguồn này: ngày 18/08 phiên Direct vọt lên <b>275 so với mức dự kiến 20</b>, nguồn "(direct)" tăng từ 36 lên 449 theo tuần, trình duyệt Chrome từ 18 lên 441, và <b>Singapore xuất hiện từ 0 lên 249 phiên</b>. Bộ bốn tín hiệu này là dấu hiệu traffic tự động khá rõ. Điểm tích cực: Display giảm 73,8% (168 → 44) và Email về 0.</span>
+    <span class="en"><b>Sessions are up 16.5%, but the quality still sits in the wrong places.</b> The increase again comes from Direct (+29.6%, 476 → 617) and Paid Search (+191%, 57 → 166) — Direct averages <b>13 seconds</b> on site, Paid Search <b>6 seconds</b> at a 27.1% engagement rate. Direct alone is <b>55% of all sessions</b> yet produced a single key event. GA4's own anomaly detection flags exactly this source: on 18 Aug, Direct sessions jumped to <b>275 against an expected 20</b>, the "(direct)" source rose from 36 to 449 week over week, Chrome browser sessions went from 18 to 441, and <b>Singapore appeared from zero to 249 sessions</b>. Those four signals together read strongly like automated traffic. The positive: Display fell 73.8% (168 → 44) and Email is at zero.</span>
   </div>
 
   <div class="note">
-    <span class="vi"><b>Key events tiếp tục sụp đổ và vẫn chưa ai kiểm tra kỹ thuật.</b> Tổng key event
-    <b>rơi từ 46 xuống 10</b> (−78%), tỷ lệ key event trên mỗi phiên giảm 66%. Organic Search vẫn là kênh gánh
-    gần như toàn bộ — <b>8 trong 10 key event</b> dù chỉ chiếm 20,6% phiên — nhưng chính organic cũng rơi từ 35
-    xuống 8. Paid Search tiêu 160 phiên và tạo ra <b>0</b> key event, kỳ thứ hai liên tiếp. Mấu chốt: phiên organic
-    thực tế <i>tăng</i> 8,2% trong cùng kỳ, nên mức giảm key event không thể giải thích bằng hành vi người dùng.
-    <b>Cần kiểm tra lại định nghĩa key event trong GA4 và tracking form /contact-us.</b> Đây là lần quét thứ năm nêu
-    lại việc này.</span>
-    <span class="en"><b>Key events keep collapsing, and still nobody has run the technical check.</b> Total key events
-    <b>fell from 46 to 10</b> (−78%) and the per-session key-event rate dropped 66%. Organic Search still carries
-    almost all of it — <b>8 of the 10</b> despite being only 20.6% of sessions — but organic itself fell from 35 to 8.
-    Paid Search spent 160 sessions and produced <b>zero</b>, for a second period running. The decisive detail: organic
-    sessions actually <i>rose</i> 8.2% over the same window, so the key-event fall cannot be user behaviour.
-    <b>The GA4 key-event definitions and the /contact-us form tracking need to be re-verified.</b> This is the fifth
-    scan to raise it.</span>
+    <span class="vi"><b>Key events vẫn nằm đáy và vẫn chưa ai kiểm tra kỹ thuật.</b> Tổng key event giữ nguyên <b>10 so với 46 kỳ trước</b> (−78%), tỷ lệ key event trên mỗi phiên giảm 63%. Organic Search vẫn là kênh gánh gần như toàn bộ — <b>8 trong 10 key event</b> dù chỉ chiếm 21,2% phiên — nhưng chính organic cũng chỉ còn 8 so với 35. Paid Search tiêu 166 phiên và tạo ra <b>0</b> key event, kỳ thứ ba liên tiếp. Mấu chốt không đổi: phiên organic thực tế <i>tăng</i> 7,2% trong cùng kỳ, nên mức giảm key event không thể giải thích bằng hành vi người dùng. <b>Cần kiểm tra lại định nghĩa key event trong GA4 và tracking form /contact-us.</b> Đây là lần quét thứ sáu nêu lại việc này.</span>
+    <span class="en"><b>Key events are still on the floor, and still nobody has run the technical check.</b> Total key events hold at <b>10 against 46 last period</b> (−78%) and the per-session key-event rate is down 63%. Organic Search still carries almost all of it — <b>8 of the 10</b> despite being only 21.2% of sessions — but organic itself is down to 8 from 35. Paid Search spent 166 sessions and produced <b>zero</b>, for a third period running. The decisive detail is unchanged: organic sessions actually <i>rose</i> 7.2% over the same window, so the key-event fall cannot be user behaviour. <b>The GA4 key-event definitions and the /contact-us form tracking need to be re-verified.</b> This is the sixth scan to raise it.</span>
   </div>
 
   <h2><span class="vi">Trang được xem nhiều nhất</span><span class="en">Most-viewed pages</span></h2>
@@ -438,45 +405,33 @@
         <th class="num">Key ev.</th>
       </tr></thead>
       <tbody>
-        <tr><td class="q">/</td><td class="num">523</td><td class="num">768</td><td class="num down">−31.9%</td><td class="num">12s</td><td class="num">0</td></tr>
-        <tr><td class="q">/technology</td><td class="num">171</td><td class="num">46</td><td class="num up">+271.7%</td><td class="num">7s</td><td class="num">0</td></tr>
-        <tr><td class="q">/services</td><td class="num">103</td><td class="num">93</td><td class="num up">+10.8%</td><td class="num">27s</td><td class="num">0</td></tr>
-        <tr><td class="q">/project-control</td><td class="num">80</td><td class="num">50</td><td class="num up">+60.0%</td><td class="num">9s</td><td class="num">0</td></tr>
+        <tr><td class="q">/</td><td class="num">478</td><td class="num">819</td><td class="num down">−41.6%</td><td class="num">13s</td><td class="num">0</td></tr>
+        <tr><td class="q">/technology</td><td class="num">184</td><td class="num">47</td><td class="num up">+291.5%</td><td class="num">7s</td><td class="num">0</td></tr>
+        <tr><td class="q">/services</td><td class="num">113</td><td class="num">93</td><td class="num up">+21.5%</td><td class="num">25s</td><td class="num">0</td></tr>
+        <tr><td class="q">/project-control</td><td class="num">85</td><td class="num">49</td><td class="num up">+73.5%</td><td class="num">9s</td><td class="num">0</td></tr>
         <tr><td class="q">/faq <span class="pill p-bad">404</span></td><td class="num">70</td><td class="num">0</td><td class="num">—</td><td class="num" style="color:var(--up);font-weight:700">1m 51s</td><td class="num">0</td></tr>
-        <tr><td class="q">/about-us</td><td class="num">63</td><td class="num">63</td><td class="num">0%</td><td class="num">27s</td><td class="num">0</td></tr>
-        <tr><td class="q">/our-work</td><td class="num">61</td><td class="num">69</td><td class="num down">−11.6%</td><td class="num">30s</td><td class="num">0</td></tr>
-        <tr><td class="q">/contact-us</td><td class="num">47</td><td class="num">96</td><td class="num down">−51.0%</td><td class="num">22s</td><td class="num" style="color:var(--up);font-weight:700">5</td></tr>
-        <tr><td class="q">/studio</td><td class="num">39</td><td class="num">39</td><td class="num">0%</td><td class="num">38s</td><td class="num">0</td></tr>
-        <tr><td class="q">/news</td><td class="num">15</td><td class="num">11</td><td class="num up">+36.4%</td><td class="num">41s</td><td class="num">0</td></tr>
+        <tr><td class="q">/our-work</td><td class="num">69</td><td class="num">67</td><td class="num up">+3.0%</td><td class="num">30s</td><td class="num">0</td></tr>
+        <tr><td class="q">/about-us</td><td class="num">65</td><td class="num">64</td><td class="num up">+1.6%</td><td class="num">26s</td><td class="num">0</td></tr>
+        <tr><td class="q">/contact-us</td><td class="num">41</td><td class="num">100</td><td class="num down">−59.0%</td><td class="num">26s</td><td class="num" style="color:var(--up);font-weight:700">5</td></tr>
+        <tr><td class="q">/studio</td><td class="num">41</td><td class="num">40</td><td class="num up">+2.5%</td><td class="num">38s</td><td class="num">0</td></tr>
+        <tr><td class="q">/news</td><td class="num">18</td><td class="num">11</td><td class="num up">+63.6%</td><td class="num">40s</td><td class="num">0</td></tr>
       </tbody>
     </table>
   </div>
   <div class="note warnbox">
-    <span class="vi"><b>Ba điều đáng chú ý trong bảng này.</b> Thứ nhất, <code>/contact-us</code> mất 51% lượt xem
-    (96 → 47) và key event của nó rơi từ 21 xuống <b>5</b> — trang chuyển đổi tốt nhất site vừa ít được nhìn thấy hơn
-    vừa ít chuyển đổi hơn, và mức giảm sâu hơn hẳn lần quét trước. Thứ hai, <code>/technology</code> vẫn tăng +272%
-    lượt xem nhưng chỉ giữ người <b>7 giây</b> (kỳ trước 24 giây) — trong khi GSC ghi nhận trang này chỉ có 110
-    impressions và <b>0 click</b>, tức lưu lượng đó không đến từ tìm kiếm. Thứ ba, trang chủ mất 32% lượt xem
-    (768 → 523) khi đỉnh traffic bất thường 18/08 trôi dần ra khỏi khung — đây là mức "bình thường" thật của site.
-    <code>/faq</code> vẫn 404 mà vẫn thu 70 lượt xem với thời gian dừng dài nhất site.</span>
-    <span class="en"><b>Three things stand out here.</b> First, <code>/contact-us</code> lost 51% of its views
-    (96 → 47) and its key events fell from 21 to <b>5</b> — the site's best-converting page is both being seen less
-    and converting less, and the fall is markedly steeper than on the previous scan. Second, <code>/technology</code>
-    is still up +272% in views yet holds visitors for just <b>7 seconds</b> (24s last period) — while GSC records only
-    110 impressions and <b>zero clicks</b> for it, so that traffic is not coming from search. Third, the homepage lost
-    32% of its views (768 → 523) as the anomalous 18 Aug spike drifts out of the window — this is the site's real
-    baseline. <code>/faq</code> is still 404 and still drew 70 views at the longest dwell time on the site.</span>
+    <span class="vi"><b>Ba điều đáng chú ý trong bảng này.</b> Thứ nhất, <code>/contact-us</code> mất 59% lượt xem (100 → 41) và key event của nó rơi từ 21 xuống <b>5</b> — trang chuyển đổi tốt nhất site vừa ít được nhìn thấy hơn vừa ít chuyển đổi hơn, và mức giảm còn sâu hơn lần quét trước. Thứ hai, <code>/technology</code> vẫn tăng +292% lượt xem nhưng chỉ giữ người <b>7 giây</b> — trong khi GSC không còn ghi nhận trang này trong top trang theo impressions, tức lưu lượng đó hoàn toàn không đến từ tìm kiếm. Thứ ba, trang chủ mất 42% lượt xem (819 → 478) khi đỉnh traffic bất thường 18/08 trôi dần ra khỏi khung — đây mới là mức "bình thường" thật của site. <code>/faq</code> vẫn 404 mà vẫn thu 70 lượt xem với thời gian dừng dài nhất site.</span>
+    <span class="en"><b>Three things stand out here.</b> First, <code>/contact-us</code> lost 59% of its views (100 → 41) and its key events fell from 21 to <b>5</b> — the site's best-converting page is both being seen less and converting less, and the fall is steeper again than on the previous scan. Second, <code>/technology</code> is still up +292% in views yet holds visitors for just <b>7 seconds</b> — and GSC no longer lists it among the top pages by impressions at all, so that traffic is not coming from search in any part. Third, the homepage lost 42% of its views (819 → 478) as the anomalous 18 Aug spike drifts out of the window — this is the site's real baseline. <code>/faq</code> is still 404 and still drew 70 views at the longest dwell time on the site.</span>
   </div>
 
   <footer>
     <div><b><span class="vi">Nguồn dữ liệu</span><span class="en">Data sources</span></b></div>
     <div>Google Search Console — <code>https://www.feeldx.com/</code> · <span class="vi">Page indexing, Sitemaps, Core Web Vitals.</span><span class="en">Page indexing, Sitemaps, Core Web Vitals.</span></div>
     <div>Google Analytics 4 — <code>FeelDX - GA4</code> (309588561) · <span class="vi">Traffic acquisition, Pages and screens, Insights.</span><span class="en">Traffic acquisition, Pages and screens, Insights.</span></div>
-    <div><span class="vi">Kiểm tra on-page và sitemap: đọc trực tiếp HTML/XML từ feeldx.com ngày 14/09/2026.</span><span class="en">On-page and sitemap checks: HTML/XML read directly from feeldx.com on 14 Sep 2026.</span></div>
+    <div><span class="vi">Kiểm tra on-page và sitemap: đọc trực tiếp HTML/XML từ feeldx.com ngày 16/09/2026.</span><span class="en">On-page and sitemap checks: HTML/XML read directly from feeldx.com on 16 Sep 2026.</span></div>
     <div style="color:var(--warn)">Ahrefs Site Audit — <span class="vi"><b>không chạy được.</b> feeldx.com chưa verify trên gói Ahrefs hiện tại. Các hạng mục backlink, broken link nội bộ toàn site và crawl depth <b>không có trong báo cáo này</b>.</span><span class="en"><b>unavailable.</b> feeldx.com is not verified on the current Ahrefs plan. Backlinks, site-wide internal broken links and crawl depth are <b>absent from this report</b>.</span></div>
     <div style="margin-top:10px">
-      <span class="vi">Điểm 64/100 là đánh giá dựa trên các lỗi đã kiểm chứng ở trên, không phải điểm số từ một công cụ tự động. Đã tụt từ 66 xuống 64 ở lần quét 14/09 vì phát hiện thêm lỗi canonical trang chủ; ba lỗi critical vẫn chưa lỗi nào được sửa qua năm lần quét (08/09, 09/09, 10/09, 11/09, 14/09).</span>
-      <span class="en">The 64/100 score is a judgement based on the verified issues above, not a number from an automated tool. It fell from 66 to 64 on the 14 Sep scan after the homepage canonical defect was found; none of the three critical issues has been fixed across five scans (8, 9, 10, 11 and 14 Sep).</span>
+      <span class="vi">Điểm 64/100 là đánh giá dựa trên các lỗi đã kiểm chứng ở trên, không phải điểm số từ một công cụ tự động. Điểm giữ nguyên 64 ở lần quét 16/09: không lỗi nào được sửa và cũng không phát sinh lỗi mới. Ba lỗi critical vẫn chưa lỗi nào được sửa qua sáu lần quét (08/09, 09/09, 10/09, 11/09, 14/09, 16/09).</span>
+      <span class="en">The 64/100 score is a judgement based on the verified issues above, not a number from an automated tool. It holds at 64 on the 16 Sep scan: nothing was repaired and nothing new was found. None of the three critical issues has been fixed across six scans (8, 9, 10, 11, 14 and 16 Sep).</span>
     </div>
   </footer>
 </div>
@@ -488,14 +443,15 @@ b.onclick=()=>{const en=document.body.classList.toggle('lang-en');
 
 /* channel bars — colour encodes engagement quality, not volume */
 const ch=[
- {n:'Direct',        s:624, t:'12s', e:37.0, k:1, q:'bad'},
- {n:'Organic Search',s:237, t:'45s', e:60.3, k:8, q:'good'},
- {n:'Paid Search',   s:160, t:'6s',  e:26.9, k:0, q:'bad'},
- {n:'Display',       s:65,  t:'15s', e:30.8, k:0, q:'bad'},
+ {n:'Direct',        s:617, t:'13s', e:37.4, k:1, q:'bad'},
+ {n:'Organic Search',s:239, t:'46s', e:60.3, k:8, q:'good'},
+ {n:'Paid Search',   s:166, t:'6s',  e:27.1, k:0, q:'bad'},
+ {n:'Display',       s:44,  t:'22s', e:43.2, k:0, q:'mid'},
  {n:'Referral',      s:36,  t:'15s', e:47.2, k:1, q:'good'},
  {n:'Organic Social',s:14,  t:'4s',  e:28.6, k:0, q:'mid'},
  {n:'Cross-network', s:6,   t:'0s',  e:0.0,  k:0, q:'bad'},
- {n:'Email',         s:0,   t:'0s',  e:0.0,  k:0, q:'mid'}
+ {n:'Unassigned',    s:2,   t:'5s',  e:0.0,  k:0, q:'mid'},
+ {n:'AI Assistant',  s:1,   t:'0s',  e:0.0,  k:0, q:'mid'}
 ];
 const col={good:'#5A6640', mid:'#3D6B80', bad:'#B4503A'};
 const max=Math.max(...ch.map(c=>c.s));
