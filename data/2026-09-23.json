@@ -1,0 +1,1175 @@
+{
+  "run_date": "2026-09-23",
+  "timezone": "Asia/Ho_Chi_Minh",
+  "status": "COMPLETE - every source read live this run. Under the per-source policy each block runs to its own latest available day: GSC advanced to 2026-09-20; GA4 and the technical crawl run to the run date 2026-09-23; LinkedIn's own windows end 2026-09-20 or 2026-09-21.",
+  "notes": [
+    "GSC latest available day advanced to 2026-09-20 (was 2026-09-19 last run), so the 28-day window moved to 2026-08-24..2026-09-20.",
+    "GSC 28-day clicks fell to 114 (was 119), impressions to 4,791 (was 4,888); average position improved slightly to 37.6 (was 38.0).",
+    "GSC clicks are -32.5% against the previous 28 days (169, was 166). The prior period still contains 13 Aug (16 clicks, the single biggest day in the 90-day series) and 18 Aug (11 clicks). Removing 13 Aug alone still leaves the prior period at 153 clicks vs 114 now, so part of the drop is a genuine softening, not only a base effect.",
+    "GA4 sessions 795 vs 1,261 (-37.0%). The previous window (30 Jul-26 Aug) still holds the same Direct/Singapore/Chrome spike GA4's anomaly detector has flagged on every recent run (Singapore sessions 249->2, Chrome sessions 441->10). Treat the sessions headline as base-effect-heavy.",
+    "GA4 key events fell sharply again: 17 vs 44 (-61.4%). Organic Search contributes 10 of the 17 (58.8%), still the highest-intent channel by a wide margin.",
+    "Paid Search continues to grow: 156 sessions vs 97 (+60.8%), now the third-largest channel at 19.6% of sessions.",
+    "/technology keeps compounding: 197 views vs 85 (+131.8%), now the second most-viewed page on the site, behind only the homepage.",
+    "/faq dropped out of GA4's top-10 pages this run (43 views last run, rank 8); it is still a genuine HTTP 404 that serves the SPA shell.",
+    "GSC and GA4 do NOT share a window this run (GSC ends 20 Sep, GA4 ends 23 Sep, a partial day). Do not compare GSC clicks against GA4 organic sessions as if they were the same period.",
+    "LinkedIn impressions 1,648 (-12.4%) on the 22 Aug-20 Sep window; reactions 19 (-59.6%). Followers reached 3,109 (+1). New followers in 30 days held at 13 (-13.3% vs the prior 30-day window).",
+    "LinkedIn page searches rose to 342 (+6.2%) for 14-20 Sep, continuing last run's increase.",
+    "Nothing was fixed on the website this run. /faq still returns 404, /studio-draft is still public and still in the sitemap, zero sitemaps are submitted to GSC, the sitemap still carries the malformed <loc>//</loc> and no lastmod, and the homepage canonical is still '//'. Health score holds at 66."
+  ],
+  "window_policy": {
+    "chosen": "per-source latest",
+    "decided_by": "user, 2026-09-17",
+    "gsc": "2026-08-24..2026-09-20 - Google has not published 21-23 Sep; hard ceiling, not a choice",
+    "ga4": "2026-08-27..2026-09-23 - runs to today; 23 Sep is a part-day",
+    "linkedin": "Highlights / followers / visitors / competitors 2026-08-22..2026-09-20; content-engagement table 2026-09-07..2026-09-21; search appearances 2026-09-14..2026-09-20",
+    "technical": "2026-09-23 - live crawl, already today",
+    "note": "GSC and GA4 windows deliberately DO NOT match under this policy. Direct GSC-vs-GA4 comparison (e.g. GSC clicks vs GA4 organic sessions) is not valid; each block is labelled with its own window in the reports."
+  },
+  "gsc": {
+    "property": "https://www.feeldx.com/",
+    "readable": true,
+    "windows": {
+      "current": "2026-08-24..2026-09-20",
+      "previous": "2026-07-27..2026-08-23",
+      "latest_data_day": "2026-09-20",
+      "breakdowns_window": "2026-08-24..2026-09-20 (GSC 28-day preset)"
+    },
+    "totals": {
+      "clicks": 114,
+      "impressions": 4791,
+      "ctr_pct": 2.38,
+      "position": 37.6
+    },
+    "previous_totals": {
+      "clicks": 169,
+      "impressions": 6385,
+      "ctr_pct": 2.65,
+      "position": 40.5
+    },
+    "change": {
+      "clicks_pct": -32.54,
+      "impressions_pct": -24.96,
+      "ctr_pp": -0.27,
+      "position_delta": 2.96,
+      "position_delta_note": "positive = improvement (lower average position)",
+      "base_effect_note": "The previous 28-day window (27 Jul-23 Aug) still holds 13 Aug (16 clicks, the single biggest day in the 90-day series) and 18 Aug (11 clicks). Excluding 13 Aug alone, the previous period's clicks fall from 169 to 153 - still above the current period's 114, so the -32.5% headline is partly but not fully a sliding-window base effect; the underlying run rate has also softened (best day in the current window is 8 clicks on 24 Aug, vs six days above 8 clicks in the previous window)."
+    },
+    "ninety_day_totals": {
+      "clicks": 461,
+      "impressions": 19200,
+      "ctr_pct": 2.4,
+      "position": 36.9,
+      "window": "2026-06-21..2026-09-20"
+    },
+    "daily_note": "Full 92-day daily series read live via the DAYS tab (num_of_days=90, sorted by date).",
+    "queries": {
+      "total": 331,
+      "brand": {
+        "definition": "feeldx / feel dx variants, misspelling 'xfeeld', plus founder name 'aman dalmond'",
+        "count": 6,
+        "clicks": 74,
+        "impressions": 183
+      },
+      "non_brand": {
+        "count": 325,
+        "clicks": 0,
+        "impressions": 3034
+      },
+      "unattributed_clicks": 40,
+      "unattributed_note": "114 total clicks vs 74 attributed to named brand queries and 0 to named non-brand queries; GSC anonymises low-volume queries, so 40 clicks have no query row.",
+      "columns": [
+        "query",
+        "clicks",
+        "impressions",
+        "ctr_pct",
+        "position"
+      ],
+      "brand_rows": [
+        [
+          "feeldx",
+          49,
+          108,
+          45.4,
+          1.1
+        ],
+        [
+          "feeldx pty ltd",
+          13,
+          38,
+          34.2,
+          1.0
+        ],
+        [
+          "feel dx",
+          8,
+          14,
+          57.1,
+          1.0
+        ],
+        [
+          "aman dalmond",
+          3,
+          10,
+          30.0,
+          2.0
+        ],
+        [
+          "feel dx pty ltd",
+          1,
+          4,
+          25.0,
+          1.0
+        ],
+        [
+          "xfeeld",
+          0,
+          9,
+          0.0,
+          7.2
+        ]
+      ],
+      "top_non_brand_by_impressions": [
+        [
+          "defense bim software",
+          0,
+          269,
+          52.9
+        ],
+        [
+          "4d coordination hyperscale construction",
+          0,
+          162,
+          83.8
+        ],
+        [
+          "5d bim",
+          0,
+          130,
+          52.5
+        ],
+        [
+          "3d model rendering",
+          0,
+          123,
+          40.3
+        ],
+        [
+          "5d bim software",
+          0,
+          107,
+          17.5
+        ],
+        [
+          "render 3d",
+          0,
+          89,
+          77.6
+        ],
+        [
+          "render 3d model",
+          0,
+          83,
+          61.3
+        ]
+      ],
+      "top_non_brand_note": "Same seven head terms as previous runs, all still on zero clicks. 'defense bim software' remains the single largest non-brand impression source at 269.",
+      "striking_distance": [
+        [
+          "5d bim software",
+          107,
+          17.5
+        ],
+        [
+          "ai-accelerated rendering",
+          46,
+          11.8
+        ],
+        [
+          "pcm meaning in construction",
+          25,
+          7.0
+        ],
+        [
+          "who offers bim, digital twin, 4d/5d construction services?",
+          23,
+          7.9
+        ],
+        [
+          "5d bim software list",
+          18,
+          15.5
+        ],
+        [
+          "4d bim planning",
+          14,
+          15.1
+        ],
+        [
+          "pcm role",
+          9,
+          4.8
+        ],
+        [
+          "4d simulation",
+          9,
+          5.1
+        ],
+        [
+          "rendering in 3d modelling",
+          9,
+          12.0
+        ],
+        [
+          "model rendering",
+          8,
+          17.0
+        ],
+        [
+          "is it who offers bim, digital twin, 4d/5d construction services?",
+          7,
+          8.1
+        ]
+      ],
+      "striking_distance_note": "Queries already inside the top 20 with zero clicks."
+    },
+    "pages": {
+      "total": 74,
+      "columns": [
+        "url",
+        "clicks",
+        "impressions",
+        "ctr_pct",
+        "position"
+      ],
+      "rows": [
+        [
+          "/news/exploring-5d-bim-software-solutions",
+          3,
+          705,
+          0.4,
+          41.0
+        ],
+        [
+          "/news/the-art-of-rendering-a-3d-model",
+          0,
+          673,
+          0.0,
+          55.9
+        ],
+        [
+          "/news/the-critical-role-of-project-controls-manager-in-construction",
+          0,
+          542,
+          0.0,
+          30.1
+        ],
+        [
+          "/",
+          86,
+          435,
+          19.8,
+          7.2
+        ],
+        [
+          "/news/bim-and-4d-modelling-revolutionise-australian-defence-construction",
+          0,
+          373,
+          0.0,
+          53.6
+        ],
+        [
+          "/about-us",
+          9,
+          244,
+          3.7,
+          2.9
+        ],
+        [
+          "/services",
+          4,
+          211,
+          1.9,
+          3.0
+        ],
+        [
+          "/news/leveraging-4d-bim-for-enhanced-construction-scheduling",
+          0,
+          194,
+          0.0,
+          79.7
+        ],
+        [
+          "/news/understanding-the-components-of-a-project-control-plan",
+          1,
+          153,
+          0.7,
+          32.1
+        ],
+        [
+          "/news/the-role-of-4d-simulation-in-bim-projects",
+          0,
+          153,
+          0.0,
+          67.9
+        ]
+      ]
+    },
+    "countries": {
+      "total": 94,
+      "columns": [
+        "country",
+        "clicks",
+        "impressions",
+        "ctr_pct",
+        "position"
+      ],
+      "rows": [
+        [
+          "Australia",
+          71,
+          1353,
+          5.2,
+          17.7
+        ],
+        [
+          "Vietnam",
+          20,
+          132,
+          15.2,
+          19.0
+        ],
+        [
+          "Philippines",
+          8,
+          90,
+          8.9,
+          28.3
+        ],
+        [
+          "Sri Lanka",
+          8,
+          11,
+          72.7,
+          1.0
+        ],
+        [
+          "India",
+          1,
+          133,
+          0.8,
+          50.6
+        ],
+        [
+          "France",
+          1,
+          43,
+          2.3,
+          52.7
+        ],
+        [
+          "Singapore",
+          1,
+          38,
+          2.6,
+          46.2
+        ],
+        [
+          "Malaysia",
+          1,
+          30,
+          3.3,
+          35.0
+        ],
+        [
+          "Hong Kong",
+          1,
+          26,
+          3.8,
+          14.2
+        ],
+        [
+          "Qatar",
+          1,
+          2,
+          50.0,
+          38.5
+        ]
+      ]
+    },
+    "devices": {
+      "Desktop": {
+        "clicks": 88,
+        "impressions": 4087,
+        "ctr_pct": 2.2,
+        "position": 39.5
+      },
+      "Mobile": {
+        "clicks": 26,
+        "impressions": 696,
+        "ctr_pct": 3.7,
+        "position": 26.6
+      },
+      "Tablet": {
+        "clicks": 0,
+        "impressions": 8,
+        "ctr_pct": 0.0,
+        "position": 6.0
+      }
+    },
+    "indexing": {
+      "indexed": 92,
+      "not_indexed": 7,
+      "not_indexed_reasons": [
+        [
+          "Duplicate without user-selected canonical",
+          2
+        ],
+        [
+          "Crawled - currently not indexed",
+          5
+        ],
+        [
+          "Alternate page with proper canonical tag",
+          0
+        ]
+      ]
+    },
+    "sitemaps_submitted": 0,
+    "cwv": "no CrUX data on mobile or desktop (not enough usage data in the last 90 days)",
+    "provenance": {
+      "source": "read live via Chrome 2026-09-23"
+    }
+  },
+  "ga4": {
+    "property": "FeelDX - GA4 (309588561)",
+    "account": "FeelDX (224776331)",
+    "readable": true,
+    "windows": {
+      "current": "2026-08-27..2026-09-23",
+      "previous": "2026-07-30..2026-08-26",
+      "partial_day_warning": "2026-09-23 is the run day and was still in progress when read; it drags the averages down slightly.",
+      "base_effect_warning": "The previous window (30 Jul - 26 Aug) still contains the mid/late-August Direct+Singapore+Chrome traffic spike that GA4's own anomaly detector flags (see insights below). It inflates the comparison base for sessions, event count and key events."
+    },
+    "totals": {
+      "sessions": 795,
+      "sessions_prev": 1261,
+      "sessions_pct": -36.95,
+      "engaged_sessions": 300,
+      "engaged_sessions_prev": 465,
+      "engaged_sessions_pct": -35.48,
+      "engagement_rate_pct": 37.74,
+      "engagement_rate_prev_pct": 36.88,
+      "engagement_rate_change_pct": 0.86,
+      "avg_engagement_time": "20s",
+      "avg_engagement_time_prev": "17s",
+      "avg_engagement_time_pct": 17.54,
+      "events_per_session": 4.56,
+      "events_per_session_prev": 4.53,
+      "events_per_session_pct": 0.8,
+      "event_count": 3628,
+      "event_count_prev": 5709,
+      "event_count_pct": -36.45,
+      "key_events": 17,
+      "key_events_prev": 44,
+      "key_events_pct": -61.36,
+      "session_key_event_rate_pct": 2.14,
+      "session_key_event_rate_prev_pct": 3.49,
+      "session_key_event_rate_change_pct": -38.72
+    },
+    "channels": {
+      "columns": [
+        "channel",
+        "sessions",
+        "sessions_prev",
+        "sessions_pct",
+        "engagement_rate_pct",
+        "avg_time",
+        "key_events"
+      ],
+      "rows": [
+        [
+          "Direct",
+          337,
+          729,
+          -53.77,
+          24.33,
+          "11s",
+          5
+        ],
+        [
+          "Organic Search",
+          192,
+          245,
+          -21.63,
+          57.81,
+          "46s",
+          10
+        ],
+        [
+          "Paid Search",
+          156,
+          97,
+          60.82,
+          39.1,
+          "13s",
+          2
+        ],
+        [
+          "Display",
+          43,
+          140,
+          -69.29,
+          44.19,
+          "11s",
+          0
+        ],
+        [
+          "Referral",
+          36,
+          28,
+          28.57,
+          52.78,
+          "22s",
+          0
+        ],
+        [
+          "Organic Social",
+          20,
+          15,
+          33.33,
+          35.0,
+          "4s",
+          0
+        ],
+        [
+          "Cross-network",
+          6,
+          4,
+          50.0,
+          0.0,
+          "0s",
+          0
+        ],
+        [
+          "Organic Shopping",
+          3,
+          3,
+          0.0,
+          33.33,
+          "2s",
+          0
+        ],
+        [
+          "AI Assistant",
+          1,
+          0,
+          0.0,
+          0.0,
+          "0s",
+          0
+        ],
+        [
+          "Paid Video",
+          1,
+          0,
+          0.0,
+          0.0,
+          "0s",
+          0
+        ]
+      ],
+      "note": "GA4 shows the top 10 channels, accounting for 795 of 795 sessions this run (all channels captured)."
+    },
+    "organic_detail": {
+      "sessions": 192,
+      "sessions_prev": 245,
+      "sessions_pct": -21.63,
+      "engagement_rate_pct": 57.81,
+      "engagement_rate_prev_pct": 57.96,
+      "engagement_rate_change_pct": -0.15,
+      "avg_time": "46s",
+      "avg_time_prev": "48s",
+      "avg_time_pct": -4.07,
+      "key_events": 10,
+      "key_events_prev": 33,
+      "key_events_pct": -69.7,
+      "share_of_sessions_pct": 24.15,
+      "share_of_key_events_pct": 58.82,
+      "window_note": "GA4 organic covers 2026-08-27..2026-09-23, three days further forward than the GSC block (2026-08-24..2026-09-20). The two are not directly comparable."
+    },
+    "pages": {
+      "totals": {
+        "views": 1201,
+        "views_prev": 1815,
+        "views_pct": -33.83,
+        "users": 658,
+        "users_prev": 1105,
+        "users_pct": -40.45
+      },
+      "columns": [
+        "path",
+        "views",
+        "views_prev",
+        "views_pct",
+        "avg_time",
+        "key_events"
+      ],
+      "rows": [
+        [
+          "/",
+          369,
+          832,
+          -55.65,
+          "15s",
+          0
+        ],
+        [
+          "/technology",
+          197,
+          85,
+          131.76,
+          "8s",
+          0
+        ],
+        [
+          "/services",
+          104,
+          97,
+          7.22,
+          "20s",
+          0
+        ],
+        [
+          "/our-work",
+          75,
+          68,
+          10.29,
+          "31s",
+          0
+        ],
+        [
+          "/project-control",
+          75,
+          64,
+          17.19,
+          "13s",
+          0
+        ],
+        [
+          "/about-us",
+          55,
+          63,
+          -12.7,
+          "31s",
+          0
+        ],
+        [
+          "/studio",
+          54,
+          42,
+          28.57,
+          "38s",
+          0
+        ],
+        [
+          "/contact-us",
+          29,
+          86,
+          -66.28,
+          "23s",
+          11
+        ],
+        [
+          "/news",
+          22,
+          19,
+          15.79,
+          "18s",
+          0
+        ],
+        [
+          "/capability-statement",
+          12,
+          16,
+          -25.0,
+          "27s",
+          0
+        ]
+      ],
+      "note": "/technology is the standout riser at +131.76%, now the second most-viewed page. /faq dropped out of the top 10 this run (was rank 8 last run with 43 views). /contact-us carries most of this run's key events (11 of 17)."
+    },
+    "insights": [
+      "On August 25, 2026, sessions from \"Direct\" decreased to 14, significantly lower than the expected value of 80.",
+      "Singapore traffic drop: sessions from users in \"Singapore\" experienced a sharp decline, falling from 249 to 2.",
+      "Chrome browser decline: the volume of sessions from the \"Chrome\" browser dropped significantly from 441 to 10.",
+      "Homepage session decrease: traffic to the page path \"/\" saw a notable decrease, falling from 26 to 11 sessions."
+    ],
+    "insights_note": "Read live on this run (Insights panel, Basic Performance/anomaly cards). Identical wording and numbers to the 2026-09-22 snapshot - these are GA4's own anomaly cards, generated from GA4's internal trailing lookback rather than the custom 28-day range selected, and are recorded verbatim rather than recomputed.",
+    "provenance": {
+      "source": "read live via Chrome 2026-09-23"
+    }
+  },
+  "social": {
+    "linkedin": {
+      "company_id": 67163800,
+      "highlights_window": "2026-08-22..2026-09-20",
+      "impressions": 1648,
+      "impressions_change_pct": -12.4,
+      "impressions_change_dir": "decrease",
+      "reactions": 19,
+      "reactions_change_pct": -59.6,
+      "reactions_change_dir": "decrease",
+      "comments": 0,
+      "comments_change_pct": 0,
+      "reposts": 0,
+      "reposts_change_pct": 0,
+      "content_engagement_window": "2026-09-07..2026-09-21",
+      "content_engagement_columns": [
+        "title",
+        "type",
+        "audience",
+        "impressions",
+        "views",
+        "clicks",
+        "ctr_pct",
+        "reactions",
+        "comments",
+        "reposts",
+        "follows",
+        "engagement_rate_pct"
+      ],
+      "content_engagement_rows": [
+        [
+          "Architectural visualisation shouldn't be limited to static marketing renders...",
+          "Video",
+          "All followers",
+          136,
+          39,
+          4,
+          2.94,
+          2,
+          0,
+          1,
+          null,
+          5.15
+        ],
+        [
+          "Capitalising on NSW's Transport Oriented Development...",
+          "Article",
+          "All followers",
+          166,
+          4,
+          4,
+          2.41,
+          1,
+          0,
+          1,
+          null,
+          3.61
+        ],
+        [
+          "High-pressure site environments, compressed timelines...",
+          "Image",
+          "All followers",
+          164,
+          null,
+          8,
+          4.88,
+          3,
+          0,
+          2,
+          null,
+          7.93
+        ],
+        [
+          "The Complete Guide to 5D BIM Modelling in Australia...",
+          "Article",
+          "All followers",
+          123,
+          11,
+          3,
+          2.44,
+          1,
+          0,
+          1,
+          null,
+          4.07
+        ]
+      ],
+      "followers": {
+        "total": 3109,
+        "total_prev": 3108,
+        "new_30d": 13,
+        "new_30d_change_pct": -13.3,
+        "new_30d_change_dir": "decrease",
+        "window": "2026-08-22..2026-09-20"
+      },
+      "follower_locations": [
+        [
+          "Greater Melbourne Area, Australia",
+          1132,
+          36.4
+        ],
+        [
+          "Greater Sydney Area, Australia",
+          254,
+          8.2
+        ],
+        [
+          "Greater Brisbane Area, Australia",
+          97,
+          3.1
+        ],
+        [
+          "Greater Perth Area, Australia",
+          91,
+          2.9
+        ],
+        [
+          "Greater Adelaide Area, Australia",
+          46,
+          1.5
+        ],
+        [
+          "Metro Manila, Philippines",
+          44,
+          1.4
+        ],
+        [
+          "Ho Chi Minh City Metropolitan Area, Vietnam",
+          39,
+          1.3
+        ],
+        [
+          "London Area, United Kingdom",
+          24,
+          null
+        ],
+        [
+          "Gold Coast, Australia",
+          23,
+          null
+        ],
+        [
+          "Geelong, Australia",
+          18,
+          null
+        ]
+      ],
+      "visitors": {
+        "window": "2026-08-22..2026-09-20",
+        "page_views": 208,
+        "page_views_change_pct": -1.0,
+        "page_views_change_dir": "decrease",
+        "unique_visitors": 61,
+        "unique_visitors_change_pct": -24.7,
+        "unique_visitors_change_dir": "decrease",
+        "custom_button_clicks": 0,
+        "custom_button_clicks_change_pct": -100.0,
+        "custom_button_clicks_change_dir": "decrease"
+      },
+      "visitor_job_functions": [
+        [
+          "Operations",
+          49,
+          23.6
+        ],
+        [
+          "Engineering",
+          32,
+          15.4
+        ],
+        [
+          "Arts and Design",
+          25,
+          12.0
+        ],
+        [
+          "Research",
+          22,
+          10.6
+        ],
+        [
+          "Business Development",
+          14,
+          6.7
+        ],
+        [
+          "Sales",
+          13,
+          6.3
+        ],
+        [
+          "Marketing",
+          7,
+          3.4
+        ],
+        [
+          "Education",
+          5,
+          2.4
+        ],
+        [
+          "Program and Project Management",
+          5,
+          2.4
+        ],
+        [
+          "Community and Social Services",
+          4,
+          1.9
+        ]
+      ],
+      "search_appearances": {
+        "window": "2026-09-14..2026-09-20",
+        "page_searches": 342,
+        "page_searches_change_pct": 6.2,
+        "page_searches_change_dir": "increase",
+        "top_keyword": "Feeldx"
+      },
+      "competitors_benchmark_window": "30 days (as set by LinkedIn benchmark table)",
+      "competitors_benchmark_columns": [
+        "rank",
+        "company",
+        "followers",
+        "new_followers",
+        "posts",
+        "comments",
+        "reactions"
+      ],
+      "competitors_benchmark_rows": [
+        [
+          1,
+          "Jacobs",
+          2123194,
+          18700,
+          33,
+          134,
+          4300
+        ],
+        [
+          2,
+          "Fluor Corporation",
+          1148446,
+          8000,
+          25,
+          136,
+          7300
+        ],
+        [
+          3,
+          "Hickory",
+          40939,
+          424,
+          5,
+          7,
+          653
+        ],
+        [
+          4,
+          "Solid Support Pty Ltd",
+          3461,
+          73,
+          4,
+          1,
+          47
+        ],
+        [
+          5,
+          "Water Infrastructure Services",
+          699,
+          26,
+          1,
+          0,
+          6
+        ],
+        [
+          6,
+          "Time Planning & Programming",
+          623,
+          21,
+          0,
+          0,
+          7
+        ],
+        [
+          7,
+          "FeelDX (self)",
+          3109,
+          13,
+          6,
+          0,
+          18
+        ],
+        [
+          8,
+          "VISUAL5D GROUP (V5D)",
+          3637,
+          6,
+          1,
+          0,
+          3
+        ]
+      ],
+      "provenance": {
+        "source": "read live via Chrome 2026-09-23, javascript_tool DOM reads with aria-label sign checks"
+      }
+    },
+    "facebook": {
+      "handle": "feeldx",
+      "followers": 391,
+      "following": 50,
+      "note": "Public profile numbers only - no Business Manager access for the FeelDX page (it belongs to DX Living's Business Manager). Latest post: 1 reaction, 1 share, 66 views.",
+      "provenance": {
+        "source": "read live via Chrome 2026-09-23, public profile page"
+      }
+    },
+    "instagram": {
+      "handle": "feeldx",
+      "posts": 467,
+      "followers": 214,
+      "following": 444,
+      "provenance": {
+        "source": "read live via Chrome 2026-09-23, public profile page"
+      }
+    },
+    "youtube": {
+      "handle": "@feeldxptyltd2651",
+      "subscribers": 12,
+      "videos": 14,
+      "provenance": {
+        "source": "read live via Chrome 2026-09-23, public channel about page"
+      }
+    },
+    "provenance": {
+      "source": "read live 2026-09-23; LinkedIn Highlights/Followers/Visitors windows 2026-08-22..2026-09-20, search appearances 2026-09-14..2026-09-20, content engagement 2026-09-07..2026-09-21"
+    }
+  },
+  "technical": {
+    "checked": "2026-09-23",
+    "method": "fetch() from a live feeldx.com tab",
+    "robots": {
+      "status": 200,
+      "content": "User-agent: *\nDisallow:\nSitemap: https://www.feeldx.com/sitemap.xml"
+    },
+    "columns": [
+      "path",
+      "http",
+      "title_len",
+      "meta_desc_len",
+      "h1",
+      "canonical"
+    ],
+    "pages": [
+      [
+        "/",
+        200,
+        89,
+        113,
+        "Plan. Visualise. Transform.",
+        "//"
+      ],
+      [
+        "/services",
+        200,
+        82,
+        150,
+        "OUR SERVICES",
+        "/services"
+      ],
+      [
+        "/our-work",
+        200,
+        84,
+        156,
+        "Our Work",
+        "/our-work"
+      ],
+      [
+        "/technology",
+        200,
+        79,
+        141,
+        "Our Technology",
+        "/technology"
+      ],
+      [
+        "/project-control",
+        200,
+        65,
+        140,
+        "PROJECT CONTROL AND FORENSIC ANALYSIS",
+        "/project-control"
+      ],
+      [
+        "/about-us",
+        200,
+        72,
+        137,
+        "ABOUT US",
+        "/about-us"
+      ],
+      [
+        "/news",
+        200,
+        86,
+        127,
+        "News",
+        "/news"
+      ],
+      [
+        "/contact-us",
+        200,
+        88,
+        158,
+        null,
+        "/contact-us"
+      ],
+      [
+        "/aec",
+        200,
+        89,
+        113,
+        null,
+        null
+      ],
+      [
+        "/studio-draft",
+        200,
+        6,
+        0,
+        "The Studio",
+        "/studio-draft"
+      ],
+      [
+        "/faq",
+        404,
+        89,
+        113,
+        null,
+        null
+      ]
+    ],
+    "faq_note": "/faq returns HTTP 404 but serves the site shell, so it carries the generic homepage title and meta. There is no H1 and no canonical. It is still a genuine 404 - not restored.",
+    "sitemap": {
+      "status": 200,
+      "total_urls": 90,
+      "malformed_loc_present": true,
+      "malformed_loc": "//",
+      "lastmod_count": 0,
+      "contains_studio_draft": true,
+      "contains_faq": true
+    },
+    "gsc_index": {
+      "indexed": 92,
+      "not_indexed": 7
+    },
+    "gsc_sitemaps_submitted": 0,
+    "cwv": "no CrUX data on mobile or desktop",
+    "health_score": 66,
+    "changes_since_2026-09-22": "Nothing was fixed. /faq still 404, /studio-draft still 200 and still in the sitemap, sitemap still not submitted to GSC, sitemap still carries the malformed <loc>//</loc> and no lastmod, homepage canonical still '//'. /our-work and /news meta descriptions changed length slightly (156 and 127 chars, was 151 and 122) - minor copy edits, not a fix or a break. Page indexing held at 92/7. Health score unchanged at 66.",
+    "provenance": {
+      "source": "read live 2026-09-23"
+    }
+  }
+}
