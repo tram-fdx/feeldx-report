@@ -115,6 +115,11 @@ ul.notes li{margin-bottom:5px}
   </div>
 
   <div class="card">
+    <h2 id="i_title"></h2><div class="sub" id="i_sub"></div>
+    <ul class="notes" id="insights"></ul>
+  </div>
+
+  <div class="card">
     <h2 id="n_title"></h2>
     <ul class="notes" id="notes"></ul>
   </div>
@@ -165,6 +170,12 @@ const T = {
   noise:{vi:'nhiễu',en:'noise'}, signal:{vi:'đáng chú ý',en:'worth a look'},
   w_title:{vi:'Bảng theo tuần',en:'Weekly table'}, w_sub:{vi:'Marketing (từ báo cáo hằng ngày) và HubSpot cạnh nhau',en:'Marketing (from the daily reports) beside HubSpot'},
   wc:{vi:['Tuần','Views FB+IG','Visits FB','Contact mới','Deal mới','Meeting','Thắng','Giá trị thắng','Thua','Thắng %'],en:['Week','FB+IG views','FB visits','New contacts','Deals created','Meetings','Won','Won value','Lost','Win %']},
+  i_title:{vi:'Insight & hướng đi',en:'Insights & direction'},
+  i_sub:{vi:'Rút ra từ 13 tuần đầy đủ (06/07 – 28/09; tuần 05/10 còn dở dang nên bỏ). Đây là diễn giải, không phải quan hệ nhân quả.',en:'Drawn from the 13 complete weeks (6 Jul – 28 Sep; the 5 Oct week is partial and excluded). These are readings, not causal proof.'},
+  insights:{
+    vi:['<b>Pipeline đang chạy nhờ outbound, không phải marketing.</b> 6 tuần gần nhất (24/08 – 28/09) so với 6 tuần đầu (06/07 – 10/08): tỷ lệ thắng 11,2% → 19,5%, giá trị deal thắng AU$373.515 → AU$650.235, giá trị deal mới tạo AU$734.245 → AU$1.726.545. Hướng đi: xem marketing là lớp hỗ trợ cho đội outreach, đừng kỳ vọng nó tự sinh deal.','<b>Chưa thấy liên hệ nào giữa lượt xem social và kết quả HubSpot.</b> Mọi tương quan đều |r| &lt; 0,55 (nhiễu); cặp duy nhất vượt ngưỡng (visit trang FB → meeting tuần sau, r = −0,71, n = 12) mang dấu âm nên không đọc thành tác động. Hướng đi: ngừng dùng lượt xem làm thước đo thành công; đo bằng số liên hệ có gắn nguồn, meeting đặt được và deal có chạm marketing.','<b>Kênh inbound gần như không vào CRM.</b> 28 ngày gần nhất: 240 contact mới đều từ OFFLINE, chỉ 1 từ Direct Traffic; toàn bộ deal chỉ có 1 deal gắn Organic Search. Trong khi GA4 ghi nhiều key event ở /contact-us. Hướng đi: ưu tiên nối form /contact-us và UTM vào HubSpot (gắn nguồn) trước khi đầu tư thêm vào SEO hay social.','<b>Lý do mất deal đang dịch chuyển.</b> 4 tuần gần nhất có 43 deal mất vì "In-house" và 22 vì "Competitor" (chỉ bắt đầu được ghi từ tuần 14/09, nên chưa so được với trước đó); "Not interested" là 182 trên 249 deal mất. Hướng đi: làm nội dung phản bác trực tiếp "tự làm nội bộ" (giá trị của kiểm soát dự án độc lập) và nội dung so sánh năng lực với đối thủ.','<b>Marketing nên nhắm vào các giai đoạn đang kẹt, không phải đỉnh phễu.</b> Pipeline mở: B3 Outreach Sent 172 deal (AU$374.850), B1 Follow-Up for Approval 24 deal (AU$198.890), B6 chưa outreach 89 deal. Hướng đi: tài liệu ca nghiên cứu, mô phỏng 4D/BIM và nội dung giúp người ra quyết định duyệt nội bộ, gửi kèm trong chuỗi follow-up.','<b>Theo dõi meeting.</b> Deal mới tăng (315 → 370, 4 tuần so với 4 tuần trước) nhưng meeting giảm (65 → 52); tuần 21/09 chỉ có 4 meeting. Nếu xu hướng này kéo dài, tỷ lệ thắng hiện tại sẽ khó giữ.'],
+    en:['<b>The pipeline is running on outbound, not marketing.</b> Latest 6 weeks (24 Aug – 28 Sep) vs first 6 (6 Jul – 10 Aug): win rate 11.2% → 19.5%, won value AU$373,515 → AU$650,235, value of deals created AU$734,245 → AU$1,726,545. Direction: treat marketing as support for the outreach team; do not expect it to generate deals on its own.','<b>No visible link between social views and HubSpot outcomes.</b> Every correlation has |r| &lt; 0.55 (noise); the one pair above the line (FB page visits → next-week meetings, r = −0.71, n = 12) is negative, so it is not read as impact. Direction: stop using views as the success measure; track source-tagged contacts, meetings booked and deals with a marketing touch.','<b>Inbound barely reaches the CRM.</b> Last 28 days: 240 new contacts, all OFFLINE, only 1 from Direct Traffic; across all deals only 1 is tagged Organic Search — while GA4 logs many key events on /contact-us. Direction: wire the /contact-us form and UTMs into HubSpot (source capture) before investing further in SEO or social.','<b>Loss reasons are shifting.</b> The latest 4 weeks show 43 deals lost to "In-house" and 22 to "Competitor" (only recorded since the week of 14 Sep, so not comparable with earlier weeks); "Not interested" is 182 of 249 lost. Direction: produce content that answers "we will do it in-house" directly (the value of independent project control) and capability-versus-competitor material.','<b>Aim marketing at the stalled stages, not the top of the funnel.</b> Open pipeline: B3 Outreach Sent 172 deals (AU$374,850), B1 Follow-Up for Approval 24 deals (AU$198,890), B6 Awaiting Outreach 89 deals. Direction: case studies, 4D/BIM simulations and decision-maker approval material to attach to follow-up sequences.','<b>Watch meetings.</b> Deals created rose (315 → 370, last 4 weeks vs previous 4) while meetings fell (65 → 52); the week of 21 Sep had only 4. If that persists, the current win rate will be hard to hold.']
+  },
   n_title:{vi:'Ghi chú phương pháp & cảnh báo dữ liệu',en:'Method notes & data warnings'},
   notes:{
     vi:['Toàn bộ deal HubSpot được coi là FeelDX (theo bạn xác nhận). Marketing DXL được đọc như “air cover”, không gắn trực tiếp vào deal.','Hai pipeline được ghép theo lựa chọn của bạn khi tính deal đóng theo tuần. Deal mới tạo trong 13 tuần chỉ thuộc “New Work Flow”; pipeline “Deal Records History” không nhận deal mới từ 10/2025.','Meeting là số hoạt động meeting trong HubSpot (mọi nguồn, chủ yếu do sales), không phải meeting do marketing tạo ra.','Lượt xem các kênh không phải người duy nhất; GA4/GSC/Meta/YouTube/LinkedIn dùng cửa sổ 28 ngày hơi lệch nhau vài ngày.','Tương quan trên 13 tuần là mẫu nhỏ: dùng để quan sát, không dùng để kết luận nhân quả.'],
@@ -272,6 +283,8 @@ function render() {
     return `<tr><td>${w.w}${w.mkt_days < 7 ? '*' : ''}</td><td>${fmt(w.mkt.views)}</td><td>${fmt(w.mkt.fb_visits)}</td><td>${fmt(c.contacts_offline + c.contacts_direct)}</td><td>${fmt(c.deals_created)}</td><td>${fmt(c.meetings)}</td><td>${fmt(c.won)}</td><td>${aud(c.won_amt)}</td><td>${fmt(c.lost)}</td><td>${wr}</td></tr>`;
   }).join('');
 
+  $('i_title').textContent = tr('i_title'); $('i_sub').textContent = tr('i_sub');
+  $('insights').innerHTML = T.insights[LANG].map(x => `<li>${x}</li>`).join('');
   $('n_title').textContent = tr('n_title');
   $('notes').innerHTML = T.notes[LANG].concat(d.anomalies.map(a => '⚠ ' + a)).map(x => `<li>${x}</li>`).join('');
   $('foot').textContent = tr('foot', d.generated_at);
