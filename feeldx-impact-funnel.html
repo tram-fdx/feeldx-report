@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FeelDX — Marketing Impact Funnel</title>
+<style>
+:root{--bg:#eef1f6;--card:#fff;--ink:#1f2740;--muted:#7b8496;--line:#e9ecf2;--pos:#12b76a;--neg:#f04438;--warn:#f79009;
+--accent:#5b6bf5;--mk:#5b6bf5;--hs:#0f9d8a;--lost:#f04438;--radius:14px}
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,sans-serif;background:var(--bg);color:var(--ink);line-height:1.45}
+.main{max-width:1280px;margin:0 auto;padding:20px 24px 60px}
+.hd{background:var(--card);border-radius:var(--radius);padding:16px 20px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;box-shadow:0 1px 3px rgba(20,30,60,.06);margin-bottom:16px}
+.hd h1{font-size:18px;font-weight:800}
+.hd .per{font-size:12px;color:var(--muted);margin-top:2px}
+.lang{display:flex;border:1px solid var(--line);border-radius:999px;overflow:hidden}
+.lang button{font-size:12px;font-weight:800;padding:8px 14px;border:none;background:#fff;color:var(--ink);cursor:pointer}
+.lang button.on{background:var(--accent);color:#fff}
+.verdict{background:#fff;border-left:4px solid var(--warn);border-radius:var(--radius);padding:14px 18px;margin-bottom:16px;box-shadow:0 1px 3px rgba(20,30,60,.06);font-size:14px}
+.verdict b{font-weight:800}
+.kpirow{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:14px;margin-bottom:16px}
+.kpi{background:var(--card);border-radius:var(--radius);padding:15px 18px;box-shadow:0 1px 3px rgba(20,30,60,.06);border-top:3px solid var(--accent)}
+.kpi.hs{border-top-color:var(--hs)}
+.kpi .l{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:.5px;font-weight:700}
+.kpi .v{font-size:26px;font-weight:800;margin-top:6px}
+.kpi .c{font-size:12px;color:var(--muted);margin-top:3px}
+.card{background:var(--card);border-radius:var(--radius);padding:18px 20px;box-shadow:0 1px 3px rgba(20,30,60,.06);margin-bottom:16px}
+.card h2{font-size:15px;font-weight:800;margin-bottom:2px}
+.card .sub{font-size:12px;color:var(--muted);margin-bottom:14px}
+.lane{display:inline-block;font-size:11px;font-weight:800;padding:3px 9px;border-radius:999px;margin-right:8px;color:#fff;vertical-align:middle}
+.lane.a{background:var(--mk)}.lane.b{background:var(--hs)}
+.fun{display:flex;flex-direction:column;gap:8px}
+.step{display:grid;grid-template-columns:200px 1fr 120px;gap:12px;align-items:center;font-size:13px}
+.step .nm{font-weight:700}
+.step .nm small{display:block;font-weight:500;color:var(--muted);font-size:11px}
+.bar{height:26px;border-radius:7px;position:relative;min-width:3px}
+.bar span{position:absolute;left:10px;top:0;line-height:26px;font-size:12px;font-weight:800;color:#fff;white-space:nowrap}
+.step .cv{text-align:right;color:var(--muted);font-size:12px}
+.step .cv b{color:var(--ink)}
+.na{font-style:italic;color:var(--muted)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:900px){.two{grid-template-columns:1fr}.step{grid-template-columns:130px 1fr 80px}}
+svg text{font-family:inherit}
+.legend{display:flex;gap:14px;flex-wrap:wrap;font-size:11px;color:var(--muted);margin-top:6px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px;vertical-align:-1px}
+table{width:100%;border-collapse:collapse;font-size:12px}
+th,td{padding:6px 8px;text-align:right;border-bottom:1px solid var(--line);white-space:nowrap}
+th:first-child,td:first-child{text-align:left}
+th{color:var(--muted);font-weight:700;font-size:11px;text-transform:uppercase;letter-spacing:.3px}
+.scroll{overflow-x:auto}
+.health{display:grid;gap:10px}
+.hrow{display:grid;grid-template-columns:230px 1fr 90px;gap:12px;align-items:center;font-size:13px}
+.track{height:12px;background:#eef1f6;border-radius:6px;overflow:hidden}
+.track i{display:block;height:100%}
+.hrow .n{text-align:right;font-weight:800}
+@media (max-width:700px){.hrow{grid-template-columns:130px 1fr 60px}}
+ul.notes{margin:0 0 0 18px;font-size:12.5px;color:#3b4560}
+ul.notes li{margin-bottom:5px}
+.pill{display:inline-block;font-size:11px;font-weight:800;padding:2px 8px;border-radius:999px}
+.pill.ok{background:#e3f7ee;color:#0b7a4b}.pill.no{background:#fdecea;color:#b42318}.pill.mid{background:#fff3e0;color:#b45309}
+.foot{font-size:11px;color:var(--muted);margin-top:18px}
+</style>
+</head>
+<body>
+<div class="main">
+  <div class="hd">
+    <div>
+      <h1 id="t_title"></h1>
+      <div class="per" id="t_per"></div>
+    </div>
+    <div class="lang"><button id="bvi" class="on">VI</button><button id="ben">EN</button></div>
+  </div>
+
+  <div class="verdict" id="verdict"></div>
+  <div class="kpirow" id="kpis"></div>
+
+  <div class="card">
+    <h2><span class="lane a">A</span><span id="a_title"></span></h2>
+    <div class="sub" id="a_sub"></div>
+    <div class="fun" id="funA"></div>
+  </div>
+
+  <div class="card">
+    <h2><span class="lane b">B</span><span id="b_title"></span></h2>
+    <div class="sub" id="b_sub"></div>
+    <div class="fun" id="funB"></div>
+  </div>
+
+  <div class="two">
+    <div class="card">
+      <h2 id="c1_title"></h2><div class="sub" id="c1_sub"></div>
+      <div id="ch1"></div>
+      <div class="legend" id="lg1"></div>
+    </div>
+    <div class="card">
+      <h2 id="c2_title"></h2><div class="sub" id="c2_sub"></div>
+      <div id="ch2"></div>
+      <div class="legend" id="lg2"></div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2 id="h_title"></h2><div class="sub" id="h_sub"></div>
+    <div class="health" id="health"></div>
+  </div>
+
+  <div class="card">
+    <h2 id="r_title"></h2><div class="sub" id="r_sub"></div>
+    <div class="scroll"><table id="corr"></table></div>
+  </div>
+
+  <div class="card">
+    <h2 id="w_title"></h2><div class="sub" id="w_sub"></div>
+    <div class="scroll"><table id="wk"></table></div>
+  </div>
+
+  <div class="card">
+    <h2 id="n_title"></h2>
+    <ul class="notes" id="notes"></ul>
+  </div>
+  <div class="foot" id="foot"></div>
+</div>
+
+<script>
+let LANG = 'vi', D = null;
+try { if (/^en/i.test(navigator.language) && !localStorage.getItem('fnlang')) LANG = 'en'; LANG = localStorage.getItem('fnlang') || LANG; } catch (e) {}
+const T = {
+  title: {vi:'Phễu tác động marketing → kinh doanh', en:'Marketing impact funnel → business results'},
+  verdict: {
+    vi: (m) => `<b>Kết luận ngắn:</b> marketing hiện chỉ <b>chứng minh được trực tiếp ${m.onlineLeads} contact online</b> trong 28 ngày (trên ${m.allLeads} contact mới, ${m.pctOnline}). Gần như toàn bộ doanh thu đến từ <b>outbound do sales dẫn dắt</b> (${m.won4} deal thắng, ${m.wonAmt4} trong 4 tuần gần nhất). ${m.link ? 'Có ' + m.link + '/' + m.tests + ' phép thử theo tuần vượt ngưỡng nhiễu (xem bảng tương quan); với ngần ấy phép thử, vài kết quả vượt ngưỡng do ngẫu nhiên là bình thường — chỉ là tương quan, không phải nhân quả.' : 'Số liệu theo tuần <b>chưa cho thấy mối liên hệ ổn định</b> giữa lượt xem/tương tác marketing và deal/meeting — đây là tương quan, không phải quan hệ nhân quả.'}`,
+    en: (m) => `<b>Short verdict:</b> marketing can currently <b>directly prove only ${m.onlineLeads} online contact(s)</b> in 28 days (of ${m.allLeads} new contacts, ${m.pctOnline}). Almost all revenue comes from <b>sales-led outbound</b> (${m.won4} deals won, ${m.wonAmt4} in the last 4 weeks). ${m.link ? m.link + ' of ' + m.tests + ' weekly tests exceed the noise threshold (see the correlation table); with that many tests a few chance hits are expected — correlation, not causation.' : 'Weekly data shows <b>no stable link</b> between marketing views/interactions and deals/meetings — correlation, not causation.'}`
+  },
+  per: {vi:(d)=>`Cập nhật ${d} · HubSpot (read-only) + 3 báo cáo marketing · đơn vị AUD · tuần bắt đầu thứ Hai`, en:(d)=>`Updated ${d} · HubSpot (read-only) + 3 marketing reports · AUD · weeks start Monday`},
+  k_reach:{vi:'Tiếp cận 28 ngày',en:'Reach, 28 days'}, k_reach_c:{vi:'FB+IG+YT lượt xem + LinkedIn impressions (không phải người duy nhất)',en:'FB+IG+YT views + LinkedIn impressions (not unique people)'},
+  k_sess:{vi:'Phiên website 28 ngày',en:'Website sessions, 28d'}, k_sess_c:{vi:(e)=>`GA4 · ${e} key event`,en:(e)=>`GA4 · ${e} key events`},
+  k_lead:{vi:'Contact online mới 28 ngày',en:'New online contacts, 28d'}, k_lead_c:{vi:(a)=>`trên ${a} contact mới trong HubSpot`,en:(a)=>`of ${a} new HubSpot contacts`},
+  k_deals:{vi:'Deal mới / thắng (4 tuần)',en:'Deals created / won (4 wks)'}, k_deals_c:{vi:(a)=>`Pipeline New Work Flow · thắng ${a}`,en:(a)=>`New Work Flow pipeline · won value ${a}`},
+  k_win:{vi:'Tỉ lệ thắng (4 tuần)',en:'Win rate (4 wks)'}, k_win_c:{vi:'thắng / (thắng + thua), theo tuần đóng deal — nhiễu do đóng hàng loạt',en:'won / (won + lost) by close week — noisy due to bulk closing'},
+  a_title:{vi:'Làn A — Inbound: marketing tự tạo cầu',en:'Lane A — Inbound: demand marketing creates itself'},
+  a_sub:{vi:'Cửa sổ 28 ngày gần nhất. Độ dài thanh theo thang log vì chênh lệch rất lớn. Mỗi bước là một nguồn đo khác nhau nên tỉ lệ chỉ để so sánh sơ bộ.',en:'Latest 28-day window. Bar length is log-scaled because the gaps are huge. Each step is a different measurement source, so ratios are indicative only.'},
+  b_title:{vi:'Làn B — Outbound được marketing hỗ trợ',en:'Lane B — Outbound supported by marketing'},
+  b_sub:{vi:'Pipeline đang chạy “New Work Flow”: số deal đang mở theo bước (giá trị AUD), và kết quả đóng trong 4 tuần gần nhất. Marketing đóng vai trò “air cover”, chưa gắn nguồn vào deal.',en:'Live “New Work Flow” pipeline: open deals by stage (AUD value) and results closed in the last 4 weeks. Marketing acts as “air cover”; it is not attributed to deals.'},
+  s_reach:{vi:'Tiếp cận',en:'Reach'}, s_reach_s:{vi:'FB+IG+YT views, LI impressions',en:'FB+IG+YT views, LI impressions'},
+  s_sess:{vi:'Truy cập website',en:'Website visits'}, s_sess_s:{vi:'GA4 sessions',en:'GA4 sessions'},
+  s_key:{vi:'Hành động trên web',en:'Actions on site'}, s_key_s:{vi:'GA4 key events (form, liên hệ)',en:'GA4 key events (forms, contact)'},
+  s_lead:{vi:'Contact online mới',en:'New online contacts'}, s_lead_s:{vi:'HubSpot, nguồn khác Offline, 28 ngày',en:'HubSpot, source ≠ Offline, 28 days'},
+  s_deal:{vi:'Deal có nguồn online',en:'Online-sourced deals'}, s_deal_s:{vi:'HubSpot, toàn thời gian',en:'HubSpot, all time'},
+  s_b6:{vi:'B6 Chờ outreach',en:'B6 Awaiting outreach'}, s_b3:{vi:'B3 Đã gửi outreach',en:'B3 Outreach sent'},
+  s_b2:{vi:'B2 Khách cân nhắc / chờ tài liệu',en:'B2 Considering / awaiting docs'}, s_b1:{vi:'B1 Chờ duyệt',en:'B1 Follow-up for approval'},
+  s_won:{vi:'Thắng (4 tuần)',en:'Won (4 wks)'},
+  open:{vi:'đang mở',en:'open'}, of_prev:{vi:'so với bước trước',en:'vs previous step'}, notmeasured:{vi:'chưa đo được',en:'not measurable'},
+  c1_title:{vi:'Deal mới vs deal thắng theo tuần',en:'Deals created vs won per week'}, c1_sub:{vi:'HubSpot · tuần cuối là tuần chưa đủ (đến hôm nay)',en:'HubSpot · last week is partial (to date)'},
+  c2_title:{vi:'Cùng tuần: lượt xem marketing vs giá trị deal thắng',en:'Same week: marketing views vs won value'}, c2_sub:{vi:'Cột = lượt xem FB+IG (trục trái) · đường = giá trị thắng AUD (trục phải)',en:'Bars = FB+IG views (left) · line = won value AUD (right)'},
+  lg_created:{vi:'Deal mới',en:'Created'}, lg_won:{vi:'Deal thắng',en:'Won'}, lg_views:{vi:'Lượt xem FB+IG',en:'FB+IG views'}, lg_val:{vi:'Giá trị thắng (AUD)',en:'Won value (AUD)'},
+  h_title:{vi:'Sức khỏe attribution — marketing đo được bao nhiêu?',en:'Attribution health — how much can marketing measure?'},
+  h_sub:{vi:'Càng cao ở “Offline/chưa gán” thì càng khó chứng minh marketing ảnh hưởng doanh thu. Mục tiêu cải thiện dần.',en:'The higher “Offline/unassigned” is, the harder it is to prove marketing impact on revenue. Improve over time.'},
+  h_c_off:{vi:'Contact nguồn Offline',en:'Contacts sourced Offline'}, h_d_off:{vi:'Deal nguồn Offline',en:'Deals sourced Offline'},
+  h_d_un:{vi:'Deal chưa gán nguồn',en:'Deals with no source'}, h_ga:{vi:'GA4 key event có contact tương ứng',en:'GA4 key events with a matching contact'},
+  h_ga_v:{vi:(k,c)=>`${k} key event · ${c} contact online (28 ngày)`,en:(k,c)=>`${k} key events · ${c} online contacts (28d)`},
+  r_title:{vi:'Marketing ↔ kết quả: tương quan theo tuần',en:'Marketing ↔ outcomes: weekly correlation'},
+  r_sub:{vi:(n)=>`Pearson trên ${n} tuần đủ dữ liệu. Với ${n} tuần, |r| < 0,55 coi như nhiễu. “Lệch 1 tuần” = marketing tuần này so với kết quả tuần sau.`,en:(n)=>`Pearson over ${n} complete weeks. With ${n} weeks, |r| < 0.55 is noise. “1-week lag” = marketing this week vs outcome next week.`},
+  m_views:{vi:'Lượt xem FB+IG',en:'FB+IG views'}, m_fbv:{vi:'Lượt truy cập trang FB',en:'FB page visits'}, m_int:{vi:'Tương tác FB+IG',en:'FB+IG interactions'},
+  o_deals_created:{vi:'Deal mới',en:'Deals created'}, o_meetings:{vi:'Meeting',en:'Meetings'}, o_won:{vi:'Deal thắng',en:'Deals won'},
+  col_mkt:{vi:'Marketing',en:'Marketing'}, col_out:{vi:'Kết quả',en:'Outcome'}, col_l0:{vi:'Cùng tuần',en:'Same week'}, col_l1:{vi:'Lệch 1 tuần',en:'1-week lag'}, verdict_col:{vi:'Đọc',en:'Reading'},
+  noise:{vi:'nhiễu',en:'noise'}, signal:{vi:'đáng chú ý',en:'worth a look'},
+  w_title:{vi:'Bảng theo tuần',en:'Weekly table'}, w_sub:{vi:'Marketing (từ báo cáo hằng ngày) và HubSpot cạnh nhau',en:'Marketing (from the daily reports) beside HubSpot'},
+  wc:{vi:['Tuần','Views FB+IG','Visits FB','Contact mới','Deal mới','Meeting','Thắng','Giá trị thắng','Thua','Thắng %'],en:['Week','FB+IG views','FB visits','New contacts','Deals created','Meetings','Won','Won value','Lost','Win %']},
+  n_title:{vi:'Ghi chú phương pháp & cảnh báo dữ liệu',en:'Method notes & data warnings'},
+  notes:{
+    vi:['Toàn bộ deal HubSpot được coi là FeelDX (theo bạn xác nhận). Marketing DXL được đọc như “air cover”, không gắn trực tiếp vào deal.','Hai pipeline được ghép theo lựa chọn của bạn khi tính deal đóng theo tuần. Deal mới tạo trong 13 tuần chỉ thuộc “New Work Flow”; pipeline “Deal Records History” không nhận deal mới từ 10/2025.','Meeting là số hoạt động meeting trong HubSpot (mọi nguồn, chủ yếu do sales), không phải meeting do marketing tạo ra.','Lượt xem các kênh không phải người duy nhất; GA4/GSC/Meta/YouTube/LinkedIn dùng cửa sổ 28 ngày hơi lệch nhau vài ngày.','Tương quan trên 13 tuần là mẫu nhỏ: dùng để quan sát, không dùng để kết luận nhân quả.'],
+    en:['All HubSpot deals are treated as FeelDX (as you confirmed). DXL marketing is read as “air cover”, not attributed to deals.','The two pipelines are merged when counting closed deals per week, as you chose. Deals created in the last 13 weeks all belong to “New Work Flow”; “Deal Records History” has had no new deals since Oct 2025.','Meetings are all HubSpot meeting activities (any source, mostly sales-driven), not meetings created by marketing.','Channel views are not unique people; GA4/GSC/Meta/YouTube/LinkedIn 28-day windows are offset by a few days.','Correlation over 13 weeks is a small sample: observe with it, do not infer causation.']
+  },
+  foot:{vi:(g)=>`Trang này được dựng lại từ data/funnel.json (${g}). Không sửa tay — nguồn gốc là data/hubspot/*.json và 3 file rollup.`,en:(g)=>`Rebuilt from data/funnel.json (${g}). Do not hand-edit — sources are data/hubspot/*.json and the Social/SEO rollup files.`}
+};
+const tr = (k, ...a) => { const v = T[k][LANG]; return typeof v === 'function' ? v(...a) : v; };
+const fmt = n => n == null ? '—' : Math.round(n).toLocaleString(LANG === 'vi' ? 'vi-VN' : 'en-AU');
+const aud = n => n == null ? '—' : 'AU$' + fmt(n);
+const pct = (a, b) => b ? (100 * a / b).toFixed(1).replace('.', LANG === 'vi' ? ',' : '.') + '%' : '—';
+const $ = id => document.getElementById(id);
+
+function svgBars(weeks, series, opts) {
+  const W = 520, H = 190, pl = 34, pr = opts.right ? 44 : 10, pt = 10, pb = 34;
+  const iw = W - pl - pr, ih = H - pt - pb, n = weeks.length;
+  const maxL = Math.max(...series.filter(s => s.kind === 'bar').flatMap(s => s.v), 1);
+  const nb = series.filter(s => s.kind === 'bar').length, gw = iw / n, bw = Math.max(4, (gw - 6) / nb);
+  let g = '';
+  for (let i = 0; i <= 4; i++) { const y = pt + ih - ih * i / 4; g += `<line x1="${pl}" x2="${W - pr}" y1="${y}" y2="${y}" stroke="#e9ecf2"/><text x="${pl - 4}" y="${y + 3}" font-size="9" fill="#7b8496" text-anchor="end">${fmt(maxL * i / 4)}</text>`; }
+  series.filter(s => s.kind === 'bar').forEach((s, si) => s.v.forEach((v, i) => {
+    const h = ih * (v || 0) / maxL, x = pl + i * gw + 3 + si * bw;
+    g += `<rect x="${x}" y="${pt + ih - h}" width="${bw - 1}" height="${h}" rx="2" fill="${s.c}"><title>${weeks[i].slice(5)} · ${s.n}: ${fmt(v)}</title></rect>`;
+  }));
+  const ln = series.find(s => s.kind === 'line');
+  if (ln) {
+    const mx = Math.max(...ln.v, 1);
+    const pts = ln.v.map((v, i) => `${pl + i * gw + gw / 2},${pt + ih - ih * v / mx}`).join(' ');
+    g += `<polyline points="${pts}" fill="none" stroke="${ln.c}" stroke-width="2"/>`;
+    ln.v.forEach((v, i) => g += `<circle cx="${pl + i * gw + gw / 2}" cy="${pt + ih - ih * v / mx}" r="3" fill="${ln.c}"><title>${weeks[i].slice(5)} · ${ln.n}: ${fmt(v)}</title></circle>`);
+    for (let i = 0; i <= 4; i++) g += `<text x="${W - pr + 4}" y="${pt + ih - ih * i / 4 + 3}" font-size="9" fill="${ln.c}">${fmt(mx * i / 4 / 1000)}k</text>`;
+  }
+  weeks.forEach((w, i) => { if (i % 2 === 0 || n < 9) g += `<text x="${pl + i * gw + gw / 2}" y="${H - 14}" font-size="9" fill="#7b8496" text-anchor="middle">${w.slice(8)}/${w.slice(5, 7)}</text>`; });
+  return `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img">${g}</svg>`;
+}
+
+function render() {
+  const d = D, W = d.weeks, full = W.filter(w => w.mkt_days === 7);
+  const last4 = W.slice(-5, -1); // last 4 complete weeks (final week is partial)
+  const sum = (a, f) => a.reduce((s, x) => s + (f(x) || 0), 0);
+  const won4 = sum(last4, w => w.hs.won), wonAmt4 = sum(last4, w => w.hs.won_amt), lost4 = sum(last4, w => w.hs.lost), created4 = sum(last4, w => w.hs.deals_created);
+  const w28 = d.window28, src28 = d.contacts_28d_by_source;
+  const allLeads = Object.values(src28).reduce((s, v) => s + v, 0), onlineLeads = Object.entries(src28).filter(([k]) => k !== 'OFFLINE').reduce((s, [, v]) => s + v, 0);
+  const reach = w28.social_views ? w28.social_views.v : null;
+  const sess = w28.ga4_sessions && w28.ga4_sessions.v, key = w28.ga4_key_events && w28.ga4_key_events.v;
+  const dealOnline = Object.entries(d.deal_source_total).filter(([k]) => k !== 'OFFLINE' && k !== 'UNASSIGNED').reduce((s, [, v]) => s + v, 0);
+
+  document.documentElement.lang = LANG;
+  $('t_title').textContent = tr('title'); $('t_per').textContent = tr('per', d.as_of);
+  $('verdict').innerHTML = tr('verdict', {onlineLeads: fmt(onlineLeads), allLeads: fmt(allLeads), pctOnline: pct(onlineLeads, allLeads), won4: fmt(won4), wonAmt4: aud(wonAmt4), link: d.correlations.reduce((s, c) => s + (Math.abs(c.lag0.r || 0) >= 0.55) + (Math.abs(c.lag1.r || 0) >= 0.55), 0), tests: d.correlations.length * 2});
+
+  const k = [
+    ['k_reach', fmt(reach), tr('k_reach_c'), ''], ['k_sess', fmt(sess), tr('k_sess_c', fmt(key)), ''],
+    ['k_lead', fmt(onlineLeads), tr('k_lead_c', fmt(allLeads)), 'hs'],
+    ['k_deals', fmt(created4) + ' / ' + fmt(won4), tr('k_deals_c', aud(wonAmt4)), 'hs'],
+    ['k_win', pct(won4, won4 + lost4), tr('k_win_c'), 'hs']
+  ];
+  $('kpis').innerHTML = k.map(x => `<div class="kpi ${x[3]}"><div class="l">${tr(x[0])}</div><div class="v">${x[1]}</div><div class="c">${x[2]}</div></div>`).join('');
+
+  $('a_title').textContent = tr('a_title'); $('a_sub').textContent = tr('a_sub');
+  const A = [['s_reach', reach], ['s_sess', sess], ['s_key', key], ['s_lead', onlineLeads], ['s_deal', dealOnline]];
+  const logv = v => v == null ? 0 : Math.log10(v + 1), mxl = logv(reach);
+  $('funA').innerHTML = A.map((s, i) => {
+    const w = Math.max(1.5, 100 * logv(s[1]) / mxl), prev = i ? A[i - 1][1] : null;
+    return `<div class="step"><div class="nm">${tr(s[0])}<small>${tr(s[0] + '_s')}</small></div><div><div class="bar" style="width:${w}%;background:var(--mk);opacity:${1 - i * 0.12}"><span>${fmt(s[1])}</span></div></div><div class="cv">${(i && i < 4) ? '<b>' + pct(s[1], prev) + '</b> ' + tr('of_prev') : ''}</div></div>`;
+  }).join('') + `<div class="step"><div class="nm">${LANG === 'vi' ? 'Meeting từ marketing' : 'Marketing-sourced meetings'}</div><div class="na">${tr('notmeasured')}</div><div></div></div>`;
+
+  $('b_title').textContent = tr('b_title'); $('b_sub').textContent = tr('b_sub');
+  const op = d.open_pipeline, mxo = Math.max(...op.map(s => s.n), won4);
+  const B = [['s_b6', op[0]], ['s_b3', op[1]], ['s_b2', op[2]], ['s_b1', op[3]]];
+  $('funB').innerHTML = B.map(([nm, s]) => `<div class="step"><div class="nm">${tr(nm)}<small>${fmt(s.n)} ${tr('open')}</small></div><div><div class="bar" style="width:${Math.max(3, 100 * s.n / mxo)}%;background:var(--hs)"><span>${fmt(s.n)}</span></div></div><div class="cv"><b>${aud(s.amount)}</b></div></div>`).join('')
+    + `<div class="step"><div class="nm">${tr('s_won')}<small>${LANG === 'vi' ? 'đóng thắng' : 'closed won'}</small></div><div><div class="bar" style="width:${Math.max(3, 100 * won4 / mxo)}%;background:var(--pos)"><span>${fmt(won4)}</span></div></div><div class="cv"><b>${aud(wonAmt4)}</b></div></div>`;
+
+  const wk = W.map(w => w.w);
+  $('c1_title').textContent = tr('c1_title'); $('c1_sub').textContent = tr('c1_sub');
+  $('ch1').innerHTML = svgBars(wk, [{kind: 'bar', c: '#a5b4fc', n: tr('lg_created'), v: W.map(w => w.hs.deals_created)}, {kind: 'bar', c: '#12b76a', n: tr('lg_won'), v: W.map(w => w.hs.won)}], {});
+  $('lg1').innerHTML = `<span><i style="background:#a5b4fc"></i>${tr('lg_created')}</span><span><i style="background:#12b76a"></i>${tr('lg_won')}</span>`;
+  $('c2_title').textContent = tr('c2_title'); $('c2_sub').textContent = tr('c2_sub');
+  const fw = W.filter(w => w.mkt_days === 7), fwk = fw.map(w => w.w);
+  $('ch2').innerHTML = svgBars(fwk, [{kind: 'bar', c: '#5b6bf5', n: tr('lg_views'), v: fw.map(w => w.mkt.views)}, {kind: 'line', c: '#0f9d8a', n: tr('lg_val'), v: fw.map(w => w.hs.won_amt)}], {right: true});
+  $('lg2').innerHTML = `<span><i style="background:#5b6bf5"></i>${tr('lg_views')}</span><span><i style="background:#0f9d8a"></i>${tr('lg_val')}</span>`;
+
+  $('h_title').textContent = tr('h_title'); $('h_sub').textContent = tr('h_sub');
+  const cs = d.contact_source_total, ds = d.deal_source_total, cT = Object.values(cs).reduce((s, v) => s + v, 0), dT = Object.values(ds).reduce((s, v) => s + v, 0);
+  const H = [
+    [tr('h_c_off'), 100 * cs.OFFLINE / cT, pct(cs.OFFLINE, cT), 'var(--neg)'],
+    [tr('h_d_off'), 100 * ds.OFFLINE / dT, pct(ds.OFFLINE, dT), 'var(--neg)'],
+    [tr('h_d_un'), 100 * ds.UNASSIGNED / dT, pct(ds.UNASSIGNED, dT), 'var(--warn)'],
+    [tr('h_ga'), key ? Math.min(100, 100 * onlineLeads / key) : 0, tr('h_ga_v', fmt(key), fmt(onlineLeads)), 'var(--mk)']
+  ];
+  $('health').innerHTML = H.map(h => `<div class="hrow"><div>${h[0]}</div><div class="track"><i style="width:${h[1]}%;background:${h[3]}"></i></div><div class="n">${h[2]}</div></div>`).join('');
+
+  $('r_title').textContent = tr('r_title');
+  const nw = d.correlation_weeks.length; $('r_sub').textContent = tr('r_sub', nw);
+  const mk = {views: 'm_views', fb_visits: 'm_fbv', interactions: 'm_int'}, ok = {deals_created: 'o_deals_created', meetings: 'o_meetings', won: 'o_won'};
+  const rfmt = c => c.r == null ? '—' : c.r.toFixed(2).replace('.', LANG === 'vi' ? ',' : '.');
+  const cls = c => c.r == null ? '' : (Math.abs(c.r) >= 0.55 ? 'mid' : 'ok');
+  $('corr').innerHTML = `<tr><th>${tr('col_mkt')}</th><th>${tr('col_out')}</th><th>${tr('col_l0')}</th><th>${tr('col_l1')}</th><th>${tr('verdict_col')}</th></tr>` +
+    d.correlations.map(c => { const sig = Math.abs(c.lag0.r || 0) >= 0.55 || Math.abs(c.lag1.r || 0) >= 0.55; return `<tr><td>${tr(mk[c.mkt])}</td><td>${tr(ok[c.hs])}</td><td>${rfmt(c.lag0)}</td><td>${rfmt(c.lag1)}</td><td><span class="pill ${sig ? 'mid' : 'ok'}">${sig ? tr('signal') : tr('noise')}</span></td></tr>`; }).join('');
+
+  $('w_title').textContent = tr('w_title'); $('w_sub').textContent = tr('w_sub');
+  const wc = tr('wc');
+  $('wk').innerHTML = `<tr>${wc.map(c => `<th>${c}</th>`).join('')}</tr>` + W.slice().reverse().map(w => {
+    const c = w.hs, wr = (c.won + c.lost) ? pct(c.won, c.won + c.lost) : '—';
+    return `<tr><td>${w.w}${w.mkt_days < 7 ? '*' : ''}</td><td>${fmt(w.mkt.views)}</td><td>${fmt(w.mkt.fb_visits)}</td><td>${fmt(c.contacts_offline + c.contacts_direct)}</td><td>${fmt(c.deals_created)}</td><td>${fmt(c.meetings)}</td><td>${fmt(c.won)}</td><td>${aud(c.won_amt)}</td><td>${fmt(c.lost)}</td><td>${wr}</td></tr>`;
+  }).join('');
+
+  $('n_title').textContent = tr('n_title');
+  $('notes').innerHTML = T.notes[LANG].concat(d.anomalies.map(a => '⚠ ' + a)).map(x => `<li>${x}</li>`).join('');
+  $('foot').textContent = tr('foot', d.generated_at);
+  $('bvi').classList.toggle('on', LANG === 'vi'); $('ben').classList.toggle('on', LANG === 'en');
+}
+$('bvi').onclick = () => { LANG = 'vi'; try { localStorage.setItem('fnlang', 'vi'); } catch (e) {} render(); };
+$('ben').onclick = () => { LANG = 'en'; try { localStorage.setItem('fnlang', 'en'); } catch (e) {} render(); };
+fetch('data/funnel.json?v=' + Date.now(), {cache: 'no-store'}).then(r => r.json()).then(j => { D = j; render(); })
+  .catch(e => { document.body.insertAdjacentHTML('afterbegin', '<p style="padding:20px;color:#b42318">Cannot load data/funnel.json: ' + e + '</p>'); });
+</script>
+</body>
+</html>
