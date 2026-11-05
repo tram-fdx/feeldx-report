@@ -115,8 +115,8 @@
     <div>
       <h1>FeelDX &middot; Website Audit</h1>
       <div class="sub">
-        <span class="vi">feeldx.com &middot; quét ngày 04/11/2026 &middot; GA4 08/10 – 04/11 &middot; index/GSC đến 01/11</span>
-        <span class="en">feeldx.com &middot; scanned 4 Nov 2026 &middot; GA4 8 Oct – 4 Nov &middot; index/GSC to 1 Nov</span>
+        <span class="vi">feeldx.com &middot; quét ngày 05/11/2026 &middot; GA4 09/10 – 05/11 &middot; index/GSC đến 01/11</span>
+        <span class="en">feeldx.com &middot; scanned 5 Nov 2026 &middot; GA4 9 Oct – 5 Nov &middot; index/GSC to 1 Nov</span>
       </div>
     </div>
     <span class="spacer"></span>
@@ -177,8 +177,8 @@
     <div class="ihead"><span class="itag t-crit">critical</span>
       <span class="ititle"><span class="vi">Trang /faq trả về 404 (vẫn nằm trong sitemap)</span><span class="en">/faq returns 404 (still in the sitemap)</span></span></div>
     <div class="ibody">
-      <span class="vi"><code>https://www.feeldx.com/faq</code> vẫn trả <b>HTTP 404</b> ở lần quét 04/11, tức đã hỏng ít nhất 57 ngày; máy chủ trả shell của SPA (title/meta của trang chủ, không có H1). <code>/faq</code> <b>vẫn nằm trong <code>sitemap.xml</code></b> (kiểm tra 04/11). Có title không có nghĩa trang đã khôi phục — status vẫn là 404 thật.</span>
-      <span class="en"><code>https://www.feeldx.com/faq</code> still returns <b>HTTP 404</b> on the 4 Nov scan, so it has been broken for at least 57 days; the server returns the SPA shell (homepage title/meta, no H1). <code>/faq</code> is <b>still listed in <code>sitemap.xml</code></b> (checked 4 Nov). Having a title does not mean the page is back — the status is still a real 404.</span>
+      <span class="vi"><code>https://www.feeldx.com/faq</code> vẫn trả <b>HTTP 404</b> ở lần quét 05/11, tức đã hỏng ít nhất 57 ngày; máy chủ trả shell của SPA (title/meta của trang chủ, không có H1). <code>/faq</code> <b>vẫn nằm trong <code>sitemap.xml</code></b> (kiểm tra 05/11). Có title không có nghĩa trang đã khôi phục — status vẫn là 404 thật.</span>
+      <span class="en"><code>https://www.feeldx.com/faq</code> still returns <b>HTTP 404</b> on the 5 Nov scan, so it has been broken for at least 57 days; the server returns the SPA shell (homepage title/meta, no H1). <code>/faq</code> is <b>still listed in <code>sitemap.xml</code></b> (checked 5 Nov). Having a title does not mean the page is back — the status is still a real 404.</span>
     </div>
     <div class="fix"><span class="vi">Khôi phục trang FAQ, hoặc nếu đã bỏ hẳn thì 301 sang trang thay thế và gỡ khỏi sitemap. Đây là việc gấp nhất còn lại trong danh sách — trang có tương tác tốt nhất site đang hỏng.</span>
     <span class="en">Restore the FAQ page, or if it was retired deliberately, 301 it to a replacement and remove it from the sitemap. This is the most urgent item left here — the site’s best-engaging page is down.</span></div>
@@ -188,8 +188,8 @@
     <div class="ihead"><span class="itag t-warn">warning</span>
       <span class="ititle"><span class="vi">Trang nháp /studio-draft vẫn public (đã gỡ khỏi sitemap)</span><span class="en">Draft page /studio-draft is still public (now out of the sitemap)</span></span></div>
     <div class="ibody">
-      <span class="vi"><code>/studio-draft</code> trả <b>HTTP 200</b> (quét 04/11), không có meta description, title chỉ vỏn vẹn <b>"Studio"</b> (6 ký tự). Trang <b>không còn nằm trong sitemap.xml</b> và có canonical tự trỏ, nhưng vẫn truy cập công khai nên Google vẫn có thể thu thập và index.</span>
-      <span class="en"><code>/studio-draft</code> returns <b>HTTP 200</b> (4 Nov scan), has no meta description, and has a six-character title — <b>"Studio"</b>. It is <b>no longer listed in sitemap.xml</b> and carries a self-referencing canonical, but it is still publicly reachable, so Google can still crawl and index it.</span>
+      <span class="vi"><code>/studio-draft</code> trả <b>HTTP 200</b> (quét 05/11), không có meta description, title chỉ vỏn vẹn <b>"Studio"</b> (6 ký tự). Trang <b>không còn nằm trong sitemap.xml</b> và có canonical tự trỏ, nhưng vẫn truy cập công khai nên Google vẫn có thể thu thập và index.</span>
+      <span class="en"><code>/studio-draft</code> returns <b>HTTP 200</b> (5 Nov scan), has no meta description, and has a six-character title — <b>"Studio"</b>. It is <b>no longer listed in sitemap.xml</b> and carries a self-referencing canonical, but it is still publicly reachable, so Google can still crawl and index it.</span>
     </div>
     <div class="fix"><span class="vi">Thêm <code>noindex</code>, hoặc xoá hẳn trang nếu không còn dùng.</span>
     <span class="en">Add <code>noindex</code>, or delete the page outright if it is no longer needed.</span></div>
@@ -210,7 +210,7 @@
     <div class="ihead"><span class="itag t-warn">warning</span>
       <span class="ititle"><span class="vi">Canonical và sitemap trỏ sang host <code>feeldx.com</code> (không www), trong khi site và GSC dùng <code>www</code></span><span class="en">Canonicals and sitemap point at <code>feeldx.com</code> (no www) while the site and GSC use <code>www</code></span></span></div>
     <div class="ibody">
-      <span class="vi">Canonical của cả 11 URL được crawl lại ngày 04/11 (gồm /about-us, /news, /contact-us, /studio-draft) đều là URL tuyệt đối trên host <b><code>https://feeldx.com/…</code></b> (ví dụ trang chủ <code>https://feeldx.com/</code>), và cả <b>118 URL trong sitemap</b> cũng dùng host không www. Trong khi đó site, GSC property và Google Analytics đều dùng <code>www.feeldx.com</code>; chưa kiểm tra redirect giữa hai host.</span>
+      <span class="vi">Canonical của cả 11 URL được crawl lại ngày 05/11 (gồm /about-us, /news, /contact-us, /studio-draft) đều là URL tuyệt đối trên host <b><code>https://feeldx.com/…</code></b> (ví dụ trang chủ <code>https://feeldx.com/</code>), và cả <b>118 URL trong sitemap</b> cũng dùng host không www. Trong khi đó site, GSC property và Google Analytics đều dùng <code>www.feeldx.com</code>; chưa kiểm tra redirect giữa hai host.</span>
       <span class="en">The canonical of all 11 URLs re-crawled on 4 Nov (including /about-us, /news, /contact-us, /studio-draft) is an absolute URL on the <b><code>https://feeldx.com/…</code></b> host (for example the homepage <code>https://feeldx.com/</code>), and all <b>118 sitemap URLs</b> also use the non-www host. Meanwhile the site, the GSC property and Google Analytics use <code>www.feeldx.com</code>; the redirect between the two hosts has not been checked.</span>
     </div>
     <div class="fix"><span class="vi">Chọn một host chính (www hoặc không www), rồi đồng bộ canonical, sitemap, redirect 301 và GSC property theo host đó.</span>
@@ -232,7 +232,7 @@
     <div class="ihead"><span class="itag t-info">info</span>
       <span class="ititle"><span class="vi">/contact-us vẫn không có H1</span><span class="en">/contact-us still has no H1</span></span></div>
     <div class="ibody">
-      <span class="vi">Trang <code>/contact-us</code> (title 88 ký tự, meta 158) vẫn không có thẻ <code>H1</code> nào ở lần quét 04/11. Đây là trang ghi <b>6 trong 9 key events</b> của GA4 kỳ này và có 45 lượt xem (−15,1%), nên là trang đáng được chuẩn hoá nhất.</span>
+      <span class="vi">Trang <code>/contact-us</code> (title 88 ký tự, meta 158) vẫn không có thẻ <code>H1</code> nào ở lần quét 05/11. Đây là trang ghi <b>6 trong 9 key events</b> của GA4 kỳ này và có 45 lượt xem (−15,1%), nên là trang đáng được chuẩn hoá nhất.</span>
       <span class="en"><code>/contact-us</code> (88-character title, 158-character meta) still has no <code>H1</code> on the 4 Nov scan. It logs <b>6 of GA4’s 9 key events</b> this period and drew 45 views (−15.1%), so it is the page most worth getting right.</span>
     </div>
     <div class="fix"><span class="vi">Thêm một H1 rõ ràng cho /contact-us (ví dụ nêu rõ mục đích liên hệ/báo giá).</span>
@@ -262,8 +262,8 @@
   <!-- ══ CRAWL TABLE ══ -->
   <h2><span class="vi">Kiểm tra on-page</span><span class="en">On-page checks</span></h2>
   <p class="h2sub">
-    <span class="vi">Đọc trực tiếp HTML của từng trang, 04/11/2026 (cả 11 URL đều được crawl lại lần này). Độ dài title, meta, H1 và canonical không đổi so với lần quét 29/10.</span>
-    <span class="en">Read directly from each page's HTML, 4 Nov 2026 (all 11 URLs were re-crawled this run). Title and meta lengths, H1s and canonicals are unchanged since the 29 Oct scan.</span>
+    <span class="vi">Đọc trực tiếp HTML của từng trang, 05/11/2026 (cả 11 URL đều được crawl lại lần này). Độ dài title, meta, H1 và canonical không đổi so với lần quét 29/10.</span>
+    <span class="en">Read directly from each page's HTML, 5 Nov 2026 (all 11 URLs were re-crawled this run). Title and meta lengths, H1s and canonicals are unchanged since the 29 Oct scan.</span>
   </p>
   <div class="tblwrap">
     <table>
@@ -292,19 +292,19 @@
   <!-- ══ TRAFFIC ══ -->
   <h2><span class="vi">Lưu lượng và chất lượng</span><span class="en">Traffic &amp; quality</span></h2>
   <p class="h2sub">
-    <span class="vi">GA4 · 08/10 – 04/11/2026 (chạy tới hôm nay) so với 10/09 – 07/10/2026. Ngày 04/11 mới chạy một phần nên kéo nhẹ các số trung bình xuống. Insights của GA4 không được đọc lần này. Khung này khác khung GSC (hiệu suất 05/10 – 01/11; index cập nhật 23/10) — vì vậy không so trực tiếp số GA4 với số GSC như thể cùng kỳ.</span>
-    <span class="en">GA4 · 8 Oct – 4 Nov 2026 (running to today) vs 10 Sep – 7 Oct 2026. 4 Nov is a part-day, which drags the averages down slightly. GA4 Insights were not read this run. This window differs from the GSC windows (performance 5 Oct – 1 Nov; indexing updated 23 Oct) — so GA4 figures must not be compared directly with GSC figures as if they were the same period.</span>
+    <span class="vi">GA4 · 08/10 – 05/11/2026 (chạy tới hôm nay) so với 11/09 – 08/10/2026. Ngày 05/11 mới chạy một phần nên kéo nhẹ các số trung bình xuống. Insights của GA4 không được đọc lần này. Khung này khác khung GSC (hiệu suất 06/10 – 02/11; index cập nhật 23/10) — vì vậy không so trực tiếp số GA4 với số GSC như thể cùng kỳ.</span>
+    <span class="en">GA4 · 8 Oct – 5 Nov 2026 (running to today) vs 11 Sep – 8 Oct 2026. 5 Nov is a part-day, which drags the averages down slightly. GA4 Insights were not read this run. This window differs from the GSC windows (performance 6 Oct – 2 Nov; indexing updated 23 Oct) — so GA4 figures must not be compared directly with GSC figures as if they were the same period.</span>
   </p>
   <div class="grid k4">
     <div class="card">
       <div class="klabel">Sessions</div>
-      <div class="kval">816</div>
-      <div><span class="delta down">▼ −15.4%</span> <span class="kprev">· prev 965 · Direct/Organic/Referral/Display/Paid Search down</span></div>
+      <div class="kval">822</div>
+      <div><span class="delta down">▼ −16.0%</span> <span class="kprev">· prev 979 · Direct/Organic/Referral/Display/Paid Search down</span></div>
     </div>
     <div class="card">
       <div class="klabel"><span class="vi">Tỷ lệ tương tác</span><span class="en">Engagement rate</span></div>
-      <div class="kval">34.93%</div>
-      <div><span class="delta up">▲ +5.3%</span> <span class="kprev">· prev 33.16%</span></div>
+      <div class="kval">35.52%</div>
+      <div><span class="delta up">▲ +9.7%</span> <span class="kprev">· prev 32.38%</span></div>
     </div>
     <div class="card">
       <div class="klabel">Key events</div>
@@ -314,7 +314,7 @@
     <div class="card">
       <div class="klabel"><span class="vi">Tỷ lệ key event/phiên</span><span class="en">Key event rate</span></div>
       <div class="kval">0.61%</div>
-      <div><span class="delta down">▼ −26.1%</span> <span class="kprev">· prev 0.83%</span></div>
+      <div><span class="delta down">▼ −25.6%</span> <span class="kprev">· prev 0.82%</span></div>
     </div>
   </div>
 
@@ -324,8 +324,8 @@
   </div>
 
   <div class="note critbox">
-    <span class="vi"><b>Sessions −15,4% (lần quét 03/11: −13,6%) — giảm vừa phải, dưới ngưỡng 30%; không phải một cú sập.</b> Khung 08/10 – 04/11 cho 816 phiên so với 965 kỳ trước. Chuỗi phiên theo ngày không được đọc lại lần này. Direct giảm 14,3% (441 → 378, 9s mỗi phiên, 19,3% tương tác), Organic Search giảm 25,0% (208 → 156), Display giảm 7,2% (97 → 90), Referral giảm 20,5% (44 → 35) và Paid Search giảm 5,1% (138 → 131). Direct + Display là 468 trên 816 phiên (57,4%) nhưng chỉ có 2 key event. Chỉ các kênh rất nhỏ biến động trên 30% (Paid Video 6 → 3, Cross-network 4 → 2); không rút thêm kết luận. Lưu ý: 04/11 là ngày dở dang; bảng kênh đọc được 10 trên 11 dòng (các dòng cộng lại 817 so với tổng 816 phiên).</span>
-    <span class="en"><b>Sessions −15.4% (3 Nov scan: −13.6%) — a moderate fall, under the 30% threshold; not a collapse.</b> The 8 Oct – 4 Nov window gives 816 sessions against 965 in the prior period. The daily session series was not re-read this run. Direct fell 14.3% (441 → 378, 9s per session, 19.3% engagement), Organic Search fell 25.0% (208 → 156), Display fell 7.2% (97 → 90), Referral fell 20.5% (44 → 35) and Paid Search fell 5.1% (138 → 131). Direct + Display are 468 of 816 sessions (57.4%) but only 2 key events. Only very small channels moved more than 30% (Paid Video 6 → 3, Cross-network 4 → 2); no further conclusion is drawn. Note: 4 Nov is a part-day, and the channel table was read for 10 of 11 rows (rows sum to 817 against 816 sessions).</span>
+    <span class="vi"><b>Sessions −16,0% (lần quét 04/11: −15,4%) — giảm vừa phải, dưới ngưỡng 30%; không phải một cú sập.</b> Khung 09/10 – 05/11 cho 822 phiên so với 965 kỳ trước. Chuỗi phiên theo ngày không được đọc lại lần này. Direct giảm 14,3% (441 → 378, 9s mỗi phiên, 19,3% tương tác), Organic Search giảm 25,0% (208 → 156), Display giảm 7,2% (97 → 90), Referral giảm 20,5% (44 → 35) và Paid Search giảm 5,1% (138 → 131). Direct + Display là 468 trên 816 phiên (57,4%) nhưng chỉ có 2 key event. Chỉ các kênh rất nhỏ biến động trên 30% (Paid Video 6 → 3, Cross-network 4 → 2); không rút thêm kết luận. Lưu ý: 04/11 là ngày dở dang; bảng kênh đọc được 10 trên 11 dòng (các dòng cộng lại 817 so với tổng 816 phiên).</span>
+    <span class="en"><b>Sessions −16.0% (4 Nov scan: −15.4%) — a moderate fall, under the 30% threshold; not a collapse.</b> The 9 Oct – 5 Nov window gives 822 sessions against 979 in the prior period. The daily session series was not re-read this run. Direct fell 14.3% (441 → 378, 9s per session, 19.3% engagement), Organic Search fell 25.0% (208 → 156), Display fell 7.2% (97 → 90), Referral fell 20.5% (44 → 35) and Paid Search fell 5.1% (138 → 131). Direct + Display are 468 of 816 sessions (57.4%) but only 2 key events. Only very small channels moved more than 30% (Paid Video 6 → 3, Cross-network 4 → 2); no further conclusion is drawn. Note: 5 Nov is a part-day, and the channel table was read for 10 of 11 rows (rows sum to 817 against 816 sessions).</span>
   </div>
 
   <div class="note">
@@ -363,8 +363,8 @@
   <footer>
     <div><b><span class="vi">Nguồn dữ liệu</span><span class="en">Data sources</span></b></div>
     <div>Google Search Console — <code>https://www.feeldx.com/</code> · <span class="vi">Page indexing, Sitemaps, Core Web Vitals.</span><span class="en">Page indexing, Sitemaps, Core Web Vitals.</span></div>
-    <div>Google Analytics 4 — <code>FeelDX - GA4</code> (309588561) · <span class="vi">Traffic acquisition, Pages and screens. Khung riêng 08/10 – 04/11, chạy tới hôm nay; 04/11 là ngày dở dang. Insights không được đọc.</span><span class="en">Traffic acquisition, Pages and screens. Its own 8 Oct – 4 Nov window, running to today; 4 Nov is a part-day. Insights were not read.</span></div>
-    <div><span class="vi">Kiểm tra on-page và sitemap: đọc trực tiếp HTML/XML từ feeldx.com ngày 04/11/2026.</span><span class="en">On-page and sitemap checks: HTML/XML read directly from feeldx.com on 4 Nov 2026.</span></div>
+    <div>Google Analytics 4 — <code>FeelDX - GA4</code> (309588561) · <span class="vi">Traffic acquisition, Pages and screens. Khung riêng 09/10 – 05/11, chạy tới hôm nay; 04/11 là ngày dở dang. Insights không được đọc.</span><span class="en">Traffic acquisition, Pages and screens. Its own 9 Oct – 5 Nov window, running to today; 5 Nov is a part-day. Insights were not read.</span></div>
+    <div><span class="vi">Kiểm tra on-page và sitemap: đọc trực tiếp HTML/XML từ feeldx.com ngày 05/11/2026.</span><span class="en">On-page and sitemap checks: HTML/XML read directly from feeldx.com on 5 Nov 2026.</span></div>
     <div style="color:var(--warn)">Ahrefs Site Audit — <span class="vi"><b>không chạy được.</b> feeldx.com chưa verify trên gói Ahrefs hiện tại. Các hạng mục backlink, broken link nội bộ toàn site và crawl depth <b>không có trong báo cáo này</b>.</span><span class="en"><b>unavailable.</b> feeldx.com is not verified on the current Ahrefs plan. Backlinks, site-wide internal broken links and crawl depth are <b>absent from this report</b>.</span></div>
     <div style="margin-top:10px">
       <span class="vi">Điểm 82/100 là đánh giá dựa trên các lỗi đã kiểm chứng ở trên, không phải điểm số từ một công cụ tự động. Điểm tăng từ 70 (lần quét 14/10) lên 80 vì ba lỗi đã được sửa: canonical trang chủ, /aec (title, H1, canonical) và sitemap (mục hỏng, /studio-draft, lastmod); lần quét 23/10 cộng thêm 1 điểm vì số trang được index tăng từ 95 lên 98 mà không ai sửa gì (tự cải thiện); lần quét 27/10 cộng thêm 1 điểm nữa vì index tăng từ 98 lên 103 và trang không index giảm từ 10 xuống 7, cũng không ai sửa gì (tự cải thiện); các lần quét 24/10, 26/10, 29/10, 03/11 và 04/11 giữ nguyên điểm. Lỗi critical còn lại (/faq 404) chưa được sửa qua ba mươi hai lần quét (08/09 đến 04/11); /studio-draft ở mức warning vì đã ra khỏi sitemap.</span>
@@ -380,16 +380,15 @@ b.onclick=()=>{const en=document.body.classList.toggle('lang-en');
 
 /* channel bars — colour encodes engagement quality, not volume */
 const ch=[
-  {n:'Direct', s:378, t:'9s', e:19.31, k:2, q:'bad'},
-  {n:'Organic Search', s:156, t:'34s', e:53.85, k:3, q:'good'},
-  {n:'Paid Search', s:131, t:'17s', e:45.04, k:0, q:'mid'},
-  {n:'Display', s:90, t:'9s', e:37.78, k:0, q:'mid'},
-  {n:'Referral', s:35, t:'1m', e:68.57, k:0, q:'good'},
-  {n:'Organic Social', s:17, t:'33s', e:47.06, k:0, q:'mid'},
+  {n:'Direct', s:379, t:'9s', e:18.73, k:2, q:'bad'},
+  {n:'Organic Search', s:164, t:'35s', e:54.88, k:3, q:'good'},
+  {n:'Paid Search', s:132, t:'18s', e:47.73, k:0, q:'mid'},
+  {n:'Display', s:90, t:'9s', e:36.67, k:0, q:'mid'},
+  {n:'Referral', s:37, t:'1m', e:67.57, k:0, q:'good'},
+  {n:'Organic Social', s:13, t:'28s', e:53.85, k:0, q:'mid'},
   {n:'Paid Video', s:3, t:'0s', e:33.33, k:0, q:'mid'},
   {n:'Cross-network', s:2, t:'20s', e:50.0, k:0, q:'mid'},
-  {n:'AI Assistant', s:3, t:'1s', e:33.33, k:0, q:'mid'},
-  {n:'Unassigned', s:2, t:'0s', e:0, k:0, q:'mid'}
+  {n:'AI Assistant', s:2, t:'1s', e:50.0, k:0, q:'mid'}
 ];
 const col={good:'#5A6640', mid:'#3D6B80', bad:'#B4503A'};
 const max=Math.max(...ch.map(c=>c.s));
