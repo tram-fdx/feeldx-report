@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="vi">
+<html lang="en">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -127,8 +127,8 @@ ul.notes li{margin-bottom:5px}
 </div>
 
 <script>
-let LANG = 'vi', D = null;
-try { if (/^en/i.test(navigator.language) && !localStorage.getItem('fnlang')) LANG = 'en'; LANG = localStorage.getItem('fnlang') || LANG; } catch (e) {}
+let LANG = 'en', D = null;
+try { LANG = localStorage.getItem('fnlang2') || 'en'; } catch (e) {}
 const T = {
   title: {vi:'Phễu tác động marketing → kinh doanh', en:'Marketing impact funnel → business results'},
   verdict: {
@@ -290,8 +290,8 @@ function render() {
   $('foot').textContent = tr('foot', d.generated_at);
   $('bvi').classList.toggle('on', LANG === 'vi'); $('ben').classList.toggle('on', LANG === 'en');
 }
-$('bvi').onclick = () => { LANG = 'vi'; try { localStorage.setItem('fnlang', 'vi'); } catch (e) {} render(); };
-$('ben').onclick = () => { LANG = 'en'; try { localStorage.setItem('fnlang', 'en'); } catch (e) {} render(); };
+$('bvi').onclick = () => { LANG = 'vi'; try { localStorage.setItem('fnlang2', 'vi'); } catch (e) {} render(); };
+$('ben').onclick = () => { LANG = 'en'; try { localStorage.setItem('fnlang2', 'en'); } catch (e) {} render(); };
 fetch('data/funnel.json?v=' + Date.now(), {cache: 'no-store'}).then(r => r.json()).then(j => { D = j; render(); })
   .catch(e => { document.body.insertAdjacentHTML('afterbegin', '<p style="padding:20px;color:#b42318">Cannot load data/funnel.json: ' + e + '</p>'); });
 </script>
