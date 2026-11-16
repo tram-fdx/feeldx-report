@@ -1,0 +1,13 @@
+{
+ "site": "feeldx.com",
+ "snapshots": [
+  {
+   "date": "2026-11-16",
+   "data": "data/2026-11-16.json",
+   "report": "archive/2026-11-16.html",
+   "label_vi": "GSC 82 click, 7,377 hiển thị · GA4 884 session",
+   "label_en": "GSC 82 clicks, 7,377 impressions · GA4 884 sessions"
+  }
+ ],
+ "latest": "2026-11-16"
+}

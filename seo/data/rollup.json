@@ -1,0 +1,189 @@
+{
+ "derived": true,
+ "generated_at": "2026-11-16",
+ "grain_legend": {
+  "day": "The measurement for that exact day. Can be summed over a range.",
+  "state": "A state metric at scan time. Average or take the end value, never sum.",
+  "window28": "A rolling 28-day window snapshot. Cannot be summed (days overlap) — compare start vs end and draw the trend."
+ },
+ "kind": "rollup",
+ "scanned_count": 3,
+ "scanned_days": [
+  "2026-11-16",
+  "days",
+  "series"
+ ],
+ "series": {
+  "ahrefs_ai_citations": {
+   "grain": "state",
+   "label": "Ahrefs — AI citations",
+   "measured": 0,
+   "of_days": 3,
+   "points": []
+  },
+  "ahrefs_backlinks": {
+   "grain": "state",
+   "label": "Ahrefs — backlinks",
+   "measured": 0,
+   "of_days": 3,
+   "points": []
+  },
+  "ahrefs_cited_pages": {
+   "grain": "state",
+   "label": "Ahrefs — pages cited by AI",
+   "measured": 0,
+   "of_days": 3,
+   "points": []
+  },
+  "ahrefs_dr": {
+   "grain": "state",
+   "label": "Ahrefs — Domain Rating",
+   "measured": 0,
+   "of_days": 3,
+   "points": []
+  },
+  "ahrefs_org_keywords": {
+   "grain": "state",
+   "label": "Ahrefs — organic keywords",
+   "measured": 0,
+   "of_days": 3,
+   "points": []
+  },
+  "ahrefs_refdomains": {
+   "grain": "state",
+   "label": "Ahrefs — referring domains",
+   "measured": 0,
+   "of_days": 3,
+   "points": []
+  },
+  "ga4_engagement_pct": {
+   "grain": "window28",
+   "label": "GA4 — engagement %",
+   "measured": 1,
+   "of_days": 3,
+   "points": [
+    {
+     "d": "2026-11-16",
+     "v": 29.75
+    }
+   ]
+  },
+  "ga4_key_events": {
+   "grain": "window28",
+   "label": "GA4 — key events",
+   "measured": 1,
+   "of_days": 3,
+   "points": [
+    {
+     "d": "2026-11-16",
+     "v": 8
+    }
+   ]
+  },
+  "ga4_sessions": {
+   "grain": "window28",
+   "label": "GA4 — sessions",
+   "measured": 1,
+   "of_days": 3,
+   "points": [
+    {
+     "d": "2026-11-16",
+     "v": 884
+    }
+   ]
+  },
+  "ga4_users": {
+   "grain": "window28",
+   "label": "GA4 — users",
+   "measured": 1,
+   "of_days": 3,
+   "points": [
+    {
+     "d": "2026-11-16",
+     "v": 782
+    }
+   ]
+  },
+  "gsc_clicks": {
+   "grain": "window28",
+   "label": "GSC — clicks",
+   "measured": 1,
+   "of_days": 3,
+   "points": [
+    {
+     "d": "2026-11-16",
+     "v": 82
+    }
+   ]
+  },
+  "gsc_ctr_pct": {
+   "grain": "window28",
+   "label": "GSC — CTR %",
+   "measured": 1,
+   "of_days": 3,
+   "points": [
+    {
+     "d": "2026-11-16",
+     "v": 1.1
+    }
+   ]
+  },
+  "gsc_impressions": {
+   "grain": "window28",
+   "label": "GSC — impressions",
+   "measured": 1,
+   "of_days": 3,
+   "points": [
+    {
+     "d": "2026-11-16",
+     "v": 7377
+    }
+   ]
+  },
+  "gsc_position": {
+   "grain": "window28",
+   "label": "GSC — avg position",
+   "measured": 1,
+   "of_days": 3,
+   "points": [
+    {
+     "d": "2026-11-16",
+     "v": 27.7
+    }
+   ]
+  },
+  "gsc_queries": {
+   "grain": "window28",
+   "label": "GSC — queries with impressions",
+   "measured": 1,
+   "of_days": 3,
+   "points": [
+    {
+     "d": "2026-11-16",
+     "v": 522
+    }
+   ]
+  },
+  "sitemap_urls": {
+   "grain": "state",
+   "label": "Sitemap — URLs",
+   "measured": 0,
+   "of_days": 3,
+   "points": []
+  },
+  "ttfb_mean_ms": {
+   "grain": "state",
+   "label": "TTFB mean (ms)",
+   "measured": 1,
+   "of_days": 3,
+   "points": [
+    {
+     "d": "2026-11-16",
+     "v": 505.7
+    }
+   ]
+  }
+ },
+ "site": "dxliving-seo-report",
+ "source_of_truth": "data/YYYY-MM-DD.json — immutable. This file is DERIVED, rebuilt on every run, never hand-edited."
+}

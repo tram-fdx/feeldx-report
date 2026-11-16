@@ -3,11 +3,11 @@
  "site": "www.feeldx.com",
  "crawl": "Automated crawl (GitHub Actions, pipeline v1) on 2026-11-16 UTC",
  "method": "Sequential urllib fetch of every sitemap URL, 15 s timeout. TTFB = time to response headers. Sub-scores use fixed formulas (see pipeline README), not manual judgement.",
- "health": 83,
- "raw_score": 83.0,
+ "health": 84,
+ "raw_score": 84.3,
  "sub_scores": {
   "crawlability": 98,
-  "performance": 80,
+  "performance": 85,
   "structured_data": 60,
   "onpage": 80,
   "content": 97
@@ -40,36 +40,36 @@
   "bytes": 67
  },
  "ttfb_ms": {
-  "all": 605.9,
-  "median": 593,
-  "core": 594.5,
-  "articles": 607.7,
+  "all": 505.7,
+  "median": 502,
+  "core": 512.3,
+  "articles": 504.7,
   "projects": null,
-  "min": 550,
-  "max": 924,
+  "min": 485,
+  "max": 590,
   "under_1s": 131,
   "1s_to_3s": 0,
   "over_3s": 0,
   "slowest": [
    {
-    "url": "/news/working-calendars-rdos-and-public-holidays-in-a-construction-programme",
-    "ms": 924
+    "url": "/news/outsourcing-4d-bim-in-australia-costs-benefits-and-implementation-strategies",
+    "ms": 590
    },
    {
-    "url": "/news/construction-programme-from-tender-drawings-what-to-extract-first",
-    "ms": 923
+    "url": "/news/outsourcing-digital-engineering-the-complete-guide-to-4d-and-5d-bim-services-in-australia",
+    "ms": 558
    },
    {
-    "url": "/news/in-house-vs-outsourced-project-controls-know-where-the-risk-sits",
-    "ms": 916
+    "url": "/services",
+    "ms": 543
    },
    {
-    "url": "/news/missile-factories-and-drone-facilities-australias-high-tech-defence-build-up",
-    "ms": 765
+    "url": "/news/optimising-construction-project-planning-with-bim",
+    "ms": 540
    },
    {
-    "url": "/news/maximising-project-efficiency-with-advanced-modelling-and-rendering",
-    "ms": 725
+    "url": "/news/de-risking-complex-aviation-infrastructure-using-4d-visual-methodology-to-plan-live-airside-and-landside-staging",
+    "ms": 537
    }
   ]
  },
@@ -243,7 +243,7 @@
    "url": "/",
    "group": "core",
    "status": 200,
-   "ttfb_ms": 602,
+   "ttfb_ms": 525,
    "words": 1160,
    "schema_blocks": 1,
    "schema_types": [
@@ -268,7 +268,7 @@
    "url": "/about-us",
    "group": "core",
    "status": 200,
-   "ttfb_ms": 613,
+   "ttfb_ms": 532,
    "words": 1068,
    "schema_blocks": 1,
    "schema_types": [
@@ -293,7 +293,7 @@
    "url": "/aec",
    "group": "core",
    "status": 200,
-   "ttfb_ms": 612,
+   "ttfb_ms": 500,
    "words": 1084,
    "schema_blocks": 1,
    "schema_types": [
@@ -318,7 +318,7 @@
    "url": "/capability-statement",
    "group": "core",
    "status": 200,
-   "ttfb_ms": 593,
+   "ttfb_ms": 502,
    "words": 844,
    "schema_blocks": 1,
    "schema_types": [
@@ -343,7 +343,7 @@
    "url": "/contact-us",
    "group": "core",
    "status": 200,
-   "ttfb_ms": 597,
+   "ttfb_ms": 523,
    "words": 298,
    "schema_blocks": 1,
    "schema_types": [
@@ -368,7 +368,7 @@
    "url": "/faq",
    "group": "core",
    "status": 404,
-   "ttfb_ms": 600,
+   "ttfb_ms": 520,
    "words": 0,
    "schema_blocks": 0,
    "schema_types": [],
@@ -389,7 +389,7 @@
    "url": "/news",
    "group": "core",
    "status": 200,
-   "ttfb_ms": 604,
+   "ttfb_ms": 510,
    "words": 2601,
    "schema_blocks": 1,
    "schema_types": [
@@ -414,7 +414,7 @@
    "url": "/news/3d-visualisations-and-4d-5d-bim",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 562,
+   "ttfb_ms": 491,
    "words": 670,
    "schema_blocks": 1,
    "schema_types": [
@@ -439,7 +439,7 @@
    "url": "/news/4d-bim-services-in-australia-what-they-are-and-who-delivers-them",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 618,
+   "ttfb_ms": 489,
    "words": 1356,
    "schema_blocks": 1,
    "schema_types": [
@@ -464,7 +464,7 @@
    "url": "/news/4d-bim-vs-5d-bim-understanding-the-key-differences",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 638,
+   "ttfb_ms": 536,
    "words": 1064,
    "schema_blocks": 1,
    "schema_types": [
@@ -489,7 +489,7 @@
    "url": "/news/4d-construction-sequencing-in-sydney-a-2026-guide-for-tfnsw-contractors",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 573,
+   "ttfb_ms": 499,
    "words": 2422,
    "schema_blocks": 1,
    "schema_types": [
@@ -514,7 +514,7 @@
    "url": "/news/4d-interactive-letting-clients-explore-the-programme",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 615,
+   "ttfb_ms": 498,
    "words": 1162,
    "schema_blocks": 1,
    "schema_types": [
@@ -539,7 +539,7 @@
    "url": "/news/4d-methodology-the-future-of-pre-construction-planning",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 597,
+   "ttfb_ms": 485,
    "words": 802,
    "schema_blocks": 1,
    "schema_types": [
@@ -564,7 +564,7 @@
    "url": "/news/4d-tender-animation-show-assessors-how-you-will-build",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 590,
+   "ttfb_ms": 519,
    "words": 1237,
    "schema_blocks": 1,
    "schema_types": [
@@ -589,7 +589,7 @@
    "url": "/news/5d-bim-services-explained-improving-accuracy-in-cost-estimation",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 595,
+   "ttfb_ms": 496,
    "words": 1113,
    "schema_blocks": 1,
    "schema_types": [
@@ -614,7 +614,7 @@
    "url": "/news/a-comprehensive-guide-to-construction-project-planning",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 604,
+   "ttfb_ms": 501,
    "words": 879,
    "schema_blocks": 1,
    "schema_types": [
@@ -639,7 +639,7 @@
    "url": "/news/architectural-visualisation-from-concept-to-reality",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 569,
+   "ttfb_ms": 501,
    "words": 872,
    "schema_blocks": 1,
    "schema_types": [
@@ -664,7 +664,7 @@
    "url": "/news/as-iso-19650-in-a-construction-programme-where-information-delivery-fits",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 597,
+   "ttfb_ms": 501,
    "words": 1207,
    "schema_blocks": 1,
    "schema_types": [
@@ -689,7 +689,7 @@
    "url": "/news/baseline-vs-current-programme-how-builders-manage-change-without-losing-the-evidence",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 610,
+   "ttfb_ms": 516,
    "words": 1144,
    "schema_blocks": 1,
    "schema_types": [
@@ -714,7 +714,7 @@
    "url": "/news/basis-of-schedule-what-to-include-so-assessors-trust-your-dates",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 616,
+   "ttfb_ms": 485,
    "words": 2055,
    "schema_blocks": 1,
    "schema_types": [
@@ -739,7 +739,7 @@
    "url": "/news/beyond-the-green-star-rating-using-bim-to-calculate-and-reduce-embodied-carbon",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 615,
+   "ttfb_ms": 497,
    "words": 1249,
    "schema_blocks": 1,
    "schema_types": [
@@ -764,7 +764,7 @@
    "url": "/news/beyond-the-model-deploying-4d-bim-as-a-strategic-weapon-in-australian-aged-care-construction",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 605,
+   "ttfb_ms": 498,
    "words": 1043,
    "schema_blocks": 1,
    "schema_types": [
@@ -789,7 +789,7 @@
    "url": "/news/bim-and-4d-modelling-revolutionise-australian-defence-construction",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 565,
+   "ttfb_ms": 515,
    "words": 936,
    "schema_blocks": 1,
    "schema_types": [
@@ -814,7 +814,7 @@
    "url": "/news/capitalising-on-nsws-transport-oriented-development-tod-boom-using-4d-bim-logistics-to-win-high-density-metro-corridor-tenders",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 576,
+   "ttfb_ms": 510,
    "words": 1230,
    "schema_blocks": 1,
    "schema_types": [
@@ -839,7 +839,7 @@
    "url": "/news/concurrent-delay-in-construction-what-builders-need-to-prove",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 704,
+   "ttfb_ms": 490,
    "words": 1230,
    "schema_blocks": 1,
    "schema_types": [
@@ -864,7 +864,7 @@
    "url": "/news/construction-planning-for-builders-programme-sequence-logistics-and-risk",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 617,
+   "ttfb_ms": 505,
    "words": 1015,
    "schema_blocks": 1,
    "schema_types": [
@@ -889,7 +889,7 @@
    "url": "/news/construction-programme-critical-path-how-to-build-one-that-holds-up",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 589,
+   "ttfb_ms": 501,
    "words": 1660,
    "schema_blocks": 1,
    "schema_types": [
@@ -914,7 +914,7 @@
    "url": "/news/construction-programme-from-tender-drawings-what-to-extract-first",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 923,
+   "ttfb_ms": 518,
    "words": 1334,
    "schema_blocks": 1,
    "schema_types": [
@@ -939,7 +939,7 @@
    "url": "/news/construction-programme-review-what-an-independent-reviewer-checks-before-you-commit-to-dates",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 571,
+   "ttfb_ms": 508,
    "words": 1026,
    "schema_blocks": 1,
    "schema_types": [
@@ -964,7 +964,7 @@
    "url": "/news/construction-programme-updates-fortnightly-or-monthly-for-your-job",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 586,
+   "ttfb_ms": 503,
    "words": 1083,
    "schema_blocks": 1,
    "schema_types": [
@@ -989,7 +989,7 @@
    "url": "/news/cracking-victorias-direction-37-how-4d-visualisation-proves-construction-methodology-and-capacity-in-public-tenders",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 574,
+   "ttfb_ms": 502,
    "words": 1327,
    "schema_blocks": 1,
    "schema_types": [
@@ -1014,7 +1014,7 @@
    "url": "/news/de-risking-complex-aviation-infrastructure-using-4d-visual-methodology-to-plan-live-airside-and-landside-staging",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 686,
+   "ttfb_ms": 537,
    "words": 1554,
    "schema_blocks": 1,
    "schema_types": [
@@ -1039,7 +1039,7 @@
    "url": "/news/delay-analysis-methods-match-the-method-to-the-records-you-have",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 622,
+   "ttfb_ms": 500,
    "words": 1627,
    "schema_blocks": 1,
    "schema_types": [
@@ -1064,7 +1064,7 @@
    "url": "/news/delay-notices-programme-evidence-to-send-on-time",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 610,
+   "ttfb_ms": 499,
    "words": 1572,
    "schema_blocks": 1,
    "schema_types": [
@@ -1089,7 +1089,7 @@
    "url": "/news/delayed-construction-programme-how-builders-recover-lost-time",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 552,
+   "ttfb_ms": 503,
    "words": 1270,
    "schema_blocks": 1,
    "schema_types": [
@@ -1114,7 +1114,7 @@
    "url": "/news/delivering-the-vertical-campus-coordinating-complex-education-projects-for-semester-one-deadlines",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 572,
+   "ttfb_ms": 500,
    "words": 1347,
    "schema_blocks": 1,
    "schema_types": [
@@ -1139,7 +1139,7 @@
    "url": "/news/delving-into-construction-project-life-cycle-phases",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 590,
+   "ttfb_ms": 510,
    "words": 819,
    "schema_blocks": 1,
    "schema_types": [
@@ -1164,7 +1164,7 @@
    "url": "/news/demystifying-4d-bim-construction-planning-reinvented",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 609,
+   "ttfb_ms": 498,
    "words": 1761,
    "schema_blocks": 1,
    "schema_types": [
@@ -1189,7 +1189,7 @@
    "url": "/news/demystifying-project-control-services",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 603,
+   "ttfb_ms": 501,
    "words": 826,
    "schema_blocks": 1,
    "schema_types": [
@@ -1214,7 +1214,7 @@
    "url": "/news/designing-for-dignity-the-nuances-of-sensory-design-in-dementia-friendly-environments",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 575,
+   "ttfb_ms": 497,
    "words": 862,
    "schema_blocks": 1,
    "schema_types": [
@@ -1239,7 +1239,7 @@
    "url": "/news/enhancing-construction-project-control-with-technology-a-path-to-excellence",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 632,
+   "ttfb_ms": 513,
    "words": 1805,
    "schema_blocks": 1,
    "schema_types": [
@@ -1264,7 +1264,7 @@
    "url": "/news/enhancing-project-efficiency-with-4d-bim-modelling-services",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 564,
+   "ttfb_ms": 505,
    "words": 1177,
    "schema_blocks": 1,
    "schema_types": [
@@ -1289,7 +1289,7 @@
    "url": "/news/exploring-5d-bim-software-solutions",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 625,
+   "ttfb_ms": 507,
    "words": 985,
    "schema_blocks": 1,
    "schema_types": [
@@ -1314,7 +1314,7 @@
    "url": "/news/exploring-project-planning-scheduling-and-control-frameworks",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 558,
+   "ttfb_ms": 500,
    "words": 777,
    "schema_blocks": 1,
    "schema_types": [
@@ -1339,7 +1339,7 @@
    "url": "/news/exploring-render-services-what-to-look-for",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 577,
+   "ttfb_ms": 502,
    "words": 911,
    "schema_blocks": 1,
    "schema_types": [
@@ -1364,7 +1364,7 @@
    "url": "/news/exploring-the-added-value-of-5d-bim-in-construction",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 556,
+   "ttfb_ms": 515,
    "words": 872,
    "schema_blocks": 1,
    "schema_types": [
@@ -1389,7 +1389,7 @@
    "url": "/news/exploring-the-benefits-of-3d-architectural-visualisation-services",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 605,
+   "ttfb_ms": 497,
    "words": 895,
    "schema_blocks": 1,
    "schema_types": [
@@ -1414,7 +1414,7 @@
    "url": "/news/extension-of-time-claims-turn-your-programme-into-evidence",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 579,
+   "ttfb_ms": 489,
    "words": 1608,
    "schema_blocks": 1,
    "schema_types": [
@@ -1439,7 +1439,7 @@
    "url": "/news/float-in-a-construction-programme-who-owns-it",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 593,
+   "ttfb_ms": 502,
    "words": 1624,
    "schema_blocks": 1,
    "schema_types": [
@@ -1464,7 +1464,7 @@
    "url": "/news/future-proofing-australian-aged-care-facilities-integrating-bim-visualisation-with-adaptive-design-principles",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 572,
+   "ttfb_ms": 517,
    "words": 896,
    "schema_blocks": 1,
    "schema_types": [
@@ -1489,7 +1489,7 @@
    "url": "/news/hard-constraints-in-a-construction-programme-why-they-break-your-dates",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 575,
+   "ttfb_ms": 495,
    "words": 1374,
    "schema_blocks": 1,
    "schema_types": [
@@ -1514,7 +1514,7 @@
    "url": "/news/harnessing-5d-bim-services-for-efficient-project-control",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 570,
+   "ttfb_ms": 491,
    "words": 1219,
    "schema_blocks": 1,
    "schema_types": [
@@ -1539,7 +1539,7 @@
    "url": "/news/how-4d-bim-services-streamline-construction-projects",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 612,
+   "ttfb_ms": 503,
    "words": 806,
    "schema_blocks": 1,
    "schema_types": [
@@ -1564,7 +1564,7 @@
    "url": "/news/how-5d-bim-modelling-services-in-australia-are-replacing-manual-quantity-takeoffs",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 579,
+   "ttfb_ms": 498,
    "words": 1030,
    "schema_blocks": 1,
    "schema_types": [
@@ -1589,7 +1589,7 @@
    "url": "/news/how-architects-can-use-ai-powered-architectural-rendering-for-smarter-design-decisions",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 578,
+   "ttfb_ms": 517,
    "words": 1717,
    "schema_blocks": 1,
    "schema_types": [
@@ -1614,7 +1614,7 @@
    "url": "/news/how-feeldx-works-from-tender-documents-to-a-programme-you-can-defend",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 571,
+   "ttfb_ms": 499,
    "words": 1318,
    "schema_blocks": 1,
    "schema_types": [
@@ -1639,7 +1639,7 @@
    "url": "/news/how-high-fidelity-3d-architectural-renders-and-flythroughs-improve-pre-tender-planning",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 598,
+   "ttfb_ms": 497,
    "words": 874,
    "schema_blocks": 1,
    "schema_types": [
@@ -1664,7 +1664,7 @@
    "url": "/news/how-tier-2-builders-are-using-bim-to-compete-with-industry-giants",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 600,
+   "ttfb_ms": 496,
    "words": 1198,
    "schema_blocks": 1,
    "schema_types": [
@@ -1689,7 +1689,7 @@
    "url": "/news/how-to-choose-a-project-controls-consultant-in-australia",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 590,
+   "ttfb_ms": 523,
    "words": 1741,
    "schema_blocks": 1,
    "schema_types": [
@@ -1714,7 +1714,7 @@
    "url": "/news/implementing-5d-bim-technology-for-project-success",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 550,
+   "ttfb_ms": 490,
    "words": 857,
    "schema_blocks": 1,
    "schema_types": [
@@ -1739,7 +1739,7 @@
    "url": "/news/implementing-project-controls-plans-for-success",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 628,
+   "ttfb_ms": 499,
    "words": 905,
    "schema_blocks": 1,
    "schema_types": [
@@ -1764,7 +1764,7 @@
    "url": "/news/in-house-vs-outsourced-project-controls-know-where-the-risk-sits",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 916,
+   "ttfb_ms": 493,
    "words": 2022,
    "schema_blocks": 1,
    "schema_types": [
@@ -1789,7 +1789,7 @@
    "url": "/news/integrating-technology-into-project-planning-and-control",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 610,
+   "ttfb_ms": 500,
    "words": 999,
    "schema_blocks": 1,
    "schema_types": [
@@ -1814,7 +1814,7 @@
    "url": "/news/leveraging-4d-bim-for-enhanced-construction-scheduling",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 672,
+   "ttfb_ms": 509,
    "words": 792,
    "schema_blocks": 1,
    "schema_types": [
@@ -1839,7 +1839,7 @@
    "url": "/news/look-ahead-programme-in-construction-keep-the-next-six-weeks-under-control",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 641,
+   "ttfb_ms": 496,
    "words": 1283,
    "schema_blocks": 1,
    "schema_types": [
@@ -1864,7 +1864,7 @@
    "url": "/news/managing-brownfield-healthcare-upgrades-integrating-basis-of-schedule-and-4d-staging-to-protect-live-operational-environments",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 651,
+   "ttfb_ms": 485,
    "words": 1507,
    "schema_blocks": 1,
    "schema_types": [
@@ -1889,7 +1889,7 @@
    "url": "/news/master-planning-for-architects-balancing-creativity-with-feasibility",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 634,
+   "ttfb_ms": 500,
    "words": 761,
    "schema_blocks": 1,
    "schema_types": [
@@ -1914,7 +1914,7 @@
    "url": "/news/mastering-3d-model-rendering-techniques-a-comprehensive-guide",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 640,
+   "ttfb_ms": 505,
    "words": 875,
    "schema_blocks": 1,
    "schema_types": [
@@ -1939,7 +1939,7 @@
    "url": "/news/maximising-project-efficiency-with-advanced-modelling-and-rendering",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 725,
+   "ttfb_ms": 502,
    "words": 810,
    "schema_blocks": 1,
    "schema_types": [
@@ -1964,7 +1964,7 @@
    "url": "/news/missile-factories-and-drone-facilities-australias-high-tech-defence-build-up",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 765,
+   "ttfb_ms": 500,
    "words": 1116,
    "schema_blocks": 1,
    "schema_types": [
@@ -1989,7 +1989,7 @@
    "url": "/news/mitigating-industrial-manslaughter-risks-how-4d-bim-is-revolutionising-site-safety-protocols",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 701,
+   "ttfb_ms": 506,
    "words": 1304,
    "schema_blocks": 1,
    "schema_types": [
@@ -2014,7 +2014,7 @@
    "url": "/news/navigating-regional-megaprojects-how-2d-smps-and-3d-logistics-visualisation-resolve-heavy-haulage-and-site-establishment-bottlenecks",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 590,
+   "ttfb_ms": 500,
    "words": 1531,
    "schema_blocks": 1,
    "schema_types": [
@@ -2039,7 +2039,7 @@
    "url": "/news/navigating-the-complexities-of-construction-site-management-plans",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 610,
+   "ttfb_ms": 513,
    "words": 1446,
    "schema_blocks": 1,
    "schema_types": [
@@ -2064,7 +2064,7 @@
    "url": "/news/navigating-the-world-of-4d-construction-modelling",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 606,
+   "ttfb_ms": 518,
    "words": 988,
    "schema_blocks": 1,
    "schema_types": [
@@ -2089,7 +2089,7 @@
    "url": "/news/optimising-construction-project-planning-with-bim",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 560,
+   "ttfb_ms": 540,
    "words": 844,
    "schema_blocks": 1,
    "schema_types": [
@@ -2114,7 +2114,7 @@
    "url": "/news/outsourcing-4d-bim-in-australia-costs-benefits-and-implementation-strategies",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 600,
+   "ttfb_ms": 590,
    "words": 1100,
    "schema_blocks": 1,
    "schema_types": [
@@ -2139,7 +2139,7 @@
    "url": "/news/outsourcing-digital-engineering-the-complete-guide-to-4d-and-5d-bim-services-in-australia",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 613,
+   "ttfb_ms": 558,
    "words": 2206,
    "schema_blocks": 1,
    "schema_types": [
@@ -2164,7 +2164,7 @@
    "url": "/news/planned-vs-actual-how-to-read-a-construction-programme-update",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 569,
+   "ttfb_ms": 514,
    "words": 997,
    "schema_blocks": 1,
    "schema_types": [
@@ -2189,7 +2189,7 @@
    "url": "/news/programme-logic-in-construction-finish-to-start-lags-and-constraints-explained",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 595,
+   "ttfb_ms": 506,
    "words": 1036,
    "schema_blocks": 1,
    "schema_types": [
@@ -2214,7 +2214,7 @@
    "url": "/news/programme-narrative-in-construction-what-clients-ask-for-and-why",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 618,
+   "ttfb_ms": 497,
    "words": 1256,
    "schema_blocks": 1,
    "schema_types": [
@@ -2239,7 +2239,7 @@
    "url": "/news/project-controls-vs-project-management-who-owns-the-programme-on-your-job",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 572,
+   "ttfb_ms": 523,
    "words": 1059,
    "schema_blocks": 1,
    "schema_types": [
@@ -2264,7 +2264,7 @@
    "url": "/news/project-planning-for-the-construction-of-data-centres",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 618,
+   "ttfb_ms": 494,
    "words": 408,
    "schema_blocks": 1,
    "schema_types": [
@@ -2289,7 +2289,7 @@
    "url": "/news/remote-bases-and-outposts-strategic-planning-and-resilient-design-for-defence-infrastructure",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 581,
+   "ttfb_ms": 512,
    "words": 920,
    "schema_blocks": 1,
    "schema_types": [
@@ -2314,7 +2314,7 @@
    "url": "/news/resource-levelling-a-construction-programme-smooth-the-peaks-keep-the-date",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 556,
+   "ttfb_ms": 507,
    "words": 1552,
    "schema_blocks": 1,
    "schema_types": [
@@ -2339,7 +2339,7 @@
    "url": "/news/resource-load-histogram-prove-your-tender-programme-is-buildable",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 618,
+   "ttfb_ms": 503,
    "words": 1530,
    "schema_blocks": 1,
    "schema_types": [
@@ -2364,7 +2364,7 @@
    "url": "/news/securing-construction-finance-in-2026-how-5d-bim-cost-certainty-satisfies-tier-1-lenders",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 630,
+   "ttfb_ms": 515,
    "words": 1923,
    "schema_blocks": 1,
    "schema_types": [
@@ -2389,7 +2389,7 @@
    "url": "/news/smart-training-ranges-modernising-adf-training-areas-with-4d-simulation",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 587,
+   "ttfb_ms": 503,
    "words": 931,
    "schema_blocks": 1,
    "schema_types": [
@@ -2414,7 +2414,7 @@
    "url": "/news/tender-programme-vs-contract-programme-what-changes-after-award",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 563,
+   "ttfb_ms": 491,
    "words": 2091,
    "schema_blocks": 1,
    "schema_types": [
@@ -2439,7 +2439,7 @@
    "url": "/news/tender-programme-what-assessors-check-and-why-builders-lose-points",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 625,
+   "ttfb_ms": 508,
    "words": 1475,
    "schema_blocks": 1,
    "schema_types": [
@@ -2464,7 +2464,7 @@
    "url": "/news/the-71b-olympic-sprint-winning-complex-qld-government-tenders-with-4d-bim",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 628,
+   "ttfb_ms": 509,
    "words": 1417,
    "schema_blocks": 1,
    "schema_types": [
@@ -2489,7 +2489,7 @@
    "url": "/news/the-art-of-rendering-a-3d-model",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 581,
+   "ttfb_ms": 487,
    "words": 1020,
    "schema_blocks": 1,
    "schema_types": [
@@ -2514,7 +2514,7 @@
    "url": "/news/the-aukus-infrastructure-surge-using-4d-sequencing-to-win-high-security-defence-tenders-in-wa-and-sa",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 629,
+   "ttfb_ms": 493,
    "words": 2374,
    "schema_blocks": 1,
    "schema_types": [
@@ -2539,7 +2539,7 @@
    "url": "/news/the-complete-guide-to-5d-bim-modelling-in-australia-costs-implementation-and-roi",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 553,
+   "ttfb_ms": 495,
    "words": 1132,
    "schema_blocks": 1,
    "schema_types": [
@@ -2564,7 +2564,7 @@
    "url": "/news/the-critical-role-of-project-controls-manager-in-construction",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 562,
+   "ttfb_ms": 515,
    "words": 1222,
    "schema_blocks": 1,
    "schema_types": [
@@ -2589,7 +2589,7 @@
    "url": "/news/the-evolution-of-3d-architectural-visualisation",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 587,
+   "ttfb_ms": 486,
    "words": 1758,
    "schema_blocks": 1,
    "schema_types": [
@@ -2614,7 +2614,7 @@
    "url": "/news/the-impact-of-bim-4d-modelling-services-on-project-management",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 575,
+   "ttfb_ms": 504,
    "words": 900,
    "schema_blocks": 1,
    "schema_types": [
@@ -2639,7 +2639,7 @@
    "url": "/news/the-intersection-of-bim-and-construction-project-management",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 631,
+   "ttfb_ms": 501,
    "words": 1164,
    "schema_blocks": 1,
    "schema_types": [
@@ -2664,7 +2664,7 @@
    "url": "/news/the-new-role-of-the-digital-project-controller-in-australian-construction",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 577,
+   "ttfb_ms": 516,
    "words": 2328,
    "schema_blocks": 1,
    "schema_types": [
@@ -2689,7 +2689,7 @@
    "url": "/news/the-power-of-bim-4d-planning-in-construction-projects",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 627,
+   "ttfb_ms": 500,
    "words": 1197,
    "schema_blocks": 1,
    "schema_types": [
@@ -2714,7 +2714,7 @@
    "url": "/news/the-rise-of-ai-driven-bim-what-it-means-for-project-planning-in-australia",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 624,
+   "ttfb_ms": 493,
    "words": 2098,
    "schema_blocks": 1,
    "schema_types": [
@@ -2739,7 +2739,7 @@
    "url": "/news/the-role-of-4d-simulation-in-bim-projects",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 571,
+   "ttfb_ms": 503,
    "words": 1020,
    "schema_blocks": 1,
    "schema_types": [
@@ -2764,7 +2764,7 @@
    "url": "/news/the-role-of-digital-twin-technology-in-modern-architecture",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 633,
+   "ttfb_ms": 497,
    "words": 898,
    "schema_blocks": 1,
    "schema_types": [
@@ -2789,7 +2789,7 @@
    "url": "/news/the-role-of-project-control-specialists-in-complex-projects",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 575,
+   "ttfb_ms": 510,
    "words": 1164,
    "schema_blocks": 1,
    "schema_types": [
@@ -2814,7 +2814,7 @@
    "url": "/news/tips-for-high-quality-3d-model-rendering",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 610,
+   "ttfb_ms": 502,
    "words": 954,
    "schema_blocks": 1,
    "schema_types": [
@@ -2839,7 +2839,7 @@
    "url": "/news/understanding-the-components-of-a-project-control-plan",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 567,
+   "ttfb_ms": 499,
    "words": 1319,
    "schema_blocks": 1,
    "schema_types": [
@@ -2864,7 +2864,7 @@
    "url": "/news/understanding-the-importance-of-project-control-specialists",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 570,
+   "ttfb_ms": 502,
    "words": 814,
    "schema_blocks": 1,
    "schema_types": [
@@ -2889,7 +2889,7 @@
    "url": "/news/understanding-the-process-of-3d-modelling-rendering",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 562,
+   "ttfb_ms": 511,
    "words": 794,
    "schema_blocks": 1,
    "schema_types": [
@@ -2914,7 +2914,7 @@
    "url": "/news/unravelling-the-benefits-of-architectural-visualisations",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 615,
+   "ttfb_ms": 498,
    "words": 1167,
    "schema_blocks": 1,
    "schema_types": [
@@ -2939,7 +2939,7 @@
    "url": "/news/unveiling-the-magic-of-3d-visualisations",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 577,
+   "ttfb_ms": 489,
    "words": 818,
    "schema_blocks": 1,
    "schema_types": [
@@ -2964,7 +2964,7 @@
    "url": "/news/use-of-4d-methodology-in-construction-industry",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 582,
+   "ttfb_ms": 496,
    "words": 398,
    "schema_blocks": 1,
    "schema_types": [
@@ -2989,7 +2989,7 @@
    "url": "/news/using-3d-flythroughs-and-4d-sequencing-to-win-defence-tenders-and-engage-stakeholders",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 575,
+   "ttfb_ms": 508,
    "words": 1063,
    "schema_blocks": 1,
    "schema_types": [
@@ -3014,7 +3014,7 @@
    "url": "/news/variations-and-the-construction-programme-show-the-time-impact-before-you-price-it",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 558,
+   "ttfb_ms": 508,
    "words": 1042,
    "schema_blocks": 1,
    "schema_types": [
@@ -3039,7 +3039,7 @@
    "url": "/news/vetting-4d-bim-companies-in-melbourne-a-2026-buyers-guide-for-victorian-builders",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 563,
+   "ttfb_ms": 504,
    "words": 2802,
    "schema_blocks": 1,
    "schema_types": [
@@ -3064,7 +3064,7 @@
    "url": "/news/vetting-bim-companies-in-perth-4d-logistics-for-wa-mining-and-infrastructure-projects",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 611,
+   "ttfb_ms": 500,
    "words": 2175,
    "schema_blocks": 1,
    "schema_types": [
@@ -3089,7 +3089,7 @@
    "url": "/news/visual-risk-planning-for-explosive-ordnance-and-munitions-storage-facilities",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 562,
+   "ttfb_ms": 496,
    "words": 1153,
    "schema_blocks": 1,
    "schema_types": [
@@ -3114,7 +3114,7 @@
    "url": "/news/visualising-infrastructure-how-4d-bim-is-changing-road-and-rail-construction-in-australia",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 580,
+   "ttfb_ms": 521,
    "words": 1372,
    "schema_blocks": 1,
    "schema_types": [
@@ -3139,7 +3139,7 @@
    "url": "/news/why-6-out-of-10-construction-projects-face-delays-and-how-builders-can-overcome-them",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 570,
+   "ttfb_ms": 516,
    "words": 888,
    "schema_blocks": 1,
    "schema_types": [
@@ -3164,7 +3164,7 @@
    "url": "/news/why-outsourcing-4d-bim-services-is-cost-effective",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 558,
+   "ttfb_ms": 507,
    "words": 1301,
    "schema_blocks": 1,
    "schema_types": [
@@ -3189,7 +3189,7 @@
    "url": "/news/work-breakdown-structure-in-construction-get-it-right-before-the-detail",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 624,
+   "ttfb_ms": 497,
    "words": 1423,
    "schema_blocks": 1,
    "schema_types": [
@@ -3214,7 +3214,7 @@
    "url": "/news/working-calendars-rdos-and-public-holidays-in-a-construction-programme",
    "group": "articles",
    "status": 200,
-   "ttfb_ms": 924,
+   "ttfb_ms": 511,
    "words": 1220,
    "schema_blocks": 1,
    "schema_types": [
@@ -3239,7 +3239,7 @@
    "url": "/our-work",
    "group": "core",
    "status": 200,
-   "ttfb_ms": 592,
+   "ttfb_ms": 536,
    "words": 321,
    "schema_blocks": 1,
    "schema_types": [
@@ -3264,7 +3264,7 @@
    "url": "/privacy-policy",
    "group": "core",
    "status": 200,
-   "ttfb_ms": 587,
+   "ttfb_ms": 528,
    "words": 965,
    "schema_blocks": 1,
    "schema_types": [
@@ -3289,7 +3289,7 @@
    "url": "/project-control",
    "group": "core",
    "status": 200,
-   "ttfb_ms": 628,
+   "ttfb_ms": 511,
    "words": 798,
    "schema_blocks": 1,
    "schema_types": [
@@ -3314,7 +3314,7 @@
    "url": "/services",
    "group": "core",
    "status": 200,
-   "ttfb_ms": 578,
+   "ttfb_ms": 543,
    "words": 1388,
    "schema_blocks": 1,
    "schema_types": [
@@ -3339,7 +3339,7 @@
    "url": "/studio",
    "group": "core",
    "status": 200,
-   "ttfb_ms": 587,
+   "ttfb_ms": 506,
    "words": 701,
    "schema_blocks": 1,
    "schema_types": [
@@ -3364,7 +3364,7 @@
    "url": "/studio/brighton-grammar-school",
    "group": "core",
    "status": 200,
-   "ttfb_ms": 578,
+   "ttfb_ms": 491,
    "words": 245,
    "schema_blocks": 1,
    "schema_types": [
@@ -3389,7 +3389,7 @@
    "url": "/studio/cdu-blue-8-centre-for-better-health-futures",
    "group": "core",
    "status": 200,
-   "ttfb_ms": 628,
+   "ttfb_ms": 492,
    "words": 263,
    "schema_blocks": 1,
    "schema_types": [
@@ -3414,7 +3414,7 @@
    "url": "/studio/fogo-food-organics-and-garden-organics-newcastle",
    "group": "core",
    "status": 200,
-   "ttfb_ms": 574,
+   "ttfb_ms": 528,
    "words": 246,
    "schema_blocks": 1,
    "schema_types": [
@@ -3439,7 +3439,7 @@
    "url": "/studio/material-recovery-facility-mrf-newcastle",
    "group": "core",
    "status": 200,
-   "ttfb_ms": 580,
+   "ttfb_ms": 494,
    "words": 226,
    "schema_blocks": 1,
    "schema_types": [
@@ -3464,7 +3464,7 @@
    "url": "/studio/simplot-bathurst",
    "group": "core",
    "status": 200,
-   "ttfb_ms": 591,
+   "ttfb_ms": 495,
    "words": 266,
    "schema_blocks": 1,
    "schema_types": [
@@ -3489,7 +3489,7 @@
    "url": "/studio/university-of-newcastle-central-coast-campus-uon",
    "group": "core",
    "status": 200,
-   "ttfb_ms": 575,
+   "ttfb_ms": 495,
    "words": 267,
    "schema_blocks": 1,
    "schema_types": [
@@ -3514,7 +3514,7 @@
    "url": "/technology",
    "group": "core",
    "status": 200,
-   "ttfb_ms": 582,
+   "ttfb_ms": 511,
    "words": 798,
    "schema_blocks": 1,
    "schema_types": [
@@ -3537,8 +3537,8 @@
   }
  ],
  "commentary": {
-  "vi": "health 83; ttfb_mean 605.9; pages_crawled 132; words_total 154039; orphans 0; thin_pages 7; images_without_alt 2720.",
-  "en": "health 83; ttfb_mean 605.9; pages_crawled 132; words_total 154039; orphans 0; thin_pages 7; images_without_alt 2720.",
+  "vi": "health 84; ttfb_mean 505.7; pages_crawled 132; words_total 154039; orphans 0; thin_pages 7; images_without_alt 2720.",
+  "en": "health 84; ttfb_mean 505.7; pages_crawled 132; words_total 154039; orphans 0; thin_pages 7; images_without_alt 2720.",
   "by": "template"
  },
  "commentary_input": {
@@ -3546,15 +3546,15 @@
   "summary": {
    "today": {
     "date": "2026-11-16",
-    "health": 83,
+    "health": 84,
     "sub_scores": {
      "crawlability": 98,
-     "performance": 80,
+     "performance": 85,
      "structured_data": 60,
      "onpage": 80,
      "content": 97
     },
-    "ttfb_mean": 605.9,
+    "ttfb_mean": 505.7,
     "pages_crawled": 132,
     "words_total": 154039,
     "non_200": [
@@ -3572,5 +3572,5 @@
    "previous": {}
   }
  },
- "score_rationale": "health 83; ttfb_mean 605.9; pages_crawled 132; words_total 154039; orphans 0; thin_pages 7; images_without_alt 2720."
+ "score_rationale": "health 84; ttfb_mean 505.7; pages_crawled 132; words_total 154039; orphans 0; thin_pages 7; images_without_alt 2720."
 }
