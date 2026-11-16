@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><link rel="icon" type="image/svg+xml" href="https://tram-fdx.github.io/dxl-social-dashboard-site/fdx-favicon.svg">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FeelDX — Website Audit · History</title>
+<style>
+  :root{--bg:#f6f4ef;--card:#fff;--line:#e6e1d6;--ink:#22262c;--muted:#7b828c}
+  body{margin:0;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,sans-serif;background:var(--bg);color:var(--ink)}
+  header{background:#2c2a26;color:#e5dcc7;padding:18px 16px}
+  header a{color:#e5dcc7}
+  main{max-width:960px;margin:0 auto;padding:16px}
+  table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden}
+  th,td{text-align:left;padding:9px 12px;border-bottom:1px solid var(--line);font-size:14px}
+  th{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+  td.muted{color:var(--muted)}
+</style>
+</head>
+<body>
+<header><b>FeelDX — Website Audit</b> · Daily history · <a href="index.html">Latest</a></header>
+<main>
+  <p class="muted">Each row is one frozen scan. Click a date to open that day’s report. Trend charts and “All time” are at the bottom of the latest report.</p>
+  <table><thead><tr><th>Date</th><th>Summary</th></tr></thead><tbody id="rows"><tr><td colspan="2">…</td></tr></tbody></table>
+</main>
+<script>
+  fetch('data/index.json', {cache: 'no-store'}).then(r => r.json()).then(j => {
+    const esc = s => String(s ?? '').replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+    document.getElementById('rows').innerHTML = (j.snapshots || []).slice().reverse().map(s =>
+      `<tr><td><a href="${esc(s.report || ('archive/' + s.date + '.html'))}">${esc(s.date)}</a></td><td class="muted">${esc(s.label_en || s.label_vi || '')}</td></tr>`).join('');
+  }).catch(() => { document.getElementById('rows').innerHTML = '<tr><td colspan="2">Could not read data/index.json</td></tr>'; });
+</script>
+</body>
+</html>
