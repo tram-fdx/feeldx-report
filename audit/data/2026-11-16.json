@@ -3537,9 +3537,22 @@
   }
  ],
  "commentary": {
-  "vi": "health 84; ttfb_mean 505.7; pages_crawled 132; words_total 154039; orphans 0; thin_pages 7; images_without_alt 2720.",
-  "en": "health 84; ttfb_mean 505.7; pages_crawled 132; words_total 154039; orphans 0; thin_pages 7; images_without_alt 2720.",
-  "by": "template"
+  "vi": "Lần quét đầu của feeldx.com: điểm sức khoẻ 84, 132 trang, TTFB trung bình 506 ms. Điểm thấp nhất là dữ liệu có cấu trúc (60) vì bài /news/ chưa có FAQPage. /faq vẫn trả về 404 và 2.720 ảnh chưa có alt; còn 7 trang mỏng.",
+  "en": "First scan of feeldx.com: health 84, 132 pages, mean TTFB 506 ms. Structured data is the weakest score (60) because /news/ articles have no FAQPage. /faq still returns 404, 2,720 images lack alt text and 7 pages are thin.",
+  "by": "Claude (Mac)",
+  "rating": "ok",
+  "verdict_vi": "Nền kỹ thuật tốt, nhưng thiếu schema và alt ảnh đang kéo điểm xuống.",
+  "verdict_en": "Solid technical base; missing schema and image alt text pull the score down.",
+  "actions_vi": [
+   "Sửa hoặc chuyển hướng /faq (đang 404).",
+   "Thêm FAQPage cho các bài /news/ có phần hỏi đáp.",
+   "Thêm alt cho ảnh, bắt đầu từ trang chủ và trang dịch vụ."
+  ],
+  "actions_en": [
+   "Fix or redirect /faq (currently 404).",
+   "Add FAQPage schema to /news/ articles that have a Q&A section.",
+   "Add alt text to images, starting with the homepage and service pages."
+  ]
  },
  "commentary_input": {
   "report": "Website technical SEO audit",
@@ -3572,5 +3585,5 @@
    "previous": {}
   }
  },
- "score_rationale": "health 84; ttfb_mean 505.7; pages_crawled 132; words_total 154039; orphans 0; thin_pages 7; images_without_alt 2720."
+ "score_rationale": "First scan of feeldx.com: health 84, 132 pages, mean TTFB 506 ms. Structured data is the weakest score (60) because /news/ articles have no FAQPage. /faq still returns 404, 2,720 images lack alt text and 7 pages are thin."
 }
