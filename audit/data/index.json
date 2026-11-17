@@ -8,7 +8,14 @@
    "report": "archive/2026-11-16.html",
    "label_vi": "Health 84 · /faq 404 · 2.720 ảnh thiếu alt",
    "label_en": "Health 84 · /faq 404 · 2,720 images missing alt"
+  },
+  {
+   "date": "2026-11-17",
+   "data": "data/2026-11-17.json",
+   "report": "archive/2026-11-17.html",
+   "label_vi": "Health 82 · 132 trang · TTFB TB 642 ms",
+   "label_en": "Health 82 · 132 pages · mean TTFB 642 ms"
   }
  ],
- "latest": "2026-11-16"
+ "latest": "2026-11-17"
 }

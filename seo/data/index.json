@@ -7,7 +7,14 @@
    "report": "archive/2026-11-16.html",
    "label_vi": "82 click · 7.377 hiển thị · 884 session",
    "label_en": "82 clicks · 7,377 impressions · 884 sessions"
+  },
+  {
+   "date": "2026-11-17",
+   "data": "data/2026-11-17.json",
+   "report": "archive/2026-11-17.html",
+   "label_vi": "GSC 82 click, 7,205 hiển thị · GA4 881 session",
+   "label_en": "GSC 82 clicks, 7,205 impressions · GA4 881 sessions"
   }
  ],
- "latest": "2026-11-16"
+ "latest": "2026-11-17"
 }
