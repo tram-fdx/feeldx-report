@@ -13,8 +13,8 @@
    "date": "2026-11-17",
    "data": "data/2026-11-17.json",
    "report": "archive/2026-11-17.html",
-   "label_vi": "Health 82 · 132 trang · TTFB TB 642 ms",
-   "label_en": "Health 82 · 132 pages · mean TTFB 642 ms"
+   "label_vi": "Sức khoẻ giảm còn 82, máy chủ phản hồi chậm hơn",
+   "label_en": "Health down to 82 as server response slows"
   }
  ],
  "latest": "2026-11-17"
