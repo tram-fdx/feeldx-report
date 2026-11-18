@@ -14,7 +14,14 @@
    "report": "archive/2026-11-17.html",
    "label_vi": "Click ổn định, hiển thị giảm nhẹ",
    "label_en": "Clicks steady, impressions dip slightly"
+  },
+  {
+   "date": "2026-11-18",
+   "data": "data/2026-11-18.json",
+   "report": "archive/2026-11-18.html",
+   "label_vi": "GSC 84 click, 7,397 hiển thị · GA4 896 session",
+   "label_en": "GSC 84 clicks, 7,397 impressions · GA4 896 sessions"
   }
  ],
- "latest": "2026-11-17"
+ "latest": "2026-11-18"
 }

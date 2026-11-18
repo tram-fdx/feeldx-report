@@ -1,0 +1,22 @@
+{
+ "kind": "weekly",
+ "weeks": [
+  {
+   "id": "2026-11-13",
+   "vi": "7–13/11/2026",
+   "en": "7 – 13 Nov 2026",
+   "start": "2026-11-07",
+   "end": "2026-11-13",
+   "compare_start": "2026-10-31",
+   "compare_end": "2026-11-06",
+   "scanned_on": "2026-11-18",
+   "sources": [
+    "Google Search Console API",
+    "GA4 Data API"
+   ],
+   "notes_vi": "clicks 26 → 32; impressions 2301 → 2223; ctr_pct 1.1 → 1.4; avg_position 24.9 → 23.1; queries_with_impressions 287 → 303; brand_clicks 7 → 14; page_one_queries 73 → 84; ga4_sessions 216 → 270.",
+   "notes_en": "clicks 26 → 32; impressions 2301 → 2223; ctr_pct 1.1 → 1.4; avg_position 24.9 → 23.1; queries_with_impressions 287 → 303; brand_clicks 7 → 14; page_one_queries 73 → 84; ga4_sessions 216 → 270."
+  }
+ ],
+ "latest": "2026-11-13"
+}
