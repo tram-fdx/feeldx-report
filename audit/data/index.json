@@ -22,7 +22,14 @@
    "report": "archive/2026-11-18.html",
    "label_vi": "Health 84 · 132 trang · TTFB TB 493 ms",
    "label_en": "Health 84 · 132 pages · mean TTFB 493 ms"
+  },
+  {
+   "date": "2026-11-19",
+   "data": "data/2026-11-19.json",
+   "report": "archive/2026-11-19.html",
+   "label_vi": "Health 83 · 132 trang · TTFB TB 604 ms",
+   "label_en": "Health 83 · 132 pages · mean TTFB 604 ms"
   }
  ],
- "latest": "2026-11-18"
+ "latest": "2026-11-19"
 }
