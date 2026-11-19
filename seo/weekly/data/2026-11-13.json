@@ -1321,9 +1321,9 @@
    }
   ]
  },
- "notes_vi": "clicks 26 → 32; impressions 2301 → 2223; ctr_pct 1.1 → 1.4; avg_position 24.9 → 23.1; queries_with_impressions 287 → 303; brand_clicks 7 → 14; page_one_queries 73 → 84; ga4_sessions 216 → 270.",
- "notes_en": "clicks 26 → 32; impressions 2301 → 2223; ctr_pct 1.1 → 1.4; avg_position 24.9 → 23.1; queries_with_impressions 287 → 303; brand_clicks 7 → 14; page_one_queries 73 → 84; ga4_sessions 216 → 270.",
- "notes_by": "template",
+ "notes_vi": "Tuần 07–13/11: 32 click (từ 26), CTR 1,4% (từ 1,1%) và vị trí trung bình cải thiện từ 24,9 lên 23,1. Phiên GA4 tăng từ 216 lên 270, nhưng sự kiện chính giảm từ 5 xuống 1 và tỷ lệ tương tác từ 33,33% xuống 25,19%.",
+ "notes_en": "Week 7–13 Nov: 32 clicks (from 26), 1.4% CTR (from 1.1%), and average position improved from 24.9 to 23.1. GA4 sessions rose from 216 to 270, but key events fell from 5 to 1 and engagement from 33.33% to 25.19%.",
+ "notes_by": "Claude (Mac)",
  "commentary_input": {
   "report": "SEO weekly",
   "summary": {
@@ -1440,5 +1440,18 @@
     ]
    }
   }
+ },
+ "notes_extra": {
+  "rating": "ok",
+  "verdict_vi": "Tìm kiếm tốt lên trong tuần nhưng chuyển đổi giảm rõ.",
+  "verdict_en": "Search improved this week, but conversions dropped sharply.",
+  "actions_vi": [
+   "Kiểm tra form/CTA trên trang đích vì sự kiện chính giảm từ 5 xuống 1.",
+   "Xem lại chất lượng phiên Paid Video (16) và Display (15) mới xuất hiện trong top kênh."
+  ],
+  "actions_en": [
+   "Check forms/CTAs on landing pages, as key events fell from 5 to 1.",
+   "Review session quality from Paid Video (16) and Display (15) in the top channels."
+  ]
  }
 }
