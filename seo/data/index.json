@@ -28,7 +28,14 @@
    "report": "archive/2026-11-19.html",
    "label_vi": "Click, sự kiện chính tăng nhẹ",
    "label_en": "Clicks and key events edge up"
+  },
+  {
+   "date": "2026-11-20",
+   "data": "data/2026-11-20.json",
+   "report": "archive/2026-11-20.html",
+   "label_vi": "GSC 91 click, 7,860 hiển thị · GA4 941 session",
+   "label_en": "GSC 91 clicks, 7,860 impressions · GA4 941 sessions"
   }
  ],
- "latest": "2026-11-19"
+ "latest": "2026-11-20"
 }
