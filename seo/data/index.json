@@ -42,7 +42,14 @@
    "report": "archive/2026-11-21.html",
    "label_vi": "GSC 92 click, 8,072 hiển thị · GA4 952 session",
    "label_en": "GSC 92 clicks, 8,072 impressions · GA4 952 sessions"
+  },
+  {
+   "date": "2026-11-22",
+   "data": "data/2026-11-22.json",
+   "report": "archive/2026-11-22.html",
+   "label_vi": "GSC 94 click, 8,253 hiển thị · GA4 977 session",
+   "label_en": "GSC 94 clicks, 8,253 impressions · GA4 977 sessions"
   }
  ],
- "latest": "2026-11-21"
+ "latest": "2026-11-22"
 }
