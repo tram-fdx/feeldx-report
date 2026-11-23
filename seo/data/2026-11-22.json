@@ -1795,13 +1795,26 @@
   }
  },
  "commentary": {
-  "vi": "clicks 92 → 94; impressions 8072 → 8253; ctr_pct 1.1 → 1.1; avg_position 25.5 → 25.1; queries_with_impressions 548 → 558; brand_clicks 36 → 36; page_one_queries 143 → 151; ga4_sessions 952 → 977.",
-  "en": "clicks 92 → 94; impressions 8072 → 8253; ctr_pct 1.1 → 1.1; avg_position 25.5 → 25.1; queries_with_impressions 548 → 558; brand_clicks 36 → 36; page_one_queries 143 → 151; ga4_sessions 952 → 977.",
-  "by": "template"
+  "vi": "Click GSC của FeelDX tăng từ 92 lên 94, hiển thị từ 8.072 lên 8.253, vị trí trung bình cải thiện từ 25,5 lên 25,1 và truy vấn trang 1 lên 151. GA4 có 977 phiên (tăng từ 952) với 12 key event, tương tác 30,5%. Organic Search giảm nhẹ từ 158 xuống 150 phiên trong khi Paid Search lên 144. Nên đẩy các truy vấn không thương hiệu lên trang 1.",
+  "en": "FeelDX GSC clicks rose from 92 to 94, impressions from 8,072 to 8,253, average position improved from 25.5 to 25.1, and page-one queries reached 151. GA4 logged 977 sessions (up from 952) with 12 key events at 30.5% engagement. Organic Search sessions dipped from 158 to 150 while Paid Search rose to 144. Push non-brand queries onto page one.",
+  "by": "Claude (Mac)",
+  "rating": "ok",
+  "verdict_vi": "SEO FeelDX tăng nhẹ và ổn định, phần lớn click vẫn đến từ thương hiệu.",
+  "verdict_en": "FeelDX SEO is edging up steadily, though most clicks still come from brand searches.",
+  "actions_vi": [
+   "Tối ưu nội dung cho truy vấn không thương hiệu như 'basis of schedule example' để giảm phụ thuộc 36 click thương hiệu.",
+   "Kiểm tra vì sao phiên Organic Search giảm từ 158 xuống 150.",
+   "Giữ 12 key event và thử CTA mới trên trang nhận Paid Search."
+  ],
+  "actions_en": [
+   "Optimise content for non-brand queries such as 'basis of schedule example' to reduce reliance on the 36 brand clicks.",
+   "Check why Organic Search sessions fell from 158 to 150.",
+   "Protect the 12 key events and test a new CTA on Paid Search landing pages."
+  ]
  },
  "notes": {
-  "vi": "clicks 92 → 94; impressions 8072 → 8253; ctr_pct 1.1 → 1.1; avg_position 25.5 → 25.1; queries_with_impressions 548 → 558; brand_clicks 36 → 36; page_one_queries 143 → 151; ga4_sessions 952 → 977.",
-  "en": "clicks 92 → 94; impressions 8072 → 8253; ctr_pct 1.1 → 1.1; avg_position 25.5 → 25.1; queries_with_impressions 548 → 558; brand_clicks 36 → 36; page_one_queries 143 → 151; ga4_sessions 952 → 977."
+  "vi": "Click GSC của FeelDX tăng từ 92 lên 94, hiển thị từ 8.072 lên 8.253, vị trí trung bình cải thiện từ 25,5 lên 25,1 và truy vấn trang 1 lên 151. GA4 có 977 phiên (tăng từ 952) với 12 key event, tương tác 30,5%. Organic Search giảm nhẹ từ 158 xuống 150 phiên trong khi Paid Search lên 144. Nên đẩy các truy vấn không thương hiệu lên trang 1.",
+  "en": "FeelDX GSC clicks rose from 92 to 94, impressions from 8,072 to 8,253, average position improved from 25.5 to 25.1, and page-one queries reached 151. GA4 logged 977 sessions (up from 952) with 12 key events at 30.5% engagement. Organic Search sessions dipped from 158 to 150 while Paid Search rose to 144. Push non-brand queries onto page one."
  },
  "commentary_input": {
   "report": "SEO (GSC + GA4)",

@@ -48,8 +48,8 @@
    "date": "2026-11-22",
    "data": "data/2026-11-22.json",
    "report": "archive/2026-11-22.html",
-   "label_vi": "Health 83 · 142 trang · TTFB TB 595 ms",
-   "label_en": "Health 83 · 142 pages · mean TTFB 595 ms"
+   "label_vi": "Sức khoẻ 83 đứng yên, nhiều ảnh thiếu alt",
+   "label_en": "Health flat at 83, many images missing alt"
   }
  ],
  "latest": "2026-11-22"
