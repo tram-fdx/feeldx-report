@@ -7,7 +7,7 @@
   "window28": "A rolling 28-day window snapshot. Cannot be summed (days overlap) — compare start vs end and draw the trend."
  },
  "kind": "rollup",
- "scanned_count": 7,
+ "scanned_count": 8,
  "scanned_days": [
   "2026-11-16",
   "2026-11-17",
@@ -15,14 +15,15 @@
   "2026-11-19",
   "2026-11-20",
   "2026-11-21",
-  "2026-11-22"
+  "2026-11-22",
+  "2026-11-23"
  ],
  "series": {
   "content": {
    "grain": "state",
    "label": "Content",
-   "measured": 7,
-   "of_days": 7,
+   "measured": 8,
+   "of_days": 8,
    "points": [
     {
      "d": "2026-11-16",
@@ -50,6 +51,10 @@
     },
     {
      "d": "2026-11-22",
+     "v": 98
+    },
+    {
+     "d": "2026-11-23",
      "v": 98
     }
    ]
@@ -57,8 +62,8 @@
   "crawlability": {
    "grain": "state",
    "label": "Crawlability",
-   "measured": 7,
-   "of_days": 7,
+   "measured": 8,
+   "of_days": 8,
    "points": [
     {
      "d": "2026-11-16",
@@ -87,14 +92,18 @@
     {
      "d": "2026-11-22",
      "v": 98
+    },
+    {
+     "d": "2026-11-23",
+     "v": 98
     }
    ]
   },
   "health": {
    "grain": "state",
    "label": "Health score",
-   "measured": 7,
-   "of_days": 7,
+   "measured": 8,
+   "of_days": 8,
    "points": [
     {
      "d": "2026-11-16",
@@ -123,14 +132,18 @@
     {
      "d": "2026-11-22",
      "v": 83
+    },
+    {
+     "d": "2026-11-23",
+     "v": 83
     }
    ]
   },
   "onpage": {
    "grain": "state",
    "label": "On-page / Meta",
-   "measured": 7,
-   "of_days": 7,
+   "measured": 8,
+   "of_days": 8,
    "points": [
     {
      "d": "2026-11-16",
@@ -159,14 +172,18 @@
     {
      "d": "2026-11-22",
      "v": 80
+    },
+    {
+     "d": "2026-11-23",
+     "v": 80
     }
    ]
   },
   "pages_crawled": {
    "grain": "state",
    "label": "Pages crawled",
-   "measured": 7,
-   "of_days": 7,
+   "measured": 8,
+   "of_days": 8,
    "points": [
     {
      "d": "2026-11-16",
@@ -195,14 +212,18 @@
     {
      "d": "2026-11-22",
      "v": 142
+    },
+    {
+     "d": "2026-11-23",
+     "v": 142
     }
    ]
   },
   "performance": {
    "grain": "state",
    "label": "Performance / TTFB",
-   "measured": 7,
-   "of_days": 7,
+   "measured": 8,
+   "of_days": 8,
    "points": [
     {
      "d": "2026-11-16",
@@ -231,14 +252,18 @@
     {
      "d": "2026-11-22",
      "v": 80
+    },
+    {
+     "d": "2026-11-23",
+     "v": 78
     }
    ]
   },
   "sitemap_urls": {
    "grain": "state",
    "label": "Sitemap — URLs",
-   "measured": 7,
-   "of_days": 7,
+   "measured": 8,
+   "of_days": 8,
    "points": [
     {
      "d": "2026-11-16",
@@ -267,14 +292,18 @@
     {
      "d": "2026-11-22",
      "v": 142
+    },
+    {
+     "d": "2026-11-23",
+     "v": 142
     }
    ]
   },
   "structured_data": {
    "grain": "state",
    "label": "Structured data",
-   "measured": 7,
-   "of_days": 7,
+   "measured": 8,
+   "of_days": 8,
    "points": [
     {
      "d": "2026-11-16",
@@ -303,14 +332,18 @@
     {
      "d": "2026-11-22",
      "v": 60
+    },
+    {
+     "d": "2026-11-23",
+     "v": 60
     }
    ]
   },
   "ttfb_mean_ms": {
    "grain": "state",
    "label": "TTFB mean (ms)",
-   "measured": 7,
-   "of_days": 7,
+   "measured": 8,
+   "of_days": 8,
    "points": [
     {
      "d": "2026-11-16",
@@ -339,14 +372,18 @@
     {
      "d": "2026-11-22",
      "v": 594.6
+    },
+    {
+     "d": "2026-11-23",
+     "v": 639.5
     }
    ]
   },
   "ttfb_median_ms": {
    "grain": "state",
    "label": "TTFB median (ms)",
-   "measured": 7,
-   "of_days": 7,
+   "measured": 8,
+   "of_days": 8,
    "points": [
     {
      "d": "2026-11-16",
@@ -375,14 +412,18 @@
     {
      "d": "2026-11-22",
      "v": 583
+    },
+    {
+     "d": "2026-11-23",
+     "v": 634
     }
    ]
   },
   "words_total": {
    "grain": "state",
    "label": "Total words",
-   "measured": 7,
-   "of_days": 7,
+   "measured": 8,
+   "of_days": 8,
    "points": [
     {
      "d": "2026-11-16",
@@ -410,6 +451,10 @@
     },
     {
      "d": "2026-11-22",
+     "v": 163957
+    },
+    {
+     "d": "2026-11-23",
      "v": 163957
     }
    ]

@@ -49,7 +49,14 @@
    "report": "archive/2026-11-22.html",
    "label_vi": "Click, phiên tăng nhẹ; organic search giảm chút",
    "label_en": "Clicks and sessions edge up; organic dips slightly"
+  },
+  {
+   "date": "2026-11-23",
+   "data": "data/2026-11-23.json",
+   "report": "archive/2026-11-23.html",
+   "label_vi": "GSC 95 click, 8,373 hiển thị · GA4 989 session",
+   "label_en": "GSC 95 clicks, 8,373 impressions · GA4 989 sessions"
   }
  ],
- "latest": "2026-11-22"
+ "latest": "2026-11-23"
 }
