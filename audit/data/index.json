@@ -55,8 +55,8 @@
    "date": "2026-11-23",
    "data": "data/2026-11-23.json",
    "report": "archive/2026-11-23.html",
-   "label_vi": "Health 83 · 142 trang · TTFB TB 640 ms",
-   "label_en": "Health 83 · 142 pages · mean TTFB 640 ms"
+   "label_vi": "Sức khoẻ 83, TTFB tăng lên 639 ms",
+   "label_en": "Health 83, TTFB up to 639 ms"
   }
  ],
  "latest": "2026-11-23"

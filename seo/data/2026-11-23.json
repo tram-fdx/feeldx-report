@@ -1795,13 +1795,26 @@
   }
  },
  "commentary": {
-  "vi": "clicks 94 → 95; impressions 8253 → 8373; ctr_pct 1.1 → 1.1; avg_position 25.1 → 24.7; queries_with_impressions 558 → 564; brand_clicks 36 → 36; page_one_queries 151 → 158; ga4_sessions 977 → 989.",
-  "en": "clicks 94 → 95; impressions 8253 → 8373; ctr_pct 1.1 → 1.1; avg_position 25.1 → 24.7; queries_with_impressions 558 → 564; brand_clicks 36 → 36; page_one_queries 151 → 158; ga4_sessions 977 → 989.",
-  "by": "template"
+  "vi": "feeldx.com có 95 click và 8.373 lượt hiển thị trên Google (28 ngày tới 21/11), tăng nhẹ so với 94 và 8.253. Vị trí trung bình cải thiện từ 25,1 lên 24,7 và số truy vấn trang 1 tăng từ 151 lên 158. CTR vẫn 1,1% và 36 trong 95 click là tìm thương hiệu; GA4 ghi nhận 989 phiên, 12 key events.",
+  "en": "feeldx.com earned 95 clicks and 8,373 Google impressions (28 days to 21 Nov), up slightly from 94 and 8,253. Average position improved from 25.1 to 24.7 and page-one queries rose from 151 to 158. CTR stays at 1.1% and 36 of 95 clicks are branded; GA4 logged 989 sessions and 12 key events.",
+  "by": "Claude (Mac)",
+  "rating": "ok",
+  "verdict_vi": "Tăng trưởng chậm nhưng đúng hướng; CTR 1,1% và phụ thuộc từ khoá thương hiệu là điểm yếu.",
+  "verdict_en": "Slow but positive growth; 1.1% CTR and reliance on branded queries are the weak spots.",
+  "actions_vi": [
+   "Viết lại title/meta cho các truy vấn trang 1 có nhiều hiển thị nhưng ít click để nâng CTR 1,1%.",
+   "Tối ưu trang cho truy vấn phi thương hiệu như \"basis of schedule example\".",
+   "Theo dõi 12 key events và gắn CTA rõ hơn trên trang nhận traffic Organic (149 phiên)."
+  ],
+  "actions_en": [
+   "Rewrite titles/metas for high-impression page-one queries to lift the 1.1% CTR.",
+   "Optimise pages for non-brand queries such as \"basis of schedule example\".",
+   "Track the 12 key events and add clearer CTAs on pages receiving Organic traffic (149 sessions)."
+  ]
  },
  "notes": {
-  "vi": "clicks 94 → 95; impressions 8253 → 8373; ctr_pct 1.1 → 1.1; avg_position 25.1 → 24.7; queries_with_impressions 558 → 564; brand_clicks 36 → 36; page_one_queries 151 → 158; ga4_sessions 977 → 989.",
-  "en": "clicks 94 → 95; impressions 8253 → 8373; ctr_pct 1.1 → 1.1; avg_position 25.1 → 24.7; queries_with_impressions 558 → 564; brand_clicks 36 → 36; page_one_queries 151 → 158; ga4_sessions 977 → 989."
+  "vi": "feeldx.com có 95 click và 8.373 lượt hiển thị trên Google (28 ngày tới 21/11), tăng nhẹ so với 94 và 8.253. Vị trí trung bình cải thiện từ 25,1 lên 24,7 và số truy vấn trang 1 tăng từ 151 lên 158. CTR vẫn 1,1% và 36 trong 95 click là tìm thương hiệu; GA4 ghi nhận 989 phiên, 12 key events.",
+  "en": "feeldx.com earned 95 clicks and 8,373 Google impressions (28 days to 21 Nov), up slightly from 94 and 8,253. Average position improved from 25.1 to 24.7 and page-one queries rose from 151 to 158. CTR stays at 1.1% and 36 of 95 clicks are branded; GA4 logged 989 sessions and 12 key events."
  },
  "commentary_input": {
   "report": "SEO (GSC + GA4)",

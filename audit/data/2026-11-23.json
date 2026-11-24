@@ -3810,9 +3810,22 @@
   }
  ],
  "commentary": {
-  "vi": "health 83 → 83; ttfb_mean 594.6 → 639.5; pages_crawled 142 → 142; words_total 163957 → 163957; orphans 0; thin_pages 7; images_without_alt 2920.",
-  "en": "health 83 → 83; ttfb_mean 594.6 → 639.5; pages_crawled 142 → 142; words_total 163957 → 163957; orphans 0; thin_pages 7; images_without_alt 2920.",
-  "by": "template"
+  "vi": "Điểm sức khoẻ feeldx.com giữ ở 83 với 142 trang được quét. Điểm hiệu năng giảm từ 80 xuống 78 do TTFB trung bình tăng từ 594,6 lên 639,5 ms. Vẫn còn 2.920 ảnh thiếu alt, 7 trang mỏng và /faq trả về 404; structured data chỉ đạt 60.",
+  "en": "feeldx.com health held at 83 across 142 crawled pages. Performance slipped from 80 to 78 as mean TTFB rose from 594.6 to 639.5 ms. There are still 2,920 images without alt text, 7 thin pages and /faq returns 404; structured data scores only 60.",
+  "by": "Claude (Mac)",
+  "rating": "ok",
+  "verdict_vi": "Ổn định nhưng chậm hơn: điểm chung không đổi, hiệu năng giảm nhẹ.",
+  "verdict_en": "Stable but slower: overall score unchanged, performance dipped slightly.",
+  "actions_vi": [
+   "Sửa hoặc chuyển hướng 301 trang /faq đang 404.",
+   "Bổ sung alt cho 2.920 ảnh, bắt đầu từ các trang dịch vụ.",
+   "Kiểm tra cache/hosting để đưa TTFB (639,5 ms) về dưới 500 ms."
+  ],
+  "actions_en": [
+   "Fix or 301-redirect the 404 /faq page.",
+   "Add alt text to the 2,920 images, starting with service pages.",
+   "Review caching/hosting to bring TTFB (639.5 ms) under 500 ms."
+  ]
  },
  "commentary_input": {
   "report": "Website technical SEO audit",
@@ -3858,5 +3871,5 @@
    }
   }
  },
- "score_rationale": "health 83 → 83; ttfb_mean 594.6 → 639.5; pages_crawled 142 → 142; words_total 163957 → 163957; orphans 0; thin_pages 7; images_without_alt 2920."
+ "score_rationale": "feeldx.com health held at 83 across 142 crawled pages. Performance slipped from 80 to 78 as mean TTFB rose from 594.6 to 639.5 ms. There are still 2,920 images without alt text, 7 thin pages and /faq returns 404; structured data scores only 60."
 }
