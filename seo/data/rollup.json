@@ -7,7 +7,7 @@
   "window28": "A rolling 28-day window snapshot. Cannot be summed (days overlap) — compare start vs end and draw the trend."
  },
  "kind": "rollup",
- "scanned_count": 10,
+ "scanned_count": 11,
  "scanned_days": [
   "2026-11-16",
   "2026-11-17",
@@ -17,6 +17,7 @@
   "2026-11-21",
   "2026-11-22",
   "2026-11-23",
+  "2026-11-24",
   "days",
   "series"
  ],
@@ -25,49 +26,49 @@
    "grain": "state",
    "label": "Ahrefs — AI citations",
    "measured": 0,
-   "of_days": 10,
+   "of_days": 11,
    "points": []
   },
   "ahrefs_backlinks": {
    "grain": "state",
    "label": "Ahrefs — backlinks",
    "measured": 0,
-   "of_days": 10,
+   "of_days": 11,
    "points": []
   },
   "ahrefs_cited_pages": {
    "grain": "state",
    "label": "Ahrefs — pages cited by AI",
    "measured": 0,
-   "of_days": 10,
+   "of_days": 11,
    "points": []
   },
   "ahrefs_dr": {
    "grain": "state",
    "label": "Ahrefs — Domain Rating",
    "measured": 0,
-   "of_days": 10,
+   "of_days": 11,
    "points": []
   },
   "ahrefs_org_keywords": {
    "grain": "state",
    "label": "Ahrefs — organic keywords",
    "measured": 0,
-   "of_days": 10,
+   "of_days": 11,
    "points": []
   },
   "ahrefs_refdomains": {
    "grain": "state",
    "label": "Ahrefs — referring domains",
    "measured": 0,
-   "of_days": 10,
+   "of_days": 11,
    "points": []
   },
   "ga4_engagement_pct": {
    "grain": "window28",
    "label": "GA4 — engagement %",
-   "measured": 8,
-   "of_days": 10,
+   "measured": 9,
+   "of_days": 11,
    "points": [
     {
      "d": "2026-11-16",
@@ -100,14 +101,18 @@
     {
      "d": "2026-11-23",
      "v": 30.64
+    },
+    {
+     "d": "2026-11-24",
+     "v": 30.89
     }
    ]
   },
   "ga4_key_events": {
    "grain": "window28",
    "label": "GA4 — key events",
-   "measured": 8,
-   "of_days": 10,
+   "measured": 9,
+   "of_days": 11,
    "points": [
     {
      "d": "2026-11-16",
@@ -140,14 +145,18 @@
     {
      "d": "2026-11-23",
      "v": 12
+    },
+    {
+     "d": "2026-11-24",
+     "v": 12
     }
    ]
   },
   "ga4_sessions": {
    "grain": "window28",
    "label": "GA4 — sessions",
-   "measured": 8,
-   "of_days": 10,
+   "measured": 9,
+   "of_days": 11,
    "points": [
     {
      "d": "2026-11-16",
@@ -180,14 +189,18 @@
     {
      "d": "2026-11-23",
      "v": 989
+    },
+    {
+     "d": "2026-11-24",
+     "v": 984
     }
    ]
   },
   "ga4_users": {
    "grain": "window28",
    "label": "GA4 — users",
-   "measured": 8,
-   "of_days": 10,
+   "measured": 9,
+   "of_days": 11,
    "points": [
     {
      "d": "2026-11-16",
@@ -220,14 +233,18 @@
     {
      "d": "2026-11-23",
      "v": 874
+    },
+    {
+     "d": "2026-11-24",
+     "v": 870
     }
    ]
   },
   "gsc_clicks": {
    "grain": "window28",
    "label": "GSC — clicks",
-   "measured": 8,
-   "of_days": 10,
+   "measured": 9,
+   "of_days": 11,
    "points": [
     {
      "d": "2026-11-16",
@@ -260,14 +277,18 @@
     {
      "d": "2026-11-23",
      "v": 95
+    },
+    {
+     "d": "2026-11-24",
+     "v": 95
     }
    ]
   },
   "gsc_ctr_pct": {
    "grain": "window28",
    "label": "GSC — CTR %",
-   "measured": 8,
-   "of_days": 10,
+   "measured": 9,
+   "of_days": 11,
    "points": [
     {
      "d": "2026-11-16",
@@ -300,14 +321,18 @@
     {
      "d": "2026-11-23",
      "v": 1.1
+    },
+    {
+     "d": "2026-11-24",
+     "v": 1.1
     }
    ]
   },
   "gsc_impressions": {
    "grain": "window28",
    "label": "GSC — impressions",
-   "measured": 8,
-   "of_days": 10,
+   "measured": 9,
+   "of_days": 11,
    "points": [
     {
      "d": "2026-11-16",
@@ -340,14 +365,18 @@
     {
      "d": "2026-11-23",
      "v": 8373
+    },
+    {
+     "d": "2026-11-24",
+     "v": 8427
     }
    ]
   },
   "gsc_position": {
    "grain": "window28",
    "label": "GSC — avg position",
-   "measured": 8,
-   "of_days": 10,
+   "measured": 9,
+   "of_days": 11,
    "points": [
     {
      "d": "2026-11-16",
@@ -380,14 +409,18 @@
     {
      "d": "2026-11-23",
      "v": 24.7
+    },
+    {
+     "d": "2026-11-24",
+     "v": 24.6
     }
    ]
   },
   "gsc_queries": {
    "grain": "window28",
    "label": "GSC — queries with impressions",
-   "measured": 8,
-   "of_days": 10,
+   "measured": 9,
+   "of_days": 11,
    "points": [
     {
      "d": "2026-11-16",
@@ -420,6 +453,10 @@
     {
      "d": "2026-11-23",
      "v": 564
+    },
+    {
+     "d": "2026-11-24",
+     "v": 567
     }
    ]
   },
@@ -427,14 +464,14 @@
    "grain": "state",
    "label": "Sitemap — URLs",
    "measured": 0,
-   "of_days": 10,
+   "of_days": 11,
    "points": []
   },
   "ttfb_mean_ms": {
    "grain": "state",
    "label": "TTFB mean (ms)",
-   "measured": 8,
-   "of_days": 10,
+   "measured": 9,
+   "of_days": 11,
    "points": [
     {
      "d": "2026-11-16",
@@ -467,6 +504,10 @@
     {
      "d": "2026-11-23",
      "v": 639.5
+    },
+    {
+     "d": "2026-11-24",
+     "v": 493.8
     }
    ]
   }

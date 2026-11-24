@@ -56,7 +56,14 @@
    "report": "archive/2026-11-23.html",
    "label_vi": "SEO tăng nhẹ, 158 truy vấn trang 1",
    "label_en": "SEO edging up, 158 page-one queries"
+  },
+  {
+   "date": "2026-11-24",
+   "data": "data/2026-11-24.json",
+   "report": "archive/2026-11-24.html",
+   "label_vi": "GSC 95 click, 8,427 hiển thị · GA4 984 session",
+   "label_en": "GSC 95 clicks, 8,427 impressions · GA4 984 sessions"
   }
  ],
- "latest": "2026-11-23"
+ "latest": "2026-11-24"
 }
