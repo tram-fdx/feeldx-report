@@ -63,7 +63,14 @@
    "report": "archive/2026-11-24.html",
    "label_vi": "Đi ngang, truy vấn trang 1 tăng lên 164",
    "label_en": "Flat, page-one queries up to 164"
+  },
+  {
+   "date": "2026-11-25",
+   "data": "data/2026-11-25.json",
+   "report": "archive/2026-11-25.html",
+   "label_vi": "GSC 91 click, 8,550 hiển thị · GA4 1006 session",
+   "label_en": "GSC 91 clicks, 8,550 impressions · GA4 1006 sessions"
   }
  ],
- "latest": "2026-11-24"
+ "latest": "2026-11-25"
 }

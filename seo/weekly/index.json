@@ -2,6 +2,22 @@
  "kind": "weekly",
  "weeks": [
   {
+   "id": "2026-11-20",
+   "vi": "14–20/11/2026",
+   "en": "14 – 20 Nov 2026",
+   "start": "2026-11-14",
+   "end": "2026-11-20",
+   "compare_start": "2026-11-07",
+   "compare_end": "2026-11-13",
+   "scanned_on": "2026-11-25",
+   "sources": [
+    "Google Search Console API",
+    "GA4 Data API"
+   ],
+   "notes_vi": "clicks 32 → 17; impressions 2223 → 2488; ctr_pct 1.4 → 0.7; avg_position 23.1 → 24.0; queries_with_impressions 303 → 342; brand_clicks 14 → 6; page_one_queries 84 → 83; ga4_sessions 270 → 255.",
+   "notes_en": "clicks 32 → 17; impressions 2223 → 2488; ctr_pct 1.4 → 0.7; avg_position 23.1 → 24.0; queries_with_impressions 303 → 342; brand_clicks 14 → 6; page_one_queries 84 → 83; ga4_sessions 270 → 255."
+  },
+  {
    "id": "2026-11-13",
    "vi": "7–13/11/2026",
    "en": "7 – 13 Nov 2026",
@@ -18,5 +34,5 @@
    "notes_en": "Week 7–13 Nov: 32 clicks (from 26), 1.4% CTR (from 1.1%), and average position improved from 24.9 to 23.1. GA4 sessions rose from 216 to 270, but key events fell from 5 to 1 and engagement from 33.33% to 25.19%."
   }
  ],
- "latest": "2026-11-13"
+ "latest": "2026-11-20"
 }
