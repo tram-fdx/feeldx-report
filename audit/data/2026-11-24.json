@@ -3810,9 +3810,22 @@
   }
  ],
  "commentary": {
-  "vi": "health 83 → 84; ttfb_mean 639.5 → 493.8; pages_crawled 142 → 142; words_total 163957 → 163957; orphans 0; thin_pages 7; images_without_alt 2920.",
-  "en": "health 83 → 84; ttfb_mean 639.5 → 493.8; pages_crawled 142 → 142; words_total 163957 → 163957; orphans 0; thin_pages 7; images_without_alt 2920.",
-  "by": "template"
+  "vi": "Điểm sức khoẻ tăng từ 83 lên 84 nhờ hiệu năng lên 85 (trước 78) và TTFB giảm từ 639,5 xuống 493,8 ms. Còn 2.920 ảnh thiếu alt, /faq trả 404 và dữ liệu cấu trúc chỉ đạt 60.",
+  "en": "Health rose from 83 to 84 as performance improved to 85 (from 78) and TTFB fell from 639.5 to 493.8 ms. 2,920 images still lack alt text, /faq returns 404, and structured data scores only 60.",
+  "by": "Claude (Mac)",
+  "rating": "ok",
+  "verdict_vi": "Cải thiện nhẹ về tốc độ, các lỗi lớn chưa được xử lý.",
+  "verdict_en": "Slight speed gains; the big issues remain unfixed.",
+  "actions_vi": [
+   "Thêm alt cho 2.920 ảnh, bắt đầu từ trang dịch vụ.",
+   "Khôi phục /faq hoặc redirect 301 tới trang phù hợp.",
+   "Bổ sung schema để nâng điểm dữ liệu cấu trúc từ 60."
+  ],
+  "actions_en": [
+   "Add alt text to the 2,920 images, starting with service pages.",
+   "Restore /faq or 301 it to a relevant page.",
+   "Add schema to lift the structured-data score from 60."
+  ]
  },
  "commentary_input": {
   "report": "Website technical SEO audit",
@@ -3858,5 +3871,5 @@
    }
   }
  },
- "score_rationale": "health 83 → 84; ttfb_mean 639.5 → 493.8; pages_crawled 142 → 142; words_total 163957 → 163957; orphans 0; thin_pages 7; images_without_alt 2920."
+ "score_rationale": "Health rose from 83 to 84 as performance improved to 85 (from 78) and TTFB fell from 639.5 to 493.8 ms. 2,920 images still lack alt text, /faq returns 404, and structured data scores only 60."
 }

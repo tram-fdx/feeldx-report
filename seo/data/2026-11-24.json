@@ -1795,13 +1795,24 @@
   }
  },
  "commentary": {
-  "vi": "clicks 95 → 95; impressions 8373 → 8427; ctr_pct 1.1 → 1.1; avg_position 24.7 → 24.6; queries_with_impressions 564 → 567; brand_clicks 36 → 36; page_one_queries 158 → 164; ga4_sessions 989 → 984.",
-  "en": "clicks 95 → 95; impressions 8373 → 8427; ctr_pct 1.1 → 1.1; avg_position 24.7 → 24.6; queries_with_impressions 564 → 567; brand_clicks 36 → 36; page_one_queries 158 → 164; ga4_sessions 989 → 984.",
-  "by": "template"
+  "vi": "Click giữ 95, hiển thị tăng nhẹ từ 8.373 lên 8.427 và truy vấn trang 1 tăng từ 158 lên 164. GA4 có 984 phiên (trước 989) và 12 sự kiện chính; Paid Search mang 147 phiên. Vị trí trung bình 24,6 vẫn thấp.",
+  "en": "Clicks held at 95, impressions rose slightly from 8,373 to 8,427, and page-one queries grew from 158 to 164. GA4 shows 984 sessions (from 989) and 12 key events; Paid Search brought 147 sessions. Average position of 24.6 is still low.",
+  "by": "Claude (Mac)",
+  "rating": "ok",
+  "verdict_vi": "Ổn định, phần lớn click vẫn đến từ tên thương hiệu.",
+  "verdict_en": "Stable; most clicks still come from brand searches.",
+  "actions_vi": [
+   "Tối ưu trang dịch vụ cho 'project controls consultants Melbourne' để giảm phụ thuộc 36 click thương hiệu.",
+   "Đẩy các truy vấn gần trang 1 (như 'basis of schedule example') bằng bài chuyên sâu."
+  ],
+  "actions_en": [
+   "Optimise a service page for 'project controls consultants Melbourne' to reduce reliance on 36 brand clicks.",
+   "Push near-page-one queries (e.g. 'basis of schedule example') with in-depth articles."
+  ]
  },
  "notes": {
-  "vi": "clicks 95 → 95; impressions 8373 → 8427; ctr_pct 1.1 → 1.1; avg_position 24.7 → 24.6; queries_with_impressions 564 → 567; brand_clicks 36 → 36; page_one_queries 158 → 164; ga4_sessions 989 → 984.",
-  "en": "clicks 95 → 95; impressions 8373 → 8427; ctr_pct 1.1 → 1.1; avg_position 24.7 → 24.6; queries_with_impressions 564 → 567; brand_clicks 36 → 36; page_one_queries 158 → 164; ga4_sessions 989 → 984."
+  "vi": "Click giữ 95, hiển thị tăng nhẹ từ 8.373 lên 8.427 và truy vấn trang 1 tăng từ 158 lên 164. GA4 có 984 phiên (trước 989) và 12 sự kiện chính; Paid Search mang 147 phiên. Vị trí trung bình 24,6 vẫn thấp.",
+  "en": "Clicks held at 95, impressions rose slightly from 8,373 to 8,427, and page-one queries grew from 158 to 164. GA4 shows 984 sessions (from 989) and 12 key events; Paid Search brought 147 sessions. Average position of 24.6 is still low."
  },
  "commentary_input": {
   "report": "SEO (GSC + GA4)",
