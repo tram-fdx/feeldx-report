@@ -69,8 +69,8 @@
    "date": "2026-11-25",
    "data": "data/2026-11-25.json",
    "report": "archive/2026-11-25.html",
-   "label_vi": "Health 82 · 142 trang · TTFB TB 654 ms",
-   "label_en": "Health 82 · 142 pages · mean TTFB 654 ms"
+   "label_vi": "Sức khoẻ giảm còn 82, TTFB chậm lên 654 ms",
+   "label_en": "Health drops to 82, TTFB slows to 654 ms"
   }
  ],
  "latest": "2026-11-25"

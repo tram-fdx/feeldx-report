@@ -14,8 +14,8 @@
     "Google Search Console API",
     "GA4 Data API"
    ],
-   "notes_vi": "clicks 32 → 17; impressions 2223 → 2488; ctr_pct 1.4 → 0.7; avg_position 23.1 → 24.0; queries_with_impressions 303 → 342; brand_clicks 14 → 6; page_one_queries 84 → 83; ga4_sessions 270 → 255.",
-   "notes_en": "clicks 32 → 17; impressions 2223 → 2488; ctr_pct 1.4 → 0.7; avg_position 23.1 → 24.0; queries_with_impressions 303 → 342; brand_clicks 14 → 6; page_one_queries 84 → 83; ga4_sessions 270 → 255."
+   "notes_vi": "Tuần 14–20/11, click FeelDX giảm từ 32 xuống 17 và CTR từ 1,4% xuống 0,7%, chủ yếu vì click thương hiệu giảm từ 14 xuống 6. Hiển thị lại tăng từ 2.223 lên 2.488. GA4 có 255 phiên, tỷ lệ tương tác tăng từ 25,19% lên 34,51% và key event từ 1 lên 4.",
+   "notes_en": "For 14–20 Nov, FeelDX clicks fell from 32 to 17 and CTR from 1.4% to 0.7%, mainly as branded clicks dropped from 14 to 6. Impressions rose from 2,223 to 2,488. GA4 had 255 sessions, with engagement rate up from 25.19% to 34.51% and key events from 1 to 4."
   },
   {
    "id": "2026-11-13",

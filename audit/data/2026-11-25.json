@@ -3810,9 +3810,22 @@
   }
  ],
  "commentary": {
-  "vi": "health 84 → 82; ttfb_mean 493.8 → 654.5; pages_crawled 142 → 142; words_total 163957 → 163957; orphans 0; thin_pages 7; images_without_alt 2920.",
-  "en": "health 84 → 82; ttfb_mean 493.8 → 654.5; pages_crawled 142 → 142; words_total 163957 → 163957; orphans 0; thin_pages 7; images_without_alt 2920.",
-  "by": "template"
+  "vi": "Điểm sức khoẻ FeelDX giảm từ 84 xuống 82 do hiệu năng tụt từ 85 xuống 77; TTFB trung bình tăng từ 493,8 lên 654,5 ms. Structured data vẫn chỉ 60 và 2.920 ảnh thiếu alt. Trang /faq trả về 404. Ưu tiên: kiểm tra hosting/cache để kéo TTFB xuống.",
+  "en": "FeelDX health fell from 84 to 82 as performance dropped from 85 to 77; mean TTFB rose from 493.8 to 654.5 ms. Structured data remains at 60 and 2,920 images lack alt text. The /faq page returns 404. Priority: check hosting/caching to bring TTFB down.",
+  "by": "Claude (Mac)",
+  "rating": "bad",
+  "verdict_vi": "Website FeelDX xấu đi vì tốc độ phản hồi chậm hơn rõ rệt.",
+  "verdict_en": "The FeelDX site worsened, driven by noticeably slower server response.",
+  "actions_vi": [
+   "Kiểm tra cache/hosting vì TTFB tăng lên 654,5 ms.",
+   "Khôi phục hoặc chuyển hướng /faq (404).",
+   "Thêm alt cho 2.920 ảnh, bắt đầu từ các trang dịch vụ."
+  ],
+  "actions_en": [
+   "Check caching/hosting since TTFB rose to 654.5 ms.",
+   "Restore or redirect /faq (404).",
+   "Add alt text to the 2,920 images, starting with service pages."
+  ]
  },
  "commentary_input": {
   "report": "Website technical SEO audit",
@@ -3858,5 +3871,5 @@
    }
   }
  },
- "score_rationale": "health 84 → 82; ttfb_mean 493.8 → 654.5; pages_crawled 142 → 142; words_total 163957 → 163957; orphans 0; thin_pages 7; images_without_alt 2920."
+ "score_rationale": "FeelDX health fell from 84 to 82 as performance dropped from 85 to 77; mean TTFB rose from 493.8 to 654.5 ms. Structured data remains at 60 and 2,920 images lack alt text. The /faq page returns 404. Priority: check hosting/caching to bring TTFB down."
 }
