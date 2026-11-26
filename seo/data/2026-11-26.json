@@ -1,0 +1,1931 @@
+{
+ "date": "2026-11-26",
+ "site": "feeldx.com",
+ "provenance": "Automated: Google Search Console API + GA4 Data API (GitHub Actions, pipeline v1).",
+ "windows": {
+  "gsc": "2026-10-28 → 2026-11-24",
+  "ga4": "2026-10-29 → 2026-11-25"
+ },
+ "gsc_28d": {
+  "clicks": 92,
+  "impressions": 8683,
+  "ctr_pct": 1.1,
+  "avg_position": 23.8,
+  "queries_with_impressions": 578,
+  "brand_clicks": 35,
+  "brand_clicks_share_pct": 38.0,
+  "clicked_queries": [
+   {
+    "q": "feeldx",
+    "clicks": 27,
+    "impressions": 66,
+    "ctr_pct": 40.91,
+    "position": 1.1
+   },
+   {
+    "q": "feeldx pty ltd",
+    "clicks": 6,
+    "impressions": 16,
+    "ctr_pct": 37.5,
+    "position": 1
+   },
+   {
+    "q": "feel dx",
+    "clicks": 2,
+    "impressions": 12,
+    "ctr_pct": 16.67,
+    "position": 1
+   },
+   {
+    "q": "3d visualisation",
+    "clicks": 1,
+    "impressions": 1,
+    "ctr_pct": 100,
+    "position": 20
+   },
+   {
+    "q": "basis of schedule example",
+    "clicks": 1,
+    "impressions": 7,
+    "ctr_pct": 14.29,
+    "position": 3.3
+   },
+   {
+    "q": "construction project life cycle",
+    "clicks": 1,
+    "impressions": 11,
+    "ctr_pct": 9.09,
+    "position": 63.5
+   },
+   {
+    "q": "project control manager",
+    "clicks": 1,
+    "impressions": 4,
+    "ctr_pct": 25.0,
+    "position": 8.5
+   },
+   {
+    "q": "what is project control",
+    "clicks": 1,
+    "impressions": 31,
+    "ctr_pct": 3.23,
+    "position": 73.5
+   }
+  ],
+  "top_queries": [
+   {
+    "q": "3d rendering",
+    "clicks": 0,
+    "impressions": 422,
+    "ctr_pct": 0,
+    "position": 42.3
+   },
+   {
+    "q": "4d coordination hyperscale construction",
+    "clicks": 0,
+    "impressions": 300,
+    "ctr_pct": 0,
+    "position": 51.2
+   },
+   {
+    "q": "5d bim",
+    "clicks": 0,
+    "impressions": 138,
+    "ctr_pct": 0,
+    "position": 30.5
+   },
+   {
+    "q": "3d model rendering",
+    "clicks": 0,
+    "impressions": 132,
+    "ctr_pct": 0,
+    "position": 23.4
+   },
+   {
+    "q": "3d render",
+    "clicks": 0,
+    "impressions": 116,
+    "ctr_pct": 0,
+    "position": 41.9
+   },
+   {
+    "q": "defense bim software",
+    "clicks": 0,
+    "impressions": 112,
+    "ctr_pct": 0,
+    "position": 41.6
+   },
+   {
+    "q": "military construction bim software",
+    "clicks": 0,
+    "impressions": 90,
+    "ctr_pct": 0,
+    "position": 42.4
+   },
+   {
+    "q": "construction project control",
+    "clicks": 0,
+    "impressions": 82,
+    "ctr_pct": 0,
+    "position": 41.3
+   },
+   {
+    "q": "5d bim software",
+    "clicks": 0,
+    "impressions": 79,
+    "ctr_pct": 0,
+    "position": 18.3
+   },
+   {
+    "q": "what is high-fidelity 3d rendering",
+    "clicks": 0,
+    "impressions": 79,
+    "ctr_pct": 0,
+    "position": 4.5
+   },
+   {
+    "q": "defense bim validation",
+    "clicks": 0,
+    "impressions": 75,
+    "ctr_pct": 0,
+    "position": 38.3
+   },
+   {
+    "q": "feeldx",
+    "clicks": 27,
+    "impressions": 66,
+    "ctr_pct": 40.91,
+    "position": 1.1
+   },
+   {
+    "q": "bim 5d software",
+    "clicks": 0,
+    "impressions": 61,
+    "ctr_pct": 0,
+    "position": 17.8
+   },
+   {
+    "q": "bim 5d",
+    "clicks": 0,
+    "impressions": 60,
+    "ctr_pct": 0,
+    "position": 27.7
+   },
+   {
+    "q": "construction project controls",
+    "clicks": 0,
+    "impressions": 56,
+    "ctr_pct": 0,
+    "position": 40.9
+   },
+   {
+    "q": "4d bim",
+    "clicks": 0,
+    "impressions": 55,
+    "ctr_pct": 0,
+    "position": 40.9
+   },
+   {
+    "q": "5d bim services",
+    "clicks": 0,
+    "impressions": 55,
+    "ctr_pct": 0,
+    "position": 56.9
+   },
+   {
+    "q": "project control plan",
+    "clicks": 0,
+    "impressions": 55,
+    "ctr_pct": 0,
+    "position": 20.4
+   },
+   {
+    "q": "apa itu pcm dalam proyek",
+    "clicks": 0,
+    "impressions": 54,
+    "ctr_pct": 0,
+    "position": 10.1
+   },
+   {
+    "q": "project control",
+    "clicks": 0,
+    "impressions": 48,
+    "ctr_pct": 0,
+    "position": 56.1
+   },
+   {
+    "q": "rendering 3d",
+    "clicks": 0,
+    "impressions": 48,
+    "ctr_pct": 0,
+    "position": 23.9
+   },
+   {
+    "q": "project controls",
+    "clicks": 0,
+    "impressions": 47,
+    "ctr_pct": 0,
+    "position": 32.5
+   },
+   {
+    "q": "extension of time claim analysis",
+    "clicks": 0,
+    "impressions": 41,
+    "ctr_pct": 0,
+    "position": 16.4
+   },
+   {
+    "q": "pcm proyek adalah",
+    "clicks": 0,
+    "impressions": 41,
+    "ctr_pct": 0,
+    "position": 11.5
+   },
+   {
+    "q": "3d rendering techniques",
+    "clicks": 0,
+    "impressions": 39,
+    "ctr_pct": 0,
+    "position": 25.3
+   }
+  ],
+  "top_pages": [
+   {
+    "page": "/",
+    "clicks": 55,
+    "impressions": 334,
+    "ctr_pct": 16.47,
+    "position": 3.6
+   },
+   {
+    "page": "/about-us",
+    "clicks": 7,
+    "impressions": 165,
+    "ctr_pct": 4.24,
+    "position": 2.3
+   },
+   {
+    "page": "/news/baseline-vs-current-programme-how-builders-manage-change-without-losing-the-evidence",
+    "clicks": 3,
+    "impressions": 179,
+    "ctr_pct": 1.68,
+    "position": 4.5
+   },
+   {
+    "page": "/services",
+    "clicks": 3,
+    "impressions": 160,
+    "ctr_pct": 1.88,
+    "position": 2.9
+   },
+   {
+    "page": "/news/4d-tender-animation-show-assessors-how-you-will-build",
+    "clicks": 2,
+    "impressions": 85,
+    "ctr_pct": 2.35,
+    "position": 7.1
+   },
+   {
+    "page": "/news/resource-load-histogram-prove-your-tender-programme-is-buildable",
+    "clicks": 2,
+    "impressions": 12,
+    "ctr_pct": 16.67,
+    "position": 3.8
+   },
+   {
+    "page": "/news/visualising-infrastructure-how-4d-bim-is-changing-road-and-rail-construction-in-australia",
+    "clicks": 2,
+    "impressions": 14,
+    "ctr_pct": 14.29,
+    "position": 6.3
+   },
+   {
+    "page": "/news/4d-construction-sequencing-in-sydney-a-2026-guide-for-tfnsw-contractors",
+    "clicks": 1,
+    "impressions": 64,
+    "ctr_pct": 1.56,
+    "position": 7.0
+   },
+   {
+    "page": "/news/4d-methodology-the-future-of-pre-construction-planning",
+    "clicks": 1,
+    "impressions": 14,
+    "ctr_pct": 7.14,
+    "position": 13.4
+   },
+   {
+    "page": "/news/basis-of-schedule-what-to-include-so-assessors-trust-your-dates",
+    "clicks": 1,
+    "impressions": 148,
+    "ctr_pct": 0.68,
+    "position": 5.5
+   },
+   {
+    "page": "/news/delving-into-construction-project-life-cycle-phases",
+    "clicks": 1,
+    "impressions": 281,
+    "ctr_pct": 0.36,
+    "position": 52.1
+   },
+   {
+    "page": "/news/float-in-a-construction-programme-who-owns-it",
+    "clicks": 1,
+    "impressions": 216,
+    "ctr_pct": 0.46,
+    "position": 10.6
+   },
+   {
+    "page": "/news/hard-constraints-in-a-construction-programme-why-they-break-your-dates",
+    "clicks": 1,
+    "impressions": 72,
+    "ctr_pct": 1.39,
+    "position": 5.8
+   },
+   {
+    "page": "/news/mastering-3d-model-rendering-techniques-a-comprehensive-guide",
+    "clicks": 1,
+    "impressions": 264,
+    "ctr_pct": 0.38,
+    "position": 16.9
+   },
+   {
+    "page": "/news/missile-factories-and-drone-facilities-australias-high-tech-defence-build-up",
+    "clicks": 1,
+    "impressions": 43,
+    "ctr_pct": 2.33,
+    "position": 11.4
+   },
+   {
+    "page": "/news/outsourcing-digital-engineering-the-complete-guide-to-4d-and-5d-bim-services-in-australia",
+    "clicks": 1,
+    "impressions": 39,
+    "ctr_pct": 2.56,
+    "position": 11.2
+   },
+   {
+    "page": "/news/planned-vs-actual-how-to-read-a-construction-programme-update",
+    "clicks": 1,
+    "impressions": 129,
+    "ctr_pct": 0.78,
+    "position": 4.7
+   },
+   {
+    "page": "/news/tender-programme-vs-contract-programme-what-changes-after-award",
+    "clicks": 1,
+    "impressions": 74,
+    "ctr_pct": 1.35,
+    "position": 4.3
+   },
+   {
+    "page": "/news/the-art-of-rendering-a-3d-model",
+    "clicks": 1,
+    "impressions": 1534,
+    "ctr_pct": 0.07,
+    "position": 30.5
+   },
+   {
+    "page": "/news/the-critical-role-of-project-controls-manager-in-construction",
+    "clicks": 1,
+    "impressions": 766,
+    "ctr_pct": 0.13,
+    "position": 18.9
+   },
+   {
+    "page": "/news/the-evolution-of-3d-architectural-visualisation",
+    "clicks": 1,
+    "impressions": 22,
+    "ctr_pct": 4.55,
+    "position": 21.0
+   },
+   {
+    "page": "/news/the-new-role-of-the-digital-project-controller-in-australian-construction",
+    "clicks": 1,
+    "impressions": 11,
+    "ctr_pct": 9.09,
+    "position": 5.5
+   },
+   {
+    "page": "/news/understanding-the-components-of-a-project-control-plan",
+    "clicks": 1,
+    "impressions": 537,
+    "ctr_pct": 0.19,
+    "position": 42.0
+   },
+   {
+    "page": "/news/work-breakdown-structure-in-construction-get-it-right-before-the-detail",
+    "clicks": 1,
+    "impressions": 276,
+    "ctr_pct": 0.36,
+    "position": 8.2
+   },
+   {
+    "page": "/studio/cdu-blue-8-centre-for-better-health-futures",
+    "clicks": 1,
+    "impressions": 15,
+    "ctr_pct": 6.67,
+    "position": 4.8
+   }
+  ],
+  "page_one_queries": 179,
+  "top3_queries": 39,
+  "daily": [
+   {
+    "d": "2026-10-28",
+    "clicks": 7,
+    "impressions": 229
+   },
+   {
+    "d": "2026-10-29",
+    "clicks": 4,
+    "impressions": 273
+   },
+   {
+    "d": "2026-10-30",
+    "clicks": 2,
+    "impressions": 234
+   },
+   {
+    "d": "2026-10-31",
+    "clicks": 2,
+    "impressions": 228
+   },
+   {
+    "d": "2026-11-01",
+    "clicks": 6,
+    "impressions": 320
+   },
+   {
+    "d": "2026-11-02",
+    "clicks": 0,
+    "impressions": 355
+   },
+   {
+    "d": "2026-11-03",
+    "clicks": 4,
+    "impressions": 491
+   },
+   {
+    "d": "2026-11-04",
+    "clicks": 7,
+    "impressions": 408
+   },
+   {
+    "d": "2026-11-05",
+    "clicks": 4,
+    "impressions": 260
+   },
+   {
+    "d": "2026-11-06",
+    "clicks": 3,
+    "impressions": 239
+   },
+   {
+    "d": "2026-11-07",
+    "clicks": 2,
+    "impressions": 233
+   },
+   {
+    "d": "2026-11-08",
+    "clicks": 5,
+    "impressions": 291
+   },
+   {
+    "d": "2026-11-09",
+    "clicks": 8,
+    "impressions": 385
+   },
+   {
+    "d": "2026-11-10",
+    "clicks": 4,
+    "impressions": 379
+   },
+   {
+    "d": "2026-11-11",
+    "clicks": 8,
+    "impressions": 344
+   },
+   {
+    "d": "2026-11-12",
+    "clicks": 2,
+    "impressions": 300
+   },
+   {
+    "d": "2026-11-13",
+    "clicks": 3,
+    "impressions": 291
+   },
+   {
+    "d": "2026-11-14",
+    "clicks": 0,
+    "impressions": 277
+   },
+   {
+    "d": "2026-11-15",
+    "clicks": 3,
+    "impressions": 368
+   },
+   {
+    "d": "2026-11-16",
+    "clicks": 4,
+    "impressions": 393
+   },
+   {
+    "d": "2026-11-17",
+    "clicks": 5,
+    "impressions": 510
+   },
+   {
+    "d": "2026-11-18",
+    "clicks": 1,
+    "impressions": 376
+   },
+   {
+    "d": "2026-11-19",
+    "clicks": 3,
+    "impressions": 319
+   },
+   {
+    "d": "2026-11-20",
+    "clicks": 1,
+    "impressions": 245
+   },
+   {
+    "d": "2026-11-21",
+    "clicks": 0,
+    "impressions": 207
+   },
+   {
+    "d": "2026-11-22",
+    "clicks": 2,
+    "impressions": 338
+   },
+   {
+    "d": "2026-11-23",
+    "clicks": 2,
+    "impressions": 390
+   }
+  ]
+ },
+ "gsc_rank_movement": {
+  "tracked": {
+   "feeldx": {
+    "clicks": 27,
+    "impressions": 66,
+    "ctr_pct": 40.91,
+    "position": 1.1
+   },
+   "project controls consultants melbourne": null,
+   "construction project controls": {
+    "clicks": 0,
+    "impressions": 56,
+    "ctr_pct": 0,
+    "position": 40.9
+   },
+   "construction scheduling consultants": null,
+   "primavera p6 consultant": null,
+   "construction programming services": null,
+   "delay analysis construction": null,
+   "project controls australia": null
+  }
+ },
+ "ga4_28d": {
+  "sessions": 1022,
+  "engaged_sessions": 302,
+  "engagement_rate_pct": 29.55,
+  "key_events": 11,
+  "session_key_event_rate_pct": 1.08,
+  "users": 914,
+  "new_users": 896,
+  "returning_users": 45,
+  "avg_engagement_time": "0m 14s",
+  "events_per_session": 4.12,
+  "total_events": 4215,
+  "channel_breakdown": [
+   {
+    "name": "Direct",
+    "sessions": 566,
+    "engaged_sessions": 86,
+    "engagement_rate_pct": 15.2,
+    "key_events": 2
+   },
+   {
+    "name": "Organic Search",
+    "sessions": 144,
+    "engaged_sessions": 83,
+    "engagement_rate_pct": 57.6,
+    "key_events": 3
+   },
+   {
+    "name": "Paid Search",
+    "sessions": 143,
+    "engaged_sessions": 75,
+    "engagement_rate_pct": 52.4,
+    "key_events": 0
+   },
+   {
+    "name": "Display",
+    "sessions": 79,
+    "engaged_sessions": 26,
+    "engagement_rate_pct": 32.9,
+    "key_events": 0
+   },
+   {
+    "name": "Paid Video",
+    "sessions": 32,
+    "engaged_sessions": 7,
+    "engagement_rate_pct": 21.9,
+    "key_events": 0
+   },
+   {
+    "name": "Referral",
+    "sessions": 26,
+    "engaged_sessions": 14,
+    "engagement_rate_pct": 53.8,
+    "key_events": 6
+   },
+   {
+    "name": "Organic Social",
+    "sessions": 16,
+    "engaged_sessions": 7,
+    "engagement_rate_pct": 43.8,
+    "key_events": 0
+   },
+   {
+    "name": "Cross-network",
+    "sessions": 13,
+    "engaged_sessions": 4,
+    "engagement_rate_pct": 30.8,
+    "key_events": 0
+   },
+   {
+    "name": "Unassigned",
+    "sessions": 4,
+    "engaged_sessions": 0,
+    "engagement_rate_pct": 0.0,
+    "key_events": 0
+   }
+  ],
+  "source_medium_top": [
+   {
+    "name": "(direct) / (none)",
+    "sessions": 566,
+    "engaged_sessions": 86,
+    "engagement_rate_pct": 15.2,
+    "key_events": 2
+   },
+   {
+    "name": "google / cpc",
+    "sessions": 254,
+    "engaged_sessions": 108,
+    "engagement_rate_pct": 42.5,
+    "key_events": 0
+   },
+   {
+    "name": "google / organic",
+    "sessions": 125,
+    "engaged_sessions": 71,
+    "engagement_rate_pct": 56.8,
+    "key_events": 3
+   },
+   {
+    "name": "bing / organic",
+    "sessions": 19,
+    "engaged_sessions": 12,
+    "engagement_rate_pct": 63.2,
+    "key_events": 0
+   },
+   {
+    "name": "(data not available) / (data not available)",
+    "sessions": 13,
+    "engaged_sessions": 4,
+    "engagement_rate_pct": 30.8,
+    "key_events": 0
+   },
+   {
+    "name": "topcv.vn / referral",
+    "sessions": 11,
+    "engaged_sessions": 6,
+    "engagement_rate_pct": 54.5,
+    "key_events": 0
+   },
+   {
+    "name": "linkedin / social",
+    "sessions": 5,
+    "engaged_sessions": 1,
+    "engagement_rate_pct": 20.0,
+    "key_events": 0
+   },
+   {
+    "name": "(not set) / (not set)",
+    "sessions": 4,
+    "engaged_sessions": 0,
+    "engagement_rate_pct": 0.0,
+    "key_events": 0
+   },
+   {
+    "name": "aocr.org / referral",
+    "sessions": 3,
+    "engaged_sessions": 0,
+    "engagement_rate_pct": 0.0,
+    "key_events": 0
+   },
+   {
+    "name": "facebook / social",
+    "sessions": 3,
+    "engaged_sessions": 0,
+    "engagement_rate_pct": 0.0,
+    "key_events": 0
+   },
+   {
+    "name": "teams.public.onecdn.static.microsoft / referral",
+    "sessions": 3,
+    "engaged_sessions": 2,
+    "engagement_rate_pct": 66.7,
+    "key_events": 0
+   },
+   {
+    "name": "facebook.com / referral",
+    "sessions": 2,
+    "engaged_sessions": 1,
+    "engagement_rate_pct": 50.0,
+    "key_events": 0
+   }
+  ],
+  "ai_assistant_channel": {
+   "sessions": 0,
+   "share_of_sessions_pct": 0.0,
+   "engaged_sessions": 0,
+   "engagement_rate_pct": null,
+   "key_events": 0,
+   "sources": []
+  },
+  "daily": [
+   {
+    "d": "2026-10-29",
+    "sessions": 28,
+    "users": 25
+   },
+   {
+    "d": "2026-10-30",
+    "sessions": 26,
+    "users": 26
+   },
+   {
+    "d": "2026-10-31",
+    "sessions": 10,
+    "users": 10
+   },
+   {
+    "d": "2026-11-01",
+    "sessions": 22,
+    "users": 22
+   },
+   {
+    "d": "2026-11-02",
+    "sessions": 48,
+    "users": 46
+   },
+   {
+    "d": "2026-11-03",
+    "sessions": 33,
+    "users": 33
+   },
+   {
+    "d": "2026-11-04",
+    "sessions": 26,
+    "users": 25
+   },
+   {
+    "d": "2026-11-05",
+    "sessions": 34,
+    "users": 30
+   },
+   {
+    "d": "2026-11-06",
+    "sessions": 46,
+    "users": 38
+   },
+   {
+    "d": "2026-11-07",
+    "sessions": 40,
+    "users": 37
+   },
+   {
+    "d": "2026-11-08",
+    "sessions": 28,
+    "users": 28
+   },
+   {
+    "d": "2026-11-09",
+    "sessions": 47,
+    "users": 45
+   },
+   {
+    "d": "2026-11-10",
+    "sessions": 40,
+    "users": 35
+   },
+   {
+    "d": "2026-11-11",
+    "sessions": 48,
+    "users": 47
+   },
+   {
+    "d": "2026-11-12",
+    "sessions": 34,
+    "users": 28
+   },
+   {
+    "d": "2026-11-13",
+    "sessions": 33,
+    "users": 30
+   },
+   {
+    "d": "2026-11-14",
+    "sessions": 24,
+    "users": 24
+   },
+   {
+    "d": "2026-11-15",
+    "sessions": 29,
+    "users": 29
+   },
+   {
+    "d": "2026-11-16",
+    "sessions": 29,
+    "users": 27
+   },
+   {
+    "d": "2026-11-17",
+    "sessions": 35,
+    "users": 34
+   },
+   {
+    "d": "2026-11-18",
+    "sessions": 33,
+    "users": 31
+   },
+   {
+    "d": "2026-11-19",
+    "sessions": 65,
+    "users": 62
+   },
+   {
+    "d": "2026-11-20",
+    "sessions": 42,
+    "users": 35
+   },
+   {
+    "d": "2026-11-21",
+    "sessions": 44,
+    "users": 44
+   },
+   {
+    "d": "2026-11-22",
+    "sessions": 24,
+    "users": 24
+   },
+   {
+    "d": "2026-11-23",
+    "sessions": 43,
+    "users": 43
+   },
+   {
+    "d": "2026-11-24",
+    "sessions": 58,
+    "users": 58
+   },
+   {
+    "d": "2026-11-25",
+    "sessions": 56,
+    "users": 56
+   }
+  ]
+ },
+ "ahrefs": null,
+ "ai_visibility": null,
+ "technical_health": {
+  "measured_at": "2026-11-26",
+  "source": "dxl-seo-audit",
+  "health": 84,
+  "pages_crawled": 142,
+  "ttfb_mean_ms": 491.2,
+  "response_times": {
+   "site_mean_ms": 491.2
+  },
+  "orphan_articles": 0,
+  "thin_pages": 7
+ },
+ "errors": [],
+ "previous": {
+  "date": "2026-11-25",
+  "gsc_28d": {
+   "clicks": 91,
+   "impressions": 8550,
+   "ctr_pct": 1.1,
+   "avg_position": 24.4,
+   "queries_with_impressions": 574,
+   "brand_clicks": 34,
+   "brand_clicks_share_pct": 37.4,
+   "clicked_queries": [
+    {
+     "q": "feeldx",
+     "clicks": 26,
+     "impressions": 65,
+     "ctr_pct": 40.0,
+     "position": 1.1
+    },
+    {
+     "q": "feeldx pty ltd",
+     "clicks": 6,
+     "impressions": 16,
+     "ctr_pct": 37.5,
+     "position": 1
+    },
+    {
+     "q": "feel dx",
+     "clicks": 2,
+     "impressions": 12,
+     "ctr_pct": 16.67,
+     "position": 1
+    },
+    {
+     "q": "3d visualisation",
+     "clicks": 1,
+     "impressions": 1,
+     "ctr_pct": 100,
+     "position": 20
+    },
+    {
+     "q": "basis of schedule example",
+     "clicks": 1,
+     "impressions": 7,
+     "ctr_pct": 14.29,
+     "position": 3.3
+    },
+    {
+     "q": "construction project life cycle",
+     "clicks": 1,
+     "impressions": 11,
+     "ctr_pct": 9.09,
+     "position": 63.5
+    },
+    {
+     "q": "project control manager",
+     "clicks": 1,
+     "impressions": 4,
+     "ctr_pct": 25.0,
+     "position": 8.5
+    },
+    {
+     "q": "what is project control",
+     "clicks": 1,
+     "impressions": 32,
+     "ctr_pct": 3.12,
+     "position": 74.1
+    }
+   ],
+   "top_queries": [
+    {
+     "q": "3d rendering",
+     "clicks": 0,
+     "impressions": 428,
+     "ctr_pct": 0,
+     "position": 43.1
+    },
+    {
+     "q": "4d coordination hyperscale construction",
+     "clicks": 0,
+     "impressions": 307,
+     "ctr_pct": 0,
+     "position": 50.8
+    },
+    {
+     "q": "5d bim",
+     "clicks": 0,
+     "impressions": 141,
+     "ctr_pct": 0,
+     "position": 30.3
+    },
+    {
+     "q": "3d model rendering",
+     "clicks": 0,
+     "impressions": 135,
+     "ctr_pct": 0,
+     "position": 24.8
+    },
+    {
+     "q": "3d render",
+     "clicks": 0,
+     "impressions": 120,
+     "ctr_pct": 0,
+     "position": 42.6
+    },
+    {
+     "q": "defense bim software",
+     "clicks": 0,
+     "impressions": 106,
+     "ctr_pct": 0,
+     "position": 40.3
+    },
+    {
+     "q": "military construction bim software",
+     "clicks": 0,
+     "impressions": 88,
+     "ctr_pct": 0,
+     "position": 40.1
+    },
+    {
+     "q": "5d bim software",
+     "clicks": 0,
+     "impressions": 86,
+     "ctr_pct": 0,
+     "position": 18.1
+    },
+    {
+     "q": "construction project control",
+     "clicks": 0,
+     "impressions": 84,
+     "ctr_pct": 0,
+     "position": 42.0
+    },
+    {
+     "q": "what is high-fidelity 3d rendering",
+     "clicks": 0,
+     "impressions": 79,
+     "ctr_pct": 0,
+     "position": 4.5
+    },
+    {
+     "q": "defense bim validation",
+     "clicks": 0,
+     "impressions": 75,
+     "ctr_pct": 0,
+     "position": 37.6
+    },
+    {
+     "q": "feeldx",
+     "clicks": 26,
+     "impressions": 65,
+     "ctr_pct": 40.0,
+     "position": 1.1
+    },
+    {
+     "q": "bim 5d software",
+     "clicks": 0,
+     "impressions": 62,
+     "ctr_pct": 0,
+     "position": 18.2
+    },
+    {
+     "q": "bim 5d",
+     "clicks": 0,
+     "impressions": 61,
+     "ctr_pct": 0,
+     "position": 27.6
+    },
+    {
+     "q": "construction project controls",
+     "clicks": 0,
+     "impressions": 56,
+     "ctr_pct": 0,
+     "position": 40.9
+    },
+    {
+     "q": "apa itu pcm dalam proyek",
+     "clicks": 0,
+     "impressions": 54,
+     "ctr_pct": 0,
+     "position": 10.1
+    },
+    {
+     "q": "project control plan",
+     "clicks": 0,
+     "impressions": 54,
+     "ctr_pct": 0,
+     "position": 20.7
+    },
+    {
+     "q": "4d bim",
+     "clicks": 0,
+     "impressions": 53,
+     "ctr_pct": 0,
+     "position": 39.6
+    },
+    {
+     "q": "5d bim services",
+     "clicks": 0,
+     "impressions": 51,
+     "ctr_pct": 0,
+     "position": 55.4
+    },
+    {
+     "q": "rendering 3d",
+     "clicks": 0,
+     "impressions": 50,
+     "ctr_pct": 0,
+     "position": 26.3
+    },
+    {
+     "q": "project controls",
+     "clicks": 0,
+     "impressions": 49,
+     "ctr_pct": 0,
+     "position": 32.3
+    },
+    {
+     "q": "project control",
+     "clicks": 0,
+     "impressions": 47,
+     "ctr_pct": 0,
+     "position": 56.0
+    },
+    {
+     "q": "pcm proyek adalah",
+     "clicks": 0,
+     "impressions": 41,
+     "ctr_pct": 0,
+     "position": 11.5
+    },
+    {
+     "q": "extension of time claim analysis",
+     "clicks": 0,
+     "impressions": 39,
+     "ctr_pct": 0,
+     "position": 16.1
+    },
+    {
+     "q": "5d software bim",
+     "clicks": 0,
+     "impressions": 37,
+     "ctr_pct": 0,
+     "position": 25.2
+    }
+   ],
+   "top_pages": [
+    {
+     "page": "/",
+     "clicks": 55,
+     "impressions": 336,
+     "ctr_pct": 16.37,
+     "position": 3.8
+    },
+    {
+     "page": "/about-us",
+     "clicks": 6,
+     "impressions": 164,
+     "ctr_pct": 3.66,
+     "position": 2.3
+    },
+    {
+     "page": "/news/baseline-vs-current-programme-how-builders-manage-change-without-losing-the-evidence",
+     "clicks": 3,
+     "impressions": 165,
+     "ctr_pct": 1.82,
+     "position": 4.5
+    },
+    {
+     "page": "/services",
+     "clicks": 3,
+     "impressions": 159,
+     "ctr_pct": 1.89,
+     "position": 2.4
+    },
+    {
+     "page": "/news/4d-tender-animation-show-assessors-how-you-will-build",
+     "clicks": 2,
+     "impressions": 85,
+     "ctr_pct": 2.35,
+     "position": 7.2
+    },
+    {
+     "page": "/news/resource-load-histogram-prove-your-tender-programme-is-buildable",
+     "clicks": 2,
+     "impressions": 20,
+     "ctr_pct": 10.0,
+     "position": 5.0
+    },
+    {
+     "page": "/news/visualising-infrastructure-how-4d-bim-is-changing-road-and-rail-construction-in-australia",
+     "clicks": 2,
+     "impressions": 15,
+     "ctr_pct": 13.33,
+     "position": 6.1
+    },
+    {
+     "page": "/news/4d-construction-sequencing-in-sydney-a-2026-guide-for-tfnsw-contractors",
+     "clicks": 1,
+     "impressions": 66,
+     "ctr_pct": 1.52,
+     "position": 6.8
+    },
+    {
+     "page": "/news/4d-methodology-the-future-of-pre-construction-planning",
+     "clicks": 1,
+     "impressions": 14,
+     "ctr_pct": 7.14,
+     "position": 14.7
+    },
+    {
+     "page": "/news/basis-of-schedule-what-to-include-so-assessors-trust-your-dates",
+     "clicks": 1,
+     "impressions": 148,
+     "ctr_pct": 0.68,
+     "position": 5.3
+    },
+    {
+     "page": "/news/delving-into-construction-project-life-cycle-phases",
+     "clicks": 1,
+     "impressions": 282,
+     "ctr_pct": 0.35,
+     "position": 53.1
+    },
+    {
+     "page": "/news/float-in-a-construction-programme-who-owns-it",
+     "clicks": 1,
+     "impressions": 205,
+     "ctr_pct": 0.49,
+     "position": 10.8
+    },
+    {
+     "page": "/news/hard-constraints-in-a-construction-programme-why-they-break-your-dates",
+     "clicks": 1,
+     "impressions": 60,
+     "ctr_pct": 1.67,
+     "position": 5.9
+    },
+    {
+     "page": "/news/mastering-3d-model-rendering-techniques-a-comprehensive-guide",
+     "clicks": 1,
+     "impressions": 256,
+     "ctr_pct": 0.39,
+     "position": 16.6
+    },
+    {
+     "page": "/news/missile-factories-and-drone-facilities-australias-high-tech-defence-build-up",
+     "clicks": 1,
+     "impressions": 39,
+     "ctr_pct": 2.56,
+     "position": 12.5
+    },
+    {
+     "page": "/news/outsourcing-digital-engineering-the-complete-guide-to-4d-and-5d-bim-services-in-australia",
+     "clicks": 1,
+     "impressions": 44,
+     "ctr_pct": 2.27,
+     "position": 10.9
+    },
+    {
+     "page": "/news/planned-vs-actual-how-to-read-a-construction-programme-update",
+     "clicks": 1,
+     "impressions": 126,
+     "ctr_pct": 0.79,
+     "position": 4.6
+    },
+    {
+     "page": "/news/tender-programme-vs-contract-programme-what-changes-after-award",
+     "clicks": 1,
+     "impressions": 75,
+     "ctr_pct": 1.33,
+     "position": 4.1
+    },
+    {
+     "page": "/news/the-art-of-rendering-a-3d-model",
+     "clicks": 1,
+     "impressions": 1517,
+     "ctr_pct": 0.07,
+     "position": 31.6
+    },
+    {
+     "page": "/news/the-critical-role-of-project-controls-manager-in-construction",
+     "clicks": 1,
+     "impressions": 780,
+     "ctr_pct": 0.13,
+     "position": 19.0
+    },
+    {
+     "page": "/news/the-evolution-of-3d-architectural-visualisation",
+     "clicks": 1,
+     "impressions": 22,
+     "ctr_pct": 4.55,
+     "position": 21.0
+    },
+    {
+     "page": "/news/the-new-role-of-the-digital-project-controller-in-australian-construction",
+     "clicks": 1,
+     "impressions": 11,
+     "ctr_pct": 9.09,
+     "position": 5.5
+    },
+    {
+     "page": "/news/understanding-the-components-of-a-project-control-plan",
+     "clicks": 1,
+     "impressions": 546,
+     "ctr_pct": 0.18,
+     "position": 42.7
+    },
+    {
+     "page": "/news/work-breakdown-structure-in-construction-get-it-right-before-the-detail",
+     "clicks": 1,
+     "impressions": 266,
+     "ctr_pct": 0.38,
+     "position": 8.3
+    },
+    {
+     "page": "/studio/cdu-blue-8-centre-for-better-health-futures",
+     "clicks": 1,
+     "impressions": 15,
+     "ctr_pct": 6.67,
+     "position": 4.8
+    }
+   ],
+   "page_one_queries": 170,
+   "top3_queries": 37,
+   "daily": [
+    {
+     "d": "2026-10-27",
+     "clicks": 1,
+     "impressions": 257
+    },
+    {
+     "d": "2026-10-28",
+     "clicks": 7,
+     "impressions": 229
+    },
+    {
+     "d": "2026-10-29",
+     "clicks": 4,
+     "impressions": 273
+    },
+    {
+     "d": "2026-10-30",
+     "clicks": 2,
+     "impressions": 234
+    },
+    {
+     "d": "2026-10-31",
+     "clicks": 2,
+     "impressions": 228
+    },
+    {
+     "d": "2026-11-01",
+     "clicks": 6,
+     "impressions": 320
+    },
+    {
+     "d": "2026-11-02",
+     "clicks": 0,
+     "impressions": 355
+    },
+    {
+     "d": "2026-11-03",
+     "clicks": 4,
+     "impressions": 491
+    },
+    {
+     "d": "2026-11-04",
+     "clicks": 7,
+     "impressions": 408
+    },
+    {
+     "d": "2026-11-05",
+     "clicks": 4,
+     "impressions": 260
+    },
+    {
+     "d": "2026-11-06",
+     "clicks": 3,
+     "impressions": 239
+    },
+    {
+     "d": "2026-11-07",
+     "clicks": 2,
+     "impressions": 233
+    },
+    {
+     "d": "2026-11-08",
+     "clicks": 5,
+     "impressions": 291
+    },
+    {
+     "d": "2026-11-09",
+     "clicks": 8,
+     "impressions": 385
+    },
+    {
+     "d": "2026-11-10",
+     "clicks": 4,
+     "impressions": 379
+    },
+    {
+     "d": "2026-11-11",
+     "clicks": 8,
+     "impressions": 344
+    },
+    {
+     "d": "2026-11-12",
+     "clicks": 2,
+     "impressions": 300
+    },
+    {
+     "d": "2026-11-13",
+     "clicks": 3,
+     "impressions": 291
+    },
+    {
+     "d": "2026-11-14",
+     "clicks": 0,
+     "impressions": 277
+    },
+    {
+     "d": "2026-11-15",
+     "clicks": 3,
+     "impressions": 368
+    },
+    {
+     "d": "2026-11-16",
+     "clicks": 4,
+     "impressions": 393
+    },
+    {
+     "d": "2026-11-17",
+     "clicks": 5,
+     "impressions": 510
+    },
+    {
+     "d": "2026-11-18",
+     "clicks": 1,
+     "impressions": 376
+    },
+    {
+     "d": "2026-11-19",
+     "clicks": 3,
+     "impressions": 319
+    },
+    {
+     "d": "2026-11-20",
+     "clicks": 1,
+     "impressions": 245
+    },
+    {
+     "d": "2026-11-21",
+     "clicks": 0,
+     "impressions": 207
+    },
+    {
+     "d": "2026-11-22",
+     "clicks": 2,
+     "impressions": 338
+    }
+   ]
+  },
+  "ga4_28d": {
+   "sessions": 1006,
+   "engaged_sessions": 299,
+   "engagement_rate_pct": 29.72,
+   "key_events": 11,
+   "session_key_event_rate_pct": 1.09,
+   "users": 896,
+   "new_users": 878,
+   "returning_users": 48,
+   "avg_engagement_time": "0m 14s",
+   "events_per_session": 4.13,
+   "total_events": 4157,
+   "channel_breakdown": [
+    {
+     "name": "Direct",
+     "sessions": 554,
+     "engaged_sessions": 84,
+     "engagement_rate_pct": 15.2,
+     "key_events": 2
+    },
+    {
+     "name": "Organic Search",
+     "sessions": 143,
+     "engaged_sessions": 82,
+     "engagement_rate_pct": 57.3,
+     "key_events": 3
+    },
+    {
+     "name": "Paid Search",
+     "sessions": 142,
+     "engaged_sessions": 74,
+     "engagement_rate_pct": 52.1,
+     "key_events": 0
+    },
+    {
+     "name": "Display",
+     "sessions": 78,
+     "engaged_sessions": 26,
+     "engagement_rate_pct": 33.3,
+     "key_events": 0
+    },
+    {
+     "name": "Paid Video",
+     "sessions": 32,
+     "engaged_sessions": 7,
+     "engagement_rate_pct": 21.9,
+     "key_events": 0
+    },
+    {
+     "name": "Referral",
+     "sessions": 26,
+     "engaged_sessions": 15,
+     "engagement_rate_pct": 57.7,
+     "key_events": 6
+    },
+    {
+     "name": "Organic Social",
+     "sessions": 15,
+     "engaged_sessions": 7,
+     "engagement_rate_pct": 46.7,
+     "key_events": 0
+    },
+    {
+     "name": "Cross-network",
+     "sessions": 13,
+     "engaged_sessions": 4,
+     "engagement_rate_pct": 30.8,
+     "key_events": 0
+    },
+    {
+     "name": "Unassigned",
+     "sessions": 4,
+     "engaged_sessions": 0,
+     "engagement_rate_pct": 0.0,
+     "key_events": 0
+    }
+   ],
+   "source_medium_top": [
+    {
+     "name": "(direct) / (none)",
+     "sessions": 554,
+     "engaged_sessions": 84,
+     "engagement_rate_pct": 15.2,
+     "key_events": 2
+    },
+    {
+     "name": "google / cpc",
+     "sessions": 252,
+     "engaged_sessions": 107,
+     "engagement_rate_pct": 42.5,
+     "key_events": 0
+    },
+    {
+     "name": "google / organic",
+     "sessions": 122,
+     "engaged_sessions": 69,
+     "engagement_rate_pct": 56.6,
+     "key_events": 3
+    },
+    {
+     "name": "bing / organic",
+     "sessions": 21,
+     "engaged_sessions": 13,
+     "engagement_rate_pct": 61.9,
+     "key_events": 0
+    },
+    {
+     "name": "(data not available) / (data not available)",
+     "sessions": 13,
+     "engaged_sessions": 4,
+     "engagement_rate_pct": 30.8,
+     "key_events": 0
+    },
+    {
+     "name": "topcv.vn / referral",
+     "sessions": 12,
+     "engaged_sessions": 7,
+     "engagement_rate_pct": 58.3,
+     "key_events": 0
+    },
+    {
+     "name": "linkedin / social",
+     "sessions": 5,
+     "engaged_sessions": 1,
+     "engagement_rate_pct": 20.0,
+     "key_events": 0
+    },
+    {
+     "name": "(not set) / (not set)",
+     "sessions": 4,
+     "engaged_sessions": 0,
+     "engagement_rate_pct": 0.0,
+     "key_events": 0
+    },
+    {
+     "name": "aocr.org / referral",
+     "sessions": 3,
+     "engaged_sessions": 0,
+     "engagement_rate_pct": 0.0,
+     "key_events": 0
+    },
+    {
+     "name": "teams.public.onecdn.static.microsoft / referral",
+     "sessions": 3,
+     "engaged_sessions": 2,
+     "engagement_rate_pct": 66.7,
+     "key_events": 0
+    },
+    {
+     "name": "facebook / social",
+     "sessions": 2,
+     "engaged_sessions": 0,
+     "engagement_rate_pct": 0.0,
+     "key_events": 0
+    },
+    {
+     "name": "facebook.com / referral",
+     "sessions": 2,
+     "engaged_sessions": 1,
+     "engagement_rate_pct": 50.0,
+     "key_events": 0
+    }
+   ],
+   "ai_assistant_channel": {
+    "sessions": 0,
+    "share_of_sessions_pct": 0.0,
+    "engaged_sessions": 0,
+    "engagement_rate_pct": null,
+    "key_events": 0,
+    "sources": []
+   },
+   "daily": [
+    {
+     "d": "2026-10-28",
+     "sessions": 39,
+     "users": 36
+    },
+    {
+     "d": "2026-10-29",
+     "sessions": 28,
+     "users": 25
+    },
+    {
+     "d": "2026-10-30",
+     "sessions": 26,
+     "users": 26
+    },
+    {
+     "d": "2026-10-31",
+     "sessions": 10,
+     "users": 10
+    },
+    {
+     "d": "2026-11-01",
+     "sessions": 22,
+     "users": 22
+    },
+    {
+     "d": "2026-11-02",
+     "sessions": 48,
+     "users": 46
+    },
+    {
+     "d": "2026-11-03",
+     "sessions": 33,
+     "users": 33
+    },
+    {
+     "d": "2026-11-04",
+     "sessions": 26,
+     "users": 25
+    },
+    {
+     "d": "2026-11-05",
+     "sessions": 34,
+     "users": 30
+    },
+    {
+     "d": "2026-11-06",
+     "sessions": 46,
+     "users": 38
+    },
+    {
+     "d": "2026-11-07",
+     "sessions": 40,
+     "users": 37
+    },
+    {
+     "d": "2026-11-08",
+     "sessions": 28,
+     "users": 28
+    },
+    {
+     "d": "2026-11-09",
+     "sessions": 47,
+     "users": 45
+    },
+    {
+     "d": "2026-11-10",
+     "sessions": 40,
+     "users": 35
+    },
+    {
+     "d": "2026-11-11",
+     "sessions": 48,
+     "users": 47
+    },
+    {
+     "d": "2026-11-12",
+     "sessions": 34,
+     "users": 28
+    },
+    {
+     "d": "2026-11-13",
+     "sessions": 33,
+     "users": 30
+    },
+    {
+     "d": "2026-11-14",
+     "sessions": 24,
+     "users": 24
+    },
+    {
+     "d": "2026-11-15",
+     "sessions": 29,
+     "users": 29
+    },
+    {
+     "d": "2026-11-16",
+     "sessions": 29,
+     "users": 27
+    },
+    {
+     "d": "2026-11-17",
+     "sessions": 35,
+     "users": 34
+    },
+    {
+     "d": "2026-11-18",
+     "sessions": 33,
+     "users": 31
+    },
+    {
+     "d": "2026-11-19",
+     "sessions": 65,
+     "users": 62
+    },
+    {
+     "d": "2026-11-20",
+     "sessions": 42,
+     "users": 35
+    },
+    {
+     "d": "2026-11-21",
+     "sessions": 44,
+     "users": 44
+    },
+    {
+     "d": "2026-11-22",
+     "sessions": 24,
+     "users": 24
+    },
+    {
+     "d": "2026-11-23",
+     "sessions": 43,
+     "users": 43
+    },
+    {
+     "d": "2026-11-24",
+     "sessions": 58,
+     "users": 58
+    }
+   ]
+  }
+ },
+ "commentary": {
+  "vi": "clicks 91 → 92; impressions 8550 → 8683; ctr_pct 1.1 → 1.1; avg_position 24.4 → 23.8; queries_with_impressions 574 → 578; brand_clicks 34 → 35; page_one_queries 170 → 179; ga4_sessions 1006 → 1022.",
+  "en": "clicks 91 → 92; impressions 8550 → 8683; ctr_pct 1.1 → 1.1; avg_position 24.4 → 23.8; queries_with_impressions 574 → 578; brand_clicks 34 → 35; page_one_queries 170 → 179; ga4_sessions 1006 → 1022.",
+  "by": "template"
+ },
+ "notes": {
+  "vi": "clicks 91 → 92; impressions 8550 → 8683; ctr_pct 1.1 → 1.1; avg_position 24.4 → 23.8; queries_with_impressions 574 → 578; brand_clicks 34 → 35; page_one_queries 170 → 179; ga4_sessions 1006 → 1022.",
+  "en": "clicks 91 → 92; impressions 8550 → 8683; ctr_pct 1.1 → 1.1; avg_position 24.4 → 23.8; queries_with_impressions 574 → 578; brand_clicks 34 → 35; page_one_queries 170 → 179; ga4_sessions 1006 → 1022."
+ },
+ "commentary_input": {
+  "report": "SEO (GSC + GA4)",
+  "summary": {
+   "today": {
+    "clicks": 92,
+    "impressions": 8683,
+    "ctr_pct": 1.1,
+    "avg_position": 23.8,
+    "queries_with_impressions": 578,
+    "brand_clicks": 35,
+    "page_one_queries": 179,
+    "ga4_sessions": 1022,
+    "ga4_users": 914,
+    "ga4_engagement_rate_pct": 29.55,
+    "ga4_key_events": 11,
+    "ai_sessions": 0,
+    "top_channels": [
+     [
+      "Direct",
+      566
+     ],
+     [
+      "Organic Search",
+      144
+     ],
+     [
+      "Paid Search",
+      143
+     ],
+     [
+      "Display",
+      79
+     ],
+     [
+      "Paid Video",
+      32
+     ]
+    ],
+    "top_clicked": [
+     [
+      "feeldx",
+      27
+     ],
+     [
+      "feeldx pty ltd",
+      6
+     ],
+     [
+      "feel dx",
+      2
+     ],
+     [
+      "3d visualisation",
+      1
+     ],
+     [
+      "basis of schedule example",
+      1
+     ]
+    ]
+   },
+   "previous": {
+    "clicks": 91,
+    "impressions": 8550,
+    "ctr_pct": 1.1,
+    "avg_position": 24.4,
+    "queries_with_impressions": 574,
+    "brand_clicks": 34,
+    "page_one_queries": 170,
+    "ga4_sessions": 1006,
+    "ga4_users": 896,
+    "ga4_engagement_rate_pct": 29.72,
+    "ga4_key_events": 11,
+    "ai_sessions": 0,
+    "top_channels": [
+     [
+      "Direct",
+      554
+     ],
+     [
+      "Organic Search",
+      143
+     ],
+     [
+      "Paid Search",
+      142
+     ],
+     [
+      "Display",
+      78
+     ],
+     [
+      "Paid Video",
+      32
+     ]
+    ],
+    "top_clicked": [
+     [
+      "feeldx",
+      26
+     ],
+     [
+      "feeldx pty ltd",
+      6
+     ],
+     [
+      "feel dx",
+      2
+     ],
+     [
+      "3d visualisation",
+      1
+     ],
+     [
+      "basis of schedule example",
+      1
+     ]
+    ]
+   },
+   "windows": {
+    "gsc": "2026-10-28 → 2026-11-24",
+    "ga4": "2026-10-29 → 2026-11-25"
+   }
+  }
+ }
+}
