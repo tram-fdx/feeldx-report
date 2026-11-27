@@ -1795,13 +1795,26 @@
   }
  },
  "commentary": {
-  "vi": "clicks 91 → 92; impressions 8550 → 8683; ctr_pct 1.1 → 1.1; avg_position 24.4 → 23.8; queries_with_impressions 574 → 578; brand_clicks 34 → 35; page_one_queries 170 → 179; ga4_sessions 1006 → 1022.",
-  "en": "clicks 91 → 92; impressions 8550 → 8683; ctr_pct 1.1 → 1.1; avg_position 24.4 → 23.8; queries_with_impressions 574 → 578; brand_clicks 34 → 35; page_one_queries 170 → 179; ga4_sessions 1006 → 1022.",
-  "by": "template"
+  "vi": "Lượt hiển thị lên 8.683 (trước 8.550), click 92, truy vấn trang 1 tăng từ 170 lên 179 và vị trí trung bình cải thiện từ 24,4 lên 23,8. GA4 có 1.022 phiên và 11 sự kiện chính. Gần 40% click là truy vấn thương hiệu (35/92). Nên đẩy nội dung cho các truy vấn phi thương hiệu đã lên trang 1.",
+  "en": "Impressions rose to 8,683 (from 8,550), clicks to 92, page-one queries from 170 to 179 and average position improved from 24.4 to 23.8. GA4 logged 1,022 sessions and 11 key events. Brand queries account for 35 of 92 clicks. Push content for non-brand queries now on page one.",
+  "by": "Claude (Mac)",
+  "rating": "ok",
+  "verdict_vi": "SEO FeelDX tăng nhẹ và ổn định, nhưng click vẫn dựa nhiều vào thương hiệu.",
+  "verdict_en": "FeelDX SEO is growing slightly and steadily, but clicks still lean on brand searches.",
+  "actions_vi": [
+   "Tối ưu title/meta cho các truy vấn phi thương hiệu trong 179 truy vấn trang 1.",
+   "Mở rộng bài về 'basis of schedule example' vì đã có click tự nhiên.",
+   "So sánh 143 phiên Paid Search với 144 phiên Organic để cân lại ngân sách quảng cáo."
+  ],
+  "actions_en": [
+   "Optimise titles/meta for non-brand queries among the 179 page-one queries.",
+   "Expand the 'basis of schedule example' content since it already earns organic clicks.",
+   "Compare 143 Paid Search sessions with 144 Organic sessions to rebalance ad spend."
+  ]
  },
  "notes": {
-  "vi": "clicks 91 → 92; impressions 8550 → 8683; ctr_pct 1.1 → 1.1; avg_position 24.4 → 23.8; queries_with_impressions 574 → 578; brand_clicks 34 → 35; page_one_queries 170 → 179; ga4_sessions 1006 → 1022.",
-  "en": "clicks 91 → 92; impressions 8550 → 8683; ctr_pct 1.1 → 1.1; avg_position 24.4 → 23.8; queries_with_impressions 574 → 578; brand_clicks 34 → 35; page_one_queries 170 → 179; ga4_sessions 1006 → 1022."
+  "vi": "Lượt hiển thị lên 8.683 (trước 8.550), click 92, truy vấn trang 1 tăng từ 170 lên 179 và vị trí trung bình cải thiện từ 24,4 lên 23,8. GA4 có 1.022 phiên và 11 sự kiện chính. Gần 40% click là truy vấn thương hiệu (35/92). Nên đẩy nội dung cho các truy vấn phi thương hiệu đã lên trang 1.",
+  "en": "Impressions rose to 8,683 (from 8,550), clicks to 92, page-one queries from 170 to 179 and average position improved from 24.4 to 23.8. GA4 logged 1,022 sessions and 11 key events. Brand queries account for 35 of 92 clicks. Push content for non-brand queries now on page one."
  },
  "commentary_input": {
   "report": "SEO (GSC + GA4)",
