@@ -78,7 +78,14 @@
    "report": "archive/2026-11-26.html",
    "label_vi": "Sức khoẻ 84, TTFB nhanh hơn, 2.920 ảnh thiếu alt",
    "label_en": "Health 84, faster TTFB, 2,920 images lack alt"
+  },
+  {
+   "date": "2026-11-27",
+   "data": "data/2026-11-27.json",
+   "report": "archive/2026-11-27.html",
+   "label_vi": "Health 82 · 142 trang · TTFB TB 624 ms",
+   "label_en": "Health 82 · 142 pages · mean TTFB 624 ms"
   }
  ],
- "latest": "2026-11-26"
+ "latest": "2026-11-27"
 }
