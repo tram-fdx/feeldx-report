@@ -3810,9 +3810,22 @@
   }
  ],
  "commentary": {
-  "vi": "health 84 → 82; ttfb_mean 491.2 → 623.9; pages_crawled 142 → 142; words_total 163957 → 163957; orphans 0; thin_pages 7; images_without_alt 2920.",
-  "en": "health 84 → 82; ttfb_mean 491.2 → 623.9; pages_crawled 142 → 142; words_total 163957 → 163957; orphans 0; thin_pages 7; images_without_alt 2920.",
-  "by": "template"
+  "vi": "Health giảm từ 84 xuống 82 do performance tụt từ 85 xuống 74, TTFB trung bình tăng từ 491 ms lên 624 ms. Structured data vẫn chỉ 60, 2.920 ảnh thiếu alt và /faq trả về 404.",
+  "en": "Health dropped from 84 to 82 as performance fell from 85 to 74 and mean TTFB rose from 491 ms to 624 ms. Structured data remains at 60, 2,920 images lack alt text and /faq returns 404.",
+  "by": "Claude (Mac)",
+  "rating": "bad",
+  "verdict_vi": "Kỹ thuật website FeelDX đi xuống, chủ yếu do tốc độ phản hồi.",
+  "verdict_en": "FeelDX site health is slipping, mainly on server response time.",
+  "actions_vi": [
+   "Kiểm tra hosting/cache để đưa TTFB 624 ms về dưới 500 ms",
+   "Sửa hoặc chuyển hướng /faq (404)",
+   "Bổ sung alt cho 2.920 ảnh và nâng structured data từ 60"
+  ],
+  "actions_en": [
+   "Check hosting/caching to bring TTFB from 624 ms under 500 ms",
+   "Fix or redirect /faq (404)",
+   "Add alt text to 2,920 images and raise structured data from 60"
+  ]
  },
  "commentary_input": {
   "report": "Website technical SEO audit",
@@ -3858,5 +3871,5 @@
    }
   }
  },
- "score_rationale": "health 84 → 82; ttfb_mean 491.2 → 623.9; pages_crawled 142 → 142; words_total 163957 → 163957; orphans 0; thin_pages 7; images_without_alt 2920."
+ "score_rationale": "Health dropped from 84 to 82 as performance fell from 85 to 74 and mean TTFB rose from 491 ms to 624 ms. Structured data remains at 60, 2,920 images lack alt text and /faq returns 404."
 }
